@@ -1,0 +1,321 @@
+/*header*/
+
+body {
+  background-color: #ECF0F1;
+font-family: 'Lato', sans-serif;
+}
+
+.headerpro{
+background-color:rgba(255, 255, 255, 0.62);
+
+
+}
+.logo{
+padding-left: 15px;
+font-size: 1.5em
+
+
+}
+
+.logo a{
+color: #000;
+
+
+}
+.navbar-default{
+background-color: transparent;
+border: none
+
+
+}
+
+.navbar{
+margin-bottom: 0px;
+margin-top: 10px
+}
+
+.navbar ul li {
+list-style: none;
+float: left;
+
+}
+
+.navbar ul button {
+width: 90px;
+}
+
+.navbar ul .btn-primary {
+width: 120px;
+margin-right: 5px
+}
+
+.navbar ul .worksexp {
+  padding-top: 7px;
+  margin-right: 15px;
+}
+.worksexp a {
+
+  color: #000
+}
+
+.herofind h2 {
+font-size: 6em;
+max-width: 800px;
+margin: 0 auto;
+color: #fff;
+font-family: 'Mrs Sheppards', cursive;
+
+}
+
+.herofind h3 {
+font-size: 1.7em;
+color: #fff
+
+}
+
+.hero{
+background-image: url("../images/girl.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center top;
+padding: 12em 0
+
+}
+
+.herofind {
+text-align: center;
+
+}
+
+.hero .btn{
+border: none
+
+}
+
+.btn-search{
+background-color: #fff;
+color: #414141;
+border-radius: 0px;
+height: 50px;
+border: none
+
+}
+.searchuser {
+max-width: 700px;
+margin: 15px auto;
+
+}
+.searchuser input {
+border-radius: 0px;
+height: 50px;
+border-right: none;
+border: none
+
+}
+
+.joinus{
+margin-top: 15px
+
+}
+
+.joinus button{
+padding: 0.8em
+
+}
+
+
+/*randoms users*/
+.modulohowworks{
+background-image: url('../images/granvia.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+}
+.randomUsers{
+margin-top: 50px;
+margin-bottom: 50px;
+
+}
+.tourme{
+background-color: transparent;
+color: #337ab7;
+width: 100%;
+font-family: 'Mrs Sheppards', cursive;
+font-size: 3em;
+text-decoration: underline;
+
+}
+
+.tourme:hover{
+color: #337ab7;
+}
+
+.usersearchperfil{
+text-align: center;
+padding: 20px 10px 10px 10px;
+border-radius: 2%;
+background-color: #fff;
+margin-bottom: 5px
+
+}
+
+.madrid{
+background-image: url('../images/tour.png');
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.username {
+  font-weight: 300;
+
+
+}
+.username a {
+color: #323232
+
+}
+
+.username a:hover {
+  text-decoration: none
+
+}
+
+.bolded {
+font-weight: 900;
+
+}
+
+.mediaround{
+  backface-visibility: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  background-color: #cacccd;
+  border-radius: 50%;
+    border: 10px solid #337ab7;
+
+}
+
+.mediaround img{
+  height: 156px;
+      width: 156px;
+
+}
+
+
+
+/*module how it works*/
+
+.tours {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin-top: 15px;
+  padding: 10px 10px 120px 10px
+}
+
+.tours h3 {
+
+font-size: 3em;
+color: #FFF;
+font-weight: 300
+}
+
+.conthotworks {
+  padding-top: 50px;
+  width: 70%
+}
+
+.tours .btn-works {
+width: 50%;
+height: 60px;
+background-color: rgba(83, 169, 255, 0.8);
+font-size: 2em;
+color: #fff;
+margin-top: 15px;
+}
+
+.perfilhow img {
+width: 100%;
+
+}
+
+
+.footer{
+  margin-top: 60px;
+background-image: url('../images/tour.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  height: 360px
+
+}
+.followus {
+text-align: left;
+margin-bottom: 25px;
+padding-bottom: 15px;
+border-bottom: 1px solid #cfd3d4
+
+}
+
+.followme{
+  font-family: 'Mrs Sheppards', cursive;
+  font-size: 2em;
+  color: #80aab9
+
+}
+.followus li{
+display: inline-block;
+text-align: left;
+margin-right: 30px;
+
+}
+
+.followus a{
+font-size: 2.5em;
+color: rgb(30, 34, 32)
+
+}
+
+.navfooter{
+text-align: left;
+
+}
+
+footer p{
+text-align: left;
+
+}
+
+.navfooter li{
+display: inline-block;
+margin-right: 20px
+
+}
+
+.navfooter a{
+font-size: 1.1em
+
+}
+
+.navfooter a:hover{
+text-decoration: none
+
+}
+
+.footer-copyright{position: relative; top: 206px;
+text-align: center;
+color: #373737
+}
+
+@media (max-width:854px){
+
+}
+
+
+@media (max-width:480px){
+
+
+}
