@@ -19,7 +19,7 @@
     "express": "latest",
     "underscore": "latest",
     "swig": "latest",
-    "string": "latest",
+    "string": "latest"
   },
   "homepage": "https://github.com/iraklitbz/proyect2#readme"
 }
