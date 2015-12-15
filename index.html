@@ -1,22 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Proyect2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:400,900,100,300' rel='stylesheet' type='text/css'>
-</head>
-<body>
-
+{% block head %}
+{% endblock %}
+{% block content %}
     <div class="container-fluid">
     <div class="row">
     <header class="headerpro">
@@ -133,7 +117,7 @@
   <div class="container">
   <footer>
     <ul class="followus">
-             <li class="followme">follow us:</li> 
+             <li class="followme">follow us:</li>
       <li><a href="#"><i class="fa fa-twitter"></i></a></li>
        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -155,8 +139,8 @@
 </div>
 
 </div>
+{% endblock %}
 </body>
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
-</body>
 </html>
