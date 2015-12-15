@@ -7,6 +7,7 @@ var router = require('./router'),
      swig = require('swig'),
      app = express();
 
+app.use('/statics', express.static(__dirname + '/statics'));
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
