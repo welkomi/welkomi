@@ -1,0 +1,25 @@
+{
+  "name": "proyect2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iraklitbz/proyect2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iraklitbz/proyect2/issues"
+  },
+  "dependencies": {
+    "express": "latest",
+    "underscore": "latest",
+    "swig": "latest",
+    "string": "latest",
+  },
+  "homepage": "https://github.com/iraklitbz/proyect2#readme"
+}
