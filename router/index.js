@@ -7,4 +7,5 @@ exports.routes = function (app) {
       * Route '/'
       */
      require('./home').init(app);
+     require('./users').init(app);
 };

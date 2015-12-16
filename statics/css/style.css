@@ -5,22 +5,51 @@ body {
 font-family: 'Lato', sans-serif;
 }
 
-.headerpro{
-background-color:rgba(255, 255, 255, 0.62);
+.logo{
+padding-left: 15px;
+font-size: 1.5em;
+text-indent: -9999px
 
 
 }
-.logo{
-padding-left: 15px;
-font-size: 1.5em
 
+.headerpro{
+position: relative;
+top: -168px;
+
+}
+
+.headerpro li a{
+color: #fff
 
 }
 
 .logo a{
 color: #000;
+display: block;
+width: 150px;
+height: 40px;
+background-image: url('../images/logo.png');
+background-repeat: no-repeat;
+background-size: contain;
 
+}
 
+.navbar-fixed-top .logo a{
+color: #000;
+display: block;
+width: 140px;
+height: 30px;
+margin-top: -7px;
+background-image: url('../images/logoblack.png');
+background-repeat: no-repeat;
+background-size: contain;
+
+}
+
+.navbar-fixed-top {
+background-color:rgba(255, 255, 255, 1);
+box-shadow: 0 2px 7px -2px gray;
 }
 .navbar-default{
 background-color: transparent;
@@ -44,10 +73,6 @@ float: left;
 width: 90px;
 }
 
-.navbar ul .btn-primary {
-width: 120px;
-margin-right: 5px
-}
 
 .navbar ul .worksexp {
   padding-top: 7px;
@@ -73,12 +98,18 @@ color: #fff
 
 }
 
+.btn-joinus{
+    background-color: #fbba0e;
+    width: 120px;
+    margin-right: 5px
+}
+
 .hero{
 background-image: url("../images/girl.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center top;
-padding: 12em 0
+padding: 12em 0;
 
 }
 
@@ -124,7 +155,7 @@ padding: 0.8em
 }
 
 
-/*randoms users*/
+/*randoms users indice*/
 .modulohowworks{
 background-image: url('../images/granvia.png');
   background-repeat: no-repeat;
@@ -148,7 +179,7 @@ text-decoration: underline;
 }
 
 .tourme:hover{
-color: #337ab7;
+color: #fbba0e;
 }
 
 .usersearchperfil{
@@ -195,7 +226,7 @@ font-weight: 900;
   overflow: hidden;
   background-color: #cacccd;
   border-radius: 50%;
-    border: 10px solid #337ab7;
+    border: 10px solid #fbba0e;
 
 }
 
@@ -207,7 +238,7 @@ font-weight: 900;
 
 
 
-/*module how it works*/
+/*module how it works INDICE*/
 
 .tours {
   background-repeat: no-repeat;
@@ -243,6 +274,7 @@ width: 100%;
 
 }
 
+/*FOOTER*/
 
 .footer{
   margin-top: 60px;
@@ -263,7 +295,7 @@ border-bottom: 1px solid #cfd3d4
 .followme{
   font-family: 'Mrs Sheppards', cursive;
   font-size: 2em;
-  color: #80aab9
+  color: #fbba0e
 
 }
 .followus li{
@@ -316,13 +348,51 @@ font-size: 1.1em
 }
 
 .navfooter a:hover{
-text-decoration: none
+text-decoration: none;
+color: #fbba0e
 
 }
 
 .footer-copyright{position: relative; top: 206px;
 text-align: center;
 color: #373737
+}
+
+
+/*USERS PAGE*/
+
+.users {
+margin-top: 80px
+
+}
+.users .username{
+font-size: 20px
+
+}
+.users .tourme {
+  font-size: 2em
+}
+
+.users .mediaround img{
+  height: 130px;
+      width: 130px;
+
+}
+
+.chargemore{
+text-align: center;
+
+}
+
+.chargemore i{
+position: absolute;
+top:-33px;
+left: 24px;
+font-size: 2em}
+
+.chargemore span{
+position: relative;
+
 }
 
 @media (max-width:854px){
