@@ -3,6 +3,7 @@
  */
 
 /**
+ * http://localhost:3000/texts/es_ES/hola-mundo
  * http://localhost:3000/texts/en_EU/hola-mundo
  * @type {Function|*}
  */
