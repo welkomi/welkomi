@@ -1,3 +1,4 @@
+//function header fixed
 jQuery(document).ready(function(){
 var menu = jQuery('#nav');
 menu.addClass('headerpro');
