@@ -11,6 +11,3 @@ redis.on('error', function (err) {
 exports.init = function () {
     return redis;
 };
-
-
-
