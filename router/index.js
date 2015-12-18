@@ -17,4 +17,14 @@ exports.routes = function (app) {
       * Route /texts/:es/:key
       */
      require('./idiomsapi').init(app);
+
+     /**
+      * Route /cmslanguage
+      */
+     require('./cmslanguage').init(app);
+
+     /**
+      * Route /cmslanguagelogin
+      */
+     require('./cmslanguagelogin').init(app);
 };
