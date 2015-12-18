@@ -9,25 +9,25 @@
  */
 var redis = require('./../../wrappers/rediswrapper').init();
 
-exports.init = function (app) {
-    app.get('/texts/idioms/', function (req, res) {
-        redis.keys('idioms:*', function (err, response) {
+exports.init = function (expressrouter) {
+    expressrouter.get('/texts/languages/', function (req, res) {
+        redis.keys('language:*', function (err, response) {
             if (err) throw err;
 
             res.json(response);
         });
     });
 
-    app.get('/texts/idioms/:lang', function (req, res) {
-        redis.hgetall('idioms:' + req.params.lang, function (err, response) {
+    expressrouter.get('/texts/language/:lang', function (req, res) {
+        redis.hgetall('language:' + req.params.lang, function (err, response) {
             if (err) throw err;
 
             res.json(response);
         });
     });
 
-    app.get('/texts/:lang/:key', function (req, res) {
-        var lista = 'idioms:' + req.params.lang,
+    expressrouter.get('/texts/:lang/:key', function (req, res) {
+        var lista = 'language:' + req.params.lang,
              key = req.params.key;
 
         redis.hget(lista, key, function (err, response) {

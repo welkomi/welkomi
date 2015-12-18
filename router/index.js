@@ -2,29 +2,31 @@
  * Created by chadsfather on 15/12/15.
  */
 
-exports.routes = function (app) {
+var idioms = require('./../idioms');
+
+exports.routes = function (expressrouter) {
      /**
       * Route '/'
       */
-     require('./home').init(app);
+     require('./home').init(expressrouter, idioms);
 
      /**
       * Route /users
       */
-     require('./users').init(app);
-
-     /**
-      * Route /texts/:es/:key
-      */
-     require('./idiomsapi').init(app);
+     require('./users').init(expressrouter, idioms);
 
      /**
       * Route /cmslanguage
       */
-     require('./cmslanguage').init(app);
+     require('./cmslanguage').init(expressrouter, idioms);
 
      /**
       * Route /cmslanguagelogin
       */
-     require('./cmslanguagelogin').init(app);
+     require('./cmslanguagelogin').init(expressrouter, idioms);
+
+     /**
+      * Route /texts/:es/:key
+      */
+     require('./idiomsapi').init(expressrouter);
 };

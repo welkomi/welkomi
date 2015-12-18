@@ -6,12 +6,16 @@ var redis = require('./../wrappers/rediswrapper').init();
 
 module.exports = function () {
      return function (req, res, next) {
-          redis.hgetall('idioms:es_ES', function (err, response) {
-               if (err) throw err;
+          var idiom = req.params.lang || 'en';
 
-               req.idioms = response;
+          redis.hgetall(
+              'language:' + idiom,
+              function (err, response) {
+                   if (err) throw err;
 
-               next();
-          });
+                   req.idioms = response;
+
+                   next();
+              });
      }
-}
+};

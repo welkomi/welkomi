@@ -3,21 +3,21 @@
  */
 
 var router = require('./router'),
-     express = require('express'),
-     swig = require('swig'),
-     app = express(),
-     idioms = require('./idioms');
+    express = require('express'),
+    swig = require('swig'),
+    app = express(),
+    expressrouter = express.Router();
 
-require('./customfilters')
+require('./customfilters');
 
-app.use(idioms());
+app.use(expressrouter);
 app.use('/statics', express.static(__dirname + '/statics'));
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.set('view cache', true);
 
-router.routes(app);
+router.routes(expressrouter);
 
 var server = app.listen(process.env.PORT || 3000, function () {
      var host = server.address().address;
