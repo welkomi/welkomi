@@ -23,10 +23,11 @@ jQuery(document).ready(function () {
 
     $('.chargemore').on('click', cambiaIcono);
 
-    function cambiaIcono(){
+    function cambiaIcono() {
         var $class = $('.chargemore');
 
         $class.find('i').toggleClass('fa-spinner');
         $class.find('span').find('svg').attr('fill', '#fff');
+    }
 });
 
