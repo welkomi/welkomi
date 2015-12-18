@@ -7,8 +7,7 @@ exports.init = function (expressrouter, idioms) {
          '/',
          function (req, res) {
               res.redirect(301, '/en');
-         }
-     );
+         });
 
      expressrouter.get(
          '/:lang',

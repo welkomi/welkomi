@@ -6,7 +6,7 @@ var redis = require('./../wrappers/rediswrapper').init();
 
 module.exports = function () {
      return function (req, res, next) {
-          var idiom = req.params.lang || 'en';
+          var idiom = req.params.lang;
 
           redis.hgetall(
               'language:' + idiom,
