@@ -1,5 +1,8 @@
 /**
  * Created by chadsfather on 15/12/15.
+ *
+ * Acceso a MONGO
+ * mongodb://welkomi:appwelkomi@ds047782.mongolab.com:47782/heroku_4bzldjht
  */
 
 var router = require('./router'),
