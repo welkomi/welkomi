@@ -20,7 +20,9 @@
     "underscore": "latest",
     "swig": "latest",
     "string": "latest",
-    "redis": "latest"
+    "redis": "latest",
+    "request": "latest",
+    "body-parser": "latest"
   },
   "homepage": "https://github.com/iraklitbz/proyect2#readme"
 }

@@ -5,8 +5,12 @@
 var router = require('./router'),
      express = require('express'),
      swig = require('swig'),
-     app = express();
+     app = express(),
+     idioms = require('./idioms');
 
+require('./customfilters')
+
+app.use(idioms());
 app.use('/statics', express.static(__dirname + '/statics'));
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
