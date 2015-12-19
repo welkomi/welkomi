@@ -31,18 +31,26 @@
         <div class="container">
 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <form class="form-horizontal">
+              <form class="form-inline">
+    <div class="form-group">
+                  <input type="text" class="form-control" id="clave" placeholder="Clave">
+                </div>
   <div class="form-group">
-    <input type="text" class="form-control" id="exampleInputName2" placeholder="English">
+    <input type="text" class="form-control" id="english" placeholder="English">
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" id="password" placeholder="Español">
+    <input type="text" class="form-control" id="spanish" placeholder="Español">
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" id="password" placeholder="Deutsch">
+    <input type="text" class="form-control" id="german" placeholder="Deutsch">
   </div>
-  <button type="submit" class="btn btn-default">Send</button>
+  <button type="submit" class="btn btn-danger">Delete</button></br>
+  <fieldset class="topbuttons">
+  <button type="submit" class="btn btn-primary btn-info">Send</button>
+  <button type="submit" class="btn btn-warning">Add</button>
+</fieldset>
 </form>
+
 <h2><small class="succes">Successful!</small></h2>
 <h2><small class="wrong">Failed! try again</small></h2>
             </div>
@@ -50,26 +58,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 {% endblock %}

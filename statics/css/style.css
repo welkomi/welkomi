@@ -434,13 +434,20 @@ position: relative;
 
 /*CMS*/
 
+
+.topbuttons{
+margin-top: 20px
+
+}
+
 .cmslanguage {
 text-align: center;
 
 }
 
 .cmslanguage form{
-max-width: 600px;
+padding-bottom: 20px;
+max-width: 800px;
 float: none;
 margin: auto;
 
