@@ -3,7 +3,17 @@
  */
 
 exports.init = function (expressrouter) {
-     expressrouter.get('/:lang/cmslanguage', function (req, res) {
-          res.render('cmslanguage', {});
-     });
+     expressrouter.get(
+         '/:lang/cmslanguagelogin',
+         idioms(),
+         function (req, res) {
+              res.render('cmslanguagelogin', {});
+         });
+
+     expressrouter.get(
+         '/:lang/cmslanguage',
+         idioms(),
+         function (req, res) {
+              res.render('cmslanguage', {});
+         });
 };

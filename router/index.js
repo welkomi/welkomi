@@ -16,16 +16,15 @@ exports.routes = function (expressrouter) {
      require('./users').init(expressrouter, idioms);
 
      /**
+      * CMS for text API
+      *
       * Route /cmslanguage
       */
      require('./cmslanguage').init(expressrouter, idioms);
 
      /**
-      * Route /cmslanguagelogin
-      */
-     require('./cmslanguagelogin').init(expressrouter, idioms);
-
-     /**
+      * Translate text API
+      *
       * Route /texts/:es/:key
       */
      require('./idiomsapi').init(expressrouter);
