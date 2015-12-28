@@ -2,7 +2,7 @@
  * Created by chadsfather on 15/12/15.
  */
 
-exports.init = function (expressrouter) {
+exports.init = function (expressrouter, idioms) {
      expressrouter.get(
          '/:lang/cmslanguagelogin',
          idioms(),
