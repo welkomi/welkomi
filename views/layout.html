@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="welkomiApp">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     {% block head %}{% endblock %}
 </head>
 
-<body>
+<body ng-controller="CommonCtrl">
 {{ idioms|json }}
 {% block content %}{% endblock %}
 
@@ -26,6 +26,8 @@
 <script src="/statics/js/functions.js"></script>
 <script src="/statics/js/liveicons.js"></script>
 <script src="/statics/js/icons.js"></script>
+<script src="/statics/js/angular.min.js"></script>
+<script src="/statics/js/app.js"></script>
 
 <!--<script>-->
 
