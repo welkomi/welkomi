@@ -22,7 +22,8 @@
     "string": "latest",
     "redis": "latest",
     "request": "latest",
-    "body-parser": "latest"
+    "body-parser": "latest",
+    "passport-oauth2-client-password": "latest"
   },
   "homepage": "https://github.com/iraklitbz/proyect2#readme"
 }
