@@ -3,8 +3,8 @@
  */
 
 /**
- * http://localhost:3000/texts/es_ES/hola-mundo
- * http://localhost:3000/texts/en_EU/hola-mundo
+ * http://localhost:3000/texts/language/es/dog
+ * http://localhost:3000/texts/language/en/dog
  * @type {Function|*}
  */
 var redis = require('./../../wrappers/rediswrapper').init();
