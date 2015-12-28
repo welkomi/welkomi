@@ -8,7 +8,9 @@ app
     .config([
         '$interpolateProvider',
         function ($interpolateProvider) {
-            $interpolateProvider.startSymbol('[[').endSymbol(']]');
+            $interpolateProvider
+                .startSymbol('[[')
+                .endSymbol(']]');
         }]);
 
 /**
@@ -18,10 +20,12 @@ app
  * @param $scope
  * @constructor
  */
-function CommonCtrl ($rootScope, $scope) {}
+function CommonCtrl ($rootScope, $scope, $window) {}
 
-app.controller('CommonCtrl', [
-    '$rootScope',
-    '$scope',
-    CommonCtrl
-]);
+app
+    .controller('CommonCtrl', [
+        '$rootScope',
+        '$scope',
+        '$window',
+        CommonCtrl
+    ]);
