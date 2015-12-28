@@ -5,7 +5,8 @@
  * mongodb://welkomi:appwelkomi@ds047782.mongolab.com:47782/heroku_4bzldjht
  */
 
-var router = require('./router'),
+var passport = require('passport'),
+    router = require('./router'),
     express = require('express'),
     swig = require('swig'),
     app = express(),
@@ -13,6 +14,16 @@ var router = require('./router'),
 
 require('./customfilters');
 
+/**
+ * Passpot Inits
+ */
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+/**
+ * Framework Inits
+ */
 app.use(expressrouter);
 app.use('/statics', express.static(__dirname + '/statics'));
 app.engine('html', swig.renderFile);

@@ -28,4 +28,10 @@ exports.routes = function (expressrouter) {
       * Route /texts/:es/:key
       */
      require('./idiomsapi').init(expressrouter);
+
+     /**
+      * passport Route
+      */
+
+     require('./passportroutes').init(expressrouter, idioms);
 };
