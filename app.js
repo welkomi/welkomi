@@ -4,9 +4,8 @@
  * Acceso a MONGO
  * mongodb://welkomi:appwelkomi@ds047782.mongolab.com:47782/heroku_4bzldjht
  */
-
-var autoIncrement = require('mongoose-auto-increment'),
-     mongoose = require('mongoose'),
+// autoIncrement = require('mongoose-auto-increment'),
+var mongoose = require('mongoose'),
      passportStrategies = require('./passportstrategies'),
      router = require('./router'),
      express = require('express'),
@@ -19,7 +18,7 @@ require('./customfilters');
 /**
  * Passport inits
  */
-app.use(passportStrategies);
+// app.use(passportStrategies);
 
 /**
  * Framework inits

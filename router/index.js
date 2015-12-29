@@ -27,6 +27,13 @@ exports.routes = function (expressrouter) {
       *
       * Route /texts/:es/:key
       */
+      require('./profile').init(expressrouter, idioms);
+
+      /**
+       * profile users
+       *
+       * Route /profile
+       */
      require('./idiomsapi').init(expressrouter);
 
      /**

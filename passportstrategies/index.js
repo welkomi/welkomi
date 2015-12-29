@@ -5,15 +5,15 @@ var strategy = require('passport-http').BasicStrategy,
      modelos = require("./../modelos");
 
 module.exports = function (req, res, next) {
-     modelos.modelo('User').find({
-          'user': 'chadsfather'
-     })
-          .exec(function (err, res) {
-               if (err) throw err;
-
-               console.log('DEV');
-               console.log(res);
-          });
+    //  modelos.modelo('User').find({
+    //       'user': 'chadsfather'
+    //  })
+    //       .exec(function (err, res) {
+    //            if (err) throw err;
+     //
+    //            console.log('DEV');
+    //            console.log(res);
+    //       });
      /*new strategy(function (username, password, callback) {
           modelos.modelo('User')
                .find({
