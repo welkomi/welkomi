@@ -25,7 +25,9 @@
     "body-parser": "latest",
     "passport": "latest",
     "passport-http": "latest",
-    "passport-http-bearer": "latest"
+    "passport-http-bearer": "latest",
+    "mongoose": "latest",
+    "mongoose-auto-increment": "latest"
   },
   "homepage": "https://github.com/iraklitbz/proyect2#readme"
 }

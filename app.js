@@ -5,24 +5,24 @@
  * mongodb://welkomi:appwelkomi@ds047782.mongolab.com:47782/heroku_4bzldjht
  */
 
-var passport = require('passport'),
-    router = require('./router'),
-    express = require('express'),
-    swig = require('swig'),
-    app = express(),
-    expressrouter = express.Router();
+var autoIncrement = require('mongoose-auto-increment'),
+     mongoose = require('mongoose'),
+     passportStrategies = require('./passportstrategies'),
+     router = require('./router'),
+     express = require('express'),
+     swig = require('swig'),
+     app = express(),
+     expressrouter = express.Router();
 
 require('./customfilters');
 
 /**
- * Passpot Inits
+ * Passport inits
  */
-
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passportStrategies);
 
 /**
- * Framework Inits
+ * Framework inits
  */
 app.use(expressrouter);
 app.use('/statics', express.static(__dirname + '/statics'));

@@ -30,8 +30,9 @@ exports.routes = function (expressrouter) {
      require('./idiomsapi').init(expressrouter);
 
      /**
+      * Passport strategies
+      *
       * passport Route
       */
-
-     require('./passportroutes').init(expressrouter, idioms);
+     require('./passportroutes').init(expressrouter);
 };
