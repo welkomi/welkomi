@@ -6,14 +6,11 @@ var idioms = require('./../idioms');
 
 exports.routes = function (expressrouter) {
      /**
-      * Route '/'
+      * Passport strategies
+      *
+      * passport Route
       */
-     require('./home').init(expressrouter, idioms);
-
-     /**
-      * Route /users
-      */
-     require('./users').init(expressrouter, idioms);
+     require('./passportroutes').init(expressrouter);
 
      /**
       * CMS for text API
@@ -21,6 +18,11 @@ exports.routes = function (expressrouter) {
       * Route /cmslanguage
       */
      require('./cmslanguage').init(expressrouter, idioms);
+
+     /**
+      * Route /users
+      */
+     require('./users').init(expressrouter, idioms);
 
      /**
       * Translate text API
@@ -37,9 +39,10 @@ exports.routes = function (expressrouter) {
      require('./idiomsapi').init(expressrouter);
 
      /**
-      * Passport strategies
+      * This is the entry point of all webapplication
+      * and must be stay on last position
       *
-      * passport Route
+      * Route '/'
       */
-     require('./passportroutes').init(expressrouter);
+     require('./home').init(expressrouter, idioms);
 };

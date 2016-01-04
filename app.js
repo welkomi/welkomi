@@ -4,31 +4,41 @@
  * Acceso a MONGO
  * mongodb://welkomi:appwelkomi@ds047782.mongolab.com:47782/heroku_4bzldjht
  */
-// autoIncrement = require('mongoose-auto-increment'),
 var mongoose = require('mongoose'),
-     passportStrategies = require('./passportstrategies'),
-     router = require('./router'),
-     express = require('express'),
-     swig = require('swig'),
-     app = express(),
-     expressrouter = express.Router();
+    //passportStrategies = require('./passportstrategies'),
+    passport = require('passport'),
+    LocalStrategy = require('passport-local').Strategy,
+    router = require('./router'),
+    express = require('express'),
+    swig = require('swig'),
+    app = express(),
+    expressrouter = express.Router(),
+    models = require('./models'),
+    cookieParser = require('cookie-parser'),
+    session = require('cookie-session'),
+    bodyParser = require('body-parser');
 
 require('./customfilters');
 
 /**
- * Passport inits
- */
-// app.use(passportStrategies);
-
-/**
  * Framework inits
  */
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
+app.use(session({keys: ['secretkey1', 'secretkey2']}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(expressrouter);
 app.use('/statics', express.static(__dirname + '/statics'));
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
-app.set('view cache', true);
+app.set('view cache', false);
+
+passport.use(new LocalStrategy(models.model('User').authenticate()));
+passport.serializeUser(models.model('User').serializeUser());
+passport.deserializeUser(models.model('User').deserializeUser());
 
 router.routes(expressrouter);
 

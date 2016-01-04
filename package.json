@@ -24,10 +24,14 @@
     "request": "latest",
     "body-parser": "latest",
     "passport": "latest",
+    "passport-local": "latest",
     "passport-http": "latest",
     "passport-http-bearer": "latest",
     "mongoose": "latest",
-    "mongoose-auto-increment": "latest"
+    "mongoose-auto-increment": "latest",
+    "passport-local-mongoose": "latest",
+    "cookie-session": "latest",
+    "cookie-parser": "latest"
   },
   "homepage": "https://github.com/iraklitbz/proyect2#readme"
 }

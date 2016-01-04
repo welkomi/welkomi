@@ -1,13 +1,30 @@
 /**
  * Created by ssanchez on 28/12/15.
  */
-var passport = require('passport');
+var passport = require('passport'),
+    models = require('./../../models');
 
 exports.init = function (expressrouter) {
-     expressrouter.get(
+     expressrouter.post(
           '/cmsAutenticate',
-          passport.authenticate('basic', { session: false }),
+          passport.authenticate('local'),
           function (req, res) {
-               res.send(res);
+               res.send(res.req.user);
           });
+
+     expressrouter.post(
+         '/cmsRegister',
+         function (req, res, next) {
+              models.model('User').register(
+                  new models.model('User')({'username': req.body.username}),
+                  req.body.password,
+                  function (err) {
+                       if (err) {
+                            throw err;
+                            return next(err);
+                       }
+
+                       console.log('==> REGISTRADO');
+                  });
+         });
 };
