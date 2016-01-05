@@ -29,6 +29,14 @@ exports.routes = function (expressrouter) {
       *
       * Route /texts/:es/:key
       */
+
+      require('./registeruser').init(expressrouter, idioms);
+
+      /**
+       * USER REGISTER
+       *
+       * Route /texts/:es/:key
+       */
       require('./profile').init(expressrouter, idioms);
 
       /**

@@ -3,6 +3,11 @@ body {
   background-color: #ECF0F1;
   font-family: 'Lato', sans-serif; }
 
+  .col_centred{
+    float: none;
+    margin: auto;
+  }
+
 .logo {
   padding-left: 15px;
   font-size: 1.5em;
@@ -202,6 +207,134 @@ body {
 
 .perfilhow img {
   width: 100%; }
+
+  /*REGISTER FORM*/
+
+  .wk-button-facebook{
+  height: 33px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  background-color: rgb(17, 67, 152);
+  color: #fff
+
+  }
+
+  .wk-button-facebook:hover{
+  color: #fff
+
+  }
+
+  .wk-button-facebook i{
+  color: #fff;
+  margin-right: 10px
+
+  }
+
+  .signup_separator{
+  text-align: center;
+  height: 33px;
+  margin: 5px 0 10px 0
+
+  }
+
+  .signup_separator hr{
+    margin: -16px auto 10px auto;
+    width: 90%;
+
+  }
+
+  .signup_eparator_text{
+    background-color: #fff;
+  display: inline-block;
+  padding: 8px;
+  }
+
+
+
+  .registeruser{
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 10px
+
+  }
+
+  .registeruser input{
+  margin-bottom: 8px;
+  height: 33px;
+  padding-left: 5px;
+  border: 1px solid rgb(205, 204, 204);
+  border-radius: 5px
+
+  }
+
+  .bir_field{
+  margin-top: 7px;
+  margin-bottom: 15px
+
+  }
+
+  .bir_field strong{
+  margin-bottom: 5px
+
+  }
+
+  .bir_field select{
+  height: 33px;
+  margin-bottom: 8px;
+  border: 1px solid rgb(205, 204, 204);
+  border-radius: 5px
+
+  }
+
+  .condicions{
+  margin: 8px 0px 15px 0px
+
+  }
+
+  .guia{
+  background-color: rgb(112, 150, 53)
+  }
+
+  .wk-hidden{
+    display: none
+  }
+
+  .pure-input{
+   width: 100%
+
+  }
+
+  .birthday{
+  width: 100%;
+  display: block;
+
+  }
+
+  .birthday_day{
+  width: 22.3%;
+
+  }
+
+  .birthday_month{
+  width: 50%
+
+  }
+
+  .birthday_year{
+  width: 25%
+
+  }
+
+  /*BTN*/
+
+.btn-wk{
+background-color: #fbba0e
+
+}
+
+
+
 
 /*FOOTER*/
 .footer {
