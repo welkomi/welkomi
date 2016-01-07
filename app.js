@@ -5,7 +5,6 @@
  * mongodb://welkomi:appwelkomi@ds047782.mongolab.com:47782/heroku_4bzldjht
  */
 var mongoose = require('mongoose'),
-    //passportStrategies = require('./passportstrategies'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
     router = require('./router'),
@@ -26,7 +25,7 @@ require('./customfilters');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-app.use(session({keys: ['secretkey1', 'secretkey2']}));
+app.use(session({keys: ['welkomiapp']}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(expressrouter);

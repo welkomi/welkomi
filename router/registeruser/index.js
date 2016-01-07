@@ -3,7 +3,7 @@
  */
 
 exports.init = function (expressrouter) {
-     expressrouter.get('/:lang/registeruser', function (req, res) {
+     expressrouter.get('/:lang/registerUser', function (req, res) {
           res.render('registeruser', {});
      });
 };
