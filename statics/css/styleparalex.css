@@ -400,6 +400,57 @@ footer p {
   text-align: center;
   color: #373737; }
 
+  .scene{
+  position: absolute!important;
+
+  }
+
+  .nube1{
+  position: relative!important;
+  left: 770px!important;
+  top: 70px!important
+
+  }
+  .nube2{
+  position: relative!important;
+  left: 470px!important;
+  top: 70px!important
+
+  }
+
+  .nube2small{
+  position: relative!important;
+  left: 0px!important;
+  top: 40px!important
+
+  }
+.welcomiman{
+position: relative!important;
+left: 770px!important;
+top: 90px!important
+
+}
+
+.welcomipar{
+position: relative!important;
+left: 850px!important;
+top: -40px!important
+
+}
+
+.welcomiwoman{
+position: relative!important;
+left: 940px!important;
+top: -175px!important
+
+}
+
+
+
+
+
+
+
 /*USERS PAGE*/
 .users .username {
   font-size: 20px; }

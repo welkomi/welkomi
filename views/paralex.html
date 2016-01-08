@@ -23,12 +23,12 @@
         <div class="container">
             <footer>
               <ul id="scene" class="scene">
-          			<li class="layer" data-depth="1.00"><img src="/statics/images/nube1.png"></li>
-          			<li class="layer" data-depth="0.80"><img src="/statics/images/nube2.png"></li>
-          			<li class="layer" data-depth="0.60"><img src="/statics/images/nube2.png"></li>
-          			<li class="layer" data-depth="0.40"><img src="/statics/images/welcomiman.png"></li>
-          			<li class="layer" data-depth="0.20"><img src="/statics/images/welcomipar.png"></li>
-          			<li class="layer" data-depth="0.00"><img src="/statics/images/welcomiwoman.png"></li>
+          			<li class="layer nube1" data-depth="0.20"><img src="/statics/images/nube1.png"></li>
+          			<li class="layer nube2" data-depth="0.80"><img src="/statics/images/nube2.png"></li>
+          			<li class="layer nube2small" data-depth="0.60"><img src="/statics/images/nube2.png"></li>
+          			<li class="layer welcomiman" data-depth="-0.50"><img src="/statics/images/welcomiman.png"></li>
+          			<li class="layer welcomipar" data-depth="0.20"><img src="/statics/images/welcomipar.png"></li>
+          			<li class="layer welcomiwoman" data-depth="-0.20"><img src="/statics/images/welcomiwoman.png"></li>
           		</ul>
                 <ul class="followus">
                     <li class="followme">follow us:</li>
@@ -57,14 +57,10 @@
 <script src="/statics/js/bootstrap.js"></script>
 <script src="/statics/js/liveicons.js"></script>
 <script src="/statics/js/icons.js"></script>
-<script src="/statics/js/angular.min.js"></script>
-<script src="/statics/js/app.js"></script>
 <script src="/statics/js/jquery.parallax.min.js"></script>
 <script>
 
-// Pretty simple huh?
-var scene = document.getElementById('scene');
-var parallax = new Parallax(scene);
+$('#scene').parallax();
 
 </script>
 </body>
