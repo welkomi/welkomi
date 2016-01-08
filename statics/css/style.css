@@ -43,7 +43,7 @@ body {
   background-size: contain; }
 
 .navbar-fixed-top {
-  background-color: white;
+  background-color: rgba(255, 250, 240, 0.9);
   box-shadow: 0 2px 7px -2px gray; }
 
 .navbar-default {
