@@ -35,6 +35,9 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.set('view cache', false);
 
+/**
+ * Config for passport
+ */
 passport.use(new LocalStrategy(models.model('User').authenticate()));
 passport.serializeUser(models.model('User').serializeUser());
 passport.deserializeUser(models.model('User').deserializeUser());

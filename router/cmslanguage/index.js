@@ -4,13 +4,6 @@
 
 exports.init = function (expressrouter, idioms) {
      expressrouter.get(
-         '/:lang/cmslanguagelogin',
-         idioms(),
-         function (req, res) {
-              res.render('cmslanguagelogin', {});
-         });
-
-     expressrouter.get(
          '/:lang/cmslanguage',
          idioms(),
          function (req, res) {

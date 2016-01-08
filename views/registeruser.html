@@ -4,6 +4,8 @@
 
 {% block head %}{% endblock %}
 
+{% block pageController %}ng-controller="RegisterUserCtrl"{% endblock %}
+
 {% block content %}
 <div class="container-fluid">
     <div class="row">
@@ -37,14 +39,15 @@
             <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 col_centred">
                 <div class="registeruser">
                     <div class="conect_fb">
-                        <a class="btn wk-button-facebook" href="#"> <i class="fa fa-facebook"></i> Login with
+                        <a fbload class="btn wk-button-facebook" href="#"> <i class="fa fa-facebook"></i> Login with
                             Facebook</a>
                     </div>
                     <div class="signup_separator">
                         <span class="signup_eparator_text">or</span>
                         <hr>
                     </div>
-                    <form accept-charset="UTF-8" class="w-authentication" id="new_user" action="/cmsRegister" method="post">
+                    <form accept-charset="UTF-8" class="w-authentication" id="new_user" action="/Register"
+                          method="post">
 
                         <fieldset>
 
@@ -276,6 +279,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
 
+{% block pagejs %}
+<script src="/statics/js/registeruser.js"></script>
 {% endblock %}

@@ -32,7 +32,7 @@ function scrollernav ($window, $document) {
             element.addClass(classHeaderPro);
 
             $window.onscroll = function () {
-                if(
+                if (
                     body.scrollTop > elementOffset.top
                     && element.hasClass(classHeaderPro)
                 ) {
