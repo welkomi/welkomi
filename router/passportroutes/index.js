@@ -6,14 +6,14 @@ var passport = require('passport'),
 
 exports.init = function (expressrouter) {
      expressrouter.post(
-          '/cmsAutenticate',
+          '/Autenticate',
           passport.authenticate('local'),
           function (req, res) {
                res.send(res.req.user);
           });
 
      expressrouter.post(
-         '/cmsRegister',
+         '/Register',
          function (req, res, next) {
               models.model('User').register(
                   new models.model('User')({'username': req.body.username}),
