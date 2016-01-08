@@ -24,15 +24,18 @@
         <div class="container">
             <footer>
               <div class="footerscene">
-              <ul id="scene" class="scene">
+              <ul id="scene" class="scene col-xs-12 col-sm-12 col-md-12 col-lg-9">
           			<li class="layer nube1" data-depth="0.20"><img src="/statics/images/nube1.png"></li>
           			<li class="layer nube2" data-depth="0.40"><img src="/statics/images/nube2.png"></li>
           			<li class="layer nube2small" data-depth="-0.10"><img src="/statics/images/nube2.png"></li>
           		</ul>
-              <ul id="scenetwo" class="scenetwo">
+              <ul id="scenetwo" class="scenetwo col-xs-12 col-sm-12 col-md-12 col-lg-10">
           			<li class="layer welcomiman" data-depth="0.10"><img src="/statics/images/welcomiman.png"></li>
           			<li class="layer welcomipar" data-depth="0.20"><img src="/statics/images/welcomipar.png"></li>
           			<li class="layer welcomiwoman" data-depth="-0.20"><img src="/statics/images/welcomiwoman.png"></li>
+          		</ul>
+              <ul id="scenethree" class="scenethree">
+          			<li class="layer welcomiman" data-depth="0.10"><img class="img-responsive" src="/statics/images/city2.png"></li>
           		</ul>
               </div>
                 <ul class="followus">
@@ -67,7 +70,7 @@
 
 $('#scene').parallax();
 $('#scenetwo').parallax();
-$('#scene3').parallax();
+$('#scenethree').parallax();
 </script>
 </body>
 </html>

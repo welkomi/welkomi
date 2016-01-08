@@ -337,17 +337,12 @@ background-color: #fbba0e
 
 
 /*FOOTER*/
-
-
 .footer {
-    background-image: url("../images/city2.png");
   margin-top: 60px;
+  background-image: url("../images/tour.png");
   background-repeat: repeat-x;
   background-position: bottom;
-  height: 360px;
-  position: relative;
-
- }
+  height: 360px; }
 
 .followus {
   text-align: left;
@@ -404,52 +399,6 @@ footer p {
   top: 206px;
   text-align: center;
   color: #373737; }
-
-
-
-  .scene{
-position: absolute;
-overflow: hidden;
-text-align: right!important;
-padding-right: 150px;
-width: 100%;
-bottom:30px;
-left: 0px;
-height: 220px;
-  }
-
-  .scenetwo{
-text-align: right!important;
-position: absolute;
-padding-right: 220px;
-width: 100%;
-overflow: hidden;
-bottom:-10px;
-left: 0px
-
-  }
-
-  .nube2{
-    position: relative;
-    right: 420px
-
-  }
-
-
-  .scenetwo .welcomipar{
-position: relative;
-right: 120px
-
-  }
-
-  .scenetwo .welcomiwoman{
-position: relative;
-right: 70px
-
-  }
-
-
-
 
 /*USERS PAGE*/
 .users .username {
