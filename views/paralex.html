@@ -19,17 +19,22 @@
 
 <body>
 <div class="container-fluid footer">
+
     <div class="row">
         <div class="container">
             <footer>
+              <div class="footerscene">
               <ul id="scene" class="scene">
           			<li class="layer nube1" data-depth="0.20"><img src="/statics/images/nube1.png"></li>
-          			<li class="layer nube2" data-depth="0.80"><img src="/statics/images/nube2.png"></li>
-          			<li class="layer nube2small" data-depth="0.60"><img src="/statics/images/nube2.png"></li>
-          			<li class="layer welcomiman" data-depth="-0.50"><img src="/statics/images/welcomiman.png"></li>
+          			<li class="layer nube2" data-depth="0.40"><img src="/statics/images/nube2.png"></li>
+          			<li class="layer nube2small" data-depth="-0.10"><img src="/statics/images/nube2.png"></li>
+          		</ul>
+              <ul id="scenetwo" class="scenetwo">
+          			<li class="layer welcomiman" data-depth="0.10"><img src="/statics/images/welcomiman.png"></li>
           			<li class="layer welcomipar" data-depth="0.20"><img src="/statics/images/welcomipar.png"></li>
           			<li class="layer welcomiwoman" data-depth="-0.20"><img src="/statics/images/welcomiwoman.png"></li>
           		</ul>
+              </div>
                 <ul class="followus">
                     <li class="followme">follow us:</li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -61,7 +66,8 @@
 <script>
 
 $('#scene').parallax();
-
+$('#scenetwo').parallax();
+$('#scene3').parallax();
 </script>
 </body>
 </html>

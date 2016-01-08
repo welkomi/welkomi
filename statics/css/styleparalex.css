@@ -337,12 +337,17 @@ background-color: #fbba0e
 
 
 /*FOOTER*/
+
+
 .footer {
+    background-image: url("../images/city2.png");
   margin-top: 60px;
-  background-image: url("../images/city2.png");
   background-repeat: repeat-x;
   background-position: bottom;
-  height: 360px; }
+  height: 360px;
+  position: relative;
+
+ }
 
 .followus {
   text-align: left;
@@ -400,53 +405,48 @@ footer p {
   text-align: center;
   color: #373737; }
 
+
+
   .scene{
-  position: absolute!important;
+position: absolute;
+overflow: hidden;
+text-align: right!important;
+padding-right: 150px;
+width: 100%;
+bottom:30px;
+left: 0px;
+height: 220px;
+  }
+
+  .scenetwo{
+text-align: right!important;
+position: absolute;
+padding-right: 220px;
+width: 100%;
+overflow: hidden;
+bottom:-10px;
+left: 0px
 
   }
 
-  .nube1{
-  position: relative!important;
-  left: 770px!important;
-  top: 70px!important
-
-  }
   .nube2{
-  position: relative!important;
-  left: 470px!important;
-  top: 70px!important
+    position: relative;
+    right: 420px
 
   }
 
-  .nube2small{
-  position: relative!important;
-  left: 0px!important;
-  top: 40px!important
+
+  .scenetwo .welcomipar{
+position: relative;
+right: 120px
 
   }
-.welcomiman{
-position: relative!important;
-left: 770px!important;
-top: 90px!important
 
-}
+  .scenetwo .welcomiwoman{
+position: relative;
+right: 70px
 
-.welcomipar{
-position: relative!important;
-left: 850px!important;
-top: -40px!important
-
-}
-
-.welcomiwoman{
-position: relative!important;
-left: 940px!important;
-top: -175px!important
-
-}
-
-
-
+  }
 
 
 
