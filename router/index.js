@@ -50,10 +50,17 @@ exports.routes = function (expressrouter) {
     require('./idiomsapi').init(expressrouter);
 
     /**
+     *Probando paralex footer
+     */
+    require('./paralex').init(expressrouter, idioms);
+
+    /**
      * This is the entry point of all webapplication
      * and must be stay on last position
      *
      * Route '/'
      */
     require('./home').init(expressrouter, idioms);
+
+
 };
