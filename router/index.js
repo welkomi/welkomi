@@ -44,6 +44,12 @@ exports.routes = function (expressrouter) {
        *
        * Route /profile
        */
+
+       require('./paralex').init(expressrouter, idioms);
+
+       /**
+        probando paralex footer
+        */
      require('./idiomsapi').init(expressrouter);
 
      /**
