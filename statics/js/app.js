@@ -52,8 +52,20 @@ function CommonCtrl ($rootScope, $scope, $window) {
             xfbml: true
         });
 
-        FB.Event.subscribe('auth.authResponseChange', function (res) {
-            console.log('FB', res);
+        FB.getLoginStatus(function(response) {
+            console.log('FB', response);
+            if (response.status === 'connected') {
+                console.log('Logged in.');
+            }
+
+            else {
+                FB.login(function (user) {
+                        console.log('USER', user);
+                    },
+                    {
+                        scope: 'publish_actions,email,user_photos'
+                    });
+            }
         });
     }
 }
