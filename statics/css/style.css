@@ -43,7 +43,7 @@ body {
   background-size: contain; }
 
 .navbar-fixed-top {
-  background-color: rgba(255, 250, 240, 0.9);
+  background-color: rgba(85, 50, 133, 0.95);
   box-shadow: 0 2px 7px -2px gray; }
 
 .navbar-default {
@@ -66,7 +66,7 @@ body {
   margin-right: 15px; }
 
 .worksexp a {
-  color: #000; }
+  color: #fff; }
 
 .herofind h2 {
   font-size: 6em;
@@ -80,7 +80,7 @@ body {
   color: #fff; }
 
 .btn-joinus {
-  background-color: #fbba0e;
+  background-color: #ffd10f;
   width: 120px;
   margin-right: 5px; }
 
@@ -128,7 +128,6 @@ body {
   background-position: top; }
 
 .randomUsers {
-  margin-top: 50px;
   margin-bottom: 50px; }
 
 .tourme {
@@ -147,7 +146,7 @@ body {
   padding: 20px 10px 10px 10px;
   border-radius: 2%;
   background-color: #fff;
-  margin-bottom: 5px; }
+  margin-bottom: 25px; }
 
 .madrid {
   background-image: url("../images/tour.png");
@@ -174,7 +173,7 @@ body {
   overflow: hidden;
   background-color: #cacccd;
   border-radius: 50%;
-  border: 10px solid #fbba0e; }
+  border: 3px solid #fbba0e; }
 
 .mediaround img {
   height: 156px;
@@ -439,7 +438,14 @@ margin: 0px;padding: 0px
 
   .nube2{
     position: relative;
-    right: 420px
+    right: 420px;
+    padding-top: 20px
+
+  }
+
+  .nube2small{
+padding-top: 30px;
+padding-left: 30px
 
   }
 
