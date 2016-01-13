@@ -4,7 +4,7 @@
 /**
  * Configuration for start app on HEROKU
  */
-    
+
 var pm2 = require('pm2'),
     instances = process.env.WEB_CONCURRENCY || -1,
     maxMemory = process.env.WEB_MEMORY || 512;
