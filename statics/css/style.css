@@ -1,6 +1,6 @@
 /*header*/
 body {
-  background-color: #ECF0F1;
+  background-color: #ecf0f1;
   font-family: 'Lato', sans-serif; }
 
   .col_centred{
@@ -38,12 +38,15 @@ body {
   width: 140px;
   height: 30px;
   margin-top: -7px;
-  background-image: url("../images/logoblack.png");
+  background-image: url("../images/logosec.png");
   background-repeat: no-repeat;
   background-size: contain; }
 
+  .navbar-fixed-top .navbar {
+    margin-top: 10px; }
+
 .navbar-fixed-top {
-  background-color: rgba(85, 50, 133, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 7px -2px gray; }
 
 .navbar-default {
@@ -52,7 +55,7 @@ body {
 
 .navbar {
   margin-bottom: 0px;
-  margin-top: 10px; }
+  margin-top: 25px; }
 
 .navbar ul li {
   list-style: none;
