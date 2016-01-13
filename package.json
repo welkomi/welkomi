@@ -16,6 +16,7 @@
     "url": "https://github.com/iraklitbz/proyect2/issues"
   },
   "dependencies": {
+    "pm2": "latest",
     "express": "latest",
     "underscore": "latest",
     "swig": "latest",
