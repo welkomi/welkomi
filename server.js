@@ -11,15 +11,15 @@ var pm2 = require('pm2'),
 
 pm2.connect(function () {
    pm2.start({
-       'script': 'app.js',
-       'name': 'welkomi-app',
-       'exec_mode' : 'cluster',
-       'instances' : instances,
-       'max_memory_restart' : maxMemory + 'M',
-       'env': {
-           'NODE_ENV': 'development',
+           'script': 'app.js',
+           'name': 'welkomi-app',
+           'exec_mode' : 'cluster',
+           'instances' : instances,
+           'max_memory_restart' : maxMemory + 'M',
+           'env': {
+               'NODE_ENV': 'development'
+           }
        },
-   },
        function (err) {
            if (err) return console.error('Error while launching applications', err.stack || err);
 
