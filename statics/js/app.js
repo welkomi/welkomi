@@ -2,7 +2,9 @@
  * Created by ssanchez on 28/12/15.
  */
 
-var app = angular.module('welkomiApp', []);
+var app = angular.module('welkomiApp', [
+    'FBF'
+]);
 
 app
     .config([
@@ -41,32 +43,22 @@ window.fbload = function () {
  * @param $window
  * @constructor
  */
-function CommonCtrl ($rootScope, $scope, $window) {
+function CommonCtrl ($rootScope, $scope, $window, FBF) {
     $window.fbload();
     $window.fbAsyncInit = function () {
-        FB.init({
-            appId: '1494810927495265',
-            channelUrl: 'app/channel.html',
-            status: true,
-            cookie: true,
-            xfbml: true
-        });
-
-        FB.getLoginStatus(function(response) {
-            console.log('FB', response);
-            if (response.status === 'connected') {
-                console.log('Logged in.');
-            }
-
-            else {
-                FB.login(function (user) {
-                        console.log('USER', user);
-                    },
-                    {
-                        scope: 'publish_actions,email,user_photos'
-                    });
-            }
-        });
+        FBF.init('1494810927495265');
+        FBF.setScopes([
+            'public_profile',
+            'publish_actions',
+            'email',
+            'user_photos'
+        ]);
+        FBF.getStatusLogin(
+            null,
+            null,
+            function () {
+                console.log('RESULT LOGIN:', FBF.login());
+            });
     }
 }
 
@@ -75,5 +67,6 @@ app
         '$rootScope',
         '$scope',
         '$window',
+        'FBF',
         CommonCtrl
     ]);
