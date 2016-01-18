@@ -50,6 +50,7 @@ function FBF ($rootScope) {
                 if (typeof cb1 === 'function') {
                     cb1(response);
                 }
+
                 else if (
                     response.status === 'connected'
                     && typeof cb2 === 'function'
