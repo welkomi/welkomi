@@ -69,6 +69,11 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
     };
 }
 
+/**
+ * Add parallax effect to the element
+ *
+ * @returns {{restrict: string, link: Function}}
+ */
 function parallax () {
     return {
         restrict: 'AEC',
