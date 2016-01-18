@@ -61,6 +61,12 @@ exports.routes = function (expressrouter) {
      * Route '/'
      */
     require('./home').init(expressrouter, idioms);
+    /**
+     * tour Publish site
+     *
+     * Route '/'
+     */
+    require('./tourpublish').init(expressrouter, idioms);
 
 
 };

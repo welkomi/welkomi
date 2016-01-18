@@ -182,6 +182,92 @@ body {
   height: 156px;
   width: 156px; }
 
+  /*tourpublish site*/
+
+.map{
+  position: relative;
+       height: 320px!important;
+       overflow: hidden;
+}
+
+.map iframe{
+  position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+}
+
+.reviw_container{
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #fff
+}
+
+.tourreview{
+  margin: 15px 0 0 0;
+  padding: 9px
+}
+
+.reviewmediapic{
+text-align: center;
+
+}
+.reviewmediapic .mediaround img{
+  height: 76px;
+  width: 76px;
+}
+
+.reviewparr .fecha{
+margin-top: 10px;
+color: rgb(34, 34, 34)
+
+}
+
+.tourreview .username {
+  font-size: 14px;
+}
+
+.tourreview{
+border-bottom: 1px dashed  #d6dcde
+
+}
+
+.tourreview:last-child {
+  border-bottom: none
+}
+
+.tourevaluation{
+padding: 15px;
+border-bottom: 1px solid #ecf0f1
+}
+
+.ec-stars-wrapper {
+	font-size: 0;
+	display: inline-block;
+  float: left;
+  margin-left: 15px
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 32px;
+	font-size: 2.5rem;
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
+
+.tourevaluation h4{
+  float: left;
+}
+
 /*module how it works INDICE*/
 .tours {
   background-repeat: no-repeat;
@@ -542,5 +628,8 @@ right: 70px
 
 .wrong {
   color: #b00000; }
+
+  .fix{
+    background-color: rgb(196, 14, 152)  }
 
 /*# sourceMappingURL=style.css.map */
