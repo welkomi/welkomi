@@ -70,6 +70,23 @@ function FBF ($rootScope) {
         },
 
         /**
+         * Perform request API
+         *
+         * @param url
+         * @param params
+         * @param cb
+         */
+        api: function (url, params, cb) {
+            FB.api(
+                url,
+                params || {},
+                function (response) {
+                    if (typeof cb === 'function') cb(response);
+                }
+            )
+        },
+
+        /**
          * Perform FB login
          *
          * @param cb

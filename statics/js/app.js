@@ -64,7 +64,15 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
 
     $scope.fbLogin = function () {
         FBF.login(function (response) {
-            console.log('LOGIN TO', response);
+            FBF.api(
+                '/me',
+                {
+                    'fields': 'email'
+                },
+                function (response) {
+                    console.log('FB response', response);
+                }
+            );
         });
     };
 }

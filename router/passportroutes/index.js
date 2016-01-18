@@ -17,16 +17,15 @@ exports.init = function (expressrouter) {
      expressrouter.post(
          '/Register',
          function (req, res, next) {
-              models.model('User').register(
-                  new models.model('User')({'username': req.body.username}),
-                  req.body.password,
-                  function (err) {
-                       if (err) {
-                            throw err;
-                            return next(err);
-                       }
+             console.log('REFERER', req.headers);
 
-                       console.log('==> REGISTRADO');
-                  });
+             models.model('User').register(
+                 new models.model('User')({'username': req.body.username}),
+                 req.body.password,
+                 function (err) {
+                     if (err) console.log(err);//return next(err);
+
+                     console.log('==> REGISTRADO');
+                 });
          });
 };
