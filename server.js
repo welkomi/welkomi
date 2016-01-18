@@ -13,9 +13,9 @@ pm2.connect(function () {
    pm2.start({
            'script': 'app.js',
            'name': 'welkomi-app',
-           'exec_mode' : 'cluster',
-           'instances' : instances,
-           'max_memory_restart' : maxMemory + 'M',
+           'exec_mode': 'cluster',
+           'instances': instances,
+           'max_memory_restart': maxMemory + 'M',
            'env': {
                'NODE_ENV': 'development'
            }
