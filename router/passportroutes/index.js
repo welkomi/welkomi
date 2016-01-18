@@ -7,7 +7,9 @@ var passport = require('passport'),
 exports.init = function (expressrouter) {
      expressrouter.post(
           '/Autenticate',
-          passport.authenticate('local'),
+          passport.authenticate('local', {
+              failureRedirect: '/es/registerUSer'
+          }),
           function (req, res) {
                res.send(res.req.user);
           });

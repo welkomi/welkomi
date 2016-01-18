@@ -40,6 +40,9 @@ function FBF ($rootScope) {
 
         /**
          * Get status login from FB
+         * cb1: return only the current state of login user
+         * cb2: callback for the user logged in
+         * cb3: callback for the user loged off
          *
          * @param cb1
          * @param cb2
@@ -49,13 +52,15 @@ function FBF ($rootScope) {
             FB.getLoginStatus(function(response) {
                 if (typeof cb1 === 'function') {
                     cb1(response);
+
+                    if (typeof cb3 === 'function') cb3();
                 }
 
                 else if (
                     response.status === 'connected'
                     && typeof cb2 === 'function'
                 ) {
-                    cb2();
+                    cb2(response);
                 }
 
                 else if (typeof cb3 === 'function') {

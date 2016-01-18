@@ -54,11 +54,27 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
             'user_photos'
         ]);
         FBF.getStatusLogin(
-            null,
-            null,
-            function () {
-                console.log('RESULT LOGIN:', FBF.login());
+            function (response) {
+                console.log('LOGIN UNKNOW', response);
+            },
+            function (response) {
+                console.log('LOGIN IN', response)
             });
+    };
+
+    $scope.fbLogin = function () {
+        FBF.login(function (response) {
+            console.log('LOGIN TO', response);
+        });
+    };
+}
+
+function parallax () {
+    return {
+        restrict: 'AEC',
+        link: function (scope, element, attrs) {
+            new Parallax(element[0]);
+        }
     }
 }
 
@@ -69,4 +85,5 @@ app
         '$window',
         'FBF',
         CommonCtrl
-    ]);
+    ]).
+    directive('parallax', [parallax])

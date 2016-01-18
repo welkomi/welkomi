@@ -22,28 +22,30 @@
 <div id="fb-root"></div>
 {{ idioms|json }}
 <div {% block pageController %}{% endblock %}>
-{% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 </div>
 <div class="container-fluid footer">
 
     <div class="row">
         <div class="container">
             <footer>
-              <div class="footerscene">
-              <ul id="scene" class="scene col-xs-12 col-sm-12 col-md-12 col-lg-9">
-          			<li class="layer nube1" data-depth="0.20"><img src="/statics/images/nube1.png"></li>
-          			<li class="layer nube2" data-depth="0.40"><img src="/statics/images/nube2.png"></li>
-          			<li class="layer nube2small" data-depth="-0.10"><img src="/statics/images/nube2.png"></li>
-          		</ul>
-              <ul id="scenetwo" class="scenetwo col-xs-12 col-sm-12 col-md-12 col-lg-10">
-          			<li class="layer welcomiman" data-depth="0.10"><img src="/statics/images/welcomiman.png"></li>
-          			<li class="layer welcomipar" data-depth="0.13"><img src="/statics/images/welcomipar.png"></li>
-          			<li class="layer welcomiwoman" data-depth="-0.09"><img src="/statics/images/welcomiwoman.png"></li>
-          		</ul>
-              <ul id="scenethree" class="scenethree">
-          			<li class="layer welcomiman" data-depth="0.10"><img class="img-responsive" src="/statics/images/city2.png"></li>
-          		</ul>
-              </div>
+                <div class="footerscene">
+                    <ul parallax id="scene" class="scene col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                        <li class="layer nube1" data-depth="0.20"><img src="/statics/images/nube1.png"></li>
+                        <li class="layer nube2" data-depth="0.40"><img src="/statics/images/nube2.png"></li>
+                        <li class="layer nube2small" data-depth="-0.10"><img src="/statics/images/nube2.png"></li>
+                    </ul>
+                    <ul parallax id="scenetwo" class="scenetwo col-xs-12 col-sm-12 col-md-12 col-lg-10">
+                        <li class="layer welcomiman" data-depth="0.10"><img src="/statics/images/welcomiman.png"></li>
+                        <li class="layer welcomipar" data-depth="0.13"><img src="/statics/images/welcomipar.png"></li>
+                        <li class="layer welcomiwoman" data-depth="-0.09"><img src="/statics/images/welcomiwoman.png">
+                        </li>
+                    </ul>
+                    <ul parallax id="scenethree" class="scenethree">
+                        <li class="layer welcomiman" data-depth="0.10"><img class="img-responsive"
+                                                                            src="/statics/images/city2.png"></li>
+                    </ul>
+                </div>
                 <ul class="followus">
                     <li class="followme">follow us:</li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -61,7 +63,9 @@
                     <li><a href="#">PRIVACY</a></li>
                     <li><a href="#">HOW IT WORKS</a></li>
                 </ul>
-                <p class="footer-copyright mod-text-center"><small> © 2015 Welkomi International, Inc. A socially responsible. </small></p>
+                <p class="footer-copyright mod-text-center">
+                    <small> © 2015 Welkomi International, Inc. A socially responsible.</small>
+                </p>
             </footer>
         </div>
     </div>
@@ -73,13 +77,8 @@
 <script src="/statics/js/icons.js"></script>
 <script src="/statics/js/angular.min.js"></script>
 <script src="/statics/js/app.js"></script>
-<script src="/statics/js/jquery.parallax.min.js"></script>
+<script src="/statics/js/parallax.js"></script>
 <script src="/statics/js/FBFactory.js"></script>
-<script>
-$('#scene').parallax();
-$('#scenetwo').parallax();
-$('#scenethree').parallax();
-</script>
 
 {% block pagejs %}{% endblock %}
 </body>
