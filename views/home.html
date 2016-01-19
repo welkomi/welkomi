@@ -12,14 +12,14 @@
         <header scrollernav id="nav" class="headerpro" ng-show="scrollerNavVisible">
             <div class="container">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h1 class="logo pull-left"><a href="#">Welkomi</a></h1>
+                    <h1 class="logo pull-left"><a href="/{{ idiom }}">Welkomi</a></h1>
                     <nav class="navbar">
                         <ul class="pull-right">
                             <li>
-                                <button type="button" class="btn btn-joinus">Join</button>
+                                <a class="btn btn-joinus" href="/{{ idiom }}/registerUser">Join</a>
                             </li>
                             <li>
-                                <button type="button" class="btn btn-default">Log in</button>
+                                <a class="btn btn-default" href="/{{ idiom }}/">Log in</a>
                             </li>
                         </ul>
 

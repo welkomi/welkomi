@@ -16,8 +16,8 @@ exports.init = function (expressrouter, idioms) {
          '/:lang',
          idioms(),
          function (req, res) {
-             console.log(req);
              res.render('home', {
+                 'idiom': req.idiom,
                  'idioms': req.idioms
              });
          });
