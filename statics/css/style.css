@@ -305,8 +305,30 @@ margin-top: 15px
 }
 
 .gallerytour img.ng-thumb{
-  height: 90px
+  height: 85px;
 }
+
+.ng-gallery > div{
+  float: left;
+}
+
+.tourimages div:nth-child(4){
+  clear: both
+}
+
+
+.tourimages{
+  float: left;
+  padding: 0px
+
+}
+
+.moreimages{
+  float: left;
+  background-color: rgb(207, 113, 238);
+}
+
+
 
 /*module how it works INDICE*/
 .tours {
