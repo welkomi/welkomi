@@ -281,22 +281,19 @@ margin: 15px 0 15px 0
   display: block;
   width: 30px;
   height: 30px;
-  background-color: rgb(204, 204, 204);
   text-align: center;
-  padding-top: 6px
+  padding-top: 5px;
+    border:solid 1px #00cb3f
 }
 
 .nextpage .prev a,.nextpage .next a {
-  background-color: rgb(0, 203, 63);
-  color: #fff
+  color: #00cb3f
 }
 
-.nextpage .activ a {
-  background-color: rgb(184, 184, 184)!important;
-}
 
 .pageindicator{
-  background-color: rgb(255, 255, 255)!important
+  background-color: #00cb3f!important;
+  color: #fff
 }
 
 .gallerytour{
