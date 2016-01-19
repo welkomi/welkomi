@@ -83,16 +83,9 @@ body {
   color: #fff; }
 
 .btn-joinus {
-  background-color: #2bb36b;
+  background-color: #ffd10f;
   width: 120px;
-  margin-right: 5px;
-  color: #fff
- }
-
-.btn-login{
-background-color: #2bb36b;
-
-}
+  margin-right: 5px; }
 
 .hero {
   background-image: url("../images/girl.jpg");
@@ -113,12 +106,6 @@ background-color: #2bb36b;
   border-radius: 0px;
   height: 50px;
   border: none; }
-
-.searchuser i{
-font-size: 2.1em;
-color: #2bb36b;
-
-}
 
 .searchuser {
   max-width: 700px;
@@ -148,7 +135,7 @@ color: #2bb36b;
 
 .tourme {
   background-color: transparent;
-  color: #2bb36b;
+  color: #337ab7;
   width: 100%;
   font-family: 'Mrs Sheppards', cursive;
   font-size: 3em;
@@ -194,6 +181,151 @@ color: #2bb36b;
 .mediaround img {
   height: 156px;
   width: 156px; }
+
+  /*tourpublish site*/
+
+.map{
+  position: relative;
+       height: 320px!important;
+       overflow: hidden;
+}
+
+.map iframe{
+  position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+}
+
+.reviw_container{
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #fff
+}
+
+.tourreview{
+  margin: 15px 0 0 0;
+  padding: 9px
+}
+
+.reviewmediapic{
+text-align: center;
+
+}
+.reviewmediapic .mediaround img{
+  height: 76px;
+  width: 76px;
+}
+
+.reviewparr .fecha{
+margin-top: 10px;
+color: rgb(34, 34, 34)
+
+}
+
+.tourreview .username {
+  font-size: 14px;
+}
+
+.tourreview{
+border-bottom: 1px dashed  #d6dcde
+
+}
+
+.peoplereview .tourreview:last-child {
+  border-bottom: none
+}
+
+.tourevaluation{
+padding: 15px;
+border-bottom: 1px solid #ecf0f1
+}
+
+.ec-stars-wrapper {
+	font-size: 0;
+	display: inline-block;
+  float: left;
+  margin-left: 15px
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 32px;
+	font-size: 2.5rem;
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
+
+.tourevaluation h4{
+  float: left;
+}
+
+.nextpage{
+margin: 15px 0 15px 0
+
+}
+
+.nextpage ul li{
+  display: inline-block;
+}
+
+.nextpage ul li a{
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+    border:solid 1px #00cb3f
+}
+
+.nextpage .prev a,.nextpage .next a {
+  color: #00cb3f
+}
+
+
+.pageindicator{
+  background-color: #00cb3f!important;
+  color: #fff
+}
+
+.gallerytour{
+margin-top: 15px
+
+}
+
+.gallerytour img.ng-thumb{
+  height: 85px;
+}
+
+.ng-gallery > div{
+  float: left;
+}
+
+.tourimages div:nth-child(4){
+  clear: both
+}
+
+
+.tourimages{
+  float: left;
+  padding: 0px
+
+}
+
+.moreimages{
+  float: left;
+  background-color: rgb(207, 113, 238);
+}
+
+
 
 /*module how it works INDICE*/
 .tours {
@@ -555,5 +687,8 @@ right: 70px
 
 .wrong {
   color: #b00000; }
+
+  .fix{
+    background-color: rgb(196, 14, 152)  }
 
 /*# sourceMappingURL=style.css.map */

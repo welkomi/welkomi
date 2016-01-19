@@ -2,7 +2,10 @@
  * Created by ssanchez on 28/12/15.
  */
 
-var app = angular.module('welkomiApp', []);
+var app = angular.module('welkomiApp', [
+    'FBF',
+    'jkuri.gallery'
+]);
 
 app
     .config([
@@ -41,32 +44,51 @@ window.fbload = function () {
  * @param $window
  * @constructor
  */
-function CommonCtrl ($rootScope, $scope, $window) {
+function CommonCtrl ($rootScope, $scope, $window, FBF) {
     $window.fbload();
     $window.fbAsyncInit = function () {
-        FB.init({
-            appId: '1494810927495265',
-            channelUrl: 'app/channel.html',
-            status: true,
-            cookie: true,
-            xfbml: true
-        });
+        FBF.init('1494810927495265');
+        FBF.setScopes([
+            'public_profile',
+            'publish_actions',
+            'email',
+            'user_photos'
+        ]);
+        FBF.getStatusLogin(
+            function (response) {
+                console.log('LOGIN UNKNOW', response);
+            },
+            function (response) {
+                console.log('LOGIN IN', response)
+            });
+    };
 
-        FB.getLoginStatus(function(response) {
-            console.log('FB', response);
-            if (response.status === 'connected') {
-                console.log('Logged in.');
-            }
-
-            else {
-                FB.login(function (user) {
-                        console.log('USER', user);
-                    },
-                    {
-                        scope: 'publish_actions,email,user_photos'
-                    });
-            }
+    $scope.fbLogin = function () {
+        FBF.login(function (response) {
+            FBF.api(
+                '/me',
+                {
+                    'fields': 'email'
+                },
+                function (response) {
+                    console.log('FB response', response);
+                }
+            );
         });
+    };
+}
+
+/**
+ * Add parallax effect to the element
+ *
+ * @returns {{restrict: string, link: Function}}
+ */
+function parallax () {
+    return {
+        restrict: 'AEC',
+        link: function (scope, element, attrs) {
+            new Parallax(element[0]);
+        }
     }
 }
 
@@ -75,5 +97,7 @@ app
         '$rootScope',
         '$scope',
         '$window',
+        'FBF',
         CommonCtrl
-    ]);
+    ]).
+    directive('parallax', [parallax])

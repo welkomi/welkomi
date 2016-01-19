@@ -20,7 +20,7 @@ UserSchema.plugin(passportLocalMongoose);
 
 exports.model = function(model) {
      var models = {
-          'User': mongoose.model('User', UserSchema)
+         'User': mongoose.model('User', UserSchema)
      };
 
      return models[model];

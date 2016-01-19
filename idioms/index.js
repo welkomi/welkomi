@@ -13,6 +13,7 @@ module.exports = function () {
               function (err, response) {
                    if (err) throw err;
 
+                   req.idiom = idiom;
                    req.idioms = response;
 
                    next();

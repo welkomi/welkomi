@@ -4,8 +4,14 @@
 
 exports.init = function (expressrouter) {
      expressrouter.get(
-         '/:lang/registerUser',
+         '/:lang/register-user',
          function (req, res) {
               res.render('registeruser', {});
          });
+
+     expressrouter.get(
+          '/:lang/login-user',
+          function (req, res) {
+               res.render('registeruser', {});
+          });
 };
