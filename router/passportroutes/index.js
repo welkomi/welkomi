@@ -21,7 +21,9 @@ exports.init = function (expressrouter) {
 
              models.model('User').register(
                  new models.model('User')({'username': req.body.username}),
+
                  req.body.password,
+
                  function (err) {
                      if (err) console.log(err);//return next(err);
 
