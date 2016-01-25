@@ -14,7 +14,7 @@ body {
   text-indent: -9999px; }
 
 .top {
-  margin-top: 80px; }
+  margin-top: 65px; }
 
 .headerpro {
   position: relative;
@@ -46,7 +46,7 @@ body {
     margin-top: 10px; }
 
 .navbar-fixed-top {
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: rgba(255, 255, 255, 0.96);
   border-bottom: solid 1px #aaddc1
 }
 
@@ -203,7 +203,8 @@ body {
 .reviw_container{
   margin-top: 15px;
   padding: 15px;
-  background-color: #fff
+  background-color: #fff;
+  border: solid 1px #dadfe0
 }
 
 .tourreview{
@@ -296,6 +297,7 @@ margin: 15px 0 15px 0
 
 }
 
+
 .nextpage ul li{
   display: inline-block;
 }
@@ -306,16 +308,16 @@ margin: 15px 0 15px 0
   height: 30px;
   text-align: center;
   padding-top: 5px;
-    border:solid 1px #00cb3f
+    border:solid 1px #34ae6b
 }
 
 .nextpage .prev a,.nextpage .next a {
-  color: #00cb3f
+  color: #34ae6b
 }
 
 
 .pageindicator{
-  background-color: #00cb3f!important;
+  background-color: #34ae6b!important;
   color: #fff
 }
 
@@ -506,7 +508,8 @@ background-color: #fbba0e
   background-color: #fff;
   padding: 5px 20px 10px 20px;
   border-radius: 2%;
-  margin-bottom: 15px
+  margin-bottom: 15px;
+  border: solid 1px #dadfe0
 }
 
 
@@ -517,6 +520,7 @@ background-color: #fbba0e
   border-radius: 2%;
   text-align: center;
   padding: 15px;
+  border: solid 1px #dadfe0
 
 }
 
@@ -536,7 +540,8 @@ height: 40px
   padding: 5px 0 5px 0
 }
 .contactways a{
-color: rgb(54, 54, 54)
+color: rgb(54, 54, 54);
+padding: 20px
 }
 .contactways a span{
 font-family:'Lato', sans-serif;
