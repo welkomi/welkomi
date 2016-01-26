@@ -11,6 +11,42 @@ function TourPublishCtrl ($rootScope, $scope) {
             {thumb: '/statics/images/tourimages/thumbs/5.jpg', img: '/statics/images/tourimages/5.jpg'},
       ];
 
+    /**
+     * Funciones para le datepicker
+     */
+    $scope.today = function() {
+        $scope.dt = new Date();
+    };
+
+    $scope.today();
+
+    $scope.open = function() {
+        $scope.popup.opened = true;
+    };
+
+    $scope.setDate = function(year, month, day) {
+        $scope.dt = new Date(year, month, day);
+    };
+
+    $scope.popup = {
+        opened: false
+    };
+
+    $scope.getDayClass = function(date, mode) {
+        if (mode === 'day') {
+            var dayToCheck = new Date(date).setHours(0,0,0,0);
+
+            for (var i = 0; i < $scope.events.length; i++) {
+                var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
+
+                if (dayToCheck === currentDay) {
+                    return $scope.events[i].status;
+                }
+            }
+        }
+
+        return '';
+    };
 }
 
 app
