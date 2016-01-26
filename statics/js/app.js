@@ -4,7 +4,7 @@
 
 var app = angular.module('welkomiApp', [
     'FBF',
-    'jkuri.gallery'
+    'jkuri.gallery',
 ]);
 
 app
