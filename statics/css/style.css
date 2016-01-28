@@ -23,6 +23,13 @@ body {
 .headerpro li a {
   color: #fff; }
 
+  .margindefault{
+    margin-bottom: 15px;
+    padding: 15px 20px 10px 20px;
+    border: solid 1px #dadfe0;
+    border-radius: 2%;
+  }
+
 .logo a {
   color: #000;
   display: block;
@@ -124,6 +131,17 @@ body {
 
 .joinus button {
   padding: 0.8em; }
+
+  aside .asidemgm {
+    padding: 20px 0px 0px 0px!important;
+    margin: 0 0 15px 0;
+    border: solid 1px #dadfe0;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 4%
+  }
+
 
 /*randoms users indice*/
 .modulohowworks {
@@ -501,6 +519,29 @@ margin-top: 15px
 background-color: #fbba0e
 
 }
+
+/*Myperfil*/
+
+.myperfil{
+  background-color: #fff;
+  border-radius: 2%;
+}
+
+.main-info {
+  margin-left: 10px
+}
+
+.main-info .username {
+  width: 100%
+}
+
+.thisme{
+  margin-top: 15px;
+  padding: 0px 8px 8px 5px;
+  border-top: 1px solid #86d4a9;
+  border-bottom: 1px solid #86d4a9;
+}
+
 
 /*tourinfo*/
 
