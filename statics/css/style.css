@@ -23,12 +23,12 @@ body {
 .headerpro li a {
   color: #fff; }
 
-  .margindefault{
-    margin-bottom: 8px;
-    padding: 15px 20px 10px 20px;
-    border: solid 1px #dadfe0;
-    background-color: #fff;
-  }
+.margindefault{
+margin-bottom: 8px;
+padding: 30px 25px 30px 30px;
+border: solid 1px #dadfe0;
+background-color: #fff;
+}
 
 .logo a {
   color: #000;
@@ -529,6 +529,25 @@ background-color: #fbba0e
   width: 100%
 }
 
+.userbox .mediaround img{
+  width: 120px;
+  height: 120px
+}
+
+.userbox h2{
+  font-size: 1.8em;
+  margin: 10px 0 7px 0
+}
+
+.userbox .localization{
+  font-size: 1.4em;
+  margin: 0px 0 7px 0
+}
+.userbox .localization i{
+  margin-right: 10px;
+  color: #34ae6b
+}
+
 
 
 
@@ -720,7 +739,9 @@ position: absolute;
 width: 100%;
 bottom:0px;
 left: 0px;
-margin: 0px;padding: 0px
+margin: 0px;
+padding: 0px;
+overflow: hidden;
 
   }
 
