@@ -10,13 +10,14 @@
 <div class="container-fluid hero">
     <div class="row">
         <header scrollernav id="nav" class="headerpro" ng-show="scrollerNavVisible">
+            <img src="[[ pictureProfile ]]" />
             <div class="container">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h1 class="logo pull-left"><a href="/{{ idiom }}">Welkomi</a></h1>
                     <nav class="navbar">
                         <ul class="pull-right">
                             <li>
-                                <a class="btn btn-joinus" href="/{{ idiom }}/registerUser">Join</a>
+                                <a class="btn btn-joinus" href="/{{ idiom }}/register-user">Join</a>
                             </li>
                             <li>
                                 <a class="btn btn-default" href="/{{ idiom }}/">Log in</a>
@@ -48,7 +49,7 @@
                     <div class="clearfix"></div>
 
                     <div class="joinus">
-                        <a class="btn btn-primary">Join us with Facebook</a>
+                        <a class="btn btn-primary" ng-click="fbLogin()">Join us with Facebook</a>
                         <a class="btn btn-default">Log in</a>
                     </div>
 

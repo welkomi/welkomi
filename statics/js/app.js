@@ -46,6 +46,8 @@ window.fbload = function () {
  * @constructor
  */
 function CommonCtrl ($rootScope, $scope, $window, FBF) {
+    $rootScope.pictureProfile;
+
     $window.fbload();
     $window.fbAsyncInit = function () {
         FBF.init('1494810927495265');
@@ -58,6 +60,16 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
         FBF.getStatusLogin(
             function (response) {
                 console.log('LOGIN UNKNOW', response);
+                if (response.status === 'connected') {
+                    FBF.api(
+                         '/me/picture',
+                         {},
+                         function (response) {
+                             $rootScope.pictureProfile = response.data.url;
+                             $rootScope.$apply();
+                         }
+                    )
+                }
             },
             function (response) {
                 console.log('LOGIN IN', response)
@@ -69,7 +81,7 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
             FBF.api(
                 '/me',
                 {
-                    'fields': 'email'
+                    'fields': 'email,name'
                 },
                 function (response) {
                     console.log('FB response', response);

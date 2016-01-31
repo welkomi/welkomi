@@ -9,7 +9,7 @@
  * @param $scope
  * @constructor
  */
-function HomeCtrl ($scope) {
+function HomeCtrl ($rootScope, $scope) {
     $scope.scrollerNavVisible = true;
 }
 
