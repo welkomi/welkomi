@@ -16,15 +16,19 @@
             <div class="container">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h1 class="logo pull-left"><a href="#">Welkomi</a></h1>
+
+                    <form class="searchuserheader">
+                                <input type="text" class="form-control" placeholder="Search tour">
+                        <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
+                    </form>
+
                     <nav class="navbar">
                         <ul class="pull-right">
-                            <li class="visible-sm visible-md visible-lg worksexp"><a class="active" href="#">HOW IT
-                                WORKS</a></li>
                             <li>
-                                <button type="button" class="btn btn-joinus">Join</button>
+                                <a class="btn btn-joinus" href="/{{ idiom }}/register-user">Join</a>
                             </li>
                             <li>
-                                <button type="button" class="btn btn-default">Log in</button>
+                                <a class="btn btn-default" href="/{{ idiom }}/">Log in</a>
                             </li>
                         </ul>
 
