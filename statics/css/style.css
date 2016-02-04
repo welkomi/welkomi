@@ -97,7 +97,7 @@ background-color: #fff;
   color: #fff; }
 
 .herofind h2 {
-  font-size: 6em;
+  font-size: 7em;
   max-width: 800px;
   margin: 50px auto 0 auto;
   color: #fff;
@@ -134,6 +134,13 @@ background-color: #fff;
   height: 50px;
   border: none; }
 
+  .velo .btn-search i {
+    font-size: 2em;
+    margin-top: 7px
+     }
+
+
+
 .searchuser {
   max-width: 700px;
   margin: 15px auto; }
@@ -142,25 +149,37 @@ background-color: #fff;
   border-radius: 0px;
   height: 50px;
   border-right: none;
-  border: none; }
+  border: none;
 
-  .searchuserheader input {
-    border-radius: 30px;
-    height: 34px;
+}
 
-  }
   .searchuserheader {
     margin: 15px 0 0 15px;
     position: relative;
     float: left;
     z-index: 1000;
-    width: 25%;
     top:0px;
     -webkit-transition: top 0.5s ease;
     -moz-transition: top 0.5s ease;
     -ms-transition: top 0.5s ease;
   -o-transition: top 0.5s ease;
       transition: top 0.5s ease;
+  }
+
+  .searchuserheader input {
+    border-radius: 30px;
+    height: 34px;
+    width: 200px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+
+  }
+
+  .searchuserheader input:focus {
+  width: 400px
   }
 
   .velo{
@@ -179,8 +198,6 @@ background-color: #fff;
     top: 0px
   }
 
-.joinus {
-  margin-top: 15px; }
 
 .joinus button {
   padding: 0.8em; }
@@ -247,7 +264,7 @@ background-color: #fff;
   overflow: hidden;
   background-color: #cacccd;
   border-radius: 50%;
-  border: 3px solid #34ae6b; }
+  border: 8px solid transparent; }
 
 .mediaround img {
   height: 156px;
@@ -568,6 +585,27 @@ margin-top: 15px
 
 .btn-wk{
 background-color: #fbba0e
+
+}
+.joinus .btn{
+    padding:12px 12px 12px 12px
+}
+
+.btn-fb{
+  background-color: #44619d;
+  color: #fff;
+  width: 230px
+
+}
+
+.btn-fb i{
+margin-right: 10px
+
+}
+
+.btn-fb:hover{
+  background-color: #395388;
+  color: #fff;
 
 }
 
