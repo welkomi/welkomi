@@ -51,9 +51,27 @@ background-color: #fff;
   .navbar-fixed-top .navbar {
     margin-top: 10px; }
 
+  .specialheader  .navbar-fixed-top {
+      background-color: rgba(255, 255, 255, 0.31);
+      border-bottom: none;
+      -webkit-transition: background 0.3s linear;
+      -moz-transition: background 0.3s linear;
+      -ms-transition: background 0.3s linear;
+    -o-transition: background 0.3s linear;
+        transition: background 0.3s linear;
+
+
+    }
+
+.searchuserheader.specialSearch {
+  top: 70px
+}
+
 .navbar-fixed-top {
   background-color: rgba(255, 255, 255, 0.96);
-  border-bottom: solid 1px #aaddc1
+  border-bottom: solid 1px #aaddc1;
+  overflow: hidden;
+
 }
 
 .navbar-default {
@@ -126,24 +144,29 @@ background-color: #fff;
   border-right: none;
   border: none; }
 
-  .searchuserheader {
-    margin: 15px 0 0 15px;
-    position: relative;
-    float: left;
-    z-index: 1000;
-    width: 25%
-}
-
   .searchuserheader input {
     border-radius: 30px;
     height: 34px;
 
   }
+  .searchuserheader {
+    margin: 15px 0 0 15px;
+    position: relative;
+    float: left;
+    z-index: 1000;
+    width: 25%;
+    top:0px;
+    -webkit-transition: top 0.5s ease;
+    -moz-transition: top 0.5s ease;
+    -ms-transition: top 0.5s ease;
+  -o-transition: top 0.5s ease;
+      transition: top 0.5s ease;
+  }
 
   .velo{
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.24)
-  }
+    }
 
   .searchuserheader .btn-search {
     background-color: transparent;
@@ -154,7 +177,6 @@ background-color: #fff;
     position: absolute;
     right: 5px;
     top: 0px
-
   }
 
 .joinus {
@@ -173,12 +195,12 @@ background-color: #fff;
   }
 
 
-/*randoms users indice*/
-.modulohowworks {
-  background-image: url("../images/granvia.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top; }
+  /*randoms users indice*/
+  .modulohowworks {
+    background-image: url("../images/granvia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; }
 
 .randomUsers {
   margin-bottom: 50px; }
@@ -240,7 +262,7 @@ background-color: #fff;
 }
 
 .map iframe{
-  position: absolute;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100% !important;
@@ -709,6 +731,33 @@ padding-right: 7px;
 padding-left: 7px;
 }
 
+/*social icons*/
+
+
+.followus a{
+  display: inline-block;
+border: 1px solid rgb(187, 187, 187);
+width: 45px;
+height: 45px;
+  font-size: 2em;
+  margin-right: 2px;
+  text-align: center;
+  color: rgb(56, 56, 56);
+  border-radius: 50%;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -ms-transition: background 0.3s linear;
+-o-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+}
+
+.followus a:hover{
+background-color: rgb(193, 205, 242);
+}
+
+.followus li i{
+  display: none
+}
 
 
 /*FOOTER*/
@@ -724,23 +773,6 @@ padding-left: 7px;
 
  }
 
-.social {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 0 10px;
-  line-height: 50px;
-  font-family: Entypo;
-  font-size: 28px;
-  text-align: center;
-  color: #555;
-  border-radius: 10px;
-  background: #fbfbfb;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-
 
 .followus {
   text-align: left;
@@ -750,7 +782,10 @@ padding-left: 7px;
 }
 
 .navfooter {
-  text-align: left; }
+  text-align: left;
+position: relative;
+z-index: 10000
+ }
 
 footer p {
   text-align: left; }

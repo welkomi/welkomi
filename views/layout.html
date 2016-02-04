@@ -18,10 +18,38 @@
     {% block head %}{% endblock %}
 </head>
 
-<body ng-controller="CommonCtrl">
+<body ng-controller="CommonCtrl" class="{% block etiquetaBody %}{% endblock%}">
 <div id="fb-root"></div>
 
-{{ idioms|json }}
+<div class="container-fluid">
+    <div class="row">
+        <header id="nav" class="navbar-fixed-top">
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1 class="logo pull-left"><a href="#">Welkomi</a></h1>
+
+                    <form class="searchuserheader{% block etiquetaSearch %}{% endblock %}">
+                                <input type="text" class="form-control" placeholder="Search tour">
+                        <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
+                    </form>
+
+                    <nav class="navbar">
+                        <ul class="pull-right">
+                            <li>
+                                <a class="btn btn-joinus" href="/{{ idiom }}/register-user">Join</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-default" href="/{{ idiom }}/">Log in</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+    </div>
+</div>
 
 <div {% block pageController %}{% endblock %}>
     {% block content %}{% endblock %}
@@ -52,10 +80,10 @@
 
                   <ul class="followus">
 
-                      <li class="social"><a href="#">&#62220;</a></li>  <!--facebook-->
-                      <li class="social"><a href="#">&#62217;</a></li>  <!--twitter-->
-                      <li class="social"><a href="#">&#62232;</a></li>  <!--instagram-->
-                      <li class="social"><a href="#">&#62226;</a></li>  <!--pinset-->
+                    <a class="facebookwm" href="#"><li class="fa fa-facebook"><i>facebook</i></li></a>
+                  <a class="twitterwm" href="#"><li class="fa fa-twitter"><i>twitter</i></li></a>
+                  <a class="instagramwm" href="#"><li class="fa fa-instagram"><i>instagram</i></li></a>
+                  <a class="vimeowm" href="#"><li class="fa fa-vimeo"><i>vimeo</i></li></a>
 
                   </ul>
 

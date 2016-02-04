@@ -4,7 +4,7 @@
 
 exports.init = function (expressrouter, idioms) {
      expressrouter.get(
-         '/:lang/cmslanguage',
+         '/:lang/cms-language',
          idioms(),
          function (req, res) {
               res.render('cmslanguage', {});

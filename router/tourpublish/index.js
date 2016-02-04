@@ -4,7 +4,7 @@
 
 exports.init = function (expressrouter, idioms) {
      expressrouter.get(
-         '/:lang/tourpublish',
+         '/:lang/tour-publish',
          idioms(),
          function (req, res) {
               res.render('tourpublish', {});
