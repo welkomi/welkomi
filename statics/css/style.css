@@ -15,8 +15,9 @@ body {
   text-indent: -9999px; }
 
 .top {
-  margin-top: 65px; }
-
+  margin-top: 70px; }
+  .topheader {
+    margin-top: 120px; }
 
 
 .headerpro li a {
@@ -102,7 +103,7 @@ background-color: #fff;
   color: #fff; }
 
 .herofind h2 {
-  font-size: 7em;
+  font-size: 8em;
   max-width: 800px;
   margin: 50px auto 0 auto;
   color: #fff;
