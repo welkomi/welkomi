@@ -858,6 +858,15 @@ border: none
   display: none
 }
 
+.asidefather{
+  position: relative;
+}
+.asidepublish{
+  z-index: auto;
+  position: static;
+  top: auto;
+}
+
 
 
 /*FOOTER*/
