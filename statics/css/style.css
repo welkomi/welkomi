@@ -2,7 +2,10 @@
 /*header*/
 body {
   background-color: #ecf0f1;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased!important;
+    -moz-osx-font-smoothing: grayscale!important;
+ }
 
   .col_centred{
     float: none;
@@ -181,16 +184,11 @@ z-index: 100000
     height: 34px;
     width: 200px;
     background-color: #ecf0f1;
-    -webkit-transition: background 0.1s linear;
-    -moz-transition: background 0.1s linear;
-    -ms-transition: background 0.1s linear;
-  -o-transition: background 0.1s linear;
-      transition: background 0.1s linear;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
 
   }
 
@@ -198,7 +196,7 @@ z-index: 100000
   background-color: #fff;
   border:1px solid #CCC;
   box-shadow: none;
-  width: 250px
+  width: 280px
   }
 
 .searchinputwk::-webkit-input-placeholder {
@@ -751,6 +749,15 @@ position: relative;
 
 
 /*aside bookingtour*/
+.scroll-to-fixed-fixed{
+
+}
+.asidefather{
+width: 354px;
+float: right;
+margin-right: 12px;
+
+}
 .asidemodule{
   background-color: #fff;
   margin-bottom: 15px;
@@ -858,15 +865,76 @@ border: none
   display: none
 }
 
-.asidefather{
-  position: relative;
-}
-.asidepublish{
-  z-index: auto;
-  position: static;
-  top: auto;
+
+
+/*moretours*/
+
+.moduletitle{
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
+.moretours{
+margin-top: 30px;
+background-color: #aaa8a8;
+padding-top: 15px;
+padding-bottom: 50px;
+background-image: url("../images/moreguide_wk.png");
+background-repeat: repeat;
+
+}
+
+.moretours h2{
+font-size: 2.9em;
+font-weight: 500;
+text-transform: uppercase;
+margin: 0px;
+padding-top: 5px;
+border-top: 1px solid #FFF;
+border-bottom: 1px solid #FFF;
+
+}
+
+.moretours a{
+color: #fff;
+
+}
+
+.moretours a:hover{
+text-decoration: none
+
+}
+
+
+
+.toursearchperfil {
+  text-align: center;
+  padding: 140px 10px 140px 10px;
+  background-color: #fff;
+  margin-bottom: 25px;
+  border: 1px solid #b5b5b5
+}
+.nightour {
+  background-image: url("../images/nightlife.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.citytour {
+  background-image: url("../images/citytour.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.museomtour {
+  background-image: url("../images/museomtour.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
 
 /*FOOTER*/
