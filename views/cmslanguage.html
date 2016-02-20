@@ -5,7 +5,7 @@
 {% block head %}{% endblock %}
 
 {% block content %}
-<div class="container-fluid top cmslanguage">
+<div class="container-fluid top cmslanguage" ng-controller="CmslanguageCtrl">
     <div class="row">
         <div class="container">
 
@@ -42,6 +42,8 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
-
+{% block pagejs %}
+<script src="/statics/js/cmslanguage.js"></script>
 {% endblock %}

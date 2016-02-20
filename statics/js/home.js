@@ -9,63 +9,52 @@
  * @param $scope
  * @constructor
  */
-function HomeCtrl ($rootScope, $scope) {
+function HomeCtrl ($rootScope, $scope, $window) {
     $scope.scrollerNavVisible = true;
 }
 
 /**
- * Directive to appear nav in home index
+ * Se añadio la funcionalidad
+ * al buscador de la home
  *
+ * @param $rootScope
  * @param $window
  * @param $document
  * @returns {{restrict: string, link: Function}}
  */
-// function scrollernav ($window, $document) {
-//     return {
-//         restrict: 'AEC',
-//         link: function (scope, element, attrs) {
-//             var classHeaderPro = 'headerpro',
-//                 classNavBarFixedTop = 'navbar-fixed-top',
-//                 body = $document[0].body,
-//                 elementOffset = element[0].getBoundingClientRect();
-//
-//             element.addClass(classHeaderPro);
-//
-//             $window.onscroll = function () {
-//                 if (
-//                     body.scrollTop > elementOffset.top
-//                     && element.hasClass(classHeaderPro)
-//                 ) {
-//                     scope.scrollerNavVisible = true;
-//
-//                     element
-//                         .removeClass(classHeaderPro)
-//                         .addClass(classNavBarFixedTop);
-//                 }
-//
-//                 else if (
-//                     body.scrollTop <= elementOffset.top
-//                     && element.hasClass(classNavBarFixedTop)
-//                 ) {
-//                     scope.scrollerNavVisible = false;
-//
-//                     element
-//                         .removeClass(classNavBarFixedTop)
-//                         .addClass(classHeaderPro);
-//                 }
-//             }
-//         }
-//     }
-// }
+function scrollernav ($rootScope, $window, $document) {
+    return {
+        'restrict': 'C',
+        'link': function ($scope, $element, $attrs) {
+            var window = angular.element($window),
+                body = angular.element($document[0].body);
+                element = angular.element($element);
+
+            window.on('scroll', function () {
+                if (window.scrollTop() > 330) {
+                    body.addClass('specialheader');
+                    element.removeClass('specialSearch');
+                }
+
+                else {
+                    body.removeClass('specialheader');
+                    element.addClass('specialSearch');
+                }
+            });
+        }
+    }
+}
 
 app
     .controller('HomeCtrl', [
         '$rootScope',
         '$scope',
-        HomeCtrl
+        '$window',
+         HomeCtrl
+    ])
+    .directive('scrollernav', [
+        '$rootScope',
+        '$window',
+        '$document',
+        scrollernav
     ]);
-    // .directive('scrollernav', [
-    //     '$window',
-    //     '$document',
-    //     scrollernav
-    // ]);

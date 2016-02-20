@@ -16,7 +16,8 @@ specialSearch
 <div class="container-fluid hero">
     <div class="row">
         <div class="homeheroimg topheader" scrollernav id="nav" class="headerpro" ng-show="scrollerNavVisible">
-            <img src="[[ pictureProfile ]]" />
+            <img src="[[ pictureProfile ]]"/>
+
             <div class="clearfix"></div>
         </div>
         <div class="container">
@@ -27,21 +28,22 @@ specialSearch
                     <h3>Guia a la gente por tu ciudad, y haz nuevos amigos</h3>
 
                     <form class="searchuser clearfix">
-                      <div class="velo clearfix">
-                        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-                            <div class="row">
+                        <div class="velo clearfix">
+                            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                <div class="row">
 
-                                <input type="text" class="form-control" placeholder="Text input">
-                            </div>
-                        </div>
-                        <a href="#" type="button" class="btn btn-search col-xs-1 col-sm-1 col-md-1 col-lg-1"><i
-                                class="fa fa-search fa-lg"></i></a>
+                                    <input type="text" class="form-control" placeholder="Text input">
                                 </div>
+                            </div>
+                            <a href="#" type="button" class="btn btn-search col-xs-1 col-sm-1 col-md-1 col-lg-1"><i
+                                    class="fa fa-search fa-lg"></i></a>
+                        </div>
                     </form>
                     <div class="clearfix"></div>
 
                     <div class="joinus">
-                        <a class="btn btn-fb" ng-click="fbLogin()"><i class="fa fa-facebook fa-lg"></i>Join us with Facebook</a>
+                        <a class="btn btn-fb" ng-click="fbLogin()"><i class="fa fa-facebook fa-lg"></i>Join us with
+                            Facebook</a>
                         <a class="btn btn-default">Log in</a>
                     </div>
 
@@ -119,27 +121,4 @@ specialSearch
 
 {% block pagejs %}
 <script src="/statics/js/home.js"></script>
-<script>
-$(document).ready(function(){
-$(window).scroll(function () {
-console.log($(window).scrollTop());
-
-  if ($(window).scrollTop() > 330){
-    $('body').removeClass('specialheader');
-
-  }
-  else {
-    $('body').addClass('specialheader');
-  }
-
- if ($(window).scrollTop() > 330){
-   $('.searchuserheader').removeClass('specialSearch');
- }else{
-   $('.searchuserheader').addClass('specialSearch');
- }
-
-});
-
-})
-</script>
 {% endblock %}
