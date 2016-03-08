@@ -1286,10 +1286,11 @@ clear: both
 /*# search btn */
 .results {
   width: 100%;
-  top: 15px;
-  left: 120px;
+ -ms-transform: translate(185px,53px); /* IE 9 */
+    -webkit-transform: translate(185px,53px); /* Safari */
+    transform: translate(185px,53px);
   position: fixed;
-  max-width: 400px;
+  max-width: 280px;
   z-index: 9999;
   background-color: #fff;
   padding: 0px;
