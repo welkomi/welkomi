@@ -11,43 +11,42 @@
 
 {% block content %}
 <div class="container-fluid publishpage top">
-    <div class="row">
         <div class="container">
+            <div class="row">
+           <ol class="breadcrumb">
+  <li><a href="#">Madrid</a></li>
+  <li class="active">Julia Anderson</li>
+</ol>
+</div>
             <div class="row">
                     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                         <div class="row">
                             <div class="userperfil">
                                 <div class="myperfil">
-                        <section class="margindefault">
-                                  <div class="userbox clearfix">
-                                    <div class="mediaround pull-left">
-                                        <img src="/statics/images/julia.png">
-                                    </div>
-                                    <div class="main-info col-xs-12 col-sm-12 col-md-6">
+                        <section class="margindefault clearfix">
+                                  <div class="col-md-11 col-lg-11 userbox clearfix">
+                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 media pull-left">
+                                     <img src="/statics/images/julia.png" alt="profile" class="img-thumbnail">                                    
+                                 </div>
+                                    <div class="main-info col-xs-12 col-sm-12 col-md-7">
                                       <hgroup>
                                       <h2 class="username"><a href="#">Julia Anderson</a><span></span></h2>
-                                      <h3 class="localization"><i class="fa fa-map-marker"></i><a href="#">Vancouver - Canada </a><span></span></h3>
+                                      <h3 class="localization"><i class="fa fa-map-marker"></i><a href="#">Vancouver </a><span></span></h3>
+
                                     </hgroup>
-                                        <div class="ec-stars-wrapperstars pull-left">
-                                            <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-                                            <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-                                            <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-                                            <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-                                            <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-                                        </div>
-
-
-
-                                    </div>
-
+                                       <blockquote class="clearfix col-lg-12">
+                                "I like to learn other languages even if it is a little bit so please bring yours my way"
+                             </blockquote>
+                      </div>
+                          
                                   </div>
+                                    <div class="fav col-md-1 col-lg-1 col-sm-12 clearfix text-right">
+                                   <button type="button" class="btn btn-like" aria-label="Left Align">
+  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</button>
+                                </div>
                                 </section>
-                                <section class="margindefault me">
-                                    <div class="thisme">
-
-                                    <h2>"I like to learn other languages even if it is a little bit so please bring yours my way"</h2>
-                                  </div>
-                                </section>
+                      
                         <section class="margindefault">
                                     <h3>Teach, Learn, Share</h3>
                                     <p>I like to learn other languages even if it is a little bit so please bring yours my way.</p>
@@ -101,7 +100,6 @@
                     </div>
             </div>
         </div>
-    </div>
 </div>
 
 {% endblock %}

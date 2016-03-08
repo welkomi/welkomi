@@ -6,6 +6,40 @@ body {
     -webkit-font-smoothing: antialiased!important;
     -moz-osx-font-smoothing: grayscale!important;
  }
+ .whitebg{
+  background-color: #fff;
+  padding: 7px
+ }
+ .m_left {
+  margin-left: 10px
+ }
+ .m_right {
+  margin-right: 10px
+ }
+ .m_top {
+  margin-top: 10px
+ }
+  .m_bottom {
+  margin-top: 10px
+ }
+ .p_right{
+  padding-right: 10px!important;
+ }
+  .p_left{
+  padding-left: 10px!important;
+ }
+  .p_top{
+  padding-top: 10px!important;
+ }
+  .p_bottom{
+  padding-bottom: 10px!important;
+ }
+ .nopadding{
+  padding: 0px!important;
+ }
+  .nomargin{
+  margin: 0px!important;
+ }
 
   .col_centred{
     float: none;
@@ -18,7 +52,9 @@ body {
   text-indent: -9999px; }
 
 .top {
-  margin-top: 70px; }
+  margin-top: 80px; }
+  .topmodule {
+    margin-top: 50px; }
   .topheader {
     margin-top: 120px; }
 
@@ -74,13 +110,12 @@ background-color: #fff;
 .navbar-fixed-top {
   background-color: rgba(255, 255, 255, 0.97);
   border-bottom: solid 1px #aaddc1;
-  overflow: hidden;
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
   -ms-transition: background 0.2s linear;
 -o-transition: background 0.2s linear;
     transition: background 0.2s linear;
-z-index: 100000
+z-index: 9998
 }
 
 .navbar-default {
@@ -118,7 +153,7 @@ z-index: 100000
   color: #fff; }
 
 .btn-joinus {
-  background-color: #34ae6b;
+  background-color: #b66186;
   color: #fff;
   width: 120px;
   margin-right: 5px; }
@@ -138,10 +173,14 @@ z-index: 100000
 
 .btn-search {
   background-color: #fff;
-  color: #34ae6b;
+  color: #b66186;
   border-radius: 0px;
   height: 50px;
   border: none; }
+
+  .btn-search:hover {
+    color: #b66186;
+   }
 
   .velo .btn-search i {
     font-size: 2em;
@@ -242,12 +281,12 @@ z-index: 100000
 
   .velo{
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.24)
+    background-color: rgba(255, 255, 255, 0.24)
     }
 
   .searchuserheader .btn-search {
     background-color: transparent;
-    color: #34ae6b;
+    color: #b66186;
     border-radius: 0px;
     height: 50px;
     border: none;
@@ -255,7 +294,6 @@ z-index: 100000
     right: 5px;
     top: 0px
   }
-
 
 .joinus button {
   padding: 0.8em; }
@@ -315,18 +353,20 @@ z-index: 100000
   font-weight: 900; }
 
 .mediaround {
+  padding: 9px;
   backface-visibility: hidden;
   position: relative;
   display: inline-block;
   vertical-align: bottom;
   overflow: hidden;
-  background-color: #cacccd;
   border-radius: 50%;
-  border: 8px solid transparent; }
+  border: 5px solid #cacccd }
 
 .mediaround img {
   height: 156px;
-  width: 156px; }
+  width: 156px;
+border-radius: 50%
+}
 
   /*tourpublish site*/
 
@@ -527,6 +567,12 @@ font-size: 2.4em
   background-color: rgb(56, 56, 56)
 }
 
+.titlemodule {
+  text-align: center;
+  font-size: 2.3em;
+  margin-bottom: 25px
+}
+
 /*module how it works INDICE*/
 .tours {
   background-repeat: no-repeat;
@@ -672,8 +718,21 @@ font-size: 2.4em
   width: 25%
 
   }
+    /*BREADCUMB*/
+.breadcrumb {
+  margin-bottom: 7px;
+  background-color: transparent
+}
+
 
   /*BTN*/
+  .btn-like {
+    border: 1px solid #656565;
+    background-color: #fff
+  }
+   .btn-like:hover {
+    color: #cf3447
+  }
 
 .btn-wk{
 background-color: #fbba0e
@@ -701,8 +760,17 @@ margin-right: 10px
 
 }
 
+/*filter search*/
+.filter {
+  margin-bottom: 5px
+}
+
 /*Myperfil*/
 
+blockquote {
+  border-left: 5px solid #baf0d3;
+  margin-top: 7px
+}
 
 .main-info {
   margin-left: 10px
@@ -728,7 +796,7 @@ margin-right: 10px
 }
 .userbox .localization i{
   margin-right: 10px;
-  color: #34ae6b
+  color: #b66186
 }
 
 
@@ -980,6 +1048,8 @@ text-decoration: none
 }
 
 
+
+
 /*FOOTER*/
 
 
@@ -1088,9 +1158,18 @@ right: 70px
   }
 
 
-
-
 /*USERS PAGE*/
+.userperfil .img-thumbnail{
+  margin-top: 13px
+}
+.fav span {
+  font-size: 1.5em
+}
+.userperfil .username a {
+  font-weight: bold;
+  color: #34ae6b
+}
+
 .users .username {
   font-size: 20px; }
 
@@ -1102,7 +1181,9 @@ right: 70px
   width: 130px; }
 
 .chargemore {
-  text-align: center; }
+  text-align: center; 
+clear: both
+}
 
 .chargemore i {
   position: absolute;
@@ -1167,5 +1248,94 @@ right: 70px
 
   .fix{
     background-color: rgb(196, 14, 152)  }
+
+
+    .map_ubication {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+        height: 645px
+    }
+    .map_ubication iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .pagination .active a {
+      background-color: #b46087;
+      color: #fff;
+      border: 1px solid #b46087;
+
+    }
+    .pagination .active a:hover {
+      background-color: #b46087;
+      
+    }
+
+    .pagination  li  a {
+      color: #b46087
+    }
+  .pagination  li  a:hover {
+      color: #b46087
+    }
+
+/*# search btn */
+.results {
+  width: 100%;
+  top: 15px;
+  left: 120px;
+  position: fixed;
+  max-width: 400px;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 0px;
+  border: 1px solid #d1d1d1;
+}
+
+.results li:last-child {
+  border-bottom: none;
+}
+
+.results li {
+  width: 100%;
+  border-bottom: 1px solid #ecf0f1;
+  list-style: none;
+}
+
+.results li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+    padding: 15px;
+    color: #565a5c;
+    font-weight: bold
+}
+
+.results li a span {
+ color: #dcdfe0
+}
+
+.results li a:hover {
+  background-color: #34ae6b;
+  color: #fff;
+  text-decoration: none
+}
+
+.wover {
+  overflow: hidden
+}
+
+.wman {
+  background-image: url('../images/welkomi_men.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  opacity: 0.4
+}
 
 /*# sourceMappingURL=style.css.map */

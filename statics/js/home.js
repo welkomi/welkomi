@@ -32,12 +32,12 @@ function scrollernav ($rootScope, $window, $document) {
 
             window.on('scroll', function () {
                 if (window.scrollTop() > 330) {
-                    body.addClass('specialheader');
+                    body.removeClass('specialheader');
                     element.removeClass('specialSearch');
                 }
 
                 else {
-                    body.removeClass('specialheader');
+                    body.addClass('specialheader');
                     element.addClass('specialSearch');
                 }
             });
