@@ -29,19 +29,39 @@ wover
                     <h2>Enseña tu ciudad! </h2>
 
                     <h3>Guia a la gente por tu ciudad, y haz nuevos amigos</h3>
+                    <div class="row">
+<div class="w_search_hero">
 
-                    <form class="searchuser clearfix">
-                        <div class="velo clearfix">
-                            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-                                <div class="row">
+<div class="velo">
+    <div class="input-group searchuser">
+      
+      <input id="primary_search" type="text" class="form-control" placeholder="Search for a Guide in...">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn_guide dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="wman"></span>
 
-                                    <input type="text" class="form-control" placeholder="Text input">
-                                </div>
-                            </div>
-                            <a href="#" type="button" class="btn btn-search col-xs-1 col-sm-1 col-md-1 col-lg-1"><i
-                                    class="fa fa-search fa-lg"></i></a>
-                        </div>
-                    </form>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">Night-Guide</a></li>
+          <li><a href="#">Free-Guide</a></li>
+          <li><a href="#">City-Guide</a></li>
+          <li><a href="#">Museom-Guide</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <span class="input-group-btn">
+        <button class="btn btn-search_hero" type="button"><i class="fa fa-search fa-lg"></i></button>
+      </span>
+    </div>
+        </div>
+      <ul class="results_home">
+                        <li><a href="#"><i class="fa fa-map-marker"></i> Madrid</span></a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i>Amsterdam</span></a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i>Paris</span></a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i>Berlin</span></a></li>
+                    </ul>
+
+                </div>
+            </div>
                     <div class="clearfix"></div>
 
                     <div class="joinus">
@@ -124,4 +144,10 @@ wover
 
 {% block pagejs %}
 <script src="/statics/js/home.js"></script>
+<script>
+$('.results_home').hide();
+    $("#primary_search").focus(function() {
+    $('.results_home').show();
+});
+</script>
 {% endblock %}

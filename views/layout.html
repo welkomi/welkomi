@@ -27,7 +27,7 @@
                     <h1 class="logo pull-left"><a href="#">Welkomi</a></h1>
 
                     <form class="scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
-                        <input type="text" class="searchinputwk form-control" placeholder="Search tour">
+                        <input id="searchfixed" type="text" class="searchinputwk form-control" placeholder="Search tour">
                         <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
 
                     </form>
@@ -50,14 +50,14 @@
         </header>
  
 </div>
-<div class="container">
+<div class="container searchresults">
   <div class="row">
    <div class="col-lg-11">
           <ul class="results">
-                        <li><a href="#">Madrid<span class="pull-right wman"></span></a></li>
-                        <li><a href="#">Amsterdam<span class="pull-right wman"></span></a></li>
-                        <li><a href="#">Paris<span class="pull-right fa wman"></span></a></li>
-                        <li><a href="#">Berlin<span class="pull-right fa wman"></span></a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i>Madrid</a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i>Amsterdam</a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i>Paris</a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i>Berlin</a></li>
                     </ul>
    </div>
 </div>
@@ -131,6 +131,13 @@
 <script src="/statics/js/ngGallery.js"></script>
 <script src="/statics/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="/statics/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<!--search result-->
+<script>
+$('.searchresults').hide();
+    $("#searchfixed").focus(function() {
+    $('.searchresults').show();
+});
+</script>
 
 {% block pagejs %}{% endblock %}
 </body>

@@ -8,15 +8,17 @@
 
 {% block content %}
 
-<div class="container-fluid top registeruser">
+<div class="container-fluid top">
         <div class="container">
-              <div class="row">
-           <ol class="breadcrumb">
-  <li><a href="#">Madrid</a></li>
-  <li class="active">Julia Anderson</li>
+             <div class="row">
+           <ol class="col-sm-6 col-lg-6 breadcrumb">
+  <li><a href="#">Register</a></li>
+  <li class="active">New Guider</li>
 </ol>
 </div>
-            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 col_centred">
+
+<div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 clearfix">
                 <div class="registeruser">
                     <div class="conect_fb">
                         <a class="btn wk-button-facebook" href="#" ng-click="fbLogin()"> <i class="fa fa-facebook"></i> Login with
@@ -254,10 +256,14 @@
 
                 </div>
             </div>
-
-
-        </div>
+ <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 text-center">
+    <div class="beguide">
+<h2>Guia a la gente por tu ciudad!</h2>
 </div>
+  </div>
+   </div>
+        </div>
+         </div>
 {% endblock %}
 
 
