@@ -10,27 +10,29 @@
         <div class="container">
 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="clave" placeholder="Clave">
+                <form class="form-inline" ng-model="langkeys">
+                    <div ng-repeat="key in keys track by $index">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="langkeys" ng-model="langkeys[]" placeholder="Clave">
+                        </div>
+
+                        <div class="form-group" ng-repeat="lang in langs">
+                            <input type="text" class="form-control" name="langkeys[<<* $index *>>][<<* lang *>>]" ng-model="langkeys[$index][lang]"
+                                   placeholder="<<* lang | uppercase *>>">
+                        </div>
+
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="english" placeholder="English">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="spanish" placeholder="Español">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="german" placeholder="Deutsch">
-                    </div>
-                    <button type="submit" class="btn btn-danger">Delete</button>
+
                     </br>
+
                     <fieldset class="topbuttons">
                         <button type="submit" class="btn btn-primary btn-info">Send</button>
-                        <button type="submit" class="btn btn-warning">Add</button>
+                        <button type="submit" class="btn btn-warning" ng-click="addkey()">Add</button>
                     </fieldset>
-                </form>
 
+                    <<* langkeys | json *>>
+                </form>
                 <h2>
                     <small class="succes">Successful!</small>
                 </h2>

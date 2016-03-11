@@ -36,4 +36,16 @@ exports.init = function (expressrouter) {
             res.json(response);
         });
     });
+
+    /**
+     * NEW API
+     */
+
+    expressrouter.get('/getlangs/', function (req, res) {
+        redis.lrange('languagesAvailable', 0, 3, function (err, response) {
+            if (err) throw  err;
+
+            res.json(response);
+        });
+    });
 };

@@ -13,8 +13,8 @@ app
         '$interpolateProvider',
         function ($interpolateProvider) {
             $interpolateProvider
-                .startSymbol('[[')
-                .endSymbol(']]');
+                .startSymbol('<<*')
+                .endSymbol('*>>');
         }]);
 
 /**
