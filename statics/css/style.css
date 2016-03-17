@@ -617,9 +617,15 @@ font-size: 2.4em
   width: 100%; }
 
   /*REGISTER FORM*/
+  .userRegister{
+  background-image: url('../images/trip.png');
+  background-size: cover;
+  padding: 35px 15px 50px 15px
+}
+
   .beguide h2{
     font-size: 5.5em;
-    color: #34ae6b;
+    color: #FFF;
     font-family: 'Mrs Sheppards', cursive;
   }
   .wk-button-facebook{
@@ -657,15 +663,12 @@ font-size: 2.4em
   }
 
   .signup_eparator_text{
-    background-color: #fff;
   display: inline-block;
   padding: 8px;
   }
 
-
-
   .registeruser{
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.65);
   padding: 20px;
 
   }
