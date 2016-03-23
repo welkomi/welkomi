@@ -20,7 +20,7 @@ body {
   margin-top: 10px
  }
   .m_bottom {
-  margin-top: 10px
+  margin-bottom: 10px
  }
  .p_right{
   padding: 0px 10px 0px 0px!important;
@@ -218,7 +218,6 @@ z-index: 9998
 .searchinputwk {
 
 }
-
   .searchuserheader {
     margin: 15px 0 0 15px;
     position: relative;
@@ -228,7 +227,7 @@ z-index: 9998
     -webkit-transition: top 0.5s ease;
     -moz-transition: top 0.5s ease;
     -ms-transition: top 0.5s ease;
-  -o-transition: top 0.5s ease;
+    -o-transition: top 0.5s ease;
       transition: top 0.5s ease;
   }
 
@@ -296,7 +295,7 @@ z-index: 9998
   .velo{
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.24);
-    margin-bottom: 15px
+    margin-bottom: 10px
     }
 
   .searchuserheader .btn-search {
@@ -319,7 +318,7 @@ z-index: 9998
     border: solid 1px #dadfe0;
     text-align: center;
     background-color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
 
@@ -339,16 +338,22 @@ z-index: 9998
   width: 100%;
   font-family: 'Mrs Sheppards', cursive;
   font-size: 3em;
-  text-decoration: underline; }
+  text-decoration: underline;
+
+   }
 
 .tourme:hover {
   color: #34ae6b; }
 
 .usersearchperfil {
   text-align: center;
-  padding: 20px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   background-color: #fff;
   margin-bottom: 25px; }
+
+  .usersearchperfil p {
+ font-size: 1.4em
+  }
 
 .madrid {
   background-image: url("../images/tour.png");
@@ -368,23 +373,26 @@ z-index: 9998
   font-weight: 900; }
 
 .mediaround {
-  padding: 9px;
+  padding: 3px;
   backface-visibility: hidden;
   position: relative;
   display: inline-block;
   vertical-align: bottom;
   overflow: hidden;
   border-radius: 50%;
-  border: 5px solid #cacccd }
+  background-color: #323232
+  }
 
+.full_media{
+      overflow: hidden;
+    max-height: 220px;
+}
 .mediaround img {
   height: 156px;
   width: 156px;
 border-radius: 50%
 }
-
   /*tourpublish site*/
-
 .map{
   position: relative;
        height: 320px!important;
@@ -400,7 +408,7 @@ border-radius: 50%
 }
 
 .reviw_container{
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 15px;
   background-color: #fff;
   border: solid 1px #dadfe0
@@ -538,7 +546,7 @@ background-color: rgb(175, 215, 175)
 }
 
 .gallerytour{
-margin-top: 15px
+margin-top: 10px
 
 }
 
@@ -579,7 +587,8 @@ font-size: 2.4em
 }
 
 .wkpricebox{
-  background-color: rgb(56, 56, 56)
+    font-size: 40px;
+    margin-top: -5px;
 }
 
 .titlemodule {
@@ -593,7 +602,7 @@ font-size: 2.4em
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px 10px 120px 10px; }
 
 .tours h3 {
@@ -611,7 +620,7 @@ font-size: 2.4em
   background-color: #34ae6b;
   font-size: 2em;
   color: #fff;
-  margin-top: 15px; }
+  margin-top: 10px; }
 
 .perfilhow img {
   width: 100%; }
@@ -684,7 +693,7 @@ font-size: 2.4em
 
   .bir_field{
   margin-top: 7px;
-  margin-bottom: 15px
+  margin-bottom: 10px
 
   }
 
@@ -861,13 +870,43 @@ position: relative;
 
 }
 
-
 /*tourinfo*/
 
+.tour-header {
+  background-image: url("../images/citys/madrid.png");
+  background-size: cover;
+  height: 260px;
+  width: 100%;
+  background-repeat: no-repeat;
+  display:table;
+}
+.tour-header .velohg {
+  text-align: center;
+  vertical-align: middle;
+  display:table-cell;
+}
+
+.tour-header .velohg hgroup {
+padding: 15px;
+width: 60%;
+margin: 0 auto 0 auto;
+background-color: rgba(0,0,0,0.2);
+color: #fff
+}
+
+.tour-header .velohg hgroup i {
+font-size: 1.8em;
+margin-bottom: 10px
+}
+.tour-header .velohg hgroup h2 {
+font-size: 36px;
+border-bottom: 1px solid #fff;
+  padding-bottom: 11px;
+  margin-top: 0px;
+}
 .tourinfo{
   background-color: #fff;
   padding: 5px 20px 10px 20px;
-  margin-bottom: 15px;
   border: solid 1px #dadfe0
 }
 
@@ -884,7 +923,7 @@ margin-right: 12px;
 }
 .asidemodule{
   background-color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: center;
   padding: 15px;
   border: solid 1px #dadfe0
@@ -950,7 +989,7 @@ aside .usersearchperfil {
 }
 
 .tourmodel{
-  margin-bottom: 15px
+  margin-bottom: 10px
 }
 
 .pickdate{
@@ -1191,10 +1230,28 @@ right: 70px
 }
 
 .users .username {
-  font-size: 20px; }
+  font-size: 1.9em;
+margin-top: 7px;
+   }
 
 .users .tourme {
-  font-size: 2em; }
+  font-size: 2em; 
+
+}
+.users .usersearchperfil{
+
+margin-bottom: 10px
+}
+
+.users .usersearchperfil p{
+font-size: 1.1em;
+margin-bottom: 0px
+}
+
+.users .full_media{
+      overflow: hidden;
+    max-height: 160px;
+}
 
 .users .mediaround img {
   height: 130px;
