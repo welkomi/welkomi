@@ -17,7 +17,7 @@
                         </div>
 
                         <div class="form-group" ng-repeat="lang in langs">
-                            <textarea row="8" cols="100" class="form-control" name="langkeys[<<* k *>>][<<* lang *>>]" ng-model="langkeys[k][lang]"
+                            <textarea row="8" cols="100" class="form-control" name="langkeys[<<* k *>>]['translates'][<<* lang *>>]" ng-model="langkeys[k]['translates'][lang]"
                                    placeholder="<<* lang | uppercase *>>"></textarea>
                         </div>
 

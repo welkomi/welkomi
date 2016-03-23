@@ -19,6 +19,11 @@ var IdiomsSchema = mongoose.Schema({
     'translates': {}
 });
 
+var LanguagesSchema = mongoose.Schema({
+    '_id': 'Number',
+    'language': {}
+});
+
 /**
  * Iniciamos mongo con el plugin de autoincremento
  */
@@ -35,10 +40,16 @@ UserSchema.plugin(passportLocalMongoose);
  */
 IdiomsSchema.plugin(autoIncrement.plugin, 'Idioms');
 
+/**
+ * Schema para lenguages
+ */
+LanguagesSchema.plugin(autoIncrement.plugin, 'Languages');
+
 exports.model = function(model) {
      var models = {
          'User': mongoose.model('User', UserSchema),
-         'Idioms': mongoose.model('Idioms', IdiomsSchema)
+         'Idioms': mongoose.model('Idioms', IdiomsSchema),
+         'Languages': mongoose.model('Lenguages', LanguagesSchema)
      };
 
      return models[model];

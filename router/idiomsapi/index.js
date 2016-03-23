@@ -61,7 +61,11 @@ exports.init = function (expressrouter) {
     /**
      * REMAKE API IDIOMS WHIT MONGO
      */
-    expressrouter.get('/mongotest/', function () {
+    expressrouter.get('lang-avialables', function () {
+
+    });
+
+    expressrouter.get('/lang-save-key', function () {
         var IdiomsSchema = models.model('Idioms');
         var obj = {
             'key': 'dog',
