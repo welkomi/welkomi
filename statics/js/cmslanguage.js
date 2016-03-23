@@ -5,7 +5,6 @@
 function CmslanguageCtrl ($rootScope, $scope, $log, $q, language) {
     $scope.langkeys = {};
     $scope.keys = [];
-    $scope.keys.push(1);
 
     $q.all([
         language.get()
@@ -16,6 +15,14 @@ function CmslanguageCtrl ($rootScope, $scope, $log, $q, language) {
 
     $scope.addkey = function () {
         $scope.keys.push(1);
+    }
+
+    $scope.delkey = function (k) {
+        delete $scope.langkeys[k];
+    }
+
+    $scope.savekeys = function () {
+        $log.info($scope.langkeys);
     }
 }
 

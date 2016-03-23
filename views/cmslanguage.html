@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% block title %}<title>Home</title>{% endblock %}
+{% block title %}CMS Language{% endblock %}
 
 {% block head %}{% endblock %}
 
@@ -11,27 +11,25 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <form class="form-inline" ng-model="langkeys">
-                    <div ng-repeat="key in keys track by $index">
+                    <div class="entry-keys" ng-repeat="(k, v) in keys track by $index">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="langkeys" ng-model="langkeys[]" placeholder="Clave">
+                            <input type="text" class="form-control" name="langkeys[<<* k *>>].key" ng-model="langkeys[k].key" placeholder="Clave">
                         </div>
 
                         <div class="form-group" ng-repeat="lang in langs">
-                            <input type="text" class="form-control" name="langkeys[<<* $index *>>][<<* lang *>>]" ng-model="langkeys[$index][lang]"
-                                   placeholder="<<* lang | uppercase *>>">
+                            <textarea row="8" cols="100" class="form-control" name="langkeys[<<* k *>>][<<* lang *>>]" ng-model="langkeys[k][lang]"
+                                   placeholder="<<* lang | uppercase *>>"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger" ng-click="delkey(k)">Delete</button>
                     </div>
 
                     </br>
 
                     <fieldset class="topbuttons">
-                        <button type="submit" class="btn btn-primary btn-info">Send</button>
+                        <button type="submit" class="btn btn-primary btn-info" ng-click="savekeys()">Send</button>
                         <button type="submit" class="btn btn-warning" ng-click="addkey()">Add</button>
                     </fieldset>
-
-                    <<* langkeys | json *>>
                 </form>
                 <h2>
                     <small class="succes">Successful!</small>
