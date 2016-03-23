@@ -8,6 +8,7 @@
  * @type {Function|*}
  */
 var redis = require('./../../wrappers/rediswrapper').init();
+var models = require('./../../models');
 
 exports.init = function (expressrouter) {
     expressrouter.get('/texts/languages/', function (req, res) {
@@ -47,5 +48,50 @@ exports.init = function (expressrouter) {
 
             res.json(response);
         });
+    });
+
+    expressrouter.get('/getlangs/:key', function (req, res) {
+        redis.hgetall(req.params.key, function (err, response) {
+            if (err) throw err;
+
+            res.json(response);
+        });
+    });
+
+    /**
+     * REMAKE API IDIOMS WHIT MONGO
+     */
+    expressrouter.get('/mongotest/', function () {
+        var IdiomsSchema = models.model('Idioms');
+        var obj = {
+            'key': 'dog',
+            'translates': {
+                'en': 'dog',
+                'es': 'perro',
+                'de': 'doguito'
+            }
+        };
+
+        IdiomsSchema
+            .find({'key': obj.key})
+            .exec(function (err, response) {
+                if (err) throw  err;
+
+                if (response.length > 0) {
+                    IdiomsSchema.update({'key': obj.key}, {$set: obj}, function (errUpdate, responseUpdate) {
+                        if (errUpdate) throw errUpdate;
+
+                        console.log(responseUpdate);
+                    });
+                }
+
+                else {
+                    IdiomsSchema.create(obj, function (err, response) {
+                        if (err) throw err;
+
+                        console.log(response);
+                    });
+                }
+            });
     });
 };
