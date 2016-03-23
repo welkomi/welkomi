@@ -1496,6 +1496,16 @@ color: #bdbdbd
    border-left: 1px solid #fff!important
 }
 
+.entry-keys{
+  margin-bottom: 20px
+}
+
+.entry-keys .form-group{
+  margin-bottom: 7px
+}
+
+
+
 
 
 
