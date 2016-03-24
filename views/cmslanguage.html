@@ -11,7 +11,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <form class="form-inline" ng-model="langkeys">
-                    <div class="entry-keys" ng-repeat="(k, v) in keys track by $index">
+                    <div class="entry-keys" ng-repeat="(k, v) in langkeys track by $index">
                         <div class="form-group">
                             <input type="text" class="form-control" name="langkeys[<<* k *>>].key" ng-model="langkeys[k].key" placeholder="Clave">
                         </div>
@@ -21,7 +21,7 @@
                                    placeholder="<<* lang | uppercase *>>"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-danger" ng-click="delkey(k)">Delete</button>
+                        <button type="submit" class="btn btn-danger" ng-click="delkey(k, langkeys[k].key)">Delete</button>
                     </div>
 
                     </br>

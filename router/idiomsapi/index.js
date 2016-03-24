@@ -61,20 +61,50 @@ exports.init = function (expressrouter) {
     /**
      * REMAKE API IDIOMS WHIT MONGO
      */
-    expressrouter.get('lang-avialables', function () {
+    expressrouter.get('/langs-availables/', function (req, res) {
+        var LanguagesSchema = models.model('Languages');
 
+        LanguagesSchema
+            .find({'languages': {'$exists': true}})
+            .exec(function (err, response) {
+                if (err) throw err;
+
+                res.json(response);
+            });
     });
 
-    expressrouter.get('/lang-save-key', function () {
+    expressrouter.get('/langs-get-keys/', function (req, res) {
         var IdiomsSchema = models.model('Idioms');
-        var obj = {
-            'key': 'dog',
-            'translates': {
-                'en': 'dog',
-                'es': 'perro',
-                'de': 'doguito'
-            }
-        };
+
+        IdiomsSchema
+            .find({},
+            {
+                '_id': 0,
+                '__v': 0
+            })
+            .exec(function (err, response) {
+                if (err) throw err;
+
+                res.json(response);
+            });
+    });
+
+    expressrouter.get('/langs-delete-key/', function (req, res) {
+        var IdiomsSchema = models.model('Idioms');
+
+        IdiomsSchema
+            .find(req.query)
+            .remove()
+            .exec(function (errDelete, resDelete) {
+                if (errDelete) throw errDelete;
+
+                res.json(resDelete);
+            });
+    });
+
+    expressrouter.get('/langs-save-keys/', function (req, res) {
+        var IdiomsSchema = models.model('Idioms'),
+            obj = req.query;
 
         IdiomsSchema
             .find({'key': obj.key})
@@ -85,15 +115,15 @@ exports.init = function (expressrouter) {
                     IdiomsSchema.update({'key': obj.key}, {$set: obj}, function (errUpdate, responseUpdate) {
                         if (errUpdate) throw errUpdate;
 
-                        console.log(responseUpdate);
+                        res.json(responseUpdate);
                     });
                 }
 
                 else {
-                    IdiomsSchema.create(obj, function (err, response) {
+                    IdiomsSchema.create(obj, function (errCreate, responseCreate) {
                         if (err) throw err;
 
-                        console.log(response);
+                        res.json(responseCreate);
                     });
                 }
             });

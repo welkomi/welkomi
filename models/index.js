@@ -21,7 +21,7 @@ var IdiomsSchema = mongoose.Schema({
 
 var LanguagesSchema = mongoose.Schema({
     '_id': 'Number',
-    'language': {}
+    'languages': []
 });
 
 /**
@@ -49,7 +49,7 @@ exports.model = function(model) {
      var models = {
          'User': mongoose.model('User', UserSchema),
          'Idioms': mongoose.model('Idioms', IdiomsSchema),
-         'Languages': mongoose.model('Lenguages', LanguagesSchema)
+         'Languages': mongoose.model('Languages', LanguagesSchema)
      };
 
      return models[model];
