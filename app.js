@@ -4,8 +4,7 @@
  * Acceso a MONGO
  * mongodb://welkomi:appwelkomi@ds047782.mongolab.com:47782/heroku_4bzldjht
  */
-var mongoose = require('mongoose'),
-    passport = require('passport'),
+var passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
     router = require('./router'),
     express = require('express'),
@@ -15,13 +14,26 @@ var mongoose = require('mongoose'),
     models = require('./models'),
     cookieParser = require('cookie-parser'),
     session = require('cookie-session'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    i18n = require('i18n');
 
 require('./customfilters');
 
 /**
+ * Config for i18n
+ */
+i18n.configure({
+    'locales': ['es', 'en', 'de'],
+    'directory': __dirname + '/locales',
+    'defaultLocale': 'en',
+    'cookie': 'langcookie',
+    'queryParameter': 'lang'
+});
+
+/**
  * Framework inits
  */
+app.use(i18n.init);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());

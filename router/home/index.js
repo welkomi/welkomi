@@ -13,12 +13,11 @@ exports.init = function (expressrouter, idioms) {
          });
 
      expressrouter.get(
-         '/:lang',
-         idioms(),
+         '/:lang(en|es|de)',
          function (req, res) {
+
              res.render('home', {
-                 'idiom': req.idiom,
-                 'idioms': req.idioms
+                 'locale': req.params.lang
              });
          });
 };

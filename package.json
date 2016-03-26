@@ -33,7 +33,9 @@
     "passport-local-mongoose": "latest",
     "cookie-session": "latest",
     "cookie-parser": "latest",
-    "imagemagick-stream": "latest"
+    "imagemagick-stream": "latest",
+    "express-locale": "latest",
+    "i18n": "latest"
   },
   "homepage": "https://github.com/iraklitbz/proyect2#readme"
 }

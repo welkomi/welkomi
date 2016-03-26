@@ -5,7 +5,6 @@
 exports.init = function (expressrouter, idioms) {
      expressrouter.get(
          '/:lang/users',
-         idioms(),
          function (req, res) {
               res.render('users', {});
          });
