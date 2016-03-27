@@ -1,6 +1,5 @@
 /**
  * Created by chadsfather on 15/12/15.
- *
  */
 
 var passport = require('passport'),
