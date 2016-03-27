@@ -27,7 +27,7 @@ var LanguagesSchema = mongoose.Schema({
 /**
  * Iniciamos mongo con el plugin de autoincremento
  */
-autoIncrement.initialize(mongoose.connect('mongodb://welkomiapp:appwelkomi2015@ds047782.mongolab.com:47782/heroku_4bzldjht'));
+autoIncrement.initialize(mongoose.connect(process.env.MONGOLAB_URI));
 
 /**
  * Schema para usuarios
