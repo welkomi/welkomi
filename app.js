@@ -1,8 +1,6 @@
 /**
  * Created by chadsfather on 15/12/15.
  *
- * Acceso a MONGO
- * mongodb://welkomi:appwelkomi@ds047782.mongolab.com:47782/heroku_4bzldjht
  */
 var passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
@@ -15,50 +13,53 @@ var passport = require('passport'),
     cookieParser = require('cookie-parser'),
     session = require('cookie-session'),
     bodyParser = require('body-parser'),
-    i18n = require('i18n');
+    i18n = require('i18n'),
+    idioms = require('./idioms/');
 
-require('./customfilters');
+idioms.getAvailableLangs(function () {
+    require('./customfilters');
 
-/**
- * Config for i18n
- */
-i18n.configure({
-    'locales': ['es', 'en', 'de'],
-    'directory': __dirname + '/locales',
-    'defaultLocale': 'en',
-    'cookie': 'langcookie',
-    'queryParameter': 'lang'
-});
+    /**
+     * Config for i18n
+     */
+    i18n.configure({
+        'locales': ___availableLangs.array,
+        'directory': __dirname + '/locales',
+        'defaultLocale': 'en',
+        'cookie': 'langcookie',
+        'queryParameter': 'lang'
+    });
 
-/**
- * Framework inits
- */
-app.use(i18n.init);
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(cookieParser());
-app.use(session({keys: ['welkomiapp']}));
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(expressrouter);
-app.use('/statics', express.static(__dirname + '/statics'));
-app.engine('html', swig.renderFile);
-app.set('view engine', 'html');
-app.set('views', __dirname + '/views');
-app.set('view cache', false);
+    /**
+     * Framework inits
+     */
+    app.use(i18n.init);
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: false}));
+    app.use(cookieParser());
+    app.use(session({keys: ['welkomiapp']}));
+    app.use(passport.initialize());
+    app.use(passport.session());
+    app.use(expressrouter);
+    app.use('/statics', express.static(__dirname + '/statics'));
+    app.engine('html', swig.renderFile);
+    app.set('view engine', 'html');
+    app.set('views', __dirname + '/views');
+    app.set('view cache', false);
 
-/**
- * Config for passport
- */
-passport.use(new LocalStrategy(models.model('User').authenticate()));
-passport.serializeUser(models.model('User').serializeUser());
-passport.deserializeUser(models.model('User').deserializeUser());
+    /**
+     * Config for passport
+     */
+    passport.use(new LocalStrategy(models.model('User').authenticate()));
+    passport.serializeUser(models.model('User').serializeUser());
+    passport.deserializeUser(models.model('User').deserializeUser());
 
-router.routes(expressrouter);
+    router.routes(expressrouter);
 
-var server = app.listen(process.env.PORT || 3000, function () {
-    var host = server.address().address,
-         port = server.address().port;
+    var server = app.listen(process.env.PORT || 3000, function () {
+        var host = server.address().address,
+            port = server.address().port;
 
-    console.log('App listening at http://%s:%s', host, port);
+        console.log('App listening at http://%s:%s', host, port);
+    });
 });

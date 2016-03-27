@@ -1,17 +1,16 @@
 /**
  * Created by chadsfather on 18/12/15.
  */
+exports.init = function () {
+    return function (req, res, next) {
+        req.setLocale(req.params.lang);
 
-/*var redis = require('./../wrappers/rediswrapper').init(),
-    models = require('./../models/'),
-    _ = require('underscore');*/
+        next();
+    }
+};
 
-module.exports = function () {
-     return function (req, res, next) {
-         console.log(req.params.lang);
-
-         req.setLocale(req.params.lang);
-
-         next();
-     }
+exports.getAvailableLangs = function (callback) {
+    require('./availableLangs.js').init(function () {
+        callback();
+    });
 };

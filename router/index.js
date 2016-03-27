@@ -68,6 +68,4 @@ exports.routes = function (expressrouter) {
      * Route '/'
      */
     require('./tourpublish').init(expressrouter, idioms);
-
-
 };

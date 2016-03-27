@@ -5,7 +5,7 @@
 exports.init = function (expressrouter, idioms) {
      expressrouter.get(
          '/:lang/paralex',
-         idioms(),
+         idioms.init(),
          function (req, res) {
               res.render('paralex', {});
          });
