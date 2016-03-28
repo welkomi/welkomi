@@ -7,7 +7,12 @@ var google = require('googleapis'),
         keys.client_email,
         null,
         keys.private_key,
-        ['https://www.googleapis.com/auth/drive'],
+        [
+            'https://www.googleapis.com/auth/drive',
+            'https://www.googleapis.com/auth/drive.file',
+            'https://www.googleapis.com/auth/drive.appdata',
+            'https://www.googleapis.com/auth/drive.apps.readonly'
+        ],
         null
     );
 
@@ -16,5 +21,5 @@ exports.init = function () {
 };
 
 exports.drive = function () {
-    return google.drive('v2');
+    return google.drive('v3');
 };

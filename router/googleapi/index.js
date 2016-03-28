@@ -6,12 +6,17 @@ var google = require('./../../wrappers/googlewrapper'),
     drive = google.drive();
 
 exports.init = function (expressrouter) {
-    expressrouter.get('/testg/', function(req, res) {
+    /**
+     * List files from gdrive
+     */
+    expressrouter.get('/drive/list/:id', function(req, res) {
+        var id = req.params.id;
+
         googleinit.authorize(function (errGoogle, tokens) {
             if (errGoogle) throw errGoogle;
 
-            drive.children.list({
-                'folderId': '0B9gI2Lt4M_dxOENhek9qdVpTTDQ',
+            drive.files.list({
+                'q': '"' + id + '" in parents',
                 'auth': googleinit
             }, function (errDrive, resDrive) {
                 if (errDrive) throw errDrive;
@@ -19,5 +24,35 @@ exports.init = function (expressrouter) {
                 res.json(resDrive);
             });
         })
+    });
+
+    /**
+     * Create folder in parent or root
+     */
+    expressrouter.get('/drive/folder/create/:parents/:name', function (req, res) {
+        var name = req.params.name,
+            parents = [];
+
+        parents.push(req.params.parents);
+
+        googleinit.authorize(function (errGoogle, tokens) {
+            if (errGoogle) throw errGoogle;
+
+            var resource = {
+                'mimeType': 'application/vnd.google-apps.folder',
+                'name': name,
+                'parents': parents
+            };
+
+            drive.files.create({
+                'resource': resource,
+                'fields': 'id',
+                'auth': googleinit
+            }, function (errDrive, resDrive) {
+                if (errDrive) throw errDrive;
+
+                res.json(resDrive);
+            });
+        });
     });
 };
