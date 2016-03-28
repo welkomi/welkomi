@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iraklitbz/proyect2.git"
+    "url": "git+https://github.com/welkomi/welkomi.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iraklitbz/proyect2/issues"
+    "url": "https://github.com/welkomi/issues"
   },
   "dependencies": {
     "pm2": "latest",
@@ -37,5 +37,8 @@
     "express-locale": "latest",
     "i18n": "latest"
   },
-  "homepage": "https://github.com/iraklitbz/proyect2#readme"
+  "homepage": "git+https://github.com/welkomi/#readme",
+  "devDependencies": {
+    "gulp-sass": "^2.2.0"
+  }
 }

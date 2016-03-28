@@ -33,6 +33,13 @@ idioms.getAvailableLangs(function () {
     /**
      * Framework inits
      */
+    app.use(function (req, res, next) {
+        res.locals.renderGdriveUrl = function (folder, file) {
+            return 'http://googledrive.com/host/' + folder + '/' + file;
+        }
+
+        next();
+    });
     app.use(i18n.init);
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: false}));
