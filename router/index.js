@@ -55,6 +55,11 @@ exports.routes = function (expressrouter) {
     require('./cacheapi').init(expressrouter);
 
     /**
+     * Google router api
+     */
+    require('./googleapi').init(expressrouter);
+
+    /**
      *Probando paralex footer
      */
     require('./paralex').init(expressrouter, idioms);
