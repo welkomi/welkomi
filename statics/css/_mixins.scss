@@ -1,3 +1,5 @@
 @function render-gdrive-url($folder, $file) {
   @return 'http://googledrive.com/host/' + $folder + '/' + $file
 }
+
+$wkcolor: #e83026

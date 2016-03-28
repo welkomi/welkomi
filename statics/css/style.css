@@ -45,12 +45,11 @@ body {
   margin: auto; }
 
 .logo {
-  padding-left: 15px;
   font-size: 1.5em;
   text-indent: -9999px; }
 
 .top {
-  margin-top: 80px; }
+  margin-top: 70px; }
 
 .topmodule {
   margin-top: 50px; }
@@ -90,13 +89,14 @@ body {
   margin-top: 10px; }
 
 .specialheader .navbar-fixed-top {
-  background-color: rgba(255, 255, 255, 0.31);
+  background-color: transparent;
   border-bottom: none;
   -webkit-transition: background 0.3s linear;
   -moz-transition: background 0.3s linear;
   -ms-transition: background 0.3s linear;
   -o-transition: background 0.3s linear;
-  transition: background 0.3s linear; }
+  transition: background 0.3s linear;
+  position: absolute !important; }
 
 .searchuserheader.specialSearch {
   top: 70px; }
@@ -110,6 +110,9 @@ body {
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
   z-index: 9998; }
+
+.specialheader .wklogin {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
 
 .navbar-default {
   background-color: transparent;
@@ -144,11 +147,60 @@ body {
   font-size: 1.7em;
   color: #fff; }
 
+.specialheader .wklogin .btn {
+  display: none; }
+
+.specialheader .btn-publish {
+  float: right;
+  margin: 15px 0 0 0px;
+  border: none; }
+
+.btn-publish {
+  float: left;
+  background-color: transparet;
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 15px 0 0 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  position: relative;
+  z-index: 9999;
+  border-left: 1px solid #000; }
+
 .btn-joinus {
-  background-color: #b66186;
+  background-color: #e83026;
   color: #fff;
-  width: 120px;
-  margin-right: 5px; }
+  width: 180px;
+  margin-right: 5px;
+  opacity: 1;
+  font-weight: 800; }
+
+.btn-joinus:hover {
+  color: #fff;
+  opacity: 0.9; }
+
+.btn-login {
+  border: solid 1px #e83026;
+  color: #e83026;
+  width: 100px;
+  font-weight: 800;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.btn-login:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #e83026; }
 
 .hero {
   background-image: url("http://googledrive.com/host/0B9gI2Lt4M_dxZFRPLVdhbUxRREE/girl.jpg");
@@ -269,7 +321,7 @@ body {
 
 .searchuserheader .btn-search {
   background-color: transparent;
-  color: #b66186;
+  color: #e83026;
   border-radius: 0px;
   height: 50px;
   border: none;
@@ -279,6 +331,16 @@ body {
 
 .joinus button {
   padding: 0.8em; }
+
+.joinus .btn-loginhero {
+  background-color: #e83026;
+  color: #fff;
+  width: 120px;
+  font-weight: 800;
+  opacity: 1; }
+
+.joinus .btn-loginhero:hover {
+  opacity: 0.9; }
 
 aside .asidemgm {
   padding: 20px 0px 0px 0px !important;
