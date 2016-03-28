@@ -50,6 +50,11 @@ exports.routes = function (expressrouter) {
     require('./idiomsapi').init(expressrouter);
 
     /**
+     * Cache router api
+     */
+    require('./cacheapi').init(expressrouter);
+
+    /**
      *Probando paralex footer
      */
     require('./paralex').init(expressrouter, idioms);
