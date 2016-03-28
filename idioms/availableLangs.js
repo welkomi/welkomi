@@ -12,8 +12,6 @@ exports.init = function (callback) {
         if (errRedis) throw errRedis;
 
         if (!resRedis) {
-            console.log('FROM MONGO');
-
             models.model('Languages')
                 .find({}, {
                     '__v': 0,
@@ -44,8 +42,6 @@ exports.init = function (callback) {
         }
 
         else {
-            console.log('FROM REDIS');
-
             redis.get(rediskey, function (errRedisGet, resRedisGet) {
                 if (errRedisGet) throw errRedisGet;
 
