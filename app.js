@@ -35,8 +35,8 @@ idioms.getAvailableLangs(function () {
      */
     app.use(function (req, res, next) {
         res.locals.renderGdriveUrl = function (folder, file) {
-            return 'http://googledrive.com/host/' + folder + '/' + file;
-        }
+            return process.env.GDRIVE_URI + folder + '/' + file;
+        };
 
         next();
     });
