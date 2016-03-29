@@ -55,7 +55,7 @@ body {
   margin-top: 50px; }
 
 .topheader {
-  margin-top: 120px; }
+  margin-top: 80px; }
 
 .headerpro li a {
   color: #fff; }
@@ -87,6 +87,34 @@ body {
 
 .navbar-fixed-top .navbar {
   margin-top: 10px; }
+
+/*usuario login list*/
+.userlogin {
+  display: none; }
+
+.specialheader .userlogin {
+  float: right;
+  margin-top: 15px;
+  position: relative;
+  z-index: 9999;
+  display: block; }
+
+.specialheader .userlogin li {
+  display: inline-block; }
+
+.specialheader .userlogin li a {
+  display: block;
+  padding: 1px 12px;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold; }
+
+.specialheader .userlogin li a span {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  position: relative;
+  top: 4px; }
 
 .specialheader .navbar-fixed-top {
   background-color: transparent;
@@ -153,7 +181,10 @@ body {
 .specialheader .btn-publish {
   float: right;
   margin: 15px 0 0 0px;
-  border: none; }
+  border: none;
+  left: 27px;
+  border: 1px solid #fff;
+  color: #fff; }
 
 .btn-publish {
   float: left;
