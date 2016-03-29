@@ -1,42 +1,35 @@
 /**
  * Created by ssanchez on 28/03/16.
  */
-var google = require('./../../wrappers/googlewrapper'),
-    googleinit = google.init(),
-    drive = google.drive();
+var google = require('./../../wrappers/googlewrapper');
+    //googleinit = google.init(),
+    //drive = google.drive();
 
 exports.init = function (expressrouter) {
-    /**
-     * List files from gdrive
-     */
-    expressrouter.get('/drive/list/:id', function(req, res) {
-        var id = req.params.id;
-
-        googleinit.authorize(function (errGoogle, tokens) {
-            if (errGoogle) throw errGoogle;
+    google.api('drive', 'v3', function (drive) {
+        /**
+         * List files from gdrive
+         */
+        expressrouter.get('/drive/folder/list/:id', function(req, res) {
+            var id = req.params.id;
 
             drive.files.list({
-                'q': '"' + id + '" in parents',
-                'auth': googleinit
+                'q': '"' + id + '" in parents'
             }, function (errDrive, resDrive) {
                 if (errDrive) throw errDrive;
 
                 res.json(resDrive);
             });
-        })
-    });
+        });
 
-    /**
-     * Create folder in parent or root
-     */
-    expressrouter.get('/drive/folder/create/:parents/:name', function (req, res) {
-        var name = req.params.name,
-            parents = [];
+        /**
+         * Create folder in parent or root
+         */
+        expressrouter.get('/drive/folder/create/:parents/:name', function (req, res) {
+            var name = req.params.name,
+                parents = [];
 
-        parents.push(req.params.parents);
-
-        googleinit.authorize(function (errGoogle, tokens) {
-            if (errGoogle) throw errGoogle;
+            parents.push(req.params.parents);
 
             var resource = {
                 'mimeType': 'application/vnd.google-apps.folder',
@@ -46,8 +39,7 @@ exports.init = function (expressrouter) {
 
             drive.files.create({
                 'resource': resource,
-                'fields': 'id',
-                'auth': googleinit
+                'fields': 'id, webViewLink',
             }, function (errDrive, resDrive) {
                 if (errDrive) throw errDrive;
 
