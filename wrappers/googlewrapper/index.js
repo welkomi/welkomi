@@ -1,8 +1,7 @@
 /**
  * Created by ssanchez on 28/03/16.
  */
-var redis = require('./../rediswrapper').init(),
-    credentials = process.env,
+var credentials = process.env,
     credentials1 = require('./client_secret_258762512585-48kk76vfdnagble13bv3kn8b6u0liebn.apps.googleusercontent.com.json'),
     google = require('googleapis'),
     OAuth2 = google.auth.OAuth2,
