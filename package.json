@@ -36,7 +36,8 @@
     "imagemagick-stream": "latest",
     "express-locale": "latest",
     "i18n": "latest",
-    "googleapis": "latest"
+    "googleapis": "latest",
+    "refresh-token": "latest"
   },
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {
