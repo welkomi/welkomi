@@ -35,7 +35,8 @@
     "cookie-parser": "latest",
     "imagemagick-stream": "latest",
     "express-locale": "latest",
-    "i18n": "latest"
+    "i18n": "latest",
+    "googleapis": "latest"
   },
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {
