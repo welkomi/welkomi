@@ -1,5 +1,8 @@
 {
+  "login": "注册",
+  "messages": "帖子",
   "showyourcity": "显示您的城市!",
   "guidethepeople": "引导人们对你的城市和结交新朋友",
-  "guideme": "导致我 !"
+  "guideme": "导致我 !",
+  "publishatour": "参观后"
 }
