@@ -119,13 +119,6 @@ body {
     font-weight: bold
   }
 
-  .specialheader .userlogin li a span{
-   width: 22px;
-    height: 22px;
-    margin-right: 5px;
-    position: relative;
-    top: 4px;
-  }
 
 .specialheader  .navbar-fixed-top {
   background-color: transparent;
@@ -146,7 +139,7 @@ body {
 
 .navbar-fixed-top {
   background-color: rgba(255, 255, 255, 0.97);
-  border-bottom: solid 1px #aaddc1;
+  border-bottom: solid 1px $wkcolor;
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
   -ms-transition: background 0.2s linear;
@@ -157,6 +150,7 @@ body {
 
 .specialheader .wklogin {
   border-bottom:1px solid rgba(255,255,255, 0.3);
+  border-radius: 0px
 
 }
 
@@ -195,31 +189,41 @@ body {
   font-size: 1.7em;
   color: #fff; }
 
-
-
-
-
      .specialheader .wklogin .btn{
   display: none;
  
    }
 
    .specialheader .btn-publish {
-    float: right;
-    margin: 15px 0 0 0px;
      border: none;
-     left:27px;
-     border:1px solid #fff;
-     color: #fff
+     border:2px solid #fff;
+     color: #fff;
+     padding: 6px 12px;
+      margin: 5px 0 0 57px;
+    left: 25px;
+    font-weight: bold;
    }
+   .specialheader .btn-publish:hover {
+    color:#fff;
+    text-decoration:underline
+   }
+    .specialheader .btn-publish span {
+   display: none
+   }
+
+   .wkicon{
+     display: inline-block;
+   margin-right: 5px;
+   position: relative;
+   top: 4px
+   }
+
  .btn-publish {
-    float: left;
+    color: $wkcolor;
     background-color:transparet;
     display: inline-block;
     padding: 6px 12px;
-    margin: 15px 0 0 12px;
     font-size: 14px;
-    font-weight: normal;
     line-height: 1.42857143;
     text-align: center;
     white-space: nowrap;
@@ -234,16 +238,20 @@ body {
     background-image: none;
     position: relative;
     z-index: 9999;
-    border-left: 1px solid #000
+
+   }
+
+    .btn-publish:hover {
+color: $wkcolor;
+text-decoration:none
    }
 
 .btn-joinus {
   background-color: $wkcolor;
   color: #fff;
-  width: 180px;
   margin-right: 5px;
+  padding: 6px 30px;
   opacity: 1;
-  font-weight: 800
    }
   .btn-joinus:hover {
   color: #fff;
@@ -253,8 +261,6 @@ body {
  .btn-login {
   border:solid 1px $wkcolor;
   color: $wkcolor;
-  width: 100px;
-   font-weight: 800;
    background-color: rgba(255,255,255,0.8);
    }
   .btn-login:hover {
@@ -403,7 +409,7 @@ body {
 
 .searchuserheader .btn-search {
   background-color: transparent;
-  color: $wkcolor;
+  color: #34ae6b;
   border-radius: 0px;
   height: 50px;
   border: none;
@@ -413,14 +419,14 @@ body {
 }
 
 .joinus button {
-  padding: 0.8em; }
+  padding: 0.8em;
+ height:50px
+   }
 
 
 .joinus .btn-loginhero {
   background-color: $wkcolor;
     color: #fff;
-    width: 120px;
-    font-weight: 800;
     opacity: 1
 }
 .joinus .btn-loginhero:hover {
@@ -890,7 +896,7 @@ aside .asidemgm {
 .btn-fb{
   background-color: #44619d;
   color: #fff;
-  width: 230px
+  width: 230px;
 
 }
 
@@ -1477,9 +1483,9 @@ footer p {
 /*# search btn */
 .results {
   width: 100%;
-  -ms-transform: translate(185px,53px); /* IE 9 */
-  -webkit-transform: translate(185px,53px); /* Safari */
-  transform: translate(185px,53px);
+  -ms-transform: translate(155px,53px); /* IE 9 */
+  -webkit-transform: translate(155px,53px); /* Safari */
+  transform: translate(155px,53px);
   position: fixed;
   max-width: 280px;
   z-index: 9999;
