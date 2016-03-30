@@ -27,7 +27,9 @@ idioms.getAvailableLangs(function () {
         'directory': __dirname + '/locales',
         'defaultLocale': 'en',
         'cookie': 'langcookie',
-        'queryParameter': 'lang'
+        'queryParameter': 'lang',
+        //'updateFiles': false,
+        'register': global
     });
 
     /**
@@ -40,6 +42,7 @@ idioms.getAvailableLangs(function () {
 
         next();
     });
+
     app.use(i18n.init);
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: false}));
@@ -75,6 +78,16 @@ idioms.getAvailableLangs(function () {
     /**
      * Other server config
      */
+    expressrouter.prefix = express.Router.prefix = function (path, configure) {
+        var router = express.Router();
+
+        this.use (path, router);
+
+        configure(router);
+
+        return router;
+    };
+
     router.routes(expressrouter);
 
     var server = app.listen(process.env.PORT || 3000, function () {

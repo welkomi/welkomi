@@ -1,9 +1,9 @@
 {
-	"login": "登録",
-	"messages": "投稿",
-	"showyourcity": "あなたの街を表示します !",
-	"guidethepeople": "あなたの街のために人を案内し、新しい友達を作ります",
-	"guideme": "私を導きます !",
-	"publishatour": "ポストツアー",
-	"/login-user/": "/login-user/"
+  "login": "登録",
+  "messages": "投稿",
+  "showyourcity": "あなたの街を表示します !",
+  "guidethepeople": "あなたの街のために人を案内し、新しい友達を作ります",
+  "guideme": "私を導きます !",
+  "publishatour": "ポストツアー",
+  "/register-user/": "/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E7%99%BB%E9%8C%B2/"
 }
