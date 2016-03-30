@@ -14,11 +14,10 @@ var passport = require('passport'),
     session = require('cookie-session'),
     bodyParser = require('body-parser'),
     i18n = require('i18n'),
-    idioms = require('./idioms/');
+    idioms = require('./idioms/'),
+    middlewares = require('./middlewares');
 
 idioms.getAvailableLangs(function () {
-    require('./customfilters');
-
     /**
      * Config for i18n
      */
@@ -35,13 +34,7 @@ idioms.getAvailableLangs(function () {
     /**
      * Framework inits
      */
-    app.use(function (req, res, next) {
-        res.locals.renderGdriveUrl = function (folder, file) {
-            return process.env.GDRIVE_URI + folder + '/' + file;
-        };
-
-        next();
-    });
+    app.use(middlewares.renderGdriveUrl());
 
     app.use(i18n.init);
     app.use(bodyParser.json());
@@ -78,19 +71,14 @@ idioms.getAvailableLangs(function () {
     /**
      * Other server config
      */
-    expressrouter.prefix = express.Router.prefix = function (path, configure) {
-        var idioms = require('./idioms'),
-            router = express.Router();
-
-        this.use (path, idioms.init(), router);
-
-        configure(router);
-
-        return router;
-    };
-
+    expressrouter.prefix = express.Router.prefix = middlewares.prefixRouter(app, express);
     router.routes(expressrouter);
 
+    /**
+     * Initialize the server
+     *
+     * @type {http.Server}
+     */
     var server = app.listen(process.env.PORT || 3000, function () {
         var host = server.address().address,
             port = server.address().port;
