@@ -78,13 +78,11 @@ idioms.getAvailableLangs(function () {
     /**
      * Other server config
      */
-    expressrouter.prefix = express.Router.prefix = function (path, configure, middleware) {
-        var router = express.Router(),
-            use = middleware || function (req, res, next) {
-                    next();
-                };
+    expressrouter.prefix = express.Router.prefix = function (path, configure) {
+        var idioms = require('./idioms'),
+            router = express.Router();
 
-        this.use (path, use, router);
+        this.use (path, idioms.init(), router);
 
         configure(router);
 
