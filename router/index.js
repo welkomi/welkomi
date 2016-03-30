@@ -33,7 +33,7 @@ exports.routes = function (expressrouter) {
     /**
      *Rutas de usuario
      */
-    require('./userinterface').init(expressrouter);
+    require('./userinterface').init(expressrouter, idioms);
 
     /**
      * USER REGISTER

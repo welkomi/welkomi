@@ -5,5 +5,6 @@
 	"guidethepeople": "Leitfaden Menschen für Ihre Stadt und neue Freunde zu finden",
 	"guideme": "Führen mich !",
 	"publishatour": "Nach der Tour",
-	"/register-user/": "/register-user/"
+	"/register-user/": "/registrieren-Benutzer/",
+	"/login-user/": "/Login-Benutzer/"
 }
