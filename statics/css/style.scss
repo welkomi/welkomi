@@ -201,17 +201,18 @@ body {
 
 
  .btn-publish {
-    color: $wkcolor;
+    color: #e85e63;
+    border: 2px solid #e85e63!important;
+    padding: 4px 10px!important
    }
 
 .btn-joinus {
   background-color: $wkcolor!important;
   color: #fff;
-  padding: 6px 30px!important;
+  padding: 5px 11px!important
    }
 
  .btn-login {
-  border:solid 1px $wkcolor;
   color: $wkcolor;
    }
 

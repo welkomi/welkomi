@@ -25,6 +25,11 @@ exports.routes = function (expressrouter) {
     require('./users').init(expressrouter, idioms);
 
     /**
+     * Route /publish
+     */
+    require('./publish').init(expressrouter, idioms);
+
+    /**
      * Translate text API
      *
      * Route /texts/:es/:key
