@@ -10,11 +10,11 @@ exports.init = function (expressrouter) {
         /**
          * List files from gdrive
          */
-        expressrouter.get('/drive/folder/list/:id', function(req, res) {
-            var id = req.params.id;
+        expressrouter.get('/drive/folder/list/:id?', function(req, res) {
+            var id = req.params.id || 'root';
 
             drive.files.list({
-                'q': '"' + id + '" in parents'
+                'q': '"' + id + '" in parents and trashed = false'
             }, function (errDrive, resDrive) {
                 if (errDrive) throw errDrive;
 

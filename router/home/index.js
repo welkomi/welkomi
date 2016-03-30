@@ -14,7 +14,6 @@ exports.init = function (expressrouter, idioms) {
 
      expressrouter.get(
          ___availableLangs.route,
-         idioms.init(),
          function (req, res) {
              res.render('home', {
                  'locale': req.params.lang
