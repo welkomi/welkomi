@@ -2,7 +2,8 @@
  * Created by chadsfather on 15/12/15.
  */
 
-var idioms = require('./../idioms');
+var idioms = require('./../idioms'),
+    i18n = require('i18n');
 
 exports.routes = function (expressrouter) {
     /**
@@ -33,7 +34,7 @@ exports.routes = function (expressrouter) {
     /**
      *Rutas de usuario
      */
-    require('./userinterface').init(expressrouter, idioms);
+    require('./userinterface').init(expressrouter, i18n);
 
     /**
      * USER REGISTER

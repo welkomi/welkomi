@@ -3,14 +3,17 @@
  */
 
 var mongoose = require('mongoose'),
-    autoIncrement = require('mongoose-auto-increment'),
-    passportLocalMongoose = require('passport-local-mongoose');
+    autoIncrement = require('mongoose-auto-increment');
+    //passportLocalMongoose = require('passport-local-mongoose');
 
 var UserSchema = mongoose.Schema({
     '_id': 'Number',
     'username': 'String',
     'password': 'String',
-    'role': 'String'
+    'role': {
+        'type': 'String',
+        'default': 'user'
+    }
 });
 
 var IdiomsSchema = mongoose.Schema({
@@ -33,7 +36,7 @@ autoIncrement.initialize(mongoose.connect(process.env.MONGOLAB_URI));
  * Schema para usuarios
  */
 UserSchema.plugin(autoIncrement.plugin, 'User');
-UserSchema.plugin(passportLocalMongoose);
+//UserSchema.plugin(passportLocalMongoose);
 
 /**
  * Schema para idiomas

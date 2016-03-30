@@ -57,10 +57,24 @@ idioms.getAvailableLangs(function () {
     /**
      * Config for passport
      */
-    passport.use(new LocalStrategy(models.model('User').authenticate()));
-    passport.serializeUser(models.model('User').serializeUser());
-    passport.deserializeUser(models.model('User').deserializeUser());
+    //passport.use(new LocalStrategy(models.model('User').authenticate()));
+    //passport.serializeUser(models.model('User').serializeUser());
+    //passport.deserializeUser(models.model('User').deserializeUser());
 
+    passport.use(new LocalStrategy({
+        'usernameField': 'username',
+        'passwordField': 'password'
+        },
+        function (req, username, password, next) {
+            console.log('config', req);
+            console.log('config', username);
+            console.log('config', password);
+        }
+    ));
+
+    /**
+     * Other server config
+     */
     router.routes(expressrouter);
 
     var server = app.listen(process.env.PORT || 3000, function () {

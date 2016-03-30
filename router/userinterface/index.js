@@ -2,16 +2,16 @@
  * Created by chadsfather on 15/12/15.
  */
 
-exports.init = function (expressrouter) {
+exports.init = function (expressrouter, i18n) {
      expressrouter.get(
-         '/:lang/register-user',
+         ___availableLangs.route + '/register-user/',
          function (req, res) {
               res.render('registeruser', {});
          });
 
      expressrouter.get(
-          '/:lang/login-user',
-          function (req, res) {
-               res.render('registeruser', {});
-          });
+         ___availableLangs.route + i18n.__('/login-user/'),
+         function (req, res) {
+             res.render('registeruser', {});
+         });
 };

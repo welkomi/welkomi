@@ -6,7 +6,7 @@ var passport = require('passport'),
 
 exports.init = function (expressrouter) {
      expressrouter.post(
-          '/Autenticate',
+          '/Autenticate/',
           passport.authenticate('local', {
               failureRedirect: '/es/registerUser'
           }),
@@ -15,19 +15,21 @@ exports.init = function (expressrouter) {
           });
 
      expressrouter.post(
-         '/Register',
+         '/Register/',
          function (req, res, next) {
-             console.log('REFERER', req.headers);
+             console.log('register', req.body);
 
-             models.model('User').register(
-                 new models.model('User')({'username': req.body.username}),
-
-                 req.body.password,
-
-                 function (err) {
-                     if (err) console.log(err);//return next(err);
-
-                     console.log('==> REGISTRADO');
-                 });
+             //models.model('User').register(
+             //    new models.model('User')(
+             //        {
+             //            'username': req.body.username
+             //        }
+             //    ),
+             //    req.body.password,
+             //    function (err) {
+             //        if (err) throw err;
+             //
+             //        console.log('==> REGISTRADO');
+             //    });
          });
 };

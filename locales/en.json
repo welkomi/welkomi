@@ -1,8 +1,9 @@
 {
-  "login": "Login",
-  "messages": "Messages",
-  "showyourcity": "Show your city!",
-  "guidethepeople": "Guide the people for your city and make a new friend",
-  "guideme": "Guide me!",
-  "publishatour": "Publish a tour"
+	"login": "Login",
+	"messages": "Messages",
+	"showyourcity": "Show your city!",
+	"guidethepeople": "Guide the people for your city and make a new friend",
+	"guideme": "Guide me!",
+	"publishatour": "Publish a tour",
+	"/login-user/": "/login-user/"
 }
