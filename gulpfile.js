@@ -9,7 +9,10 @@ gulp.task('css', function () {
     return gulp
         .src('./statics/css/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(cleancss())
+        .pipe(cleancss({'debug': true}, function (details) {
+            console.log('Original size: ' + details.stats.originalSize);
+            console.log('Minified size: ' + details.stats.minifiedSize);
+        }))
         .pipe(gulp.dest('./statics/css/'));
 });
 
