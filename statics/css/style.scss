@@ -158,6 +158,12 @@ body {
   color: #fff; }
 
   /*usuario login list*/
+  .specialheader .wklogin span svg path {
+  fill: #fff
+}
+.wklogin span svg path {
+  fill: #000
+}
     .wkicon{
      display: inline-block;
    margin-right: 5px;
