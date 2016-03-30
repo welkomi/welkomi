@@ -158,24 +158,29 @@ body {
   color: #fff; }
 
   /*usuario login list*/
-  .specialheader .wklogin span svg path {
-  fill: #fff
+ .wklogin .btn-publish svg path {
+  fill: #ec6060
 }
 .wklogin span svg path {
-  fill: #000
+  fill: $wkcolor
+}
+.wklogin .btn-joinus svg path {
+  fill: #fff
 }
     .wkicon{
      display: inline-block;
    margin-right: 5px;
-   position: relative;
-   top: 4px
+  float: left
    }
 
 
 .wklogin a {
      background-color: transparent;
     font-weight: bold;
-    margin:0px 7px 0 0!important
+    margin:0px 7px 0 0!important;
+    text-transform: uppercase;
+    font-weight: normal;
+    clear: both
    }
 
 
@@ -196,9 +201,21 @@ body {
 
    .btn-mens {
   color: $wkcolor;
+  display: none
+   }
+
+    .wklogin .navtext {
+    float: right;
+    margin-top: 3px
    }
 
     /*usuario login list specialheader*/
+      .specialheader .wklogin span svg path {
+  fill: #fff
+}
+.specialheader .wklogin .btn-publish svg path {
+  fill: #ec6060
+}
       .specialheader .wklogin {
   border-bottom:1px solid rgba(255,255,255, 0.3);
   border-radius: 0px
@@ -207,16 +224,28 @@ body {
         display: none
       }
 
+      .specialheader .wklogin .navtext {
+    float: right;
+    margin-top: 3px
+   }
+
       .specialheader .wklogin a {
      border: none;
      color: #fff;
      background-color: transparent;
     font-weight: bold;
-    padding: 6px 12px!important;
-    margin:0px 7px 0 0!important
+    padding: 6px 12px;
+    margin:0px 7px 0 0;
+    text-transform: uppercase;
+    clear: both
    }
     .specialheader .btn-publish {
-    border: 2px solid #fff!important
+    border: 2px solid #fff!important;
+    padding: 4px 10px!important
+   }
+
+    .specialheader .btn-mens {
+    display: inline-block
    }
 
 
