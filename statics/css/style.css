@@ -166,7 +166,7 @@ body {
   fill: #607684; }
 
 .wklogin .btn-joinus svg path {
-  fill: #fff; }
+  fill: #607684; }
 
 .wkicon {
   display: inline-block;
@@ -175,24 +175,23 @@ body {
 
 .wklogin a {
   background-color: transparent;
-  font-weight: bold;
   margin: 0px 7px 0 0 !important;
-  text-transform: uppercase;
   font-weight: normal;
   clear: both; }
 
 .btn-publish {
   color: #e85e63;
-  border: 2px solid #e85e63 !important;
+  border: 1px solid #e85e63 !important;
   padding: 4px 10px !important; }
 
 .btn-joinus {
-  background-color: #607684 !important;
-  color: #fff;
-  padding: 5px 11px !important; }
+  border: 1px solid #607684 !important;
+  color: #607684;
+  padding: 4px 10px !important; }
 
 .btn-login {
-  color: #607684; }
+  color: #607684;
+  padding: 4px 10px !important; }
 
 .btn-mens {
   color: #607684;
@@ -214,7 +213,8 @@ body {
   border-radius: 0px; }
 
 .specialheader .btn-joinus {
-  display: none; }
+  display: none;
+  padding: 4px 10px !important; }
 
 .specialheader .wklogin .navtext {
   float: right;
@@ -225,17 +225,19 @@ body {
   color: #fff;
   background-color: transparent;
   font-weight: bold;
-  padding: 6px 12px;
   margin: 0px 7px 0 0;
-  text-transform: uppercase;
   clear: both; }
 
 .specialheader .btn-publish {
-  border: 2px solid #fff !important;
+  border: 1px solid #fff !important;
   padding: 4px 10px !important; }
 
 .specialheader .btn-mens {
-  display: inline-block; }
+  display: inline-block;
+  padding: 4px 10px !important; }
+
+.specialheader .btn-login {
+  padding: 4px 10px !important; }
 
 /*hero*/
 .hero {
@@ -1357,5 +1359,9 @@ footer p {
 
 .entry-keys .form-group {
   margin-bottom: 7px; }
+
+/*# Publish guides page */
+.publishtour {
+  min-height: 540px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -181,7 +181,7 @@ body {
   fill: $wkcolor
 }
 .wklogin .btn-joinus svg path {
-  fill: #fff
+  fill: $wkcolor
 }
     .wkicon{
      display: inline-block;
@@ -192,9 +192,7 @@ body {
 
 .wklogin a {
      background-color: transparent;
-    font-weight: bold;
     margin:0px 7px 0 0!important;
-    text-transform: uppercase;
     font-weight: normal;
     clear: both
    }
@@ -202,18 +200,19 @@ body {
 
  .btn-publish {
     color: #e85e63;
-    border: 2px solid #e85e63!important;
+    border: 1px solid #e85e63!important;
     padding: 4px 10px!important
    }
 
 .btn-joinus {
-  background-color: $wkcolor!important;
-  color: #fff;
-  padding: 5px 11px!important
+  border: 1px solid $wkcolor!important;
+  color: $wkcolor;
+  padding: 4px 10px!important
    }
 
  .btn-login {
   color: $wkcolor;
+  padding: 4px 10px!important
    }
 
    .btn-mens {
@@ -238,7 +237,8 @@ body {
   border-radius: 0px
 }
    .specialheader .btn-joinus {
-        display: none
+        display: none;
+        padding: 4px 10px!important
       }
 
       .specialheader .wklogin .navtext {
@@ -251,18 +251,22 @@ body {
      color: #fff;
      background-color: transparent;
     font-weight: bold;
-    padding: 6px 12px;
     margin:0px 7px 0 0;
-    text-transform: uppercase;
     clear: both
    }
     .specialheader .btn-publish {
-    border: 2px solid #fff!important;
+    border: 1px solid #fff!important;
     padding: 4px 10px!important
    }
 
     .specialheader .btn-mens {
-    display: inline-block
+    display: inline-block;
+    padding: 4px 10px!important
+   }
+
+    .specialheader .btn-login {
+    padding: 4px 10px!important;
+    
    }
 
 
@@ -1625,8 +1629,10 @@ footer p {
   margin-bottom: 7px
 }
 
-
-
+/*# Publish guides page */
+.publishtour {
+  min-height: 540px
+}
 
 
 
