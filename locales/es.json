@@ -5,5 +5,6 @@
 	"guidethepeople": "Guía a la gente por tu ciudad y haz nuevos amigos",
 	"guideme": "Guíame !",
 	"publishatour": "Publica un tour",
-	"/register-user/": "/registrar-usuario/"
+	"/register-user/": "/registrar-usuario/",
+	"/login-user/": "/logar-usuario/"
 }
