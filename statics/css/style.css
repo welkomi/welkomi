@@ -75,15 +75,29 @@ body {
   background-repeat: no-repeat;
   background-size: contain; }
 
+.specialheader .navbar-fixed-top .logo a {
+  color: #000;
+  display: block;
+  width: 140px;
+  height: 45px;
+  margin-top: -16px;
+  background-image: url("../images/logosec.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 9999; }
+
 .navbar-fixed-top .logo a {
   color: #000;
   display: block;
   width: 140px;
-  height: 30px;
-  margin-top: -7px;
-  background-image: url("../images/logosec.png");
+  height: 45px;
+  margin-top: -16px;
+  background-image: url("../images/logo.png");
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: contain;
+  position: relative;
+  z-index: 9999; }
 
 .navbar-fixed-top .navbar {
   margin-top: 10px; }
@@ -195,7 +209,7 @@ body {
   fill: #ec6060; }
 
 .specialheader .wklogin {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0px; }
 
 .specialheader .btn-joinus {
