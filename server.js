@@ -15,10 +15,7 @@ pm2.connect(function () {
            'name': 'welkomi-app',
            'exec_mode': 'cluster',
            'instances': instances,
-           'max_memory_restart': maxMemory + 'M',
-           'env': {
-               'NODE_ENV': 'production'
-           }
+           'max_memory_restart': maxMemory + 'M'
        },
        function (err) {
            if (err) return console.error('Error while launching applications', err.stack || err);
