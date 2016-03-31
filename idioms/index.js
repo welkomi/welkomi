@@ -1,6 +1,7 @@
 /**
  * Created by chadsfather on 18/12/15.
  */
+
 /**
  * Set the locale for the app
  *
@@ -8,7 +9,18 @@
  */
 exports.init = function () {
     return function (req, res, next) {
-        req.setLocale(req.params.lang);
+        var language = req.params.lang;
+
+        res.cookie(
+            'langcookie',
+            language,
+            {
+                'maxAge': 900000,
+                'httpOnly': true
+            }
+        );
+
+        req.setLocale(language);
 
         next();
     }
