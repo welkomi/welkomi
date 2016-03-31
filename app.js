@@ -18,7 +18,6 @@ var passport = require('passport'),
     middlewares = require('./middlewares'),
     viewsCache = process.env.NODE_ENV === 'production';
 
-console.log(process.env);
 console.info('viewsCache: ', viewsCache);
 
 idioms.getAvailableLangs(function () {
