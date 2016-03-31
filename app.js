@@ -18,6 +18,8 @@ var passport = require('passport'),
     middlewares = require('./middlewares'),
     viewsCache = process.env.NODE_ENV === 'production' ? true : false;
 
+console.info('viewsCache: ', viewsCache);
+
 idioms.getAvailableLangs(function () {
     /**
      * Config for i18n
