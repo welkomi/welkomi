@@ -1,7 +1,8 @@
 /**
  * Created by chadsfather on 15/12/15.
  */
-var string = require('string');
+var string = require('string'),
+    idioms = require('./../../idioms');
 
 exports.init = function (expressrouter, idioms) {
      expressrouter.get(
@@ -14,6 +15,7 @@ exports.init = function (expressrouter, idioms) {
 
      expressrouter.get(
          ___availableLangs.route,
+         idioms.init(),
          function (req, res) {
              res.render('home', {
                  'locale': req.params.lang
