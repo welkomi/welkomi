@@ -6,6 +6,8 @@ exports.init = function (expressrouter, idioms) {
      expressrouter.get(
          '/:lang/users',
          function (req, res) {
-              res.render('users', {});
+              res.render('users', {
+                  'footer': 0
+              });
          });
 };
