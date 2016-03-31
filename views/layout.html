@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="welkomiApp">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="robots" content="noindex">
-        <title>Welkomi - {% block title %}{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="/statics/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="/statics/css/style.css">
-        {% block head %}{% endblock %}
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <title>Welkomi - {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/statics/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/statics/css/style.css">
+    {% block head %}{% endblock %}
+</head>
 <body ng-controller="CommonCtrl" class="{% block etiquetaBody %}{% endblock%}">
 <div id="fb-root"></div>
 <div class="container-fluid">
@@ -34,77 +34,85 @@
                 </ul>
             </nav>
         </div>
-    </div>
-</div>
-<div class="clearfix"></div>
-</header>
+        <div class="clearfix"></div>
+    </header>
 
 </div>
 <div class="container searchresults">
-<div class="row">
-<div class="col-lg-11">
-    <ul class="results">
-        <li><a href="#"><i class="fa fa-map-marker"></i>Madrid</a></li>
-        <li><a href="#"><i class="fa fa-map-marker"></i>Amsterdam</a></li>
-        <li><a href="#"><i class="fa fa-map-marker"></i>Paris</a></li>
-        <li><a href="#"><i class="fa fa-map-marker"></i>Berlin</a></li>
-    </ul>
-</div>
-</div>
+    <div class="row">
+        <div class="col-lg-11">
+            <ul class="results">
+                <li><a href="#"><i class="fa fa-map-marker"></i>Madrid</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i>Amsterdam</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i>Paris</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i>Berlin</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
 <div {% block pageController %}{% endblock %}>
-{% block content %}{% endblock %}
-</div>
-<div class="container-fluid footer">
-<div class="container">
-<footer>
-<div class="footerscene">
-    <ul parallax id="scene" class="scene col-xs-12 col-sm-12 col-md-12 col-lg-9">
-        <!--<li class="layer nube1" data-depth="0.02"><img src="/statics/images/nube1.png"></li>-->
-        <li class="layer nube1" data-depth="0.02"><img src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube1.png') }}"></li>
-        <li class="layer nube2" data-depth="0.02"><img src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube2.png') }}"></li>
-        <li class="layer nube2small" data-depth="-0.02"><img src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube2.png') }}"></li>
-    </ul>
-    <ul parallax id="scenetwo" class="scenetwo col-xs-12 col-sm-12 col-md-12 col-lg-10">
-        <li class="layer welcomiman" data-depth="0.03"><img src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'welcomiman.png') }}"></li>
-        <li class="layer welcomipar" data-depth="0.01"><img src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'welcomipar.png') }}"></li>
-        <li class="layer welcomiwoman" data-depth="-0.02"><img src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'welcomiwoman.png') }}">
-        </li>
-    </ul>
-    <ul parallax id="scenethree" class="scenethree">
-        <li class="layer welcomiman" data-depth="0.04"><img class="img-responsive"
-        src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'city2.png') }}"></li>
-    </ul>
-</div>
-<ul class="followus">
-    <a class="facebookwm" href="#">
-        <li class="fa fa-facebook"><i>facebook</i></li>
-    </a>
-    <a class="twitterwm" href="#">
-        <li class="fa fa-twitter"><i>twitter</i></li>
-    </a>
-    <a class="instagramwm" href="#">
-        <li class="fa fa-instagram"><i>instagram</i></li>
-    </a>
-    <a class="vimeowm" href="#">
-        <li class="fa fa-vimeo"><i>vimeo</i></li>
-    </a>
-</ul>
-<ul class="navfooter">
-    <li><a href="#">ABOUT US</a></li>
-    <li><a href="#">COPYRIGHT</a></li>
-    <li><a href="#">CONTACT</a></li>
-    <li><a href="#">COMMUNITY</a></li>
-    <li><a href="#">PRIVACY</a></li>
-    <li><a href="#">HOW IT WORKS</a></li>
-</ul>
-<p class="footer-copyright mod-text-center">
-    <small> © 2015 Welkomi International, Inc. A socially responsible.</small>
-</p>
-</footer>
+    {% block content %}{% endblock %}
 </div>
 
+{% if footer != 0 %}
+<div class="container-fluid footer">
+    <div class="container">
+        <footer>
+            <div class="footerscene">
+                <ul parallax id="scene" class="scene col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                    <!--<li class="layer nube1" data-depth="0.02"><img src="/statics/images/nube1.png"></li>-->
+                    <li class="layer nube1" data-depth="0.02"><img
+                            src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube1.png') }}"></li>
+                    <li class="layer nube2" data-depth="0.02"><img
+                            src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube2.png') }}"></li>
+                    <li class="layer nube2small" data-depth="-0.02"><img
+                            src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube2.png') }}"></li>
+                </ul>
+                <ul parallax id="scenetwo" class="scenetwo col-xs-12 col-sm-12 col-md-12 col-lg-10">
+                    <li class="layer welcomiman" data-depth="0.03"><img
+                            src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'welcomiman.png') }}"></li>
+                    <li class="layer welcomipar" data-depth="0.01"><img
+                            src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'welcomipar.png') }}"></li>
+                    <li class="layer welcomiwoman" data-depth="-0.02"><img
+                            src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'welcomiwoman.png') }}">
+                    </li>
+                </ul>
+                <ul parallax id="scenethree" class="scenethree">
+                    <li class="layer welcomiman" data-depth="0.04"><img class="img-responsive"
+                                                                        src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'city2.png') }}">
+                    </li>
+                </ul>
+            </div>
+            <ul class="followus">
+                <a class="facebookwm" href="#">
+                    <li class="fa fa-facebook"><i>facebook</i></li>
+                </a>
+                <a class="twitterwm" href="#">
+                    <li class="fa fa-twitter"><i>twitter</i></li>
+                </a>
+                <a class="instagramwm" href="#">
+                    <li class="fa fa-instagram"><i>instagram</i></li>
+                </a>
+                <a class="vimeowm" href="#">
+                    <li class="fa fa-vimeo"><i>vimeo</i></li>
+                </a>
+            </ul>
+            <ul class="navfooter">
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">COPYRIGHT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+                <li><a href="#">PRIVACY</a></li>
+                <li><a href="#">HOW IT WORKS</a></li>
+            </ul>
+            <p class="footer-copyright mod-text-center">
+                <small> © 2015 Welkomi International, Inc. A socially responsible.</small>
+            </p>
+        </footer>
+    </div>
+
 </div>
+{% endif %}
 <script src="/statics/js/jquery-1.11.1.min.js"></script>
 <script src="/statics/js/bootstrap.js"></script>
 <script src="/statics/js/liveicons.js"></script>
@@ -118,10 +126,10 @@
 <script src="/statics/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <!--search result-->
 <script>
-$('.searchresults').hide();
-$("#searchfixed").focus(function() {
-$('.searchresults').show();
-});
+    $('.searchresults').hide();
+    $("#searchfixed").focus(function () {
+        $('.searchresults').show();
+    });
 </script>
 {% block pagejs %}{% endblock %}
 </body>
