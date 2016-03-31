@@ -13,9 +13,8 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased!important;
   -moz-osx-font-smoothing: grayscale!important;
-  height: 100%;
 }
-.container-fluid {
+.container-fluid{
   padding: 0 20px 0 20px
 }
 .whitebg{
@@ -499,6 +498,8 @@ aside .asidemgm {
   background-size: cover;
   background-position: top; }
 
+.randomUsers {
+  margin-bottom: 50px; }
 
 .tourme {
   background-color: transparent;
@@ -507,11 +508,11 @@ aside .asidemgm {
   font-family: 'Mrs Sheppards', cursive;
   font-size: 3em;
   text-decoration: underline;
+
 }
 
 .tourme:hover {
-  color: #34ae6b; 
-}
+  color: #34ae6b; }
 
 .usersearchperfil {
   text-align: center;
@@ -1386,26 +1387,22 @@ footer p {
 
 
 /*USERS PAGE*/
-.randomUsers{
-  float: left
-}
 .guidedisplay{
   overflow-y: scroll;
-  height: 640px;
+  height: 580px;
 
 }
 
 .guidedisplay::-webkit-scrollbar {
-background-color:#dad8da;
-width:8px
+background-color:#fff;
+width:12px
  }
 
 
 .guidedisplay::-webkit-scrollbar-thumb {
   background-color:$wkcolor;
-  height: 30px;
-  width: 8px;
-  border-radius:10px
+  height: 90px;
+  width: 12px
 }
 .fav span {
   font-size: 1.5em
@@ -1515,8 +1512,10 @@ width:8px
 
 .map_ubication {
   position: relative;
- height: 900px;
- overflow:hidden
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+  height: 645px
 }
 .map_ubication iframe {
   position: absolute;
