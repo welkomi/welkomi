@@ -5,6 +5,8 @@
 	"guidethepeople": "Guide the people for your city and make a new friend",
 	"guideme": "Guide me!",
 	"publishatour": "Publish a tour",
+  	"searchtour": "Search tour",
+  	"/home/": "/",
 	"/register-user/": "/register-user/",
 	"/login-user/": "/login-user/"
 }

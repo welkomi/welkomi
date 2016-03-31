@@ -38,6 +38,7 @@ idioms.getAvailableLangs(function () {
      * Framework inits
      */
     app.use(middlewares.renderGdriveUrl());
+    app.use(middlewares.renderUrl());
 
     app.use(i18n.init);
     app.use(bodyParser.json());

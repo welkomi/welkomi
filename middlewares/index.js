@@ -36,3 +36,15 @@ exports.prefixRouter = function (object, express) {
         return router;
     }
 };
+
+exports.renderUrl = function () {
+    return function (req, res, next) {
+        res.locals.renderUrl = function (route) {
+            var locale = req.res.locale;
+
+            return '/' + locale + __(route);
+        };
+
+        next();
+    };
+};

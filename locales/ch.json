@@ -5,6 +5,8 @@
 	"guidethepeople": "引导人们对你的城市和结交新朋友",
 	"guideme": "导致我 !",
 	"publishatour": "参观后",
+  	"searchtour": "旅游搜索",
+  	"/home/": "/",
 	"/register-user/": "/%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C/",
 	"/login-user/": "/%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7/"
 }

@@ -23,9 +23,9 @@
         <div class="container {% block wover %}{% endblock %}">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row">
-                <h1 class="logo pull-left"><a href="#">Welkomi</a></h1>
+                <h1 class="logo pull-left"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
                 <form class="scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
-                <input id="searchfixed" type="text" class="searchinputwk form-control" placeholder="Search tour">
+                <input id="searchfixed" type="text" class="searchinputwk form-control" placeholder="{{ __('searchtour') }}">
                 <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
             </form>
             <nav class="navbar wklogin">
@@ -33,10 +33,10 @@
                     <li> <a class="btn btn-publish" href="#"><span class="wkicon livicon shadowed" data-n="location" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">Publish tour</span></a></li>
                     <li> <a class="btn btn-mens" href="#"><span class="wkicon livicon shadowed" data-n="message-flag" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">{{ __('messages') }}</span></a></li>
                     <li>
-                        <a class="btn btn-joinus" href="/{{ locale }}/register-user"><span class="wkicon livicon shadowed" data-n="plus" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">Join us</span></a>
+                        <a class="btn btn-joinus" href="{{ renderUrl('/register-user/') }}"><span class="wkicon livicon shadowed" data-n="plus" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">Join us</span></a>
                     </li>
                     <li>
-                        <a class="btn btn-login" href="/{{ locale }}/"><span class="wkicon livicon shadowed" data-n="sign-in" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">Login</span></a>
+                        <a class="btn btn-login" href="{{ renderUrl('/login-user/') }}"><span class="wkicon livicon shadowed" data-n="sign-in" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">Login</span></a>
                     </li>
                 </ul>
             </nav>
