@@ -15,7 +15,8 @@ var passport = require('passport'),
     bodyParser = require('body-parser'),
     i18n = require('i18n'),
     idioms = require('./idioms/'),
-    middlewares = require('./middlewares');
+    middlewares = require('./middlewares'),
+    viewsCache = process.env.NODE_ENV === 'production';
 
 idioms.getAvailableLangs(function () {
     /**
@@ -48,7 +49,7 @@ idioms.getAvailableLangs(function () {
     app.engine('html', swig.renderFile);
     app.set('view engine', 'html');
     app.set('views', __dirname + '/views');
-    app.set('view cache', false);
+    app.set('view cache', viewsCache);
 
     /**
      * Config for passport
