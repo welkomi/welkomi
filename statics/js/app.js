@@ -1,7 +1,7 @@
 /**
  * Created by ssanchez on 28/12/15.
  */
-
+    
 var app = angular.module('welkomiApp', [
     'FBF',
     'jkuri.gallery',
