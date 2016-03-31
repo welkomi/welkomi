@@ -1385,27 +1385,11 @@ footer p {
 
 }
 
-
 /*USERS PAGE*/
 .guidedisplay{
-  overflow-y: scroll;
   height: 580px;
-
 }
 
-.guidedisplay::-webkit-scrollbar {
-background-color:#dddede;
-width:12px;
-  border-radius:10px
- }
-
-
-.guidedisplay::-webkit-scrollbar-thumb {
-  background-color:$wkcolor;
-  height: 90px;
-  width: 12px;
-  border-radius:10px
-}
 .fav span {
   font-size: 1.5em
 }

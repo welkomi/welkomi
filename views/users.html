@@ -1,165 +1,184 @@
 {% extends 'layout.html' %}
 
-{% block title %}<title>Home</title>{% endblock %}
+{% block title %}User{% endblock %}
 
-{% block head %}{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/statics/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"
+      type="text/css"/>
+{% endblock %}
+
+{% block pageController %}ng-controller="UsersCtrl"{% endblock %}
+
 
 {% block content %}
-
 <div class="container-fluid randomUsers users top">
-            <div class="row">
-           <ol class="col-sm-6 col-lg-6 breadcrumb">
-  <li><a href="#">Madrid</a></li>
-  <li class="active">1092 Guias</li>
-</ol>
-</div>
+    <div class="row">
+        <ol class="col-sm-6 col-lg-6 breadcrumb">
+            <li><a href="#">Madrid</a></li>
+            <li class="active">1092 Guias</li>
+        </ol>
+    </div>
 
- <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-     <div class="row">              
-   <div class="guidedisplay">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7 p_right">
-                <div class="usersearchperfil">
-                    <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/newyork.png">
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+        <div class="row">
+            <div ng-scrollbars ng-scrollbars-config="config" class="guidedisplay">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/newyork.png">
+                        </div>
+                        <h2 class="username"><a href="#">40€ /<span class="bolded"> Madrid</span></a></h2>
+
+                        <p>CITY TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+
                     </div>
-                    <h2 class="username"><a href="#">40€ /<span class="bolded"> Madrid</span></a></h2>
-                    <p>CITY TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-
                 </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/tokio.png">
+                        </div>
+                        <h2 class="username"><a href="#">free /<span class="bolded"> New York</span></a></h2>
+
+                        <p>NIGHTTOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/madrid.png">
+                        </div>
+                        <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
+
+                        <p>MUSEUM TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/tokio.png">
+                        </div>
+                        <h2 class="username"><a href="#">2€ /<span class="bolded"> Tokio</span></a></h2>
+
+                        <p>MUSEUM TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/madrid.png">
+                        </div>
+                        <h2 class="username"><a href="#">free /<span class="bolded"> Tokio</span></a></h2>
+
+                        <p>MUSEUM TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/madrid.png">
+                        </div>
+                        <h2 class="username"><a href="#">free /<span class="bolded"> Tokio</span></a></h2>
+
+                        <p>MUSEUM TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/madrid.png">
+                        </div>
+                        <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
+
+                        <p>MUSEUM TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/madrid.png">
+                        </div>
+                        <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
+
+                        <p>MUSEUM TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/madrid.png">
+                        </div>
+                        <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
+
+                        <p>MUSEUM TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
+                    <div class="usersearchperfil">
+                        <div class="full_media">
+                            <img class="img-responsive" src="/statics/images/citys/madrid.png">
+                        </div>
+                        <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
+
+                        <p>MUSEUM TOUR</p>
+                        <a class="tourme" href="#">tour me!</a>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="col-lg-12 nopadding">
+                    <nav>
+                        <ul class="pagination">
+                            <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 p_right">
-                <div class="usersearchperfil">
-                   <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/tokio.png">
-                    </div>
-                    <h2 class="username"><a href="#">free /<span class="bolded"> New York</span></a></h2>
-                    <p>NIGHTTOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
+            <div class="scrollhelp">
+                <h3>Scroll to see more!</h3>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
-                <div class="usersearchperfil">
-                    <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/madrid.png">
-                    </div>
-                    <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
-                    <p>MUSEUM TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 hidden-xs hidden-sm">
 
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
-                <div class="usersearchperfil">
-                   <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/tokio.png">
-                    </div>
-                    <h2 class="username"><a href="#">2€ /<span class="bolded"> Tokio</span></a></h2>
-                    <p>MUSEUM TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
+            <div class="map_ubication">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804"
+                        width="600" height="450" frameborder="0" style="border:0"></iframe>
             </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
-                <div class="usersearchperfil">
-                   <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/madrid.png">
-                    </div>
-                    <h2 class="username"><a href="#">free /<span class="bolded"> Tokio</span></a></h2>
-                    <p>MUSEUM TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
-            </div>
-
-             <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 p_right">
-                <div class="usersearchperfil">
-                   <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/madrid.png">
-                    </div>
-                    <h2 class="username"><a href="#">free /<span class="bolded"> Tokio</span></a></h2>
-                    <p>MUSEUM TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 p_right">
-                <div class="usersearchperfil">
-                    <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/madrid.png">
-                    </div>
-                    <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
-                    <p>MUSEUM TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
-                <div class="usersearchperfil">
-                    <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/madrid.png">
-                    </div>
-                    <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
-                    <p>MUSEUM TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
-                <div class="usersearchperfil">
-                    <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/madrid.png">
-                    </div>
-                    <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
-                    <p>MUSEUM TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
-            </div>
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p_right">
-                <div class="usersearchperfil">
-                    <div class="full_media">
-                        <img class="img-responsive" src="/statics/images/citys/madrid.png">
-                    </div>
-                    <h2 class="username"><a href="#">10€ /<span class="bolded"> Tokio</span></a></h2>
-                    <p>MUSEUM TOUR</p>
-                    <a class="tourme" href="#">tour me!</a>
-                </div>
-            </div>
-
-<div class="clearfix"></div>
-<div class="col-lg-12 nopadding">
-<nav> 
-    <ul class="pagination"> 
-        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li> 
-        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li> 
-        <li><a href="#">2</a></li> 
-        <li><a href="#">3</a></li> 
-        <li><a href="#">4</a></li>  
-        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li> 
-    </ul> 
-</nav>
- </div>
- 
- </div>
-          
-<div class="scrollhelp">
-    <h3>Scroll to see more!</h3>
-</div>
-
- </div>
- </div>
- <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 hidden-xs hidden-sm">
-    
-     <div class="map_ubication">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="600" height="450" frameborder="0" style="border:0"></iframe>
-      </div>
 
 
         </div>
     </div>
- </div>
+</div>
+{% endblock %}
 
+{% block pagejs %}
+<script src="/statics/js/users.js"></script>
 {% endblock %}
 
