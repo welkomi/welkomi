@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 @import url('https://fonts.googleapis.com/css?family=Mrs+Sheppards');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900,100,300');
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
 @import 'mixins';
 
 /*header*/
@@ -518,7 +519,9 @@ aside .asidemgm {
   text-align: center;
   padding: 10px 10px 10px 10px;
   background-color: #fff;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  border-radius:8px
+   }
 
 .usersearchperfil p {
   font-size: 1.4em
@@ -1394,15 +1397,17 @@ footer p {
 }
 
 .guidedisplay::-webkit-scrollbar {
-background-color:#fff;
-width:12px
+background-color:#dddede;
+width:12px;
+  border-radius:10px
  }
 
 
 .guidedisplay::-webkit-scrollbar-thumb {
   background-color:$wkcolor;
   height: 90px;
-  width: 12px
+  width: 12px;
+  border-radius:10px
 }
 .fav span {
   font-size: 1.5em
@@ -1693,6 +1698,13 @@ width:12px
   min-height: 540px
 }
 
+.scrollhelp h3 {
+font-family: 'Nothing You Could Do', cursive;
+  font-size: 1.8em;
+  color: $wkcolor;
+  text-align: center;
+  padding-top: 40px
+}
 
 
 /*# sourceMappingURL=style.css.map */
