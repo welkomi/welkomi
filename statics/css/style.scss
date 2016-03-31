@@ -1,4 +1,10 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"');
 @import url('http://weloveiconfonts.com/api/?family=entypo');
+@import url('http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
+@import url('https://fonts.googleapis.com/css?family=Passion+One:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Mrs+Sheppards');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900,100,300');
 @import 'mixins';
 
 /*header*/
@@ -112,7 +118,6 @@ body {
 
 .specialheader  .navbar-fixed-top {
   background-color: transparent;
-  border-bottom: none;
   -webkit-transition: background 0.3s linear;
   -moz-transition: background 0.3s linear;
   -ms-transition: background 0.3s linear;
@@ -129,13 +134,50 @@ body {
 
 .navbar-fixed-top {
   background-color: rgba(255, 255, 255, 0.97);
-  border-bottom: solid 1px $wkcolor;
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
   -ms-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
-  z-index: 9998
+  z-index: 9998;
+
+}
+
+.caja-sombra{
+    position: relative;
+    float: left;
+    padding: 1em;
+    margin: 100px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.caja-sombra:before, .caja-sombra:after{
+    content: "";
+    position: absolute;
+    z-index: -2;
+}
+.caja-sombra:before{
+    bottom: 15px;
+    left: 10px;
+    width: 46%;
+    height: 20%;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+.caja-sombra:after{
+    right: 10px;
+    bottom: 15px;
+    width: 46%;
+    height: 20%;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
 }
 
 .navbar-default {
@@ -175,13 +217,13 @@ body {
 
   /*usuario login list*/
  .wklogin .btn-publish svg path {
-  fill: #ec6060
+  fill: #fff;
 }
 .wklogin span svg path {
-  fill: $wkcolor
+  fill: $wkcolor;
 }
 .wklogin .btn-joinus svg path {
-  fill: $wkcolor
+  fill: #fff;
 }
     .wkicon{
      display: inline-block;
@@ -191,7 +233,6 @@ body {
 
 
 .wklogin a {
-     background-color: transparent;
     margin:0px 7px 0 0!important;
     font-weight: normal;
     clear: both
@@ -199,14 +240,14 @@ body {
 
 
  .btn-publish {
-    color: #e85e63;
-    border: 1px solid #e85e63!important;
+    color: #fff;
+    background-color: $wkcolor;
     padding: 4px 10px!important
    }
 
 .btn-joinus {
-  border: 1px solid $wkcolor!important;
-  color: $wkcolor;
+  background-color:#607684;
+  color: #fff;
   padding: 4px 10px!important
    }
 
@@ -296,7 +337,7 @@ body {
 }
 
 .btn-search_hero {
-  background-color: #34ae6b;
+  background-color: $wkcolor;
   color: #fff;
   border-radius: 0px;
   height: 50px;
@@ -414,7 +455,7 @@ body {
 
 .searchuserheader .btn-search {
   background-color: transparent;
-  color: #34ae6b;
+  color: $wkcolor;
   border-radius: 0px;
   height: 50px;
   border: none;
