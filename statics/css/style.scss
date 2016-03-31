@@ -220,7 +220,7 @@ body {
   fill: #fff;
 }
 .wklogin span svg path {
-  fill: $wkcolor;
+  fill: $wkseccolor;
 }
 .wklogin .btn-joinus svg path {
   fill: #fff;
@@ -246,18 +246,18 @@ body {
    }
 
 .btn-joinus {
-  background-color:#607684;
+  background-color:$wkseccolor;
   color: #fff;
   padding: 4px 10px!important
    }
 
  .btn-login {
-  color: $wkcolor;
+  color: $wkseccolor;
   padding: 4px 10px!important
    }
 
    .btn-mens {
-  color: $wkcolor;
+  color: $wkseccolor;
   display: none
    }
 
@@ -389,7 +389,7 @@ body {
 .searchuserheader input {
   border-radius: 30px;
   height: 34px;
-  width: 200px;
+  width: 280px;
   background-color: #ecf0f1;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -403,7 +403,7 @@ body {
   background-color: #fff;
   border:1px solid #CCC;
   box-shadow: none;
-  width: 280px
+  width: 400px
 }
 
 .searchinputwk::-webkit-input-placeholder {
@@ -500,7 +500,7 @@ aside .asidemgm {
 
 .tourme {
   background-color: transparent;
-  color: #34ae6b;
+  color: $wkcolor;
   width: 100%;
   font-family: 'Mrs Sheppards', cursive;
   font-size: 3em;
@@ -919,7 +919,10 @@ aside .asidemgm {
   margin-bottom: 7px;
   background-color: transparent
 }
-
+.breadcrumb a {
+  color: $wkseccolor;
+  font-weight: bold
+}
 
 /*BTN*/
 .btn-like {
@@ -1078,9 +1081,6 @@ blockquote {
 
 
 /*aside bookingtour*/
-.scroll-to-fixed-fixed{
-
-}
 .asidefather{
   width: 354px;
   float: right;
@@ -1384,8 +1384,23 @@ footer p {
 
 
 /*USERS PAGE*/
-.userperfil .img-thumbnail{
-  margin-top: 13px
+.guidedisplay{
+  overflow-y: scroll;
+  height: 580px;
+
+}
+
+.guidedisplay::-webkit-scrollbar {
+background-color:#dad8da;
+width:8px
+ }
+
+
+.guidedisplay::-webkit-scrollbar-thumb {
+  background-color:$wkcolor;
+  height: 30px;
+  width: 8px;
+  border-radius:10px
 }
 .fav span {
   font-size: 1.5em
@@ -1509,9 +1524,9 @@ footer p {
 }
 
 .pagination .active a {
-  background-color: #b46087;
+  background-color: $wkcolor;
   color: #fff;
-  border: 1px solid #b46087;
+  border: 1px solid $wkcolor;
 
 }
 .pagination .active a:hover {
@@ -1520,20 +1535,21 @@ footer p {
 }
 
 .pagination  li  a {
-  color: #b46087
+  color: $wkcolor
 }
 .pagination  li  a:hover {
   color: #b46087
 }
 
+
 /*# search btn */
 .results {
   width: 100%;
-  -ms-transform: translate(155px,53px); /* IE 9 */
-  -webkit-transform: translate(155px,53px); /* Safari */
-  transform: translate(155px,53px);
+  -ms-transform: translate(0px,53px); /* IE 9 */
+  -webkit-transform: translate(0px,53px); /* Safari */
+  transform: translate(0px,53px);
   position: fixed;
-  max-width: 280px;
+  max-width: 400px;
   z-index: 9999;
   background-color: rgba(255,255,255, 0.95);
   padding: 0px;

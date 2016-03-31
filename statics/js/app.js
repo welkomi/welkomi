@@ -5,7 +5,7 @@
 var app = angular.module('welkomiApp', [
     'FBF',
     'jkuri.gallery',
-    'ui.bootstrap'
+    'ui.bootstrap',
 ]);
 
 app
