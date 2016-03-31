@@ -16,7 +16,7 @@ var passport = require('passport'),
     i18n = require('i18n'),
     idioms = require('./idioms/'),
     middlewares = require('./middlewares'),
-    viewsCache = process.env.NODE_ENV === 'production';
+    viewsCache = process.env.NODE_ENV === 'production' ? true : false;
 
 idioms.getAvailableLangs(function () {
     /**
