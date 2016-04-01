@@ -11,8 +11,8 @@
  */
 function UsersCtrl ($rootScope, $scope, $window) {
     $scope.config = {
-        'autoHideScrollbar': true,
-        'theme': 'rounded-dots-dark',
+        'autoHideScrollbar': false,
+        'theme': 'dark-thick',
         'advanced':{
             'updateOnContentResize': true
         },
