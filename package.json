@@ -37,7 +37,8 @@
     "express-locale": "latest",
     "i18n": "latest",
     "googleapis": "latest",
-    "refresh-token": "latest"
+    "refresh-token": "latest",
+    "password-hash-and-salt": "latest"
   },
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {
