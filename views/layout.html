@@ -54,7 +54,7 @@
     {% block content %}{% endblock %}
 </div>
 
-{% if footer != 0 %}
+{% if footer === null %}
 <div class="container-fluid footer">
     <div class="container">
         <footer>
@@ -118,6 +118,8 @@
 <script src="/statics/js/liveicons.js"></script>
 <script src="/statics/js/icons.js"></script>
 <script src="/statics/js/angular.min.js"></script>
+<script src="/statics/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/statics/ng-scrollbars/dist/scrollbars.min.js"></script>
 <script src="/statics/js/app.js"></script>
 <script src="/statics/js/parallax.js"></script>
 <script src="/statics/js/FBFactory.js"></script>
