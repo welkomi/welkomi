@@ -21,6 +21,12 @@ body {
 .bk-wkseccolor{
   background-color:$wkseccolor
 }
+.wkcolor{
+  color:$wkcolor
+}
+.wkseccolor{
+  color:$wkseccolor
+}
 .container-fluid{
   padding: 0 20px 0 20px
 }
@@ -73,6 +79,9 @@ body {
 .top {
   margin-top: 70px;
 }
+.topmap {
+  margin-top: -63px!important;
+}
 .topmodule {
   margin-top: 50px; }
 .topheader {
@@ -87,6 +96,8 @@ body {
   padding: 30px 25px 30px 30px;
   border: solid 1px #dadfe0;
   background-color: #fff;
+      border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .logo a {
@@ -129,7 +140,7 @@ body {
   margin-top: 10px; }
 
 .specialheader  .navbar-fixed-top {
-  background-color: transparent;
+  background-color: rgba(39, 40, 34, 0.3);
   -webkit-transition: background 0.3s linear;
   -moz-transition: background 0.3s linear;
   -ms-transition: background 0.3s linear;
@@ -140,12 +151,12 @@ body {
 
 }
 
-.searchuserheader.specialSearch {
+.searchuserheader.specioalSearch {
   top: 70px
 }
 
 .navbar-fixed-top {
-  background-color: rgba(61, 61, 58, 0.98);
+  background-color: rgba(39, 40, 34, 0.99);
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
   -ms-transition: background 0.2s linear;
@@ -232,7 +243,7 @@ body {
   fill: #fff;
 }
 .wklogin span svg path {
-  fill: $wkseccolor;
+  fill: #fff;
 }
 .wklogin .btn-joinus svg path {
   fill: #fff;
@@ -264,7 +275,7 @@ body {
    }
 
  .btn-login {
-  color: $wkseccolor;
+  color: #fff;
   padding: 4px 10px!important
    }
 
@@ -540,8 +551,10 @@ aside .asidemgm {
 .username {
   font-weight: 300; }
 
+
+
 .username a {
-  color: #323232; }
+  color: $wkseccolor; }
 
 .username a:hover {
   text-decoration: none; }
@@ -923,12 +936,12 @@ aside .asidemgm {
 
 .birthday_year{
   width: 25%
-
 }
 /*BREADCUMB*/
 .breadcrumb {
   margin-bottom: 7px;
-  background-color: transparent
+  background-color: transparent;
+  padding-left:0px
 }
 .breadcrumb a {
   color: $wkseccolor;
@@ -978,9 +991,18 @@ aside .asidemgm {
 
 /*Myperfil*/
 
+
 blockquote {
   border-left: 5px solid #777;
   margin-top: 7px
+}
+
+.panel-default > .panel-heading {
+  background-color:rgba(98, 118, 132, 0.2)
+}
+
+.panel {
+margin-bottom:10px
 }
 
 .main-info {
@@ -990,7 +1012,6 @@ blockquote {
 .main-info .username {
   width: 100%
 }
-
 .userbox .mediaround img{
   width: 120px;
   height: 120px
@@ -1108,7 +1129,7 @@ blockquote {
 }
 
 .bookingtour .btn-tourme{
-  background-color: #34ae6b;
+  background-color: $wkcolor;
   color: #fff;
   font-size: 1.4em;
   border: none;
@@ -1503,13 +1524,12 @@ footer p {
 .fix{
   background-color: rgb(196, 14, 152)  }
 
-
 .map_ubication {
   position: relative;
   padding-bottom: 75%; // This is the aspect ratio
   height: 0;
   overflow: hidden;
-  height: 645px
+  height: 755px
 }
 .map_ubication iframe {
   position: absolute;
