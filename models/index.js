@@ -10,6 +10,12 @@ var UserSchema = mongoose.Schema({
     '_id': 'Number',
     'username': 'String',
     'password': 'String',
+    'firstname': 'String',
+    'lastname': 'String',
+    'location': 'String',
+    'birthdayday': 'String',
+    'birthdaymonth': 'String',
+    'birthdayyear': 'String',
     'role': {
         'type': 'String',
         'default': 'user'
