@@ -35,42 +35,38 @@ idioms.getAvailableLangs(function () {
     });
 
     /**
-     * Framework inits
+     * Config Passport
      */
+    passport.use('local', middlewares.passportUse(LocalStrategy));
+    passport.serializeUser(middlewares.serializeUser());
+    passport.deserializeUser(middlewares.deserializeUser());
+
+    /**
+     * Middlewares
+     */
+    app.use(middlewares.userObject());
     app.use(middlewares.renderGdriveUrl());
     app.use(middlewares.renderUrl());
+
+    /**
+     * Framework inits
+     */
 
     app.use(i18n.init);
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: false}));
     app.use(cookieParser());
     app.use(session({keys: ['welkomiapp']}));
+
     app.use(passport.initialize());
     app.use(passport.session());
+
     app.use(expressrouter);
     app.use('/statics', express.static(__dirname + '/statics'));
     app.engine('html', swig.renderFile);
     app.set('view engine', 'html');
     app.set('views', __dirname + '/views');
     app.set('view cache', viewsCache);
-
-    /**
-     * Config for passport
-     */
-    //passport.use(new LocalStrategy(models.model('User').authenticate()));
-    //passport.serializeUser(models.model('User').serializeUser());
-    //passport.deserializeUser(models.model('User').deserializeUser());
-
-    passport.use(new LocalStrategy({
-        'usernameField': 'username',
-        'passwordField': 'password'
-        },
-        function (req, username, password, next) {
-            console.log('config', req);
-            console.log('config', username);
-            console.log('config', password);
-        }
-    ));
 
     /**
      * Other server config

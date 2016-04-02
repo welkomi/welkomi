@@ -7,39 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/statics/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/statics/css/style.css">
+
+    {{ userObject() }}
+
     {% block head %}{% endblock %}
 </head>
 <body ng-controller="CommonCtrl" class="{% block etiquetaBody %}{% endblock%}">
 <div id="fb-root"></div>
+
 <div class="container-fluid">
     <header id="nav" class="navbar-fixed-top">
         <div class="container-fluid {% block wover %}{% endblock %}">
-             <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <form class="scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
-                <input id="searchfixed" type="text" class="searchinputwk form-control" placeholder="{{ __('searchtour') }}">
-                <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
-            </form>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-             <h1 class="logo"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
-         </div>
-         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <nav class="navbar wklogin">
-                <ul class="pull-right">
-                    <li> <a class="btn btn-publish" href="#"><span class="wkicon livicon shadowed" data-n="location" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">Publish tour</span></a></li>
-                    <li> <a class="btn btn-mens" href="#"><span class="wkicon livicon shadowed" data-n="message-flag" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">{{ __('messages') }}</span></a></li>
-                    <li>
-                        <a class="btn btn-joinus" href="{{ renderUrl('/register-user/') }}"><span class="wkicon livicon shadowed" data-n="plus" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">Join us</span></a>
-                    </li>
-                    <li>
-                        <a class="btn btn-login" href="{{ renderUrl('/login-user/') }}"><span class="wkicon livicon shadowed" data-n="sign-in" data-s="24" data-hc="0" data-onparent="true"></span><span class="navtext">Login</span></a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <form class="scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
+                        <input id="searchfixed" type="text" class="searchinputwk form-control"
+                               placeholder="{{ __('searchtour') }}">
+                        <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h1 class="logo"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <nav class="navbar wklogin">
+                        <ul class="pull-right">
+                            <li><a class="btn btn-publish" href="#"><span class="wkicon livicon shadowed"
+                                                                          data-n="location" data-s="24" data-hc="0"
+                                                                          data-onparent="true"></span><span
+                                    class="navtext">Publish tour</span></a></li>
+                            <li><a class="btn btn-mens" href="#"><span class="wkicon livicon shadowed"
+                                                                       data-n="message-flag" data-s="24" data-hc="0"
+                                                                       data-onparent="true"></span><span
+                                    class="navtext">{{ __('messages') }}</span></a></li>
+                            <li>
+                                <a class="btn btn-joinus" href="{{ renderUrl('/register-user/') }}"><span
+                                        class="wkicon livicon shadowed" data-n="plus" data-s="24" data-hc="0"
+                                        data-onparent="true"></span><span class="navtext">Join us</span></a>
+                            </li>
+                            <li>
+                                <a class="btn btn-login" href="{{ renderUrl('/login-user/') }}"><span
+                                        class="wkicon livicon shadowed" data-n="sign-in" data-s="24" data-hc="0"
+                                        data-onparent="true"></span><span class="navtext">Login</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
-        <div class="clearfix"></div>
+            <div class="clearfix"></div>
     </header>
 
 </div>
@@ -115,8 +130,13 @@
             </p>
         </footer>
     </div>
-
 </div>
+
+<pre>
+    <<* __user__ | json *>>
+</pre>
+<img ng-src="<<* User.pictureProfile *>>" />
+
 {% endif %}
 <script src="/statics/js/jquery-1.11.1.min.js"></script>
 <script src="/statics/js/bootstrap.js"></script>

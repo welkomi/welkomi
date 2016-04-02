@@ -47,7 +47,23 @@ window.fbload = function () {
  * @constructor
  */
 function CommonCtrl ($rootScope, $scope, $window, FBF) {
-    $rootScope.pictureProfile;
+    console.log($window.__user__);
+
+    $rootScope.User = {};
+    $rootScope.__user__ = $window.__user__;
+
+    var me = '/me/',
+        fieldsreponse = {
+        'fields': [
+            'id',
+            'first_name',
+            'last_name',
+            'email',
+            'birthday',
+            'locale',
+            'location'
+        ].join(',')
+    };
 
     $window.fbload();
     $window.fbAsyncInit = function () {
@@ -56,40 +72,47 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
             'public_profile',
             'publish_actions',
             'email',
-            'user_photos'
+            'user_about_me',
+            'user_photos',
+            'user_location',
+            'user_birthday'
         ]);
         FBF.getStatusLogin(
             function (response) {
-                console.log('LOGIN UNKNOW', response);
                 if (response.status === 'connected') {
-                    FBF.api(
-                         '/me/picture',
-                         {},
-                         function (response) {
-                             $rootScope.pictureProfile = response.data.url;
-                             $rootScope.$apply();
-                         }
-                    )
+                    FBFapi();
                 }
             },
-            function (response) {
-                console.log('LOGIN IN', response)
-            });
+            function (response) {});
     };
 
     $scope.fbLogin = function () {
         FBF.login(function (response) {
-            FBF.api(
-                '/me',
-                {
-                    'fields': 'email,name'
-                },
-                function (response) {
-                    console.log('FB response', response);
-                }
-            );
+            if (response.status === 'connected') {
+                FBFapi();
+            }
         });
     };
+
+    function FBFapi () {
+        FBF.api(
+            me,
+            fieldsreponse,
+            function (response) {
+                FBF.loginToWelkoni(response, setPictureFromFBProfile);
+            }
+        )
+    }
+
+    function setPictureFromFBProfile (user, idFB) {
+        if (idFB) {
+            FBF.exchangePictureProfile(idFB, function (picture) {
+                $rootScope.User.pictureProfile = picture;
+
+                $rootScope.$apply();
+            });
+        }
+    }
 }
 
 /**
@@ -114,4 +137,4 @@ app
         'FBF',
         CommonCtrl
     ]).
-    directive('parallax', [parallax])
+    directive('parallax', [parallax]);

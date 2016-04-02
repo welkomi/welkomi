@@ -6,11 +6,36 @@
  * Module that allow FB graph API
  *
  * @param $rootScope
- * @returns {{init: Function, setScopes: Function, getStatusLogin: Function, login: Function}}
+ * @param $http
+ * @param $window
+ * @returns {{init: Function, setScopes: Function, getStatusLogin: Function, api: Function, login: Function, loginToWelkoni: Function, exchangePictureProfile: Function}}
  * @constructor
  */
-function FBF ($rootScope) {
+function FBF ($rootScope, $http, $window) {
     $rootScope.scopes = 'public_profile';
+
+    function parseParamsFromFB (user) {
+        var birthday = user.birthday.split('/'),
+            locale = user.locale.split('_');
+
+        user.username = user.email;
+        user.locale = locale[0];
+        user.birthdayday = birthday[1];
+        user.birthdaymonth = birthday[0];
+        user.birthdayyear = birthday[2];
+        user.location = user.location.name;
+        user.firstname = user.first_name;
+        user.lastname = user.last_name;
+        user.password = user.email;
+        user.logintype = 'fb';
+
+        delete user.first_name;
+        delete user.last_name;
+        delete user.email;
+        delete user.birthday;
+
+        return user;
+    }
 
     return {
         /**
@@ -100,6 +125,67 @@ function FBF ($rootScope) {
                 {
                     'scope': $rootScope.scopes
                 });
+        },
+
+        /**
+         * Send data from FB to welkomi login API
+         *
+         * @param user
+         * @param cb
+         */
+        loginToWelkoni: function (user, cb) {
+            $http.post(
+                '/register/',
+                parseParamsFromFB(user),
+                {
+                    "Content-Type": "application/x-www-form-urlencoded;charset=utf-8;"
+                }
+            )
+                .success(function (data, status) {
+                    if (data) {
+                        if (!$window.__user__) {
+                            $http.post(
+                                '/authenticate-ajax/',
+                                {
+                                    'username': data.username,
+                                    'logintype': data.logintype
+                                })
+                                .then(function (response) {
+                                    if (response.data.success) {
+                                        $window.location.reload();
+
+                                        return;
+                                    }
+
+                                    if (typeof cb === 'function') {
+                                        cb(data, user.id);
+                                    }
+                                });
+                        }
+
+                        if (typeof cb === 'function') {
+                            cb(data, user.id);
+                        }
+                    }
+                })
+        },
+
+        /**
+         * Exchange the user picture profile in large mode from FB
+         *
+         * @param id
+         * @param cb
+         */
+        exchangePictureProfile: function (id, cb) {
+            FB.api(
+                '/me/picture?type=large',
+                {},
+                function (response) {
+                    if (typeof cb === 'function') {
+                        cb(response.data.url);
+                    }
+                }
+            )
         }
     }
 }
@@ -108,4 +194,9 @@ function FBF ($rootScope) {
  * Module that allow FB graph API
  */
 angular.module('FBF', [])
-    .factory('FBF', ['$rootScope', FBF]);
+    .factory('FBF', [
+        '$rootScope',
+        '$http',
+        '$window',
+        FBF
+    ]);

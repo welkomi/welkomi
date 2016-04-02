@@ -6,34 +6,68 @@ var passport = require('passport'),
     password = require('password-hash-and-salt');
 
 exports.init = function (expressrouter) {
-     expressrouter.post(
-          '/autenticate/',
-          passport.authenticate('local', {
-              'failureRedirect': '/es/registerUser'
-          }),
-          function (req, res) {
-               res.send(res.req.user);
-          });
+    /**
+     * Login User
+     */
+    expressrouter.post(
+        '/autenticate/',
+        passport.authenticate('local', {
+          'failureRedirect': '/es/registrar-usuario/'
+        }), function (err, res) {
+            res.redirect('/');
+        });
 
+    /**
+     * Login User by AJAX
+     */
+    expressrouter.post(
+        '/authenticate-ajax/',
+        function (req, res, next) {
+            var user = req.body;
+
+            if (user.logintype === 'fb') {
+                user.password = user.username;
+            }
+
+            passport.authenticate('local', function (err, user) {
+                if (err) res.json(err);
+
+                req.login(user, {}, function (errLogin, resLogin) {
+                    if (errLogin) res.json(errLogin);
+
+                    res.json({'success': true});
+                });
+            })(req, res, next)
+        });
+
+    /**
+     * Logout User
+     */
+    expressrouter.get(
+        '/logout/',
+        function (req, res) {
+            req.logout();
+            res.redirect('/');
+        });
+
+    /**
+     * Register User
+     */
      expressrouter.post(
          '/register/',
          function (req, res, next) {
              var user = req.body,
                  User = models.model('User');
-
-             console.log('incominig register', user);
-             console.log('-->', user.username);
-
              User
                  .find({
                      'username': req.body.username
                  })
+                 .select('-password')
                  .exec(function (errFind, resFind) {
                      if (errFind) throw errFind;
 
                      if (resFind.length > 0) {
-                         console.log('User found', resFind);
-                         res.json(resFind);
+                         res.json(resFind[0]);
                      }
 
                      else {
@@ -42,27 +76,21 @@ exports.init = function (expressrouter) {
 
                              user.password = resHash;
 
-                             User.create(req.body, function (errCreate, resCreate) {
-                                 if (errCreate) throw errCreate;
+                             User
+                                 .create(user, function (errCreate, resCreate) {
+                                     if (errCreate) throw errCreate;
 
-                                 console.log('User create', resCreate);
-                                 res.json(resCreate);
+                                     User
+                                         .find(resCreate)
+                                         .select('-password')
+                                         .exec(function (errCreateFind, resCreateFind) {
+                                             if (errCreateFind) throw errCreateFind;
+
+                                             res.json(resCreateFind);
+                                         });
                              });
                          });
                      }
                  });
-
-             //models.model('User').register(
-             //    new models.model('User')(
-             //        {
-             //            'username': req.body.username
-             //        }
-             //    ),
-             //    req.body.password,
-             //    function (err) {
-             //        if (err) throw err;
-             //
-             //        console.log('==> REGISTRADO');
-             //    });
          });
 };

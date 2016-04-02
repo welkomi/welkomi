@@ -6,7 +6,8 @@
     "ignore_watch": [
       "statics/js/*.js",
       ".idea/*",
-      "recursos"
+      "recursos",
+      ".git/*"
     ],
     "env": {
       "NODE_ENV": "development",
