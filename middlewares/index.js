@@ -136,6 +136,11 @@ exports.deserializeUser = function () {
     }
 };
 
+/**
+ * Crea un objeto de usuario
+ *
+ * @returns {Function}
+ */
 exports.userObject = function () {
     return function (req, res, next) {
         res.locals.userObject = function () {
@@ -144,6 +149,21 @@ exports.userObject = function () {
                 : false;
 
             return '<script> window.__user__ = ' + userinf + '</script>';
+        };
+
+        next();
+    }
+};
+
+/**
+ * Setea el id de la app de FB
+ *
+ * @returns {Function}
+ */
+exports.setFBId = function () {
+    return function (req, res, next) {
+        res.locals.setFBId = function () {
+            return '<script> window.FBID = ' + process.env.FACEBOOK_API_ID + ';</script>';
         };
 
         next();

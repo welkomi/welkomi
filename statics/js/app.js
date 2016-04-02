@@ -67,7 +67,7 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
 
     $window.fbload();
     $window.fbAsyncInit = function () {
-        FBF.init('1494810927495265');
+        FBF.init($window.FBID);
         FBF.setScopes([
             'public_profile',
             'publish_actions',
