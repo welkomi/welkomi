@@ -338,8 +338,9 @@ text-align:center
 
 
 .hero {
-  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxZFRPLVdhbUxRREE', 'madrid.jpg'));
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxNGJxMnlIN1dQRzg', 'madrid.jpg'));
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center top;
   padding: 0 0 12em 0;
@@ -393,15 +394,15 @@ text-align:center
 
 }
 
-.searchinputwk {
-
+.specialheader .searchuserheader {
+ top:50px
 }
 .searchuserheader {
   margin: 15px 0 0 15px;
   position: relative;
   float: left;
   z-index: 1000;
-  top:0px;
+  top: 0px;
   -webkit-transition: top 0.5s ease;
   -moz-transition: top 0.5s ease;
   -ms-transition: top 0.5s ease;
@@ -513,10 +514,11 @@ aside .asidemgm {
 
 /*randoms users indice*/
 .modulohowworks {
-  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxZFRPLVdhbUxRREE', 'granvia.png'));
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxNGJxMnlIN1dQRzg', 'tournature.jpg'));
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  background-position: top; }
+  background-position: center; }
 
 .randomUsers {
   margin-bottom: 50px; }
@@ -795,22 +797,26 @@ aside .asidemgm {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  margin-top: 10px;
-  padding: 10px 10px 120px 10px; }
+  padding: 60px 10px 60px 10px; }
 
 .tours h3 {
-  font-size: 3em;
+  font-size: 3.6em;
   color: #FFF;
-  font-weight: 300; }
+  font-weight: bold;
+  margin-bottom: 40px }
 
 .conthotworks {
-  padding-top: 50px;
-  width: 70%; }
+  padding: 0px 10px 0 0;
+   }
+
+   .p_tours {
+    padding: 30px 0 30px 0;
+   }
 
 .tours .btn-works {
   width: 50%;
   height: 60px;
-  background-color: #34ae6b;
+  background-color: $wkcolor;
   font-size: 2em;
   color: #fff;
   margin-top: 10px; }
@@ -1358,7 +1364,7 @@ footer p {
   position: relative;
   top: 206px;
   text-align: center;
-  color: #373737; }
+  color: #fff; }
 
 .scene{
   position: absolute;
