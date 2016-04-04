@@ -170,6 +170,11 @@ exports.setFBId = function () {
     }
 };
 
+/**
+ * Obtiene una imagen en random para la portada de la home
+ *
+ * @returns {Function}
+ */
 exports.getRandomImgForHome = function () {
     var key = '___imagerandomhome',
         redis = require('./../wrappers/rediswrapper').init(),
@@ -211,7 +216,9 @@ exports.getRandomImgForHome = function () {
                             function (errRedis, resRedis) {
                                 if (errRedis) throw errRedis;
 
-                                __resLocals(resDrive, next, res);
+                                if (resRedis) {
+                                    __resLocals(resDrive, next, res);
+                                }
                             });
                     });
                 });
