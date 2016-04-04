@@ -172,7 +172,8 @@ exports.setFBId = function () {
 
 exports.getRandomImgForHome = function () {
     var key = '___imagerandomhome',
-        redis = require('./../wrappers/rediswrapper').init();
+        redis = require('./../wrappers/rediswrapper').init(),
+        parentFolder = '0B9gI2Lt4M_dxNGJxMnlIN1dQRzg';
 
     function __getRandom (files) {
         return files[Math.floor(Math.random() * (files.length - 1)) + 1].name;
@@ -185,7 +186,7 @@ exports.getRandomImgForHome = function () {
         var files = resRedis.files;
 
         res.locals.getRandomImgForHome = function () {
-            return '<style>.hero {background-image: url(' + process.env.GDRIVE_URI + '0B9gI2Lt4M_dxNGJxMnlIN1dQRzg/' + __getRandom(files) + ') !important};</style>';
+            return '<style>.hero {background-image: url(' + process.env.GDRIVE_URI + parentFolder + '/' + __getRandom(files) + ') !important};</style>';
         };
 
         next();
@@ -200,7 +201,7 @@ exports.getRandomImgForHome = function () {
 
                 google.api('drive', 'v3', function (drive) {
                     drive.files.list({
-                        'q': '"0B9gI2Lt4M_dxNGJxMnlIN1dQRzg" in parents and trashed = false'
+                        'q': '"' + parentFolder + '" in parents and trashed = false'
                     }, function (errDrive, resDrive) {
                         if (errDrive) throw errDrive;
 
