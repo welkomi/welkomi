@@ -37,7 +37,9 @@ exports.init = function (callback) {
 
                     redis.expire(rediskey, 86400);
 
-                    callback();
+                    if (typeof callback === 'function') {
+                        callback();
+                    }
                 });
         }
 
@@ -47,7 +49,9 @@ exports.init = function (callback) {
 
                 global[rediskey] = JSON.parse(resRedisGet);
 
-                callback();
+                if (typeof callback === 'function') {
+                    callback();
+                }
             });
         }
     });

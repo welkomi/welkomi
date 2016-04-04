@@ -169,3 +169,60 @@ exports.setFBId = function () {
         next();
     }
 };
+
+exports.getRandomImgForHome = function () {
+    var key = '___imagerandomhome',
+        redis = require('./../wrappers/rediswrapper').init();
+
+    function __getRandom (files) {
+        return files[Math.floor(Math.random() * (files.length - 1)) + 1].name;
+    }
+
+    function __resLocals (resRedis, next, res) {
+        if (typeof resRedis === 'string') {
+            resRedis = JSON.parse(resRedis);
+        }
+        var files = resRedis.files;
+
+        res.locals.getRandomImgForHome = function () {
+            return '<style>.hero {background-image: url(' + process.env.GDRIVE_URI + '0B9gI2Lt4M_dxNGJxMnlIN1dQRzg/' + __getRandom(files) + ') !important};</style>';
+        };
+
+        next();
+    }
+
+    return function (req, res, next) {
+        redis.exists(key, function (errRedis, resRedis) {
+            if (errRedis) throw  errRedis;
+
+            if (!resRedis) {
+                var google = require('./../wrappers/googlewrapper');
+
+                google.api('drive', 'v3', function (drive) {
+                    drive.files.list({
+                        'q': '"0B9gI2Lt4M_dxNGJxMnlIN1dQRzg" in parents and trashed = false'
+                    }, function (errDrive, resDrive) {
+                        if (errDrive) throw errDrive;
+
+                        redis.set(
+                            key,
+                            JSON.stringify(resDrive),
+                            function (errRedis, resRedis) {
+                                if (errRedis) throw errRedis;
+
+                                __resLocals(resDrive, next, res);
+                            });
+                    });
+                });
+            }
+
+            else {
+                redis.get(key, function (errRedis, resRedis) {
+                    if (errRedis) throw errRedis;
+
+                    __resLocals(resRedis, next, res);
+                });
+            }
+        });
+    }
+};

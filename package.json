@@ -38,7 +38,8 @@
     "i18n": "latest",
     "googleapis": "latest",
     "refresh-token": "latest",
-    "password-hash-and-salt": "latest"
+    "password-hash-and-salt": "latest",
+    "promise": "latest"
   },
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {

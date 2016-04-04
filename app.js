@@ -44,6 +44,7 @@ idioms.getAvailableLangs(function () {
     /**
      * Middlewares
      */
+    app.use(middlewares.getRandomImgForHome());
     app.use(middlewares.setFBId());
     app.use(middlewares.userObject());
     app.use(middlewares.renderGdriveUrl());
