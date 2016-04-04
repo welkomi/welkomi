@@ -183,8 +183,6 @@ exports.getRandomImgForHome = function () {
     function __getRandom (files) {
         var randomNumber = (Math.floor(Math.random() * files.length) + 1) - 1;
 
-        console.log('IMGHOME', randomNumber);
-
         return files[randomNumber].name;
     }
 
