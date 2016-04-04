@@ -339,12 +339,19 @@ text-align:center
 
 .hero {
   background-image: url(render-gdrive-url('0B9gI2Lt4M_dxNGJxMnlIN1dQRzg', 'madrid.jpg'));
+  background-color:#272822;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
   padding: 0 0 12em 0;
+   -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    -ms-transition: all 1s ease-in;
+    transition: all 1s ease-in;
 }
+
 
 .herofind {
   text-align: center; }
