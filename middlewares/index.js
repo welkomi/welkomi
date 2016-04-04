@@ -181,7 +181,11 @@ exports.getRandomImgForHome = function () {
         parentFolder = '0B9gI2Lt4M_dxNGJxMnlIN1dQRzg';
 
     function __getRandom (files) {
-        return files[(Math.floor(Math.random() * files.length) + 1) - 1].name;
+        var randomNumber = (Math.floor(Math.random() * files.length) + 1) - 1;
+
+        console.log('IMGHOME', randomNumber);
+
+        return files[randomNumber].name;
     }
 
     function __resLocals (resRedis, next, res) {
