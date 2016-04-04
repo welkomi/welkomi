@@ -220,6 +220,8 @@ exports.getRandomImgForHome = function () {
                                     __resLocals(resDrive, next, res);
                                 }
                             });
+
+                        redis.expire(key, 86400);
                     });
                 });
             }
