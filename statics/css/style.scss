@@ -418,16 +418,34 @@ text-align:center
 
 .searchuserheader input {
   height: 60px;
-  width: 280px;
+  width: 320px;
   border-radius:0px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #3c3d38;
   color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+
+}
+
+
+.select_wk {
+  position: absolute;
+  right: 0px;
+  width: 115px;
+  color: $wkcolor;
+  top: 0px;
+  height: 60px!important;
+  background-color: #3c3d38;
+  border-top:none;
+  padding-left:7px;
+  border-bottom:none;
+  border-radius:0px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
 
 }
 
@@ -492,14 +510,15 @@ text-align:center
 
 .searchuserheader .btn-search {
   background-color: #272822;
-  color: #fff;
-  border-right:1px solid #ffffff;
+  color: $wkcolor;
+  border-right:1px solid #666665;
   border-radius: 0px;
   height: 60px;
   padding: 0 18px 0 0px;
   float: left;
   display: table;
 }
+
 
 .joinus button {
   padding: 0.8em;
