@@ -395,10 +395,9 @@ text-align:center
 }
 
 .specialheader .searchuserheader {
- top:50px
+ top:60px
 }
 .searchuserheader {
-  margin: 15px 0 0 15px;
   position: relative;
   float: left;
   z-index: 1000;
@@ -411,10 +410,12 @@ text-align:center
 }
 
 .searchuserheader input {
-  border-radius: 30px;
-  height: 34px;
+  height: 60px;
   width: 280px;
-  background-color: #ecf0f1;
+  border-radius:0px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -477,15 +478,20 @@ text-align:center
   margin-bottom: 10px
 }
 
+.searchuserheader .fa-search {
+  display: table-cell;
+  vertical-align: middle
+}
+
 .searchuserheader .btn-search {
-  background-color: transparent;
-  color: $wkcolor;
+  background-color: #272822;
+  color: #fff;
+  border-right:1px solid #ffffff;
   border-radius: 0px;
-  height: 50px;
-  border: none;
-  position: absolute;
-  right: 5px;
-  top: 0px
+  height: 60px;
+  padding: 0 18px 0 0px;
+  float: left;
+  display: table;
 }
 
 .joinus button {
