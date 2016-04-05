@@ -7,7 +7,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900,100,300');
 @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
 @import 'mixins';
-
 /*header*/
 body {
   background-color: #ecf0f1;
@@ -136,7 +135,7 @@ text-align:center
   background-repeat: no-repeat;
   background-size: contain; 
   position:relative;
-  z-index: 9999
+  z-index: 9999;
 }
 
 .navbar-fixed-top .navbar {
@@ -427,7 +426,6 @@ text-align:center
 }
 .searchuserheader {
   position: relative;
-  float: left;
   z-index: 1000;
   top: 0px;
   -webkit-transition: top 0.5s ease;
@@ -439,10 +437,10 @@ text-align:center
 
 .searchuserheader input {
   height: 60px;
-  width: 320px;
   border-radius:0px;
   border: none;
-  background-color: #3c3d38;
+  border-left:1px solid #666665!important;
+  background-color: rgba(255,255,255,0.1);
   color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -460,6 +458,7 @@ text-align:center
    height: 50px!important;
    border-radius: 0;
      -webkit-appearance: none;
+       padding-left:5px;
 }
 
 .searchuser .select_wk {
@@ -468,7 +467,6 @@ text-align:center
   height: 50px!important;
   background-color: #fff;
   overflow: hidden;
-  padding:0 0 0 15px;
   border-right: 0;
   border-left: 1px solid #a5a5a5;
 }
@@ -478,14 +476,24 @@ text-align:center
  right: 15px;
 }
 
+.select_wk  {
+width:100%
+
+
+}
+
 
 .select_wk select {
   background: transparent;
   border: 0;
-   width: 80px;
+  padding-left: 5px;
    height: 60px!important;
+   width: 100%;
    border-radius: 0;
      -webkit-appearance: none;
+      -moz-appearance: none;
+     display: block
+
 
 }
 
@@ -494,15 +502,10 @@ text-align:center
 }
 
 .select_wk {
-  position: absolute;
-  right: 0px;
-  width: 80px;
   color: #fff;
-  top: 0px;
   height: 60px!important;
   background-color: #272822;
   overflow: hidden;
-  padding-left:7px;
     border-right: 1px solid #666665;
              border-left: 1px solid #666665;
 
@@ -517,10 +520,9 @@ text-align:center
 }
 
 .searchuserheader input:focus {
-  background-color: #fff;
-  border:1px solid #CCC;
+  background-color: rgba(255,255,255,0.3);
   box-shadow: none;
-  width: 350px
+
 }
 
 .searchinputwk::-webkit-input-placeholder {
@@ -578,10 +580,8 @@ text-align:center
 .searchuserheader .btn-search {
   background-color: #272822;
   color: #fff;
-  border-right:1px solid #666665;
   border-radius: 0px;
   height: 60px;
-  padding: 0 18px 0 0px;
   float: left;
   display: table;
 }
@@ -1061,7 +1061,6 @@ aside .asidemgm {
   font-weight: bold;
   padding-left: 15px
 }
-
 /*BTN*/
 .btn-like {
   border: 1px solid #656565;
