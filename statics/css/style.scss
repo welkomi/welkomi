@@ -261,18 +261,35 @@ text-align:center
 .wklogin a {
     margin:0px 7px 0 0!important;
     font-weight: normal;
-    clear: both
+    clear: both;
+         -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+   }
+
+   .wklogin a:hover {
+    color:$wkseccolor
    }
 
 
  .btn-publish {
     color: #fff;
     background-color: $wkcolor;
-    padding: 4px 10px!important
+    padding: 4px 10px!important;
+     -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+
+   }
+
+    .btn-publish:hover {
+    background-color: #F44E51;
+    color: #fff!important;
    }
 
 .btn-joinus {
-  background-color:$wkseccolor;
   color: #fff;
   padding: 4px 10px!important
    }
@@ -322,6 +339,7 @@ text-align:center
     border: 1px solid #fff!important;
     padding: 4px 10px!important
    }
+
 
     .specialheader .btn-mens {
     display: inline-block;
@@ -374,12 +392,15 @@ text-align:center
   height: 50px;
   border: none;
   width: 90px;
-  opacity: 0.9
+      -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
 }
 
 .btn-search_hero:hover {
-  opacity: 1;
   color: #fff;
+   background-color: #F44E51;
 }
 
 .btn-search:hover {
@@ -432,28 +453,74 @@ text-align:center
 }
 
 
+.searchuser .select_wk select {
+ background: transparent;
+  border: 0;
+   width: 160px;
+   height: 50px!important;
+   border-radius: 0;
+     -webkit-appearance: none;
+}
+
+.searchuser .select_wk {
+  width: 160px;
+   color:$wkcolor;
+  height: 50px!important;
+  background-color: #fff;
+  overflow: hidden;
+  padding:0 0 0 15px;
+  border-right: 0;
+  border-left: 1px solid #a5a5a5;
+}
+
+.searchuser .select_wk i {
+ color:$wkcolor;
+ right: 15px;
+}
+
+
+.select_wk select {
+  background: transparent;
+  border: 0;
+   width: 80px;
+   height: 60px!important;
+   border-radius: 0;
+     -webkit-appearance: none;
+
+}
+
+.select_wk select:focus {
+ outline: none;
+}
+
 .select_wk {
   position: absolute;
   right: 0px;
-  width: 115px;
-  color: $wkcolor;
+  width: 80px;
+  color: #fff;
   top: 0px;
   height: 60px!important;
-  background-color: #3c3d38;
-  border-top:none;
+  background-color: #272822;
+  overflow: hidden;
   padding-left:7px;
-  border-bottom:none;
-  border-radius:0px;
-  -webkit-appearance: none;
-  -webkit-border-radius: 0px;
+    border-right: 1px solid #666665;
+             border-left: 1px solid #666665;
 
+}
+
+.select_wk i {
+  position: absolute;
+  right: 7px;
+  color: #fff;
+  top: 50%;
+  margin-top: -7px
 }
 
 .searchuserheader input:focus {
   background-color: #fff;
   border:1px solid #CCC;
   box-shadow: none;
-  width: 400px
+  width: 350px
 }
 
 .searchinputwk::-webkit-input-placeholder {
@@ -500,7 +567,7 @@ text-align:center
 .velo{
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.24);
-  margin-bottom: 10px
+  margin-bottom: 20px
 }
 
 .searchuserheader .fa-search {
@@ -510,7 +577,7 @@ text-align:center
 
 .searchuserheader .btn-search {
   background-color: #272822;
-  color: $wkcolor;
+  color: #fff;
   border-right:1px solid #666665;
   border-radius: 0px;
   height: 60px;
@@ -522,17 +589,22 @@ text-align:center
 
 .joinus button {
   padding: 0.8em;
- height:50px
+ height:50px;
    }
 
 
 .joinus .btn-loginhero {
   background-color: $wkcolor;
     color: #fff;
-    opacity: 1
+     -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;  
+  margin-left: 3px  
 }
 .joinus .btn-loginhero:hover {
-  opacity: 0.9
+    background-color: #F44E51;
+    color: #fff!important;
 }
 aside .asidemgm {
   padding: 20px 0px 0px 0px!important;
@@ -1001,7 +1073,7 @@ aside .asidemgm {
 
 .btn-wk{
   background-color: #fbba0e;
-  height: 40px
+  height: 40px;
 
 }
 .joinus .btn{
@@ -1012,6 +1084,11 @@ aside .asidemgm {
   background-color: #44619d;
   color: #fff;
   width: 230px;
+  margin-right: 3px;
+    -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
 
 }
 
@@ -1109,6 +1186,7 @@ margin-bottom:10px
   color: #b2b2b2;
   overflow: hidden;
   -webkit-transition: background-color .3s,color .3s;
+
   transition: color .3s;
 
 }

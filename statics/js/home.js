@@ -31,7 +31,7 @@ function scrollernav ($rootScope, $window, $document) {
                 element = angular.element($element);
 
             window.on('scroll', function () {
-                if (window.scrollTop() > 120) {
+                if (window.scrollTop() > 360) {
                     body.removeClass('specialheader');
                     element.removeClass('specialSearch');
                 }
