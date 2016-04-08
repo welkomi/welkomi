@@ -158,21 +158,24 @@
 <img ng-src="<<* User.pictureProfile *>>" />
 
 {% endif %}
-<script src="/statics/js/welkomiapp.js"></script>
 
-<!--<script src="/statics/js/jquery-1.11.1.min.js"></script>-->
-<!--<script src="/statics/js/bootstrap.js"></script>-->
-<!--<script src="/statics/js/liveicons.js"></script>-->
-<!--<script src="/statics/js/icons.js"></script>-->
-<!--<script src="/statics/js/angular.min.js"></script>-->
-<!--<script src="/statics/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>-->
-<!--<script src="/statics/ng-scrollbars/dist/scrollbars.min.js"></script>-->
-<!--<script src="/statics/js/app.js"></script>-->
-<!--<script src="/statics/js/parallax.js"></script>-->
-<!--<script src="/statics/js/FBFactory.js"></script>-->
-<!--<script src="/statics/js/ngGallery.js"></script>-->
-<!--<script src="/statics/angular-bootstrap/ui-bootstrap.min.js"></script>-->
-<!--<script src="/statics/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>-->
+{% if enviromentName() === 'production' %}
+<script src="/statics/js/welkomiapp.js"></script>
+{% else %}
+<script src="/statics/js/jquery-1.11.1.min.js"></script>
+<script src="/statics/js/bootstrap.js"></script>
+<script src="/statics/js/liveicons.js"></script>
+<script src="/statics/js/icons.js"></script>
+<script src="/statics/js/angular.min.js"></script>
+<script src="/statics/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/statics/ng-scrollbars/dist/scrollbars.min.js"></script>
+<script src="/statics/js/app.js"></script>
+<script src="/statics/js/parallax.js"></script>
+<script src="/statics/js/FBFactory.js"></script>
+<script src="/statics/js/ngGallery.js"></script>
+<script src="/statics/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="/statics/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+{% endif %}
 <!--search result-->
 <script>
     $('.searchresults').hide();

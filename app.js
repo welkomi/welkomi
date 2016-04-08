@@ -46,6 +46,7 @@ idioms.getAvailableLangs(function () {
     /**
      * Middlewares
      */
+    app.use(middlewares.enviromentName());
     app.use(middlewares.getRandomImgForHome());
     app.use(middlewares.setFBId());
     app.use(middlewares.userObject());

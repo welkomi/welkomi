@@ -238,3 +238,18 @@ exports.getRandomImgForHome = function () {
         });
     }
 };
+
+/**
+ * Return the enviroment name
+ *
+ * @returns {Function}
+ */
+exports.enviromentName = function () {
+    return function (req, res, next) {
+        res.locals.enviromentName = function () {
+            return process.env.NODE_ENV;
+        };
+
+        next();
+    }
+}
