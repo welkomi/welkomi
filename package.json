@@ -44,6 +44,7 @@
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {
     "gulp-sass": "^2.2.0",
-    "gulp-clean-css": "latest"
+    "gulp-clean-css": "latest",
+    "gulp-uglifyjs": "latest"
   }
 }
