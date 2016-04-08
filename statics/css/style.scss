@@ -1537,8 +1537,9 @@ footer p {
 
 /*USERS PAGE*/
 .guidedisplay{
-  height: 600px;
-overflow-y:scroll!important;
+  height: 85%;
+  position: fixed;
+  width: 60%;
 }
 
 
