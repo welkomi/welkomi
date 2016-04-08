@@ -17,9 +17,10 @@ var passport = require('passport'),
     idioms = require('./idioms/'),
     middlewares = require('./middlewares'),
     viewsCache = process.env.NODE_ENV === 'production',
-    staticsCache = process.env.NODE_ENV === 'production' ? 300 : 0;
+    staticsCache = process.env.NODE_ENV === 'production' ? process.env.CACHE_TIME : 0;
 
 console.info('viewsCache: ', viewsCache);
+console.info('staticsCache: ', staticsCache);
 
 idioms.getAvailableLangs(function () {
     /**
