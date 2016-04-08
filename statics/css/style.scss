@@ -1537,8 +1537,11 @@ footer p {
 
 /*USERS PAGE*/
 .guidedisplay{
-  height: 580px;
+  height: 600px;
+overflow-y:scroll!important;
 }
+
+
 
 .fav span {
   font-size: 1.5em
@@ -1644,21 +1647,11 @@ footer p {
 
 .fix{
   background-color: rgb(196, 14, 152)  }
+.citytogo {
 
-.map_ubication {
-  position: relative;
-  padding-bottom: 75%; // This is the aspect ratio
-  height: 0;
-  overflow: hidden;
-  height: 755px
 }
-.map_ubication iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
+
+
 
 .pagination .active a {
   background-color: $wkcolor;
@@ -1847,5 +1840,8 @@ font-family: 'Nothing You Could Do', cursive;
   padding-top: 40px
 }
 
+.noscroll{
+    overflow-y:hidden;
+}
 
 /*# sourceMappingURL=style.css.map */
