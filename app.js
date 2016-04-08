@@ -16,7 +16,8 @@ var passport = require('passport'),
     i18n = require('i18n'),
     idioms = require('./idioms/'),
     middlewares = require('./middlewares'),
-    viewsCache = process.env.NODE_ENV === 'production';
+    viewsCache = process.env.NODE_ENV === 'production',
+    staticsCache = process.env.NODE_ENV === 'production' ? 300 : 0;
 
 console.info('viewsCache: ', viewsCache);
 
@@ -64,7 +65,7 @@ idioms.getAvailableLangs(function () {
     app.use(passport.session());
 
     app.use(expressrouter);
-    app.use('/statics', express.static(__dirname + '/statics'));
+    app.use('/statics', express.static(__dirname + '/statics', {'maxAge': staticsCache}));
     app.engine('html', swig.renderFile);
     app.set('view engine', 'html');
     app.set('views', __dirname + '/views');
