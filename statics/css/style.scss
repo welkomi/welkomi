@@ -73,7 +73,7 @@ body {
 
 .logo {
   font-size: 1.5em;
-  text-indent: -9999px; 
+  text-indent: -9999px;
 text-align:center
 }
 
@@ -120,7 +120,7 @@ text-align:center
   margin-top: -16px;
   background-image: url("../images/logosec.png");
   background-repeat: no-repeat;
-  background-size: contain; 
+  background-size: contain;
   position:relative;
   z-index: 9999
 }
@@ -133,7 +133,7 @@ text-align:center
   margin-top: -16px;
   background-image: url("../images/logo.png");
   background-repeat: no-repeat;
-  background-size: contain; 
+  background-size: contain;
   position:relative;
   z-index: 9999;
 }
@@ -315,7 +315,7 @@ text-align:center
 .specialheader .wklogin .btn-publish svg path {
   fill: #ec6060
 }
-  
+
    .specialheader .btn-joinus {
         display: none;
         padding: 4px 10px!important
@@ -347,7 +347,7 @@ text-align:center
 
     .specialheader .btn-login {
     padding: 4px 10px!important;
-    
+
    }
 
 
@@ -595,8 +595,8 @@ text-align:center
      -moz-transition: background 0.2s linear;
   -ms-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
-  transition: background 0.2s linear;  
-  margin-left: 3px  
+  transition: background 0.2s linear;
+  margin-left: 3px
 }
 .joinus .btn-loginhero:hover {
     background-color: #F44E51;
@@ -1537,9 +1537,26 @@ footer p {
 
 /*USERS PAGE*/
 .guidedisplay{
-  height: 85%;
+  height: 82%;
   position: fixed;
-  width: 60%;
+  width: 65%;
+}
+
+.colspecial {
+  clear: both;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.colspecialfil{
+  width: 35%;
+  padding-right: 15px;
+  padding-left: 30px;
+  float: right;
+  
+}
+.wkfilter{
+    background-color: #000;
 }
 
 
@@ -1824,7 +1841,7 @@ footer p {
 /*# scroll tool --guide page-- */
 .mCSB_container_wrapper>.mCSB_container {
     padding-right: 15px!important;
-  
+
 }
 .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
 background-color:$wkcolor!important
