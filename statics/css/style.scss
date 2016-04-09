@@ -1553,14 +1553,18 @@ footer p {
   padding-right: 15px;
   padding-left: 30px;
   float: right;
-  
-}
-.wkfilter{
-    background-color: #000;
+
 }
 
 
-
+.wkfilter .searchuser{
+  margin-top: 0px
+}
+.wkfilter h2{
+  font-family: 'Nothing You Could Do', cursive;
+  color: $wkseccolor;
+  text-align: center;
+}
 .fav span {
   font-size: 1.5em
 }
