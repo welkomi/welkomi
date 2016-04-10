@@ -1,119 +1,133 @@
 {% extends 'layout.html' %}
 
-{% block title %}<title>Home</title>{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="/statics/css/screen.css">
 <link rel="stylesheet" type="text/css" href="/statics/css/ngGallery.css">
 {% endblock %}
 
-{% block pageController %}ng-controller="TourPublishCtrl"{% endblock %}
+{% block pageController %}ng-controller="ProfileCtrl"{% endblock %}
 
 {% block content %}
 <div class="container-fluid publishpage top">
-        <div class="container">
-            <div class="row">
-           <ol class="breadcrumb">
-  <li><a href="#">Madrid</a></li>
-  <li class="active">Julia Anderson</li>
-</ol>
-</div>
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="#">Madrid</a></li>
+                <li class="active">Julia Anderson</li>
+            </ol>
+        </div>
 
-            <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                        <div class="row">
-                            <div class="userperfil">
-                                <div class="myperfil">
-                        <section class="margindefault clearfix">
-                                  <div class="col-md-11 col-lg-11 userbox clearfix">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <div class="row">
+                    <div class="userperfil">
+                        <div class="myperfil">
+                            <section class="margindefault clearfix">
+                                <div class="col-md-11 col-lg-11 userbox clearfix">
                                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left">
-                                       <div class="mediaround">
+                                        <div class="mediaround" ng-model="interface" data-droplet>
                                             <img src="/statics/images/julia.png">
-                                        </div>                                   
-                                 </div>
+                                        </div>
+
+                                        <label>Valid:</label> <<* interface.getFiles(interface.FILE_TYPES.VALID).length *>>
+                                    </div>
                                     <div class="main-info col-xs-12 col-sm-12 col-md-7">
-                                      <hgroup>
-                                      <h2 class="username"><a href="#">Julia Anderson</a><span></span></h2>
-                                      <h3 class="localization"><i class="fa fa-map-marker"></i><a href="#">Vancouver </a><span></span></h3>
+                                        <hgroup>
+                                            <h2 class="username"><a href="#">Julia Anderson</a><span></span></h2>
 
-                                    </hgroup>
-                                       <blockquote class="clearfix col-lg-12">
-                                "I like to learn other languages even if it is a little bit so please bring yours my way"
-                             </blockquote>
-                      </div>
-                          
-                                  </div>
-                                    <div class="fav col-md-1 col-lg-1 col-sm-12 clearfix text-right">
-                                   <button type="button" class="btn btn-like" aria-label="Left Align">
-  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-</button>
+                                            <h3 class="localization"><i class="fa fa-map-marker"></i><a href="#">Vancouver </a><span></span>
+                                            </h3>
+
+                                        </hgroup>
+                                        <blockquote class="clearfix col-lg-12">
+                                            "I like to learn other languages even if it is a little bit so please bring
+                                            yours my way"
+                                        </blockquote>
+                                    </div>
+
                                 </div>
-                                </section>
-
-                                <div class="panel panel-default">
-  <div class="panel-heading">Panel heading without title</div>
-  <div class="panel-body">
-     <p>I like to learn other languages even if it is a little bit so please bring yours my way.</p>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">Panel heading without title</div>
-  <div class="panel-body">
-     <p>Albania, Armenia, Australia, Austria, Azerbaijan, Belgium, Bosnia and Herzegovina, Brunei Darussalam,
-                                      Bulgaria, Cambodia, Canada, China, Colombia, Costa Rica, Croatia, Czech Republic, Denmark, Egypt,
-                                      El Salvador, England, Estonia, France, Georgia, Germany, Greece, Guatemala, Honduras, Hungary,
-                                      India, Indonesia, Ireland, Italy, Japan, Jordan, Kosovo, Laos, Latvia, Lithuania, Luxembourg,
-                                      Macedonia, Malaysia, Mexico, Moldova, Mongolia, Montenegro, Myanmar, Nepal, Netherlands,
-                                      New Zealand, Nicaragua, Northern Ireland, Oman, Panama, Philippines, Poland, Qatar, Romania,
-                                      Russian Federation, Scotland, Serbia, Singapore, Slovakia, Slovenia, South Korea, Sri Lanka,
-                                      Sweden, Switzerland, Taiwan, Thailand, Turkey, Ukraine, United Arab Emirates, United States,
-                                      Viet Nam, Wales</p>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">Countries I’ve Lived In</div>
-  <div class="panel-body">
-     <p>AAustralia, Georgia, South Korea, United States</p>
-  </div>
-</div>
-                      
-            
+                                <div class="fav col-md-1 col-lg-1 col-sm-12 clearfix text-right">
+                                    <button type="button" class="btn btn-like" aria-label="Left Align">
+                                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                                    </button>
                                 </div>
+                            </section>
 
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Panel heading without title</div>
+                                <div class="panel-body">
+                                    <p>I like to learn other languages even if it is a little bit so please bring yours
+                                        my way.</p>
+                                </div>
                             </div>
 
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Panel heading without title</div>
+                                <div class="panel-body">
+                                    <p>Albania, Armenia, Australia, Austria, Azerbaijan, Belgium, Bosnia and
+                                        Herzegovina, Brunei Darussalam,
+                                        Bulgaria, Cambodia, Canada, China, Colombia, Costa Rica, Croatia, Czech
+                                        Republic, Denmark, Egypt,
+                                        El Salvador, England, Estonia, France, Georgia, Germany, Greece, Guatemala,
+                                        Honduras, Hungary,
+                                        India, Indonesia, Ireland, Italy, Japan, Jordan, Kosovo, Laos, Latvia,
+                                        Lithuania, Luxembourg,
+                                        Macedonia, Malaysia, Mexico, Moldova, Mongolia, Montenegro, Myanmar, Nepal,
+                                        Netherlands,
+                                        New Zealand, Nicaragua, Northern Ireland, Oman, Panama, Philippines, Poland,
+                                        Qatar, Romania,
+                                        Russian Federation, Scotland, Serbia, Singapore, Slovakia, Slovenia, South
+                                        Korea, Sri Lanka,
+                                        Sweden, Switzerland, Taiwan, Thailand, Turkey, Ukraine, United Arab Emirates,
+                                        United States,
+                                        Viet Nam, Wales</p>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Countries I’ve Lived In</div>
+                                <div class="panel-body">
+                                    <p>AAustralia, Georgia, South Korea, United States</p>
+                                </div>
+                            </div>
+
+
                         </div>
+
                     </div>
-            
-                            
-                                <aside class="col-xs-12 col-sm-4 col-md-4 col-lg-4 asidepublish">
-                                       <div class="panel panel-default">
-                                       
-  <div class="panel-heading">More guides from <span>Julia</span></div>
-  <div class="panel-body">
-      <div class="usersearchperfil">
-                        <div class="full_media">
-                            <img class="img-responsive" src="/statics/images/citys/tokio.png">
+
+                </div>
+            </div>
+
+
+            <aside class="col-xs-12 col-sm-4 col-md-4 col-lg-4 asidepublish">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">More guides from <span>Julia</span></div>
+                    <div class="panel-body">
+                        <div class="usersearchperfil">
+                            <div class="full_media">
+                                <img class="img-responsive" src="/statics/images/citys/tokio.png">
+                            </div>
+                            <h2 class="username"><a href="#">free /<span class="bolded"> New York</span></a></h2>
+
+                            <p>NIGHTTOUR</p>
+                            <a class="tourme" href="#">tour me!</a>
                         </div>
-                        <h2 class="username"><a href="#">free /<span class="bolded"> New York</span></a></h2>
 
-                        <p>NIGHTTOUR</p>
-                        <a class="tourme" href="#">tour me!</a>
                     </div>
+                </div>
+            </aside>
 
-  </div>
- </div>
-                                </aside>
-
-                                  </div>
- </div>
-    </div>             
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}
 
 {% block pagejs %}
-<script src="/statics/js/tourpublish.js"></script>
+<script src="/statics/js/profile.js"></script>
 {% endblock %}

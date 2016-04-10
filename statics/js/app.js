@@ -6,7 +6,8 @@ var app = angular.module('welkomiApp', [
     'FBF',
     'jkuri.gallery',
     'ui.bootstrap',
-    'ngScrollbars'
+    'ngScrollbars',
+    'ngDroplet'
 ]);
 
 app
