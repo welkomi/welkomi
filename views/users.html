@@ -167,13 +167,53 @@
         </div>
         <div class="colspecialfil">
         <div class="wkfilter">
-          <h2>Post your request!</h2>
+          <h2>Launch your own proposal!</h2>
 
-          <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">What to you want to see in Madrid?</label>
-    <input type="text" class="form-control"  placeholder="I would like to see...">
-  </div>
+          <form class="launch_p clearfix">
+    <input type="text" class="form-control"  placeholder="What to you want to see in Madrid?">
+                   
+                    <div class="priceit">
+                               <select> 
+                                <option value="">I will invit you on a beer!</option> 
+                                <option value="">5€ to 10€/person</option> 
+                                <option value="">10€ to 30€/person</option> 
+                                <option value="">30€ to 60€/person</option> 
+                                <option value="">Make me an offer...</option>
+                            </select>
+                            <i class="fa fa-angle-down"></i>
+                   </div>
+                   
+                    <div class="personmuch">
+                               <select> 
+                               <option value="">1-4 persons</option>
+                                <option value="">5-10</option> 
+                                <option value="">10-20</option> 
+                                <option value="">20-50</option> 
+                            </select>
+                            <i class="fa fa-angle-down"></i>
+                   </div>
+                   
+                   <div class="pickdate clearfix">
+                            <div class="form-group">
+                                <p class="input-group">
+                                    <input type="text" class="form-control"
+                                           uib-datepicker-popup="{{format}}" ng-model="dt"
+                                           is-open="popup.opened" min-date="minDate"
+                                           max-date="maxDate" datepicker-options="dateOptions"
+                                           date-disabled="disabled(date, mode)" ng-required="true"
+                                           close-text="Close" alt-input-formats="altInputFormats"/>
+                                                              <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-pick"
+                                                                        ng-click="open()"><i
+                                                                        class="glyphicon glyphicon-calendar"></i>
+                                                                </button>
+                                                              </span>
+                                </p>
+                            </div>
+                        </div>
+                        <a class="btn btn-launch" href="#">
+                          <span class="navtext">Launch</span>
+                          </a>
 </form>
         </div>
         </div>

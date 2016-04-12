@@ -140,9 +140,8 @@
         <aside class="scrolltofixed asidefather">
             <div class="asidepublish">
                 <div class="usersearchperfil">
-                    <div class="mediaround">
-                        <img src="/statics/images/julia.png">
-                    </div>
+                                        <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'jamie.png') }}">
+
                     <h2 class="username"><a href="#">Julia /<span class="bolded"> Madrid</span></a>
                     </h2>
 
@@ -173,9 +172,9 @@
                                 <p class="input-group">
                                     <input type="text" class="form-control"
                                            uib-datepicker-popup="{{format}}" ng-model="dt"
-                                           is-open="popup.opened" min-date="minDate"
+                                           is-open="popup.opened" min-date="false"
                                            max-date="maxDate" datepicker-options="dateOptions"
-                                           date-disabled="disabled(date, mode)" ng-required="true"
+                                           date-disabled="disabled(date)" ng-required="true"
                                            close-text="Close" alt-input-formats="altInputFormats"/>
                                                               <span class="input-group-btn">
                                                                 <button type="button" class="btn btn-default"
