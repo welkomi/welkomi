@@ -66,7 +66,6 @@ exports.init = function (expressrouter) {
                     },
                     media = {
                         'mimeType': 'imagen/jpeg',
-                        //'body': new Buffer(img.replace(/data:image\/jpeg;base64,/, ''), 'base64')
                         'body': buffer
                     };
 
