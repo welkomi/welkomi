@@ -167,17 +167,17 @@
 
                 <div class="bookingtour asidemodule">
                     <div class="row">
-                        <div class="col-sm-8 pickdate">
+                        <div class="col-sm-7 pickdate">
                             <div class="form-group">
                                 <p class="input-group">
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control" show-button-bar="false"
                                            uib-datepicker-popup="{{format}}" ng-model="dt"
                                            is-open="popup.opened" min-date="false"
                                            max-date="maxDate" datepicker-options="dateOptions"
                                            date-disabled="disabled(date)" ng-required="true"
                                            close-text="Close" alt-input-formats="altInputFormats"/>
                                                               <span class="input-group-btn">
-                                                                <button type="button" class="btn btn-default"
+                                                                <button type="button" class="btn btn-pick btn-default"
                                                                         ng-click="open()"><i
                                                                         class="glyphicon glyphicon-calendar"></i>
                                                                 </button>
@@ -185,14 +185,16 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-sm-4 picknumb">
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>
-                            </div>
+                        <div class="col-sm-5 selctperson">
+                           <div class="personmuch">
+                               <select> 
+                               <option value="">1-4 persons</option>
+                                <option value="">5-10</option> 
+                                <option value="">10-20</option> 
+                                <option value="">20-50</option> 
+                            </select>
+                            <i class="fa fa-angle-down"></i>
+                   </div>
                         </div>
                     </div>
                     <a class="btn btn-primary btn-tourme">Reserva</a>

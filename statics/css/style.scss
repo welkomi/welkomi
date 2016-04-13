@@ -614,7 +614,7 @@ aside .asidemgm {
 
 /*randoms users indice*/
 .modulohowworks {
-  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxNGJxMnlIN1dQRzg', 'tournature.jpg'));
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxNGJxMnlIN1dQRzg', 'map.jpg'));
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -1311,6 +1311,14 @@ aside .usersearchperfil {
   margin-bottom: 10px
 }
 
+.bookingtour .pickdate input{
+  height: 50px
+}
+
+.bookingtour .btn-pick{
+  height: 50px;
+}
+
 .pickdate{
   padding-right: 7px;
 }
@@ -1319,8 +1327,6 @@ aside .usersearchperfil {
 }
 
 /*social icons*/
-
-
 .followus a{
   display: inline-block;
   border: 1px solid rgb(187, 187, 187);
@@ -1555,6 +1561,11 @@ footer p {
   float: right;
 
 }
+.wkfilter{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0 7px 0 7px;
+}
 
 .wkfilter .searchuser{
   margin-top: 0px
@@ -1623,6 +1634,20 @@ footer p {
      border-radius: 4px;
 }
 
+.col-sm-5  .personmuch{
+     height: 50px;
+   overflow: hidden;
+   border: 1px solid #ccc;
+     margin-top: 0px;
+     width: 100%;
+    float: none;
+     position: relative;
+     border-radius: 4px;
+}
+
+.selctperson {
+    padding-left: 4px
+}
  .personmuch select{
     background: #fff;
    padding: 5px;
