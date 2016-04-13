@@ -52,34 +52,46 @@ exports.init = function (expressrouter) {
          */
         expressrouter.post('/drive/file/insert/:parents/', function (req, res) {
             var fs = require('fs'),
+                gm = require('gm').subClass({'imageMagick': true}),
                 img = req.body.img,
                 parents = [];
 
             parents.push(req.params.parents);
 
-            var resource = {
-                    'mimeType': 'image/jpeg',
-                    'name': 'test.jpg',
-                    'parents': parents
-                },
-                media = {
-                    'mimeType': 'imagen/jpeg',
-                    'body': new Buffer(img.replace(/data:image\/jpeg;base64,/, ''), 'base64')
-                };
+            function _createImgInGdrive (buffer) {
+                var resource = {
+                        'mimeType': 'image/jpeg',
+                        'name': 'test.jpg',
+                        'parents': parents
+                    },
+                    media = {
+                        'mimeType': 'imagen/jpeg',
+                        //'body': new Buffer(img.replace(/data:image\/jpeg;base64,/, ''), 'base64')
+                        'body': buffer
+                    };
 
-            drive.files.create({
-                'resource': resource,
-                'media': media,
-                'fields': 'id'
-            }, function (err, file) {
-                if (err) {
-                    res.json(err);
-                }
+                drive.files.create({
+                    'resource': resource,
+                    'media': media,
+                    'fields': 'id'
+                }, function (err, file) {
+                    if (err) {
+                        res.json(err);
+                    }
 
-                else {
-                    res.json(file);
-                }
-            });
+                    else {
+                        res.json(file);
+                    }
+                });
+            }
+
+            gm(new Buffer(img.replace(/data:image\/jpeg;base64,/, ''), 'base64'))
+                .resize(200, 200)
+                .toBuffer('JPG', function (errGm, bufferGm) {
+                    if (errGm) throw errGm;
+
+                    _createImgInGdrive(bufferGm);
+                });
         });
     });
 };
