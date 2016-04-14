@@ -83,4 +83,11 @@ exports.routes = function (expressrouter) {
      * Route '/'
      */
     require('./tourpublish').init(expressrouter, idioms);
+    
+    /**
+     * welkomi message site
+     *
+     * Route '/'
+     */
+    require('./wkmessage').init(expressrouter, idioms);
 };

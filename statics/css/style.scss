@@ -757,6 +757,9 @@ aside .asidemgm {
   border-bottom: none
 }
 
+.peoplereview .panel-profile-img {
+    margin-top: 0px
+}
 .tourevaluation{
   padding: 15px;
   border-bottom: 1px solid #ecf0f1
@@ -1113,6 +1116,11 @@ aside .asidemgm {
 
 /*Myperfil*/
 
+.myperfil .panel-profile-img{
+    margin-top: 0px;
+     width: 170px;
+     height: 170px;
+}
 
 blockquote {
   border-left: 5px solid #777;
@@ -2061,6 +2069,127 @@ font-family: 'Nothing You Could Do', cursive;
 .uib-yearpicker .btn-info {
     background-color: $wkcolor
     
+}
+
+
+/*message interface*/
+
+.howis {
+    padding: 7px;
+    background-color: $wkcolor;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.howis h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.howis i {
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+    right: 10px;
+}
+.usermsg {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 7px;
+    margin-bottom: 7px;
+    height: 95px
+}
+.usermsg .panel-profile-img {
+    margin-top: 0px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.usermsg h2 {
+    margin-top: 5px;
+    color: #282923;
+    font-size: 1.4em;
+    font-weight: bold
+}
+
+.usermsg h6 {
+    color: #282923;
+}
+
+.inbox {
+    background-color: #ecf0f1;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 25px;
+    width: 100%;
+
+}
+
+.inbox h3 {
+    margin: 0px;
+    font-size: 1.5em
+
+}
+
+.inbox .me {
+float: right;
+    margin-bottom: 55px
+}
+
+.inbox .me .bubble {
+float: left;
+margin-right: 15px;
+    max-width: 500px;
+}
+.inbox .me .bubble h3{
+padding: 15px;
+background-color: #fff;
+    border-bottom-left-radius: 30px;
+border-top-left-radius: 30px;
+ border-bottom-right-radius: 15px;
+}
+
+.inbox .me .avatar {
+float: right;
+}
+
+.inbox .him {
+float: left;
+     margin-bottom: 55px
+}
+
+.inbox .him .bubble {
+float: right;
+ margin-left: 15px;
+ max-width: 500px
+}
+
+.inbox .him .bubble h3 {
+padding: 15px;
+background-color: #fff;
+border-bottom-right-radius: 30px;
+border-top-right-radius: 30px;
+ border-bottom-left-radius: 15px;
+}
+
+.inbox .him .avatar {
+float: left;
+}
+
+
+.inbox .panel-profile-img {
+     margin-top: 0px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 0;
+    margin-left: 0px;
 }
 
 

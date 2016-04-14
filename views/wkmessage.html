@@ -1,0 +1,159 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="/statics/css/screen.css">
+<link rel="stylesheet" type="text/css" href="/statics/css/ngGallery.css">
+{% endblock %}
+
+{% block pageController %}ng-controller="TourPublishCtrl"{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid publishpage top">
+    <div class="container">
+         <div class="row">
+           <ol class="breadcrumb">
+  <li><a href="#">My profile</a></li>
+  <li class="active">message</li>
+</ol>
+</div>
+
+
+<div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+              <a href="#"><div class="usermsg clearfix">
+                 <div class="col-md-5 col-lg-4 nopadding">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'nieve.png') }}">
+                  </div>
+                  <div class="col-md-7 col-lg-8 nopadding usermsgaside">
+                      <h2>Jon Nieve</h2>
+                      <h6>Lorem Ipsum giving information on its origins...</h6>
+                  </div>
+                  
+                  </div></a>
+                  
+                   <a href="#"><div class="usermsg clearfix">
+                 <div class="col-md-5 col-lg-4 nopadding">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'tylonn.png') }}">
+                  </div>
+                  <div class="col-md-7 col-lg-8 nopadding usermsgaside">
+                      <h2>Tylion Lanister</h2>
+                      <h6>Hi there!</h6>
+                  </div>
+                  
+                  </div></a>
+                  
+                    <a href="#"><div class="usermsg clearfix">
+                 <div class="col-md-5 col-lg-4 nopadding">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'ned.png') }}">
+                  </div>
+                  <div class="col-md-7 col-lg-8 nopadding usermsgaside">
+                      <h2>Ned Stark</h2>
+                      <h6>I told him that all he needed to do was talk his parents into buying him</h6>
+                  </div>
+                  
+                  </div></a>
+                  
+                    <a href="#"><div class="usermsg clearfix">
+                 <div class="col-md-5 col-lg-4 nopadding">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                  </div>
+                  <div class="col-md-7 col-lg-8 nopadding usermsgaside">
+                      <h2>Arya Stark</h2>
+                      <h6>My 11 year old granddaughter and 13 year...</h6>
+                  </div>
+                  
+                  </div></a>
+        </div>
+
+        <div class="col-md-6 col-lg-7">
+           <div class="howis clearfix">
+               <h2>Jon Nieve <i class="fa fa-comments pull-right" aria-hidden="true"></i></h2>
+           </div>
+            <div class="inbox">
+                
+                 <div class="clearfix">
+                <div class="him">
+                <div class="text">
+                 <div class="avatar">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                  </div>
+                  <div class="bubble">
+                      <h3>How I would have loved to have done this myself to have done this myself!</h3>
+                  </div>
+                  
+                  </div>
+</div>
+            </div>
+            
+             <div class="clearfix">
+            <div class="me">
+                <div class="text">
+                  <div class="bubble">
+                      <h3>See you!!  </h3>
+                  </div>
+                   <div class="avatar">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
+                  </div>
+                  </div>
+</div>
+           </div>
+           
+            <div class="clearfix">
+             <div class="him">
+                <div class="text">
+                 <div class="avatar">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                  </div>
+                  <div class="bubble">
+                      <h3>Lorem Ipsum giving information on its origins!</h3>
+                  </div>
+                  
+                  </div>
+</div>
+           </div>
+           
+            <div class="clearfix">
+            <div class="me">
+                <div class="text">
+                  <div class="bubble">
+                      <h3>I treated my grandchildren to a session whilst on holiday in Noosa. How I would have loved to have done this myself! This review, therefore, is by proxy. My 11 year old granddaughter and 13 year old grandson were absolutely taken by this sport/pastime.</h3>
+                  </div>
+                   <div class="avatar">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
+                  </div>
+                  </div>
+</div>
+           </div>
+           
+            <div class="clearfix">
+            <div class="me">
+                <div class="text">
+                  <div class="bubble">
+                      <h3>How I would have loved to have! </h3>
+                  </div>
+                   <div class="avatar">
+                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
+                  </div>
+                  </div>
+</div>
+      </div>      
+           
+            </div>
+            <div class="sendmsg">
+<textarea class="form-control" rows="3"></textarea>
+           </div>
+        </div>
+           </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block pagejs %}
+<script src="/statics/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+<script src="/statics/js/tourpublish.js"></script>
+{% endblock %}
