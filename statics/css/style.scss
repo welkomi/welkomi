@@ -65,6 +65,20 @@ body {
   margin: 0px!important;
 }
 
+.wksection {
+    background: #fff;
+    border-radius: 8px;
+}
+
+.wkdisplaylink {
+    display: block;
+    border-radius: 8px;
+    background-color: rgba(255,255,255, 1)
+}
+
+.wkdisplaylink:hover {
+    background-color: rgba(255,255,255,0.3)
+}
 
 .col_centred{
   float: none;
@@ -2071,19 +2085,35 @@ font-family: 'Nothing You Could Do', cursive;
     
 }
 
+/*arrows*/
+
+.arrowbox {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    margin-top: -11px
+}
+
+.arrowright {
+    font-size: 1.6em;
+    text-align: center;
+    color: $wkcolor
+}
 
 /*message interface*/
 
 .howis {
     padding: 7px;
-    background-color: $wkcolor;
+    border-bottom: 1px solid $wkseccolor;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    position: relative;
+    background: #fff
 }
 
 .howis h2 {
     text-align: center;
-    color: #fff;
+    color: $wkseccolor;
     font-size: 1.4em;
     font-weight: bold;
     margin: 0px;
@@ -2092,12 +2122,18 @@ font-family: 'Nothing You Could Do', cursive;
 .howis i {
     position: relative;
     font-size: 1em;
-    color: #fff;
+    color: $wkseccolor;
     right: 10px;
 }
+
+.howis h2 small {
+    position: absolute;
+    left: 10px;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: $wkseccolor
+}
 .usermsg {
-    background-color: #fff;
-    border-radius: 8px;
     padding: 7px;
     margin-bottom: 7px;
     height: 95px
@@ -2122,11 +2158,15 @@ font-family: 'Nothing You Could Do', cursive;
     color: #282923;
 }
 
+.usermsgaside .activ {
+    color: $wkseccolor
+}
+
 .inbox {
     background-color: #ecf0f1;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    padding-top: 25px;
+    padding: 25px 25px 25px 25px;
     width: 100%;
 
 }
@@ -2153,6 +2193,9 @@ background-color: #fff;
     border-bottom-left-radius: 30px;
 border-top-left-radius: 30px;
  border-bottom-right-radius: 15px;
+    font-size: 1.2em;
+    margin: 15px -25px 0 0px;
+    background: #daf0d6
 }
 
 .inbox .me .avatar {
@@ -2176,6 +2219,8 @@ background-color: #fff;
 border-bottom-right-radius: 30px;
 border-top-right-radius: 30px;
  border-bottom-left-radius: 15px;
+    font-size: 1.2em;
+    margin: 15px 0px 0 -25px
 }
 
 .inbox .him .avatar {
