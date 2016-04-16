@@ -261,6 +261,7 @@ text-align:center
   font-family: 'Mrs Sheppards', cursive;
 }
 
+
 .herofind h3 {
   font-size: 1.7em;
   color: #fff; }
@@ -737,7 +738,8 @@ aside .asidemgm {
   margin-top: 10px;
   padding: 15px;
   background-color: #fff;
-  border: solid 1px #dadfe0
+  border: solid 1px #dadfe0;
+    border-radius: 8px
 }
 
 .tourevaluation i{
@@ -1236,6 +1238,7 @@ margin-bottom:10px
   width: 100%;
   background-repeat: no-repeat;
   display:table;
+    border-radius: 8px
 }
 .tour-header .velohg {
   text-align: center;
@@ -1247,19 +1250,19 @@ margin-bottom:10px
   padding: 15px;
   width: 60%;
   margin: 0 auto 0 auto;
-  background-color: rgba(0,0,0,0.2);
   color: #fff
 }
 
 .tour-header .velohg hgroup i {
-  font-size: 1.8em;
+  font-size: 2.3em;
   margin-bottom: 10px
 }
 .tour-header .velohg hgroup h2 {
-  font-size: 36px;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 11px;
+  font-size: 35px;
+  border-top: 2px solid #fff;
+  padding-top: 11px;
   margin-top: 0px;
+    font-weight: bold
 }
 .tourinfo{
   background-color: #fff;
@@ -2256,7 +2259,7 @@ background-color: #fff;
 border-top-left-radius: 30px;
  border-bottom-right-radius: 15px;
     font-size: 1.2em;
-    margin: 15px -25px 0 0px;
+    margin: 15px 0px 0 0px;
     background: #daf0d6
 }
 
@@ -2284,7 +2287,7 @@ border-bottom-right-radius: 30px;
 border-top-right-radius: 30px;
  border-bottom-left-radius: 15px;
     font-size: 1.2em;
-    margin: 15px 0px 0 -25px
+    margin: 15px 0px 0 0px
 }
 
 .inbox .him .avatar {
