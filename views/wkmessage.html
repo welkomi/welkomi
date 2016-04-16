@@ -11,7 +11,7 @@
 
 {% block content %}
 
-<div class="container-fluid publishpage top">
+<div class="container-fluid wkinbox top">
     <div class="container">
          <div class="row">
            <ol class="breadcrumb">
@@ -24,6 +24,7 @@
 <div class="row">
 
         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+             <div class="mycontacts">
               <a class="wkdisplaylink" href="#"><div class="usermsg clearfix">
                  <div class="col-md-5 col-lg-4 nopadding">
                   <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'nieve.png') }}">
@@ -32,7 +33,9 @@
                       <h2>Jon Nieve</h2>
                       <h6>Lorem Ipsum giving information on its origins...</h6>
                   </div>
-                  
+                   <div class="col-md-1 col-lg-1 nopadding arrowbox">
+                 <span class="badge">4</span>
+                  </div>
                  
                   
                   </div></a>
@@ -58,12 +61,14 @@
                       <h2>Ned Stark</h2>
                       <h6>I told him that all he needed to do was talk his parents into buying him</h6>
                   </div>
-                  
+                  <div class="col-md-1 col-lg-1 nopadding arrowbox">
+                 <span class="badge">4</span>
+                  </div>
                 
                   
                   </div></a>
                   
-                    <a class="wkdisplaylink" href="#"><div class="usermsg clearfix">
+                    <a class="active wkdisplaylink" href="#"><div class="usermsg clearfix">
                  <div class="col-md-5 col-lg-4 nopadding">
                   <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
                   </div>
@@ -71,17 +76,23 @@
                       <h2 class="activ">Arya Stark</h2>
                       <h6>My 11 year old granddaughter and 13 year...</h6>
                   </div>
-                  
                     <div class="col-md-1 col-lg-1 nopadding arrowbox">
                   <i class="fa fa-angle-right arrowright" aria-hidden="true"></i>
                   </div>
                   
                   </div></a>
+                  </div>
+                  
+                  <div class="fixedsendmsg">        
+<textarea class="mymess form-control" placeholder="Send a message to Arya Stark" rows="3"></textarea>
+   <a class="btn btn-send" href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+        
+           </div>
         </div>
 
-        <div class="col-md-7 col-lg-8 wksection">
-           <div class="howis scrolltofixed clearfix">
-               <h2><small class="pull-left">Mensajes</small>Jon Nieve <i class="fa fa-comments pull-right" aria-hidden="true"></i></h2>
+        <div class="col-md-7 col-lg-8 wksection border-bottom">
+           <div class="howis clearfix">
+               <h2><i class="fa fa-comments pull-left" aria-hidden="true"></i>Arya Stark <a href="#"><i class="fa fa-times pull-right" aria-hidden="true"></i></a></h2>
            </div>
             <div class="inbox">
                 
@@ -153,9 +164,6 @@
       </div>      
            
             </div>
-            <div class="sendmsg">
-<textarea class="form-control" rows="3"></textarea>
-           </div>
         </div>
            </div>
     </div>

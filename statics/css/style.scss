@@ -14,6 +14,13 @@ body {
   -webkit-font-smoothing: antialiased!important;
   -moz-osx-font-smoothing: grayscale!important;
 }
+
+@media (min-width: 1370px){
+.container {
+    width: 1350px;
+}
+}
+
 .bk-wkcolor{
   background-color:$wkcolor
 }
@@ -77,6 +84,10 @@ body {
 }
 
 .wkdisplaylink:hover {
+    background-color: rgba(255,255,255,0.3)
+}
+
+.mycontacts .active {
     background-color: rgba(255,255,255,0.3)
 }
 
@@ -2101,7 +2112,13 @@ font-family: 'Nothing You Could Do', cursive;
 }
 
 /*message interface*/
-
+.badge {
+    background-color: $wkcolor;
+}
+.mycontacts{
+    max-height: 410px;
+    overflow-y: scroll
+} 
 .howis {
     padding: 7px;
     border-bottom: 1px solid $wkseccolor;
@@ -2119,11 +2136,14 @@ font-family: 'Nothing You Could Do', cursive;
     margin: 0px;
 }
 
-.howis i {
+.howis .fa-comments {
     position: relative;
     font-size: 1em;
     color: $wkseccolor;
-    right: 10px;
+}
+
+.howis .fa-times {
+    color: $wkcolor;
 }
 
 .howis h2 small {
@@ -2164,12 +2184,54 @@ font-family: 'Nothing You Could Do', cursive;
 
 .inbox {
     background-color: #ecf0f1;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    padding: 25px 25px 25px 25px;
+    padding: 25px 35px 25px 35px;
     width: 100%;
+    height: 600px;
+    overflow-y: scroll;
+    border-bottom: 1px solid $wkseccolor;
 
 }
+
+.border-bottom {
+    padding-bottom: 36px;
+    
+}
+
+.fixedsendmsg{
+    left: 0;
+    width: 100%;
+    margin-top: 20px
+}
+
+.fixedsendmsg .mymess{
+    height: 100px
+}
+
+.fixedsendmsg .btn-send {
+    color: #fff;
+    background-color: $wkcolor;
+    padding: 4px 10px!important;
+    width: 100%;
+    margin-top: 8px;
+     -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+       
+
+   }
+
+.fixedsendmsg .btn-send i{
+  font-size: 1.6em;
+    padding: 3px 0 3px 0;
+
+   }
+
+  .fixedsendmsg .btn-send:hover {
+    background-color: #F44E51;
+    color: #fff!important;
+   }
+
 
 .inbox h3 {
     margin: 0px;
@@ -2213,6 +2275,8 @@ float: right;
  max-width: 500px
 }
 
+
+
 .inbox .him .bubble h3 {
 padding: 15px;
 background-color: #fff;
@@ -2236,6 +2300,8 @@ float: left;
     left: 0;
     margin-left: 0px;
 }
+
+
 
 
 /*# sourceMappingURL=style.css.map */
