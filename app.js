@@ -56,7 +56,6 @@ idioms.getAvailableLangs(function () {
     /**
      * Framework inits
      */
-
     app.use(i18n.init);
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: false}));
@@ -78,6 +77,14 @@ idioms.getAvailableLangs(function () {
      */
     expressrouter.prefix = express.Router.prefix = middlewares.prefixRouter(app, express);
     router.routes(expressrouter);
+
+    /*+
+     * Improvement to capture Error Page
+     */
+    app.use(function(req, res) {
+        res.status(404);
+        res.render('404', {});
+    });
 
     /**
      * Initialize the server

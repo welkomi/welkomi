@@ -3,7 +3,18 @@
  */
 
 exports.init = function (expressrouter) {
-     expressrouter.get('/:lang/profile', function (req, res) {
-          res.render('profile', {});
-     });
+    expressrouter.prefix(
+        ___availableLangs.route,
+        function (subroutes) {
+            /**
+             * Url to register users
+             */
+
+            subroutes
+                .route(__l('/profile/:user/'))
+                .get(function (req, res) {
+                    res.render('profile', {});
+                });
+        }
+    );
 };

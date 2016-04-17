@@ -5,8 +5,9 @@
 	"guidethepeople": "あなたの街のために人を案内し、新しい友達を作ります",
 	"guideme": "私を導きます !",
 	"publishatour": "ポストツアー",
-  	"searchtour": "検索ツアー",
-  	"/home/": "/",
+	"searchtour": "検索ツアー",
+	"/home/": "/",
 	"/register-user/": "/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E7%99%BB%E9%8C%B2/",
-	"/login-user/": "/%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%A6%E3%83%BC%E3%82%B6/"
+	"/login-user/": "/%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%A6%E3%83%BC%E3%82%B6/",
+	"/profile/:user/": "/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB/:user/"
 }
