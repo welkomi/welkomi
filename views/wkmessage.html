@@ -3,11 +3,11 @@
 {% block title %}Home{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="/statics/css/screen.css">
-<link rel="stylesheet" type="text/css" href="/statics/css/ngGallery.css">
+<link rel="stylesheet" href="/statics/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"
+      type="text/css"/>
 {% endblock %}
 
-{% block pageController %}ng-controller="TourPublishCtrl"{% endblock %}
+{% block pageController %}ng-controller="WkMessageCtrl"{% endblock %}
 
 {% block content %}
 
@@ -24,6 +24,11 @@
 <div class="row">
 
         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+              <div class="fixedsendmsg">        
+<textarea class="mymess form-control" placeholder="Send a message to Arya Stark" rows="3"></textarea>
+   <a class="btn btn-send" href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+        
+           </div>
              <div class="mycontacts">
               <a class="wkdisplaylink" href="#"><div class="usermsg clearfix">
                  <div class="col-md-5 col-lg-4 nopadding">
@@ -83,18 +88,13 @@
                   </div></a>
                   </div>
                   
-                  <div class="fixedsendmsg">        
-<textarea class="mymess form-control" placeholder="Send a message to Arya Stark" rows="3"></textarea>
-   <a class="btn btn-send" href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
-        
-           </div>
         </div>
 
         <div class="col-md-7 col-lg-8 wksection border-bottom">
            <div class="howis clearfix">
-               <h2><i class="fa fa-comments pull-left" aria-hidden="true"></i>Arya Stark <a href="#"><i class="fa fa-times pull-right" aria-hidden="true"></i></a></h2>
+               <h2>Arya Stark <a href="#"><i class="pull-right glyphicon glyphicon-remove-circle" aria-hidden="true"></i></a></h2>
            </div>
-            <div class="inbox">
+            <div ng-scrollbars ng-scrollbars-config="config" class="inbox">
                 
                  <div class="clearfix">
                 <div class="him">
@@ -104,6 +104,8 @@
                   </div>
                   <div class="bubble">
                       <h3>How I would have loved to have done this myself to have done this myself!</h3>
+                      <h3>How I would have loved to have done this myself to have done this myself!</h3>
+                      <small>Yesterday</small>
                   </div>
                   
                   </div>
@@ -115,6 +117,7 @@
                 <div class="text">
                   <div class="bubble">
                       <h3>See you!!  </h3>
+                      <small>14:54</small>
                   </div>
                    <div class="avatar">
                   <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
@@ -131,6 +134,7 @@
                   </div>
                   <div class="bubble">
                       <h3>Lorem Ipsum giving information on its origins!</h3>
+                      <small>17:54</small>
                   </div>
                   
                   </div>
@@ -142,6 +146,7 @@
                 <div class="text">
                   <div class="bubble">
                       <h3>I treated my grandchildren to a session whilst on holiday in Noosa. How I would have loved to have done this myself! This review, therefore, is by proxy. My 11 year old granddaughter and 13 year old grandson were absolutely taken by this sport/pastime.</h3>
+                      <small>22:54</small>
                   </div>
                    <div class="avatar">
                   <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
@@ -155,6 +160,7 @@
                 <div class="text">
                   <div class="bubble">
                       <h3>How I would have loved to have! </h3>
+                      <small>00:54</small>
                   </div>
                    <div class="avatar">
                   <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
@@ -172,6 +178,5 @@
 {% endblock %}
 
 {% block pagejs %}
-<script src="/statics/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
-<script src="/statics/js/tourpublish.js"></script>
+<script src="/statics/js/wkmessage.js"></script>
 {% endblock %}

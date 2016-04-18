@@ -75,6 +75,10 @@ body {
 .wksection {
     background: #fff;
     border-radius: 8px;
+    height: 73%;
+    width: 58.6666666%;
+    position: fixed;
+    right: 80px
 }
 
 .wkdisplaylink {
@@ -640,7 +644,7 @@ aside .asidemgm {
 
 /*randoms users indice*/
 .modulohowworks {
-  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxZFRPLVdhbUxRREE', 'map.jpg'));
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxZFRPLVdhbUxRREE', 'how.jpg'));
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -1273,7 +1277,7 @@ margin-bottom:10px
 
 /*aside bookingtour*/
 .asidefather{
-  width: 354px;
+  width: 430px;
   float: right;
   margin-right: 12px;
 
@@ -1408,7 +1412,7 @@ aside .usersearchperfil {
   background-color: #aaa8a8;
   padding-top: 15px;
   padding-bottom: 50px;
-  background-image: url("../images/moreguide_wk.png");
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxNGJxMnlIN1dQRzg', 'street.jpg'));
   background-repeat: repeat;
 }
 
@@ -2118,10 +2122,7 @@ font-family: 'Nothing You Could Do', cursive;
 .badge {
     background-color: $wkcolor;
 }
-.mycontacts{
-    max-height: 410px;
-    overflow-y: scroll
-} 
+ 
 .howis {
     padding: 7px;
     border-bottom: 1px solid $wkseccolor;
@@ -2145,8 +2146,8 @@ font-family: 'Nothing You Could Do', cursive;
     color: $wkseccolor;
 }
 
-.howis .fa-times {
-    color: $wkcolor;
+.howis .glyphicon {
+    color: #282923;
 }
 
 .howis h2 small {
@@ -2187,13 +2188,18 @@ font-family: 'Nothing You Could Do', cursive;
 
 .inbox {
     background-color: #ecf0f1;
-    padding: 25px 35px 25px 35px;
     width: 100%;
-    height: 600px;
-    overflow-y: scroll;
+    height: inherit;
+    height: 95%;
     border-bottom: 1px solid $wkseccolor;
 
 }
+
+.inbox .clearfix {
+     padding: 8px 35px;
+
+}
+
 
 .border-bottom {
     padding-bottom: 36px;
@@ -2203,7 +2209,7 @@ font-family: 'Nothing You Could Do', cursive;
 .fixedsendmsg{
     left: 0;
     width: 100%;
-    margin-top: 20px
+    margin-bottom: 20px
 }
 
 .fixedsendmsg .mymess{
@@ -2247,6 +2253,7 @@ float: right;
     margin-bottom: 55px
 }
 
+
 .inbox .me .bubble {
 float: left;
 margin-right: 15px;
@@ -2255,12 +2262,17 @@ margin-right: 15px;
 .inbox .me .bubble h3{
 padding: 15px;
 background-color: #fff;
-    border-bottom-left-radius: 30px;
-border-top-left-radius: 30px;
- border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;
+ border-bottom-right-radius: 0px;
     font-size: 1.2em;
     margin: 15px 0px 0 0px;
     background: #daf0d6
+}
+
+.inbox .bubble small{
+padding-left: 20px;
+    color: $wkseccolor
 }
 
 .inbox .me .avatar {
@@ -2283,11 +2295,11 @@ float: right;
 .inbox .him .bubble h3 {
 padding: 15px;
 background-color: #fff;
-border-bottom-right-radius: 30px;
-border-top-right-radius: 30px;
- border-bottom-left-radius: 15px;
+border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;
+ border-bottom-left-radius: 0px;
     font-size: 1.2em;
-    margin: 15px 0px 0 0px
+    margin: -5px 0px 0 0px
 }
 
 .inbox .him .avatar {
@@ -2297,8 +2309,8 @@ float: left;
 
 .inbox .panel-profile-img {
      margin-top: 0px;
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     position: relative;
     left: 0;
     margin-left: 0px;

@@ -9,14 +9,14 @@
  * @param $scope
  * @constructor
  */
-function UsersCtrl ($rootScope, $scope, $window) {
+function WkMessageCtrl ($rootScope, $scope, $window) {
    
 }
 
 app
-    .controller('UsersCtrl', [
+    .controller('WkMessageCtrl', [
         '$rootScope',
         '$scope',
         '$window',
-        UsersCtrl
+        WkMessageCtrl
     ]);

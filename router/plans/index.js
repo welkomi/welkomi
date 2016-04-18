@@ -4,9 +4,9 @@
 
 exports.init = function (expressrouter, idioms) {
      expressrouter.get(
-         '/:lang/users',
+         '/:lang/plans',
          function (req, res) {
-              res.render('users', {
+              res.render('plans', {
                   'footer': 0
               });
          });
