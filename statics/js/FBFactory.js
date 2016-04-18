@@ -15,7 +15,7 @@ function FBF ($rootScope, $http, $window) {
     $rootScope.scopes = 'public_profile';
 
     function parseParamsFromFB (user) {
-        console.log('DEVFB', user.locale);
+        console.log('DEVFB', user.locale.name);
 
         var birthday = user.birthday.split('/'),
             locale = user.locale.split('_');
