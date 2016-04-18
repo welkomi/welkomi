@@ -52,6 +52,15 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
 
     $rootScope.User = {};
     $rootScope.__user__ = $window.__user__;
+    
+     $scope.config = {
+        'autoHideScrollbar': false,
+        'theme': 'dark-thick',
+        'advanced':{
+            'updateOnContentResize': true
+        },
+        'scrollInertia': 0
+    }
 
     var me = '/me/',
         fieldsreponse = {
@@ -139,3 +148,4 @@ app
         CommonCtrl
     ]).
     directive('parallax', [parallax]);
+

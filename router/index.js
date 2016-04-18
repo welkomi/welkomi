@@ -20,9 +20,9 @@ exports.routes = function (expressrouter) {
     require('./cmslanguage').init(expressrouter, idioms);
 
     /**
-     * Route /users
+     * Route /plans
      */
-    require('./users').init(expressrouter, idioms);
+    require('./plans').init(expressrouter, idioms);
 
     /**
      * Route /publish

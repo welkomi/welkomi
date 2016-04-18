@@ -1,5 +1,5 @@
 /**
- * Created by ssanchez on 28/12/15.
+ * Created by iraklitbz on 18/04/16.
  */
 
 /**
@@ -9,14 +9,14 @@
  * @param $scope
  * @constructor
  */
-function UsersCtrl ($rootScope, $scope, $window) {
+function PublishCtrl ($rootScope, $scope, $window) {
    
 }
 
 app
-    .controller('UsersCtrl', [
+    .controller('PublishCtrl', [
         '$rootScope',
         '$scope',
         '$window',
-        UsersCtrl
+        PublishCtrl
     ]);
