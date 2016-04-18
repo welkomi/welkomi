@@ -143,12 +143,12 @@ exports.deserializeUser = function () {
  */
 exports.userObject = function () {
     return function (req, res, next) {
-        res.locals.userObject = function (string) {
+        res.locals.userObject = function (bool) {
             var userinf = req.user
                 ? JSON.stringify(req.user)
                 : false;
 
-            if (string) {
+            if (bool) {
                 return userinf;
             }
 

@@ -26,14 +26,14 @@ exports.init = function (expressrouter) {
             var user = req.body;
 
             if (user.logintype === 'fb') {
-                user.password = user.username;
+                user.password = user.logintype + user.email + user.logintype;
             }
 
             passport.authenticate('local', function (err, user) {
-                if (err) res.json(err);
+                if (err) throw (err);
 
                 req.login(user, {}, function (errLogin, resLogin) {
-                    if (errLogin) res.json(errLogin);
+                    if (errLogin) throw (errLogin);
 
                     res.json({'success': true});
                 });
@@ -71,6 +71,10 @@ exports.init = function (expressrouter) {
                      }
 
                      else {
+                         if (user.logintype === 'fb') {
+                             user.password = user.logintype + user.email + user.logintype;
+                         }
+
                          password(user.password).hash(function (errHash, resHash) {
                              if (errHash) throw errHash;
 

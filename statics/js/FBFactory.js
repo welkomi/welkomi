@@ -15,8 +15,6 @@ function FBF ($rootScope, $http, $window) {
     $rootScope.scopes = 'public_profile';
 
     function parseParamsFromFB (user) {
-        console.log('USUARIO', user);
-
         var birthday = user.birthday.split('/'),
             locale = user.locale.split('_');
 
@@ -27,7 +25,6 @@ function FBF ($rootScope, $http, $window) {
         user.birthdayyear = birthday[2];
         user.firstname = user.first_name;
         user.lastname = user.last_name;
-        user.password = user.email;
         user.logintype = 'fb';
 
         if (user.location) {
@@ -152,8 +149,8 @@ function FBF ($rootScope, $http, $window) {
                             $http.post(
                                 '/authenticate-ajax/',
                                 {
-                                    'username': data.username,
-                                    'logintype': data.logintype
+                                    'username': data[0].username,
+                                    'logintype': data[0].logintype
                                 })
                                 .then(function (response) {
                                     if (response.data.success) {

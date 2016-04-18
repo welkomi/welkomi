@@ -78,7 +78,7 @@ idioms.getAvailableLangs(function () {
     expressrouter.prefix = express.Router.prefix = middlewares.prefixRouter(app, express);
     router.routes(expressrouter);
 
-    /*+
+    /*
      * Improvement to capture Error Page
      */
     app.use(function(req, res) {

@@ -48,8 +48,6 @@ window.fbload = function () {
  * @constructor
  */
 function CommonCtrl ($rootScope, $scope, $window, FBF) {
-    console.log($window.__user__);
-
     $rootScope.User = {};
     $rootScope.__user__ = $window.__user__;
     
@@ -89,7 +87,10 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
         ]);
         FBF.getStatusLogin(
             function (response) {
-                if (response.status === 'connected') {
+                if (
+                    $window.__user__
+                    && response.status === 'connected'
+                ) {
                     FBFapi();
                 }
             },
