@@ -143,10 +143,14 @@ exports.deserializeUser = function () {
  */
 exports.userObject = function () {
     return function (req, res, next) {
-        res.locals.userObject = function () {
+        res.locals.userObject = function (string) {
             var userinf = req.user
                 ? JSON.stringify(req.user)
                 : false;
+
+            if (string) {
+                return userinf;
+            }
 
             return '<script> window.__user__ = ' + userinf + '</script>';
         };

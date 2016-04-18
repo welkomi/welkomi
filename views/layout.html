@@ -14,7 +14,7 @@
 
     {% block head %}{% endblock %}
 </head>
-<body ng-controller="CommonCtrl" class="{% block etiquetaBody %}{% endblock%}">
+<body ng-controller="CommonCtrl" class="{% block etiquetaBody %}{% endblock%} {% if userObject('render') %} user-login {% else %} user-logoff {% endif %}">
 <div id="fb-root"></div>
 
 <div class="container-fluid">
