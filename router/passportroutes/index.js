@@ -110,7 +110,9 @@ exports.init = function (expressrouter) {
                                                          if (errUpdate) throw errUpdate;
 
                                                          User
-                                                             .find(resUpdate)
+                                                             .find({
+                                                                 'username': user.username
+                                                             })
                                                              .select('-password')
                                                              .exec(function (errCreateFind, resCreateFind) {
                                                                  if (errCreateFind) throw errCreateFind;
