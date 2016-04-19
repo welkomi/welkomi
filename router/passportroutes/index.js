@@ -115,6 +115,8 @@ exports.init = function (expressrouter) {
                                                              .exec(function (errCreateFind, resCreateFind) {
                                                                  if (errCreateFind) throw errCreateFind;
 
+                                                                 console.log(resCreateFind);
+
                                                                  res.json(resCreateFind);
                                                              });
                                                      });
