@@ -329,8 +329,9 @@ text-align:center
    }
 
    .btn-mens {
-  color: $wkseccolor;
-  display: none
+       color: #fff;
+       display: inline-block;
+    padding: 4px 10px!important
    }
 
     .wklogin .navtext {
@@ -347,7 +348,6 @@ text-align:center
 }
 
    .specialheader .btn-joinus {
-        display: none;
         padding: 4px 10px!important
       }
 
@@ -366,12 +366,6 @@ text-align:center
    }
     .specialheader .btn-publish {
     border: 1px solid #fff!important;
-    padding: 4px 10px!important
-   }
-
-
-    .specialheader .btn-mens {
-    display: inline-block;
     padding: 4px 10px!important
    }
 
@@ -2316,7 +2310,35 @@ float: left;
     margin-left: 0px;
 }
 
+/*# hide buttons if logout */
+
+.user-logoff .mebtn {
+    display: none
+}
+
+.user-logoff .mensbtn {
+    display: none
+}
+
+.user-logoff .logoutbtn {
+    display: none
+}
 
 
+
+
+/*# hide buttons if login */
+
+.user-login .loginbtn {
+    display: none
+}
+
+.user-login .joinusbtn {
+    display: none
+}
+
+.user-login .joinus {
+    display: none
+}
 
 /*# sourceMappingURL=style.css.map */

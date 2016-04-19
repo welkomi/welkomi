@@ -46,29 +46,39 @@
                     </form>
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1">
-                    <h1 class="logo"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-1 col-lg-offset-1">
+                    <h1 class="logo pull-right"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
                     <nav class="navbar wklogin">
                         <ul class="pull-right">
-                            <li><a class="btn btn-publish" href="javascript:void(0)"><span class="wkicon livicon shadowed"
-                                                                          data-n="location" data-s="24" data-hc="0"
+                            <li class="publishbtn"><a class="btn btn-publish" href="javascript:void(0)"><span class="wkicon livicon shadowed"
+                                                                          data-n="location" data-s="26" data-hc="0"
                                                                           data-onparent="true"></span><span
                                     class="navtext">Publish tour</span></a></li>
-                            <li><a class="btn btn-mens" href="#"><span class="wkicon livicon shadowed"
-                                                                       data-n="message-flag" data-s="24" data-hc="0"
+                            <li class="mensbtn"><a class="btn btn-mens" href="{{ renderUrl('/wkmessage/') }}"><span class="wkicon livicon shadowed"
+                                                                       data-n="message-flag" data-s="26" data-hc="0"
                                                                        data-onparent="true"></span><span
                                     class="navtext">{{ __('messages') }}</span></a></li>
-                            <li>
+                            <li class="joinusbtn">
                                 <a class="btn btn-joinus" href="{{ renderUrl('/register-user/') }}"><span
-                                        class="wkicon livicon shadowed" data-n="plus" data-s="24" data-hc="0"
+                                        class="wkicon livicon shadowed" data-n="plus" data-s="28" data-hc="0"
                                         data-onparent="true"></span><span class="navtext">Join us</span></a>
                             </li>
-                            <li>
+                            <li class="loginbtn">
                                 <a class="btn btn-login" href="{{ renderUrl('/login-user/') }}"><span
-                                        class="wkicon livicon shadowed" data-n="sign-in" data-s="24" data-hc="0"
+                                        class="wkicon livicon shadowed" data-n="sign-in" data-s="26" data-hc="0"
                                         data-onparent="true"></span><span class="navtext">Login</span></a>
+                            </li>
+                             <li class="mebtn">
+                                <a class="btn btn-login" href="{{ renderUrl('/profile/') }}"><span
+                                        class="wkicon livicon shadowed" data-n="user" data-s="26" data-hc="0"
+                                        data-onparent="true"></span><span class="navtext">Irakli</span></a>
+                            </li>
+                            <li class="logoutbtn">
+                                <a class="btn btn-login" href="/logout"><span
+                                        class="wkicon livicon shadowed" data-n="sign-out" data-s="26" data-hc="0"
+                                        data-onparent="true"></span><span class="navtext">Logout</span></a>
                             </li>
                         </ul>
                     </nav>
