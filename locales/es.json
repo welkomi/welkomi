@@ -9,5 +9,7 @@
 	"/home/": "/",
 	"/register-user/": "/registrar-usuario/",
 	"/login-user/": "/logar-usuario/",
-	"/profile/:user/": "/perfil/:user/"
+	"/profile/:user/": "/perfil/:user/",
+	"/wkmessage/": "/wkmessage/",
+	"/profile/": "/profile/"
 }
