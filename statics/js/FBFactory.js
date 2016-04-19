@@ -145,7 +145,7 @@ function FBF ($rootScope, $http, $window) {
             )
                 .success(function (data, status) {
                     if (data) {
-                        if (!$window.__user__) {
+                        //if (!$window.__user__) {
                             $http.post(
                                 '/authenticate-ajax/',
                                 {
@@ -163,7 +163,7 @@ function FBF ($rootScope, $http, $window) {
                                         cb(data, user.id);
                                     }
                                 });
-                        }
+                        //}
 
                         if (typeof cb === 'function') {
                             cb(data, user.id);
