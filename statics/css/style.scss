@@ -2312,14 +2312,9 @@ float: left;
     margin-left: 0px;
 }
 /*# black login background */
-.bg_black {
-    background: rgba(0,0,0,0.8);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999
+.modal-open .modal {
+    z-index: 9999!important;
+    margin-top: 30px
 }
 
 .modal-table {
