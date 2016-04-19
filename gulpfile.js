@@ -31,6 +31,7 @@ gulp.task('js', function () {
             './statics/js/parallax.js',
             './statics/js/FBFactory.js',
             './statics/js/ngGallery.js',
+            './statics/js/ng-droplet/dist/ng-droplet.min.js',
             './statics/angular-bootstrap/ui-bootstrap.min.js',
             './statics/angular-bootstrap/ui-bootstrap-tpls.min.js'
         ])
