@@ -23,6 +23,7 @@ body {
 }
 }
 
+
 .bk-wkcolor{
   background-color:$wkcolor
 }
@@ -102,10 +103,18 @@ body {
   margin: auto;
 }
 
+header {
+    position: relative
+}
+
 .logo {
+    position: absolute;
   font-size: 1.5em;
   text-indent: -9999px;
-text-align:center
+text-align:center;
+    width: 130px;
+    left: 50%;
+    margin-left: -65px
 }
 
 .top {
@@ -138,7 +147,7 @@ text-align:center
   margin: 0 auto 0 auto;
   width: 150px;
   height: 40px;
-  background-image: url("../images/logo.png");
+  background-image: url("../images/logosec.png");
   background-repeat: no-repeat;
   background-size: contain; }
 
@@ -162,7 +171,7 @@ text-align:center
   width: 140px;
   height: 45px;
   margin-top: -16px;
-  background-image: url("../images/logo.png");
+  background-image: url("../images/logosec.png");
   background-repeat: no-repeat;
   background-size: contain;
   position:relative;
@@ -447,17 +456,34 @@ text-align:center
 
 }
 
+.headerfixsearch {
+    width: 300px
+}
+
 .specialheader .searchuserheader {
  top:60px
 }
 
+.input-group-addon {
+    background-color: transparent;
+    border: none
+}
+
+.input-group-addon a {
+    color: $wkcolor;
+    font-size: 1.3em
+}
+
+.input-group-addon a:hover {
+    text-decoration: none
+}
+
 .searchuserheader {
   top: 13px;
+    margin-left: 15px;
   border-radius: 50px;
-  background-color: #ecf0f1;
   position: relative;
   z-index: 1000;
-  overflow: hidden;
   -webkit-transition: top 0.5s ease;
   -moz-transition: top 0.5s ease;
   -ms-transition: top 0.5s ease;
@@ -468,8 +494,9 @@ text-align:center
 .searchuserheader input {
   height: 34px;
   border-radius:0px;
-  border: none;
-  background-color: #ecf0f1;
+    border: none;
+    border-left: 2px solid #7d7d7b;
+  background-color: rgba(40, 41, 35, 0.8);
   color: #282923;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -479,38 +506,11 @@ text-align:center
 }
 
 
-.searchuser .select_wk select {
- background: transparent;
-  border: 0;
-   width: 160px;
-   height: 50px!important;
-   border-radius: 0;
-     -webkit-appearance: none;
-       padding-left:5px;
-}
-
-.searchuser .select_wk {
-  width: 160px;
-  color:$wkcolor;
-  height: 50px!important;
-  background-color: #fff;
-  overflow: hidden;
-  border-right: 0;
-  border-left: 1px solid #a5a5a5;
-}
-
-.searchuser .select_wk i {
- color:$wkcolor;
- right: 15px;
-}
-
-
-
 .select_wk select {
   background: transparent;
   border: 0;
   padding-left: 5px;
-   height: 34px!important;
+   height: 49px!important;
    width: 100%;
    border-radius: 0;
      -webkit-appearance: none;
@@ -527,9 +527,11 @@ text-align:center
 
 .select_wk {
   color: #282923;
-  height: 34px!important;
+  height: 50px!important;
   background-color: #ecf0f1;
   overflow: hidden;
+    width: 120px;
+    background-color: #fff
 
 }
 
@@ -1273,7 +1275,7 @@ margin-bottom:10px
 
 /*aside bookingtour*/
 .asidefather{
-  width: 430px;
+  width: 415px;
   float: right;
   margin-right: 12px;
 
@@ -2312,9 +2314,12 @@ float: left;
     margin-left: 0px;
 }
 /*# black login background */
+.modal-body {
+    padding: 0px
+}
 .modal-open .modal {
     z-index: 9999!important;
-    margin-top: 30px
+    margin-top: 40px
 }
 
 .modal-table {
@@ -2340,17 +2345,16 @@ float: left;
     background-color: #fff;
     margin-left: auto;
     margin-right: auto;
-    max-width: 520px;
+    padding: 25px
 }
 
 .signup .fastlogin {
- padding: 32px;
 position: relative;
 }
 
 .signup .btn {
 width: 100%;
-   padding: 25px
+   padding: 15px
 }
 
 .signup .btn-sesson {
@@ -2359,7 +2363,7 @@ margin-bottom: 7px
 
 .signup .pure-input {
 width: 100%;
-   padding: 25px;
+   height: 52px;
     margin-bottom: 7px
 }
 
@@ -2421,4 +2425,10 @@ width: 100%;
     display: none
 }
 
+
+@media (min-width: 768px){
+.modal-dialog {
+    width: 480px;
+}
+}
 /*# sourceMappingURL=style.css.map */
