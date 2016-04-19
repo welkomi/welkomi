@@ -97,7 +97,7 @@
                             <li class="mebtn">
                                 <a class="btn btn-login" href="{{ renderUrl('/profile/') }}"><span
                                         class="wkicon livicon shadowed" data-n="user" data-s="26" data-hc="0"
-                                        data-onparent="true"></span><span class="navtext">{{ userObject('firstname') }}</span></a>
+                                        data-onparent="true"></span><span class="navtext">{% if userObject('user') %} {{ userObject('firstname') }} {% endif %}</span></a>
                             </li>
                             <li class="logoutbtn">
                                 <a class="btn btn-login" href="/logout"><span
