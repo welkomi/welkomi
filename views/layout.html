@@ -14,48 +14,49 @@
 
     {% block head %}{% endblock %}
 </head>
-<body ng-controller="CommonCtrl" class="{% block etiquetaBody %}{% endblock %} {% if userObject('bool') %} user-login {% else %} user-logoff {% endif %}">
+<body ng-controller="CommonCtrl"
+      class="{% block etiquetaBody %}{% endblock %} {% if userObject('bool') %} user-login {% else %} user-logoff {% endif %}">
 <div id="fb-root"></div>
-  
-   
-    
-    
- <script type="text/ng-template" id="loginBoxContent.html">
-        <div class="modal-body">
-             <div class="signup">
-         <div class="fastlogin">
-        <a class="btn btn-fb" ng-click="fbLogin()"><i class="fa fa-facebook fa-lg"></i>Login with Facebook</a>
-         <div class="signup_separator">
-                            <span class="signup_eparator_text">or</span>
-                            <hr>
-                        </div>
-                        
-                        
-                        <input class="pure-input" id="Email" name="Email" placeholder="Email"
-                                       required="required" type="email">
-                                       
-                                       <input class="pure-input" id="password" name="Password" placeholder="Password"
-                                       required="required" type="Password">
-                                       <div class="remember clearfix">
-                                       <label class="check pull-left">
-    <input type="checkbox" value=""> Recordarme
-  </label>
-                                          <small class="pull-right"><a href="#">¿Te has olvidado?</a></small>
-                                          </div>
-                                       <button type="submit" class="btn btn-sesson btn-block btn-large">Iniciar sesión</button>
-                                                        
-                            <hr>
-                                       
-                                       <div class="notregister clearfix">
-                                           <small class="pull-left">¿No tienes una cuenta?</small>
-                                           <button type="submit" class="pull-right btn btn-register btn-block btn-large">Registrar</button>
-                                       </div>
-        
-    </div>
-    </div>
+
+
+<script type="text/ng-template" id="loginBoxContent.html">
+    <div class="modal-body">
+        <div class="signup">
+            <div class="fastlogin">
+                <a class="btn btn-fb" ng-click="fbLoginFromModal()"><i class="fa fa-facebook fa-lg"></i>Login with Facebook</a>
+
+                <div class="signup_separator">
+                    <span class="signup_eparator_text">or</span>
+                    <hr>
+                </div>
+
+
+                <input class="pure-input" id="Email" name="Email" placeholder="Email"
+                       required="required" type="email">
+
+                <input class="pure-input" id="password" name="Password" placeholder="Password"
+                       required="required" type="Password">
+
+                <div class="remember clearfix">
+                    <label class="check pull-left">
+                        <input type="checkbox" value=""> Recordarme
+                    </label>
+                    <small class="pull-right"><a href="#">¿Te has olvidado?</a></small>
+                </div>
+                <button type="submit" class="btn btn-sesson btn-block btn-large">Iniciar sesión</button>
+
+                <hr>
+
+                <div class="notregister clearfix">
+                    <small class="pull-left">¿No tienes una cuenta?</small>
+                    <button type="submit" class="pull-right btn btn-register btn-block btn-large">Registrar</button>
+                </div>
+
+            </div>
         </div>
+    </div>
 </script>
-    
+
 <div class="container-fluid">
     <header id="nav" class="navbar-fixed-top">
         <div class="container-fluid {% block wover %}{% endblock %}">
@@ -64,23 +65,23 @@
                 <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
                     <form class="col-xs-12 col-sm-12 col-md-8 col-lg-8 clearfix scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
                         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 nopadding">
-                       <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
-                  </div>
-                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                        <input id="searchfixed" type="text" class="searchinputwk form-control"
-                               placeholder="{{ __('searchtour') }}">
-                               </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 nopadding">
-                             <div class="select_wk">
-                               <select> 
-                                <option value="">All</option> 
-                                <option value="">Culture</option> 
-                                <option value="">City</option> 
-                                <option value="">Night</option> 
-                                <option value="">Free</option>
-                            </select>
-                            <i class="fa fa-chevron-down"></i>
+                            <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
                         </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
+                            <input id="searchfixed" type="text" class="searchinputwk form-control"
+                                   placeholder="{{ __('searchtour') }}">
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 nopadding">
+                            <div class="select_wk">
+                                <select>
+                                    <option value="">All</option>
+                                    <option value="">Culture</option>
+                                    <option value="">City</option>
+                                    <option value="">Night</option>
+                                    <option value="">Free</option>
+                                </select>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -91,13 +92,15 @@
                 <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
                     <nav class="navbar wklogin">
                         <ul class="pull-right">
-                            <li class="publishbtn"><a class="btn btn-publish" href="javascript:void(0)"><span class="wkicon livicon shadowed"
-                                                                          data-n="location" data-s="26" data-hc="0"
-                                                                          data-onparent="true"></span><span
+                            <li class="publishbtn"><a class="btn btn-publish" href="javascript:void(0)"><span
+                                    class="wkicon livicon shadowed"
+                                    data-n="location" data-s="26" data-hc="0"
+                                    data-onparent="true"></span><span
                                     class="navtext">Publish tour</span></a></li>
-                            <li class="mensbtn"><a class="btn btn-mens" href="{{ renderUrl('/wkmessage/') }}"><span class="wkicon livicon shadowed"
-                                                                       data-n="message-flag" data-s="26" data-hc="0"
-                                                                       data-onparent="true"></span><span
+                            <li class="mensbtn"><a class="btn btn-mens" href="{{ renderUrl('/wkmessage/') }}"><span
+                                    class="wkicon livicon shadowed"
+                                    data-n="message-flag" data-s="26" data-hc="0"
+                                    data-onparent="true"></span><span
                                     class="navtext">{{ __('messages') }}</span></a></li>
                             <li class="joinusbtn">
                                 <a class="btn btn-joinus" href="{{ renderUrl('/register-user/') }}"><span
@@ -107,9 +110,9 @@
                             <li class="loginbtn">
                                 <a class="btn btn-login" href="javascript:void(0)" ng-click="open('md')"><span
                                         class="wkicon livicon shadowed" data-n="sign-in" data-s="26" data-hc="0"
-                                        data-onparent="true"></span><span class="navtext" >Login</span></a>
+                                        data-onparent="true"></span><span class="navtext">Login</span></a>
                             </li>
-                             <li class="mebtn">
+                            <li class="mebtn">
                                 <a class="btn btn-login" href="{{ renderUrl('/profile/') }}"><span
                                         class="wkicon livicon shadowed" data-n="user" data-s="26" data-hc="0"
                                         data-onparent="true"></span><span class="navtext">Irakli</span></a>
@@ -204,7 +207,7 @@
 <pre>
     <<* __user__ | json *>>
 </pre>
-<img ng-src="<<* User.pictureProfile *>>" />
+<img ng-src="<<* User.pictureProfile *>>"/>
 
 {% endif %}
 
