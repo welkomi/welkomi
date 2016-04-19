@@ -84,15 +84,43 @@ exports.init = function (expressrouter) {
                                  .create(user, function (errCreate, resCreate) {
                                      if (errCreate) throw errCreate;
 
-                                     User
-                                         .find(resCreate)
-                                         .select('-password')
-                                         .exec(function (errCreateFind, resCreateFind) {
-                                             if (errCreateFind) throw errCreateFind;
+                                     var resource = {
+                                         'mimeType': 'application/vnd.google-apps.folder',
+                                         'name': user.username,
+                                         'parents': ['0B9gI2Lt4M_dxcEM0NEI1NU5fdkU']
+                                     };
 
-                                             res.json(resCreateFind);
+                                     require('./../../wrappers/googlewrapper')
+                                         .api('drive', 'v3', function (drive) {
+                                             drive.files.create({
+                                                 'resource': resource,
+                                                 'fields': 'id, webViewLink',
+                                             }, function (errDrive, resDrive) {
+                                                 if (errDrive) throw errDrive;
+
+                                                 User
+                                                     .update({
+                                                         'username': user.username
+                                                     },
+                                                     {
+                                                        '$set': {
+                                                            'userfolder': resDrive.id
+                                                        }
+                                                     }, function (errUpdate, resUpdate) {
+                                                         if (errUpdate) throw errUpdate;
+
+                                                         User
+                                                             .find(resUpdate)
+                                                             .select('-password')
+                                                             .exec(function (errCreateFind, resCreateFind) {
+                                                                 if (errCreateFind) throw errCreateFind;
+
+                                                                 res.json(resCreateFind);
+                                                             });
+                                                     });
+                                             });
                                          });
-                             });
+                                 });
                          });
                      }
                  });

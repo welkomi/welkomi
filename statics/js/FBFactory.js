@@ -149,8 +149,8 @@ function FBF ($rootScope, $http, $window) {
                             $http.post(
                                 '/authenticate-ajax/',
                                 {
-                                    'username': data.username,
-                                    'logintype': data.logintype
+                                    'username': data.username || data[0].username,
+                                    'logintype': data.logintype || data[0].logintype
                                 })
                                 .then(function (response) {
                                     if (response.data.success) {

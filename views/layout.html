@@ -95,7 +95,7 @@
                                         data-onparent="true"></span><span class="navtext">Login</span></a>
                             </li>
                             <li class="mebtn">
-                                <a class="btn btn-login" href="{{ renderUrl('/profile/') }}"><span
+                                <a class="btn btn-login" href="{{ renderUrl('/profile/') }}{% if userObject('user') %}{{ userObject('username') }}{% endif %}"><span
                                         class="wkicon livicon shadowed" data-n="user" data-s="26" data-hc="0"
                                         data-onparent="true"></span><span class="navtext">{% if userObject('user') %} {{ userObject('firstname') }} {% endif %}</span></a>
                             </li>

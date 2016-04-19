@@ -16,6 +16,10 @@ var UserSchema = mongoose.Schema({
     'birthdayday': 'String',
     'birthdaymonth': 'String',
     'birthdayyear': 'String',
+    'userfolder': {
+        'type': 'String',
+        'default': null
+    },
     'logintype': {
         'type': 'String',
         'default': 'form'
