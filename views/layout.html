@@ -62,34 +62,16 @@
         <div class="container-fluid {% block wover %}{% endblock %}">
             <div class="row">
 
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <form class="clearfix scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 nopadding">
-                            <a href="#" type="button" class="btn btn-search"><i class="fa fa-search fa-lg"></i></a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                            <input id="searchfixed" type="text" class="searchinputwk form-control"
-                                   placeholder="{{ __('searchtour') }}">
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 nopadding">
-                            <div class="select_wk">
-                                <select>
-                                    <option value="">All</option>
-                                    <option value="">Culture</option>
-                                    <option value="">City</option>
-                                    <option value="">Night</option>
-                                    <option value="">Free</option>
-                                </select>
-                                <i class="fa fa-chevron-down"></i>
-                            </div>
-                        </div>
-                    </form>
+                <div class="pull-left headerfixsearch">
+                   <div class="input-group scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
+  <span class="input-group-addon" id="basic-addon1"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></span>
+  <input type="text" class="form-control" placeholder="I would like to go to..." aria-describedby="basic-addon1">
+</div>
+                   
+                   
                 </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-1 col-lg-offset-1">
-                    <h1 class="logo pull-right"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                    <h1 class="logo"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
+                <div class="pull-right">
                     <nav class="navbar wklogin">
                         <ul class="pull-right">
                             <li class="publishbtn"><a class="btn btn-publish" href="javascript:void(0)"><span
