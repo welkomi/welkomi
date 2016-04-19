@@ -1,3 +1,5 @@
+/*Iraklitbz | Welkomi*/
+
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"');
 @import url('http://weloveiconfonts.com/api/?family=entypo');
 @import url('http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
@@ -2308,6 +2310,89 @@ float: left;
     position: relative;
     left: 0;
     margin-left: 0px;
+}
+/*# black login background */
+.bg_black {
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999
+}
+
+.modal-table {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-cell {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    padding: 50px;
+}
+.signup {
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 520px;
+}
+
+.signup .fastlogin {
+ padding: 32px;
+position: relative;
+}
+
+.signup .btn {
+width: 100%;
+   padding: 25px
+}
+
+.signup .btn-sesson {
+margin-bottom: 7px
+}
+
+.signup .pure-input {
+width: 100%;
+   padding: 25px;
+    margin-bottom: 7px
+}
+
+.notregister small {
+    display: block;
+    width: 50%;
+     padding: 7px;
+    font-size: 1.2em
+    
+}
+
+.signup .remember {
+    margin-bottom: 7px;
+        font-size: 1.2em
+}
+
+.signup .check {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.signup .check input {
+   margin-right: 7px
+}
+
+.notregister .btn-register {
+    width: 50%;
+      padding: 7px
 }
 
 /*# hide buttons if logout */

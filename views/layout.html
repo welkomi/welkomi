@@ -16,7 +16,46 @@
 </head>
 <body ng-controller="CommonCtrl" class="{% block etiquetaBody %}{% endblock %} {% if userObject('bool') %} user-login {% else %} user-logoff {% endif %}">
 <div id="fb-root"></div>
-
+  
+   
+    
+    
+ <script type="text/ng-template" id="loginBoxContent.html">
+        <div class="modal-body">
+             <div class="signup">
+         <div class="fastlogin">
+        <a class="btn btn-fb" ng-click="fbLogin()"><i class="fa fa-facebook fa-lg"></i>Login with Facebook</a>
+         <div class="signup_separator">
+                            <span class="signup_eparator_text">or</span>
+                            <hr>
+                        </div>
+                        
+                        
+                        <input class="pure-input" id="Email" name="Email" placeholder="Email"
+                                       required="required" type="email">
+                                       
+                                       <input class="pure-input" id="password" name="Password" placeholder="Password"
+                                       required="required" type="Password">
+                                       <div class="remember clearfix">
+                                       <label class="check pull-left">
+    <input type="checkbox" value=""> Recordarme
+  </label>
+                                          <small class="pull-right"><a href="#">¿Te has olvidado?</a></small>
+                                          </div>
+                                       <button type="submit" class="btn btn-sesson btn-block btn-large">Iniciar sesión</button>
+                                                        
+                            <hr>
+                                       
+                                       <div class="notregister clearfix">
+                                           <small class="pull-left">¿No tienes una cuenta?</small>
+                                           <button type="submit" class="pull-right btn btn-register btn-block btn-large">Registrar</button>
+                                       </div>
+        
+    </div>
+    </div>
+        </div>
+</script>
+    
 <div class="container-fluid">
     <header id="nav" class="navbar-fixed-top">
         <div class="container-fluid {% block wover %}{% endblock %}">
@@ -66,9 +105,9 @@
                                         data-onparent="true"></span><span class="navtext">Join us</span></a>
                             </li>
                             <li class="loginbtn">
-                                <a class="btn btn-login" href="{{ renderUrl('/login-user/') }}"><span
+                                <a class="btn btn-login" href="javascript:void(0)" ng-click="open('md')"><span
                                         class="wkicon livicon shadowed" data-n="sign-in" data-s="26" data-hc="0"
-                                        data-onparent="true"></span><span class="navtext">Login</span></a>
+                                        data-onparent="true"></span><span class="navtext" >Login</span></a>
                             </li>
                              <li class="mebtn">
                                 <a class="btn btn-login" href="{{ renderUrl('/profile/') }}"><span

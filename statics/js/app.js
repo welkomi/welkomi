@@ -47,7 +47,7 @@ window.fbload = function () {
  * @param $window
  * @constructor
  */
-function CommonCtrl ($rootScope, $scope, $window, FBF) {
+function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
     $rootScope.User = {};
     $rootScope.__user__ = $window.__user__;
     
@@ -96,7 +96,7 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
             },
             function (response) {});
     };
-
+    
     $scope.fbLogin = function () {
         FBF.login(function (response) {
             if (response.status === 'connected') {
@@ -124,6 +124,24 @@ function CommonCtrl ($rootScope, $scope, $window, FBF) {
             });
         }
     }
+    
+    /**
+    * Login Box
+    */
+    $scope.animationsEnabled = true;
+
+    $scope.open = function (size) {
+        var modalInstance = $uibModal.open({
+          animation: $scope.animationsEnabled,
+          templateUrl: 'loginBoxContent.html',
+          //controller: 'ModalInstanceCtrl',
+          size: size
+        });
+    };
+
+  $scope.toggleAnimation = function () {
+    $scope.animationsEnabled = !$scope.animationsEnabled;
+  };
 }
 
 /**
@@ -146,6 +164,7 @@ app
         '$scope',
         '$window',
         'FBF',
+        '$uibModal',
         CommonCtrl
     ]).
     directive('parallax', [parallax]);
