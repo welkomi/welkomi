@@ -15,7 +15,7 @@
     {% block head %}{% endblock %}
 </head>
 <body ng-controller="CommonCtrl"
-      class="{% block etiquetaBody %}{% endblock %} {% if userObject('bool') %} user-login {% else %} user-logoff {% endif %}">
+      class="{% block etiquetaBody %}{% endblock %} {% if userObject('user') %} user-login {% else %} user-logoff {% endif %}">
 <div id="fb-root"></div>
 
 
@@ -115,7 +115,7 @@
                             <li class="mebtn">
                                 <a class="btn btn-login" href="{{ renderUrl('/profile/') }}"><span
                                         class="wkicon livicon shadowed" data-n="user" data-s="26" data-hc="0"
-                                        data-onparent="true"></span><span class="navtext">Irakli</span></a>
+                                        data-onparent="true"></span><span class="navtext">{{ userObject('firstname') }}</span></a>
                             </li>
                             <li class="logoutbtn">
                                 <a class="btn btn-login" href="/logout"><span
@@ -204,10 +204,10 @@
     </div>
 </div>
 
-<pre>
+<!-- <pre>
     <<* __user__ | json *>>
 </pre>
-<img ng-src="<<* User.pictureProfile *>>"/>
+<img ng-src="<<* User.pictureProfile *>>"/> -->
 
 {% endif %}
 
