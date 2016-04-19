@@ -96,7 +96,7 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
             },
             function (response) {});
     };
-    
+
     $scope.fbLogin = function () {
         FBF.login(function (response) {
             if (response.status === 'connected') {
@@ -104,6 +104,8 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
             }
         });
     };
+
+    $rootScope.FBlogin = $scope.fbLogin;
 
     function FBFapi () {
         FBF.api(
@@ -131,17 +133,21 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
     $scope.animationsEnabled = true;
 
     $scope.open = function (size) {
-        var modalInstance = $uibModal.open({
-          animation: $scope.animationsEnabled,
-          templateUrl: 'loginBoxContent.html',
-          //controller: 'ModalInstanceCtrl',
-          size: size
+        $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: 'loginBoxContent.html',
+            controller: function ($rootScope, $scope) {
+                $scope.fbLoginFromModal = function () {
+                    $rootScope.FBlogin();
+                }
+            },
+            size: size
         });
     };
 
-  $scope.toggleAnimation = function () {
-    $scope.animationsEnabled = !$scope.animationsEnabled;
-  };
+    $scope.toggleAnimation = function () {
+        $scope.animationsEnabled = !$scope.animationsEnabled;
+    };
 }
 
 /**
