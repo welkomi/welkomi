@@ -151,6 +151,16 @@ text-align:center;
   background-repeat: no-repeat;
   background-size: contain; }
 
+/*responsive navbar*/
+
+.navbar-toggle {
+    top: -3px;
+    margin-right: 0px
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
 
 .specialheader .navbar-fixed-top .logo a {
   color: #000;
@@ -306,6 +316,7 @@ text-align:center;
   -ms-transition: color 0.2s linear;
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
+    height: 38px
    }
 
    .wklogin a:hover {
@@ -373,7 +384,8 @@ text-align:center;
      background-color: transparent;
     font-weight: bold;
     margin:0px 7px 0 0;
-    clear: both
+    clear: both;
+        height: 38px
    }
     .specialheader .btn-publish {
     border: 1px solid #fff!important;
@@ -2426,9 +2438,58 @@ width: 100%;
 }
 
 
+/*# media queries */
+
 @media (min-width: 768px){
 .modal-dialog {
     width: 480px;
 }
+}
+
+
+@media (max-width: 800px){
+    
+    .navbar-fixed-top .logo a {
+    width: 140px;
+    height: 45px;
+    margin-top: -16px;
+    position: relative;
+    z-index: 9999;
+}
+    
+    
+    .logo {
+    position: absolute;
+    font-size: 1.5em;
+    text-indent: -9999px;
+    width: 100%;
+    left: 0;
+   margin-left: 0px;
+        float: left;
+          
+}
+    
+    .specialheader .searchuserheader {
+        top: 15px;
+            position: absolute;
+          width: 10px;
+    }
+    .input-group-addon a {
+        color: #fff
+    }
+    
+    .specialheader .headerfixsearch {
+       display: none
+    }
+    .headerfixsearch {
+        width: 0;
+        position: absolute
+    }
+    
+    .searchuserheader {
+        margin-left: 0px;
+        position: absolute
+    }
+    
 }
 /*# sourceMappingURL=style.css.map */
