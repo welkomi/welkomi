@@ -52,6 +52,7 @@ idioms.getAvailableLangs(function () {
     app.use(middlewares.userObject());
     app.use(middlewares.renderGdriveUrl());
     app.use(middlewares.renderUrl());
+    app.use(middlewares.slugify());
 
     /**
      * Framework inits

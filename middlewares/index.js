@@ -125,7 +125,6 @@ exports.deserializeUser = function () {
             })
             .select('-password')
             .select('-role')
-            .select('-_id')
             .select('-__v')
             .select('-logintype')
             .exec(function (err, res) {
@@ -264,4 +263,21 @@ exports.enviromentName = function () {
 
         next();
     }
-}
+};
+
+/**
+ * Convert to slug the string param
+ *
+ * @returns {Function}
+ */
+exports.slugify = function () {
+    var strings = require('string');
+
+    return function (req, res, next) {
+        res.locals.slugify = function (string) {
+            return strings(string).slugify().s;
+        };
+
+        next();
+    }
+};

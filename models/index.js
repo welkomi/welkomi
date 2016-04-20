@@ -12,10 +12,13 @@ var UserSchema = mongoose.Schema({
     'password': 'String',
     'firstname': 'String',
     'lastname': 'String',
-    'location': 'String',
     'birthdayday': 'String',
     'birthdaymonth': 'String',
     'birthdayyear': 'String',
+    'location': {
+        'type': 'String',
+        'default': null
+    },
     'userfolder': {
         'type': 'String',
         'default': null
