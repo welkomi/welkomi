@@ -66,8 +66,8 @@ function scrolltofixed($rootScope) {
         'restrict': 'C',
         'link': function ($scope, $element, $attrs) {
             angular.element($element).scrollToFixed({
-                'marginTop': 70,
-                'limit': $('.publishpage').outerHeight() - ($('.asidefather').outerHeight() - 71)
+                'marginTop': 130,
+                'limit': $('.publishpage').outerHeight() - ($('.asidefather').outerHeight() - 64)
             });
         }
     }
