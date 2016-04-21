@@ -56,7 +56,7 @@ exports.init = function (expressrouter) {
             '/drive/file/insert/:parents/',
             function (req, res) {
                 var fs = require('fs'),
-                    gm = require('gm'),
+                    gm = require('gm').subClass({'imageMagick': true }),
                     parents = [],
                     ext = 'JPG',
                     height = 200,
