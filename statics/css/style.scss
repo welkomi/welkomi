@@ -678,17 +678,28 @@ aside .asidemgm {
   margin-bottom: 50px; }
 
 .tourme {
-  background-color: transparent;
+  background-color: #fff;
+    border: 1px solid $wkcolor;
   color: $wkcolor;
-  width: 100%;
-  font-family: 'Mrs Sheppards', cursive;
-  font-size: 3em;
-  text-decoration: underline;
+  width: 120px;
+    margin: 0 auto;
+    display: block;
+  font-family: 'Indie Flower',cursive;
+  font-size: 2.3em;
+    border-radius: 8px;
+     -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
 
 }
 
 .tourme:hover {
-  color: #34ae6b; }
+  color: #fff; 
+     background-color: $wkcolor;
+    text-decoration: none
+
+}
 
 .usersearchperfil {
   text-align: center;

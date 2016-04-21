@@ -13,5 +13,7 @@
 	"showyourplace": "showyourplace",
 	"/profile/": "/profile/",
 	"/logout/": "/logout/",
-	"/wkmessage/": "/wkmessage/"
+	"/wkmessage/": "/wkmessage/",
+	"more": "more",
+	"More": "More"
 }
