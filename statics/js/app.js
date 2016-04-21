@@ -50,15 +50,15 @@ window.fbload = function () {
 function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
     $rootScope.User = {};
     $rootScope.__user__ = $window.__user__;
-    
-     $scope.config = {
+
+    $scope.config = {
         'autoHideScrollbar': false,
         'theme': 'dark-thick',
         'advanced':{
             'updateOnContentResize': true
         },
         'scrollInertia': 0
-    }
+    };
 
     var me = '/me/',
         fieldsreponse = {
@@ -133,13 +133,17 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
     $scope.animationsEnabled = true;
 
     $scope.open = function (size) {
-        $uibModal.open({
+        var modalInstance = $uibModal.open({
             animation: $scope.animationsEnabled,
             templateUrl: 'loginBoxContent.html',
             controller: function ($rootScope, $scope) {
                 $scope.fbLoginFromModal = function () {
                     $rootScope.FBlogin();
-                }
+                };
+
+                $scope.close = function () {
+                    modalInstance.close();
+                };
             },
             size: size
         });

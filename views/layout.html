@@ -22,10 +22,11 @@
 <script type="text/ng-template" id="loginBoxContent.html">
     <div class="modal-body">
         <div class="signup">
-                          <a class="closebtn" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <a class="closebtn" href="javascript:void(0)" ng-click="close()"><i class="fa fa-times" aria-hidden="true"></i></a>
 
             <div class="fastlogin">
-                <a class="btn btn-fb" ng-click="fbLoginFromModal()"><i class="fa fa-facebook fa-lg"></i>Login with Facebook</a>
+                <a class="btn btn-fb" ng-click="fbLoginFromModal()"><i class="fa fa-facebook fa-lg"></i>Login with
+                    Facebook</a>
 
                 <div class="signup_separator">
                     <span class="signup_eparator_text">or</span>
@@ -59,63 +60,70 @@
             <div class="row">
 
                 <div class="pull-left headerfixsearch {% block wover %}{% endblock %}">
-                   <div class="input-group scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
-  <span class="input-group-addon" id="basic-addon1"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></span>
-  <input type="text" class="form-control" placeholder="I would like to go to..." aria-describedby="basic-addon1">
-</div>
-                   
-                   
+                    <div class="input-group scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
+                        <span class="input-group-addon" id="basic-addon1"><a href="#"><i class="fa fa-search"
+                                                                                         aria-hidden="true"></i></a></span>
+                        <input type="text" class="form-control" placeholder="I would like to go to..."
+                               aria-describedby="basic-addon1">
+                    </div>
+
+
                 </div>
-                    <h1 class="logo"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
+                <h1 class="logo"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
+
                 <div class="wknav">
-                   
+
                     <nav class="navbar wklogin">
-                       <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-                       
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="publishbtn"><a class="btn btn-publish" href="javascript:void(0)"><span
-                                    class="wkicon livicon shadowed"
-                                    data-n="location" data-s="26" data-hc="0"
-                                    data-onparent="true"></span><span
-                                    class="navtext">Publish Plan</span></a></li>
-                            <li class="mensbtn"><a class="btn btn-mens" href="{{ renderUrl('/wkmessage/') }}"><span
-                                    class="hidden-xs wkicon livicon shadowed"
-                                    data-n="message-flag" data-s="26" data-hc="0"
-                                    data-onparent="true"></span><span
-                                    class="navtext">{{ __('messages') }}</span></a></li>
-                            <li class="joinusbtn">
-                                <a class="btn btn-joinus" href="{{ renderUrl('/register-user/') }}"><span
-                                        class="wkicon livicon shadowed" data-n="plus" data-s="28" data-hc="0"
-                                        data-onparent="true"></span><span class="navtext">Join us</span></a>
-                            </li>
-                            <li class="loginbtn">
-                                <a class="btn btn-login" href="javascript:void(0)" ng-click="open('md')"><span
-                                        class="wkicon livicon shadowed" data-n="sign-in" data-s="26" data-hc="0"
-                                        data-onparent="true"></span><span class="navtext">Login</span></a>
-                            </li>
-                            <li class="mebtn dropdown">
-                                <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn-login dropdown-toggle" href="{{ renderUrl('/profile/') }}{% if userObject('user') %}{{ userObject('username') }}{% endif %}">
-                                
-                                <span class="wkicon"><img class="panel-profile-img" ng-src="<<* User.pictureProfile *>>"></span>
-                                <span class="navtext hidden-xs">{% if userObject('user') %} {{ userObject('firstname') }} {% endif %}</span>
-                                <span class="caret"></span>
-                                </a>
-                                
-                                <ul class="dropdown-menu">
-      <li><a href="/logout"><span class="navtext">My Profile</span></a></li>                    
-    <li><a href="/logout"><span class="navtext">Logout</span></a></li>
-  </ul>
-                                
-                            </li>
-                        </ul>
+                            <ul class="nav navbar-nav">
+                                <li class="publishbtn"><a class="btn btn-publish" href="javascript:void(0)"><span
+                                        class="wkicon livicon shadowed"
+                                        data-n="location" data-s="26" data-hc="0"
+                                        data-onparent="true"></span><span
+                                        class="navtext">Publish Plan</span></a></li>
+                                <li class="mensbtn"><a class="btn btn-mens" href="{{ renderUrl('/wkmessage/') }}"><span
+                                        class="hidden-xs wkicon livicon shadowed"
+                                        data-n="message-flag" data-s="26" data-hc="0"
+                                        data-onparent="true"></span><span
+                                        class="navtext">{{ __('messages') }}</span></a></li>
+                                <li class="joinusbtn">
+                                    <a class="btn btn-joinus" href="{{ renderUrl('/register-user/') }}"><span
+                                            class="wkicon livicon shadowed" data-n="plus" data-s="28" data-hc="0"
+                                            data-onparent="true"></span><span class="navtext">Join us</span></a>
+                                </li>
+                                <li class="loginbtn">
+                                    <a class="btn btn-login" href="javascript:void(0)" ng-click="open('md')"><span
+                                            class="wkicon livicon shadowed" data-n="sign-in" data-s="26" data-hc="0"
+                                            data-onparent="true"></span><span class="navtext">Login</span></a>
+                                </li>
+                                <li class="mebtn dropdown">
+                                    <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                                       class="btn btn-login dropdown-toggle"
+                                       href="{{ renderUrl('/profile/') }}{% if userObject('user') %}{{ userObject('username') }}{% endif %}">
+
+                                        <span class="wkicon"><img class="panel-profile-img"
+                                                                  ng-src="<<* User.pictureProfile *>>"></span>
+                                        <span class="navtext hidden-xs">{% if userObject('user') %} {{ userObject('firstname') }} {% endif %}</span>
+                                        <span class="caret"></span>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/logout"><span class="navtext">My Profile</span></a></li>
+                                        <li><a href="/logout"><span class="navtext">Logout</span></a></li>
+                                    </ul>
+
+                                </li>
+                            </ul>
                         </div>
                     </nav>
                 </div>
