@@ -15,6 +15,10 @@ var UserSchema = mongoose.Schema({
     'birthdayday': 'String',
     'birthdaymonth': 'String',
     'birthdayyear': 'String',
+    'emailverifyed': {
+        'type': 'Bool',
+        'default': false
+    },
     'location': {
         'type': 'String',
         'default': null

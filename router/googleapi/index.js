@@ -1,7 +1,9 @@
 /**
  * Created by ssanchez on 28/03/16.
  */
-var google = require('./../../wrappers/googlewrapper');
+var google = require('./../../wrappers/googlewrapper'),
+    request = require('request'),
+    passport = require('passport');
     //googleinit = google.init(),
     //drive = google.drive();
 
@@ -50,47 +52,98 @@ exports.init = function (expressrouter) {
         /**
          * Prueba de subida de una imagen en base 64 a GDRIVE
          */
-        expressrouter.post('/drive/file/insert/:parents/', function (req, res) {
-            var fs = require('fs'),
-                gm = require('gm').subClass({'imageMagick': true}),
-                img = req.body.img,
-                parents = [];
+        expressrouter.post(
+            '/drive/file/insert/:parents/',
+            function (req, res) {
+                var fs = require('fs'),
+                    gm = require('gm'),
+                    parents = [],
+                    ext = 'JPG',
+                    height = 200,
+                    width = 200;
 
-            parents.push(req.params.parents);
+                parents.push(req.params.parents);
 
-            function _createImgInGdrive (buffer) {
-                var resource = {
-                        'mimeType': 'image/jpeg',
-                        'name': 'test.jpg',
-                        'parents': parents
-                    },
-                    media = {
-                        'mimeType': 'imagen/jpeg',
-                        'body': buffer
-                    };
+                function _createOrUpdateImgInGdrive (buffer, id) {
+                    var resource = {
+                            'mimeType': 'image/jpeg',
+                            'name': req.body.name,
+                            'parents': id ? null : parents
+                        },
+                        media = {
+                            'mimeType': 'imagen/jpeg',
+                            'body': buffer
+                        };
 
-                drive.files.create({
-                    'resource': resource,
-                    'media': media,
-                    'fields': 'id'
-                }, function (err, file) {
-                    if (err) {
-                        res.json(err);
+                    if (id) {
+                        drive.files.update({
+                            'fileId': id,
+                            'resource': resource,
+                            'media': media,
+                            'fields': 'id'
+                        }, function (err, file) {
+                            if (err) {
+                                res.json(err);
+                            }
+
+                            else {
+                                res.json(file);
+                            }
+                        });
                     }
 
                     else {
-                        res.json(file);
+                        drive.files.create({
+                            'resource': resource,
+                            'media': media,
+                            'fields': 'id'
+                        }, function (err, file) {
+                            if (err) {
+                                res.json(err);
+                            }
+
+                            else {
+                                res.json(file);
+                            }
+                        });
+                    }
+                }
+
+                function _gmConvert (source, id) {
+                    gm(source)
+                        .resize(width, height)
+                        .toBuffer(ext, function (errGm, bufferGm) {
+                            if (errGm) throw errGm;
+
+                            _createOrUpdateImgInGdrive(bufferGm, id);
+                        });
+                }
+
+                drive.files.list({
+                    'q': '"' + req.params.parents + '" in parents and trashed = false and name = "' + req.body.name + '"'
+                }, function (errDrive, resDrive) {
+                    if (errDrive) throw errDrive;
+
+                    var id = null;
+
+                    if(resDrive.files.length > 0) {
+                        id = resDrive.files[0].id;
+                    }
+
+                    if (req.body.img) {
+                        _gmConvert(
+                            new Buffer(req.body.img.replace(/data:image\/[A-z]+;base64,/, ''), 'base64'),
+                            id
+                        );
+                    }
+
+                    else if (req.body.imgurl) {
+                        _gmConvert(
+                            request(req.body.imgurl),
+                            id
+                        );
                     }
                 });
-            }
-
-            gm(new Buffer(img.replace(/data:image\/jpeg;base64,/, ''), 'base64'))
-                .resize(200, 200)
-                .toBuffer('JPG', function (errGm, bufferGm) {
-                    if (errGm) throw errGm;
-
-                    _createImgInGdrive(bufferGm);
-                });
-        });
+            });
     });
 };

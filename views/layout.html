@@ -112,7 +112,7 @@
                                        href="{{ renderUrl('/profile/') }}{% if userObject('user') %}{{ userObject('username') }}{% endif %}">
 
                                         <span class="wkicon"><img class="panel-profile-img"
-                                                                  ng-src="<<* User.pictureProfile *>>"></span>
+                                                                  ng-src="{% if userObject('user') %}{% if userObject('logintype') === 'fb' %}<<* User.pictureProfile *>>{% else %}{{ renderGdriveUrl(userObject('userfolder'), 'profilepicture.jpg') }}{% endif %}{% endif %}"></span>
                                         <span class="navtext hidden-xs">{% if userObject('user') %} {{ userObject('firstname') }} {% endif %}</span>
                                         <span class="caret"></span>
                                     </a>

@@ -59,9 +59,12 @@ idioms.getAvailableLangs(function () {
      */
     app.use(i18n.init);
     app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({extended: false}));
+    app.use(bodyParser.urlencoded({
+        'limit': '50mb',
+        'extended': false
+    }));
     app.use(cookieParser());
-    app.use(session({keys: ['welkomiapp']}));
+    app.use(session({'keys': ['welkomiapp']}));
 
     app.use(passport.initialize());
     app.use(passport.session());
