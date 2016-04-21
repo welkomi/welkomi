@@ -734,7 +734,7 @@ aside .asidemgm {
 
 .full_media{
   overflow: hidden;
-  max-height: 220px;
+  max-height: 176px;
 }
 
 
@@ -1136,6 +1136,52 @@ aside .asidemgm {
   background-color: #fbba0e;
   height: 40px;
 
+}
+
+.closebtn {
+    display: block;
+    width: 30px;
+    height: 30xp;
+    color: #272822;
+    text-align: center;
+    font-size: 1.5em;
+    position: absolute;
+    right: 0%;
+    top: 3px
+}
+
+.closebtn:hover {
+    color: $wkcolor;
+}
+
+.btn-register {
+        border: 1px solid #262721;
+    background-color: #fff;
+    color: #262721;
+        -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+.btn-register:hover {
+    background-color:#ecf0f1 ;
+    color: #262721;
+    
+}
+
+.btn-sesson {
+    background-color: $wkcolor;
+    color: #fff;
+        -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+.btn-sesson:hover {
+    color: #fff;
+    background-color: #F44E51;  
 }
 .joinus .btn{
   padding:12px 12px 12px 12px
@@ -2385,6 +2431,7 @@ float: left;
 
 .signup .fastlogin {
 position: relative;
+    margin-top: 15px
 }
 
 .signup .btn {
@@ -2467,6 +2514,10 @@ width: 100%;
 
 
 @media (max-width: 960px){
+    .full_media{
+  overflow: hidden;
+  max-height: 250px;
+}
     .wklogin a {
        margin:0px!important
     }
@@ -2540,9 +2591,10 @@ width: 100%;
   
 }
 
-@media (min-width: 768px){
+@media (min-width: 568px){
 .modal-dialog {
     width: 480px;
+    margin: 0 auto;
 }
 }
 /*# sourceMappingURL=style.css.map */
