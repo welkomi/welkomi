@@ -2459,11 +2459,7 @@ width: 100%;
 
 /*# media queries */
 
-@media (min-width: 768px){
-.modal-dialog {
-    width: 480px;
-}
-}
+
 
 
 @media (max-width: 800px){
@@ -2510,5 +2506,11 @@ width: 100%;
         position: absolute
     }
     
+}
+
+@media (min-width: 768px){
+.modal-dialog {
+    width: 480px;
+}
 }
 /*# sourceMappingURL=style.css.map */
