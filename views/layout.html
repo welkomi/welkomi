@@ -65,13 +65,13 @@
                 <div class="pull-left headerfixsearch {% block wover %}{% endblock %}">
                    <div class="input-group scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
   <span class="input-group-addon" id="basic-addon1"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></span>
-  <input type="text" class="form-control visible-md visible-lg" placeholder="I would like to go to..." aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="I would like to go to..." aria-describedby="basic-addon1">
 </div>
                    
                    
                 </div>
                     <h1 class="logo"><a href="{{ renderUrl('/home/') }}">Welkomi</a></h1>
-                <div class="pull-right">
+                <div class="wknav">
                    
                     <nav class="navbar wklogin">
                        <div class="navbar-header">
@@ -84,14 +84,14 @@
     </div>
                        
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav pull-right">
+                        <ul class="nav navbar-nav">
                             <li class="publishbtn"><a class="btn btn-publish" href="javascript:void(0)"><span
                                     class="wkicon livicon shadowed"
                                     data-n="location" data-s="26" data-hc="0"
                                     data-onparent="true"></span><span
                                     class="navtext">Publish Plan</span></a></li>
                             <li class="mensbtn"><a class="btn btn-mens" href="{{ renderUrl('/wkmessage/') }}"><span
-                                    class="wkicon livicon shadowed"
+                                    class="hidden-xs wkicon livicon shadowed"
                                     data-n="message-flag" data-s="26" data-hc="0"
                                     data-onparent="true"></span><span
                                     class="navtext">{{ __('messages') }}</span></a></li>
@@ -109,7 +109,7 @@
                                 <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn-login dropdown-toggle" href="{{ renderUrl('/profile/') }}{% if userObject('user') %}{{ userObject('username') }}{% endif %}">
                                 
                                 <span class="wkicon"><img class="panel-profile-img" ng-src="<<* User.pictureProfile *>>"></span>
-                                <span class="navtext">{% if userObject('user') %} {{ userObject('firstname') }} {% endif %}</span>
+                                <span class="navtext hidden-xs">{% if userObject('user') %} {{ userObject('firstname') }} {% endif %}</span>
                                 <span class="caret"></span>
                                 </a>
                                 
@@ -148,7 +148,7 @@
 <div class="container-fluid footer">
     <div class="container">
         <footer>
-            <div class="footerscene">
+            <div class="footerscene hidden-xs hidden-sm">
                 <ul parallax id="scene" class="scene col-xs-12 col-sm-12 col-md-12 col-lg-9">
                     <!--<li class="layer nube1" data-depth="0.02"><img src="/statics/images/nube1.png"></li>-->
                     <li class="layer nube1" data-depth="0.02"><img

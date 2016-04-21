@@ -153,6 +153,10 @@ text-align:center;
 
 /*responsive navbar*/
 
+.wknav .navbar-nav {
+    float: right
+}
+
 .navbar-toggle {
     top: -3px;
     margin-right: 0px
@@ -2462,7 +2466,28 @@ width: 100%;
 
 
 
-@media (max-width: 800px){
+@media (max-width: 960px){
+    .wklogin a {
+       margin:0px!important
+    }
+    
+    .wkicon {
+        margin-right: 0px;
+    }
+    
+    .wklogin {
+    margin-right: 0px;
+}
+    
+    .wklogin .navbar{
+    margin-top: 0px;
+     margin-bottom: 0; 
+        
+}
+    
+    .wknav .navbar-nav {
+    margin: 7.5px 2px;
+}
     
     .navbar-fixed-top .logo a {
     width: 140px;
@@ -2483,29 +2508,36 @@ width: 100%;
         float: left;
           
 }
-    
-    .specialheader .searchuserheader {
-        top: 15px;
-            position: absolute;
-          width: 10px;
-    }
-    .input-group-addon a {
-        color: #fff
-    }
-    
-    .specialheader .headerfixsearch {
-       display: none
-    }
     .headerfixsearch {
-        width: 0;
+        width: 50px;
+        height: 50px;
         position: absolute
     }
     
-    .searchuserheader {
-        margin-left: 0px;
-        position: absolute
+    .searchuserheader{
+        top: 17px;
+        margin-left: 0px
+    }
+    .specialheader .searchuserheader .form-control {
+      display: none;
     }
     
+   .searchuserheader .form-control {
+      display: none;
+       margin-left: 0px;
+    }
+    
+    .input-group-addon a {
+    color: #fff;
+}
+    
+ 
+    
+    .wkicon .panel-profile-img {
+        margin-right: 5px
+    }
+    
+  
 }
 
 @media (min-width: 768px){
