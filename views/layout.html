@@ -22,7 +22,7 @@
 <script type="text/ng-template" id="loginBoxContent.html">
     <div class="modal-body">
         <div class="signup">
-            <a class="closebtn" href="javascript:void(0)" ng-click="close()"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <a class="visible-xs closebtn" href="javascript:void(0)" ng-click="close()"><i class="fa fa-times" aria-hidden="true"></i></a>
 
             <div class="fastlogin">
                 <a class="btn btn-fb" ng-click="fbLoginFromModal()"><i class="fa fa-facebook fa-lg"></i>Login with
@@ -172,11 +172,12 @@
                     </li>
                 </ul>
                 <ul parallax id="scenethree" class="scenethree">
-                    <li class="layer welcomiman" data-depth="0.04"><img class="img-responsive"
+                    <li class="layer welcomiman" data-depth="0.04"><img class="opacity img-responsive"
                                                                         src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'city2.png') }}">
                     </li>
                 </ul>
             </div>
+            <div class="footersec clearfix">
             <ul class="followus">
                 <a class="facebookwm" href="#">
                     <li class="fa fa-facebook"><i>facebook</i></li>
@@ -191,14 +192,37 @@
                     <li class="fa fa-vimeo"><i>vimeo</i></li>
                 </a>
             </ul>
-            <ul class="navfooter">
+            
+             <div class="dropdown selectlang">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">English
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Español</a></li>
+    <li><a href="#">Deutsch</a></li>
+    <li><a href="#">Potruguese</a></li>
+    <li><a href="#">Georgian</a></li>
+    <li><a href="#">日本の</a></li>
+    <li role="separator" class="divider"></li>
+    <li class="listtitle">Google Tanslate</li>
+    <li><a href="#">Dutch</a></li>
+    <li><a href="#">Russian</a></li>
+    <li><a href="#">Turkish</a></li>
+    <li><a href="#">Chinese</a></li>
+    <li><a href="#">Korean</a></li>
+  </ul>
+</div>
+           
+               <ul class="navfooter">
                 <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">COPYRIGHT</a></li>
                 <li><a href="#">CONTACT</a></li>
-                <li><a href="#">COMMUNITY</a></li>
-                <li><a href="#">PRIVACY</a></li>
                 <li><a href="#">HOW IT WORKS</a></li>
+                <li><a href="#">PRIVACY, CONDITIONS AND COOKIES</a></li>
             </ul>
+            
+            </div>
+            
+             
             <p class="footer-copyright mod-text-center">
                 <small> © 2015 Welkomi International, Inc. A socially responsible.</small>
             </p>
