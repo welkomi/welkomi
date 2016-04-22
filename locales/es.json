@@ -11,5 +11,6 @@
 	"/login-user/": "/logar-usuario/",
 	"/profile/:user/": "/perfil/:user/",
 	"/wkmessage/": "/wkmessage/",
-	"/profile/": "/profile/"
+	"/profile/": "/profile/",
+	"More": "More"
 }

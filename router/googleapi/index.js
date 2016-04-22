@@ -4,8 +4,6 @@
 var google = require('./../../wrappers/googlewrapper'),
     request = require('request'),
     passport = require('passport');
-    //googleinit = google.init(),
-    //drive = google.drive();
 
 exports.init = function (expressrouter) {
     google.api('drive', 'v3', function (drive) {
