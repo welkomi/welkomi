@@ -126,7 +126,6 @@ exports.deserializeUser = function () {
             .select('-password')
             .select('-role')
             .select('-__v')
-            .select('-logintype')
             .exec(function (err, res) {
                 if (err) return cb(err);
 

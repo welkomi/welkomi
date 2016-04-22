@@ -47,18 +47,18 @@ window.fbload = function () {
  * @param $window
  * @constructor
  */
-function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
+function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal, $http) {
     $rootScope.User = {};
     $rootScope.__user__ = $window.__user__;
-    
-     $scope.config = {
+
+    $scope.config = {
         'autoHideScrollbar': false,
         'theme': 'dark-thick',
         'advanced':{
             'updateOnContentResize': true
         },
         'scrollInertia': 0
-    }
+    };
 
     var me = '/me/',
         fieldsreponse = {
@@ -120,8 +120,20 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
     function setPictureFromFBProfile (user, idFB) {
         if (idFB) {
             FBF.exchangePictureProfile(idFB, function (picture) {
-                $rootScope.User.pictureProfile = picture;
+                if ($window.__user__.emailverifyed) {
+                    $http.post(
+                        '/drive/file/insert/' + $window.__user__.userfolder + '/',
+                        {
+                            'imgurl': picture,
+                            'name': 'profilepicture.jpg'
+                        },
+                        {
+                            "Content-Type": "application/x-www-form-urlencoded;charset=utf-8;"
+                        }
+                    );
+                }
 
+                $rootScope.User.pictureProfile = picture;
                 $rootScope.$apply();
             });
         }
@@ -133,13 +145,17 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal) {
     $scope.animationsEnabled = true;
 
     $scope.open = function (size) {
-        $uibModal.open({
+        var modalInstance = $uibModal.open({
             animation: $scope.animationsEnabled,
             templateUrl: 'loginBoxContent.html',
             controller: function ($rootScope, $scope) {
                 $scope.fbLoginFromModal = function () {
                     $rootScope.FBlogin();
-                }
+                };
+
+                $scope.close = function () {
+                    modalInstance.close();
+                };
             },
             size: size
         });
@@ -171,6 +187,7 @@ app
         '$window',
         'FBF',
         '$uibModal',
+        '$http',
         CommonCtrl
     ]).
     directive('parallax', [parallax]);
