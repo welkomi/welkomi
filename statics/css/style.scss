@@ -1858,12 +1858,24 @@ outline:none
     width: 40%;
     height: 50px;
     float: right;
-    font-size: 16px;
+    font-size: 2em;
     margin-top: 10px;
     background-color: #fff;
     color: $wkcolor;
-    padding: 12px 0px 15px 0px;
-    border: solid 1px $wkcolor
+    padding: 5px 0px 5px 0px;
+    border: solid 1px $wkcolor;
+     -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+    font-family: 'Indie Flower',cursive;
+        
+        
+}
+
+.btn-launch:hover {
+    color: #fff;
+    background-color: $wkcolor    
 }
 
 .fav span {
@@ -1881,6 +1893,8 @@ outline:none
 
 .users .tourme {
   font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px
 
 }
 .users .usersearchperfil{
