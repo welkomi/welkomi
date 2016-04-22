@@ -27,6 +27,10 @@ var UserSchema = mongoose.Schema({
         'type': 'String',
         'default': null
     },
+    'routesfolder': {
+        'type': 'String',
+        'default': null
+    },
     'logintype': {
         'type': 'String',
         'default': 'form'

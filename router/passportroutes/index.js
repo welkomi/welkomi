@@ -85,41 +85,53 @@ exports.init = function (expressrouter) {
                                      if (errCreate) throw errCreate;
 
                                      var resource = {
-                                         'mimeType': 'application/vnd.google-apps.folder',
-                                         'name': user.username,
-                                         'parents': ['0B9gI2Lt4M_dxcEM0NEI1NU5fdkU']
-                                     };
+                                             'mimeType': 'application/vnd.google-apps.folder',
+                                             'name': user.username,
+                                             'parents': ['0B9gI2Lt4M_dxcEM0NEI1NU5fdkU']
+                                         },
+                                         fields = 'id, webViewLink';
 
                                      require('./../../wrappers/googlewrapper')
                                          .api('drive', 'v3', function (drive) {
                                              drive.files.create({
                                                  'resource': resource,
-                                                 'fields': 'id, webViewLink',
+                                                 'fields': fields
                                              }, function (errDrive, resDrive) {
                                                  if (errDrive) throw errDrive;
 
-                                                 User
-                                                     .update({
-                                                         'username': user.username
-                                                     },
-                                                     {
-                                                        '$set': {
-                                                            'userfolder': resDrive.id
-                                                        }
-                                                     }, function (errUpdate, resUpdate) {
-                                                         if (errUpdate) throw errUpdate;
+                                                 resource.name = 'routes';
+                                                 resource.parents = [resDrive.id];
 
-                                                         User
-                                                             .find({
-                                                                 'username': user.username
-                                                             })
-                                                             .select('-password')
-                                                             .exec(function (errCreateFind, resCreateFind) {
-                                                                 if (errCreateFind) throw errCreateFind;
+                                                 drive.files.create({
+                                                     'resource': resource,
+                                                     'fields': fields
+                                                 }, function (errDrive2, resDrive2) {
+                                                     if (errDrive2) throw errDrive2;
 
-                                                                 res.json(resCreateFind);
-                                                             });
-                                                     });
+                                                     User
+                                                         .update({
+                                                             'username': user.username
+                                                         },
+                                                         {
+                                                             '$set': {
+                                                                 'userfolder': resDrive.id,
+                                                                 'routesfolder': resDrive2.id
+                                                             }
+                                                         }, function (errUpdate, resUpdate) {
+                                                             if (errUpdate) throw errUpdate;
+
+                                                             User
+                                                                 .find({
+                                                                     'username': user.username
+                                                                 })
+                                                                 .select('-password')
+                                                                 .exec(function (errCreateFind, resCreateFind) {
+                                                                     if (errCreateFind) throw errCreateFind;
+
+                                                                     res.json(resCreateFind);
+                                                                 });
+                                                         });
+                                                 });
                                              });
                                          });
                                  });
