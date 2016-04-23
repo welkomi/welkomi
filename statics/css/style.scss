@@ -23,7 +23,9 @@ body {
 }
 }
 
-
+.border {
+        border: 1px solid #dadfe0;
+}
 .bk-wkcolor{
   background-color:$wkcolor
 }
@@ -75,6 +77,9 @@ body {
   margin: 0px!important;
 }
 
+.centred {
+    text-align: center
+}
 .wksection {
     background: #fff;
     border-radius: 8px;
@@ -763,6 +768,54 @@ aside .asidemgm {
     border-radius: 100%;
 }
 
+.myplans {
+    background-color: #fff;
+    text-align: center;
+     border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 7px;
+}
+
+    
+        .asideplans h2 {
+            text-align: center;
+            margin: 0px;
+            margin-bottom: 15px;
+                font-family: 'Indie Flower',cursive;
+            }
+
+.myplans h4 {
+   font-size: 1.4em
+    
+}
+
+.myplans h5 {
+   font-size: 1.4em;
+    font-weight: bold
+    
+}
+
+
+.plans {
+    padding-left: 7px;
+    padding-right: 7px
+}
+
+.plans a {
+   overflow: hidden;
+    max-height: 125px;
+    display: block
+}
+
+.plans img {
+    width: 50%;
+    float: left;
+    border-radius: 8px
+    
+}
+
+
+
 /*tourpublish site*/
 .map{
   position: relative;
@@ -1241,7 +1294,7 @@ aside .asidemgm {
 }
 
 blockquote {
-  border-left: 5px solid #777;
+  border-left: 5px solid #78ab78;
   margin-top: 7px
 }
 
@@ -1277,6 +1330,10 @@ margin-bottom:10px
 .userbox .localization i{
   margin-right: 10px;
   color: $wkcolor
+}
+
+.userbox .localization a{
+  color: #282923
 }
 
 
@@ -1885,9 +1942,9 @@ outline:none
 .fav span {
   font-size: 1.5em
 }
-.userperfil .username a {
+.userperfil .username {
   font-weight: bold;
-  color: $wkseccolor
+  color: #282923
 }
 
 .users .username {
@@ -1970,9 +2027,32 @@ outline:none
 
 
 .panel-heading h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin: 0px;
 text-transform: uppercase
+}
+
+.btn-edit{
+    background-color: #fff;
+    border: 1px solid $wkseccolor;
+  color: $wkseccolor;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  font-size: 1.2em;
+    border-radius: 4px;
+     -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; 
+    font-weight: bold
+}
+
+.btn-edit:hover{
+ background: $wkseccolor;
+    color: #fff;
+    text-decoration: none
 }
 
 .panel-default>.panel-heading {
@@ -1980,7 +2060,7 @@ text-transform: uppercase
 }
 
 .panel-body {
-    font-size: 1.2em
+    font-size: 1.3em
 }
 
 .panel-body h3  {
@@ -2579,7 +2659,9 @@ width: 100%;
 .user-logoff .logoutbtn {
     display: none
 }
-
+.user-logoff .edit {
+    display: none
+}
 
 
 

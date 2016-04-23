@@ -15,5 +15,7 @@
 	"/logout/": "/logout/",
 	"/wkmessage/": "/wkmessage/",
 	"more": "more",
-	"More": "More"
+	"More": "More",
+	"Edit": "Edit",
+	"EDIT": "EDIT"
 }
