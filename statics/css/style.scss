@@ -137,8 +137,12 @@ text-align:center;
   padding: 30px 25px 30px 30px;
   border: solid 1px #dadfe0;
   background-color: #fff;
-      border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-radius: 8px
+}
+
+.panel {
+  border-radius: 8px ;
+    padding: 0 20px
 }
 
 .logo a {
@@ -1272,7 +1276,7 @@ margin-bottom:10px
 }
 .userbox .localization i{
   margin-right: 10px;
-  color: #b66186
+  color: $wkcolor
 }
 
 
@@ -1883,7 +1887,7 @@ outline:none
 }
 .userperfil .username a {
   font-weight: bold;
-  color: #34ae6b
+  color: $wkseccolor
 }
 
 .users .username {
@@ -1963,6 +1967,28 @@ outline:none
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+
+.panel-heading h2 {
+    font-size: 1.4em;
+    margin: 0px;
+text-transform: uppercase
+}
+
+.panel-default>.panel-heading {
+    background-color: #fff;
+}
+
+.panel-body {
+    font-size: 1.2em
+}
+
+.panel-body h3  {
+    font-size: 1em;
+    font-weight: bold
+}
+
+
 /*CMS*/
 .topbuttons {
   margin-top: 20px; }
