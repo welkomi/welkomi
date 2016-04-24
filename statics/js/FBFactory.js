@@ -33,7 +33,6 @@ function FBF ($rootScope, $http, $window) {
 
         delete user.first_name;
         delete user.last_name;
-        delete user.email;
         delete user.birthday;
 
         return user;
@@ -150,6 +149,7 @@ function FBF ($rootScope, $http, $window) {
                                 '/authenticate-ajax/',
                                 {
                                     'username': data.username || data[0].username,
+                                    'email': data.email || data[0].email,
                                     'logintype': data.logintype || data[0].logintype
                                 })
                                 .then(function (response) {

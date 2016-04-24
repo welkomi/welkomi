@@ -40,7 +40,9 @@
     "refresh-token": "latest",
     "password-hash-and-salt": "latest",
     "promise": "latest",
-    "gm": "latest"
+    "gm": "latest",
+    "node-schedule": "latest",
+    "nodemailer": "latest"
   },
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {

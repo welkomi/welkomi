@@ -4,17 +4,21 @@
 
 var mongoose = require('mongoose'),
     autoIncrement = require('mongoose-auto-increment');
-    //passportLocalMongoose = require('passport-local-mongoose');
 
 var UserSchema = mongoose.Schema({
     '_id': 'Number',
     'username': 'String',
     'password': 'String',
+    'email': 'String',
     'firstname': 'String',
     'lastname': 'String',
     'birthdayday': 'String',
     'birthdaymonth': 'String',
     'birthdayyear': 'String',
+    'emailsended': {
+        'type': 'Bool',
+        'default': false
+    },
     'emailverifyed': {
         'type': 'Bool',
         'default': false

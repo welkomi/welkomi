@@ -16,11 +16,20 @@ var passport = require('passport'),
     i18n = require('i18n'),
     idioms = require('./idioms/'),
     middlewares = require('./middlewares'),
+    crons = require('./crons');
     viewsCache = process.env.NODE_ENV === 'production',
     staticsCache = process.env.NODE_ENV === 'production' ? process.env.CACHE_TIME : 0;
 
 console.info('viewsCache: ', viewsCache);
 console.info('staticsCache: ', staticsCache);
+
+/**
+ * Crons jobs
+ */
+
+crons.init({
+    'sendVerificationMail': '*/5 * * * *'
+});
 
 idioms.getAvailableLangs(function () {
     /**
