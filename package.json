@@ -42,7 +42,9 @@
     "promise": "latest",
     "gm": "latest",
     "node-schedule": "latest",
-    "nodemailer": "latest"
+    "nodemailer": "latest",
+    "swig-email-templates": "latest",
+    "email-templates": "latest"
   },
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {

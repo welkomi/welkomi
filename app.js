@@ -28,7 +28,8 @@ console.info('staticsCache: ', staticsCache);
  */
 
 crons.init({
-    'sendVerificationMail': '*/5 * * * *'
+    'sendVerificationMail': '0 * * * *'
+    //'sendVerificationMail': '*/5 * * * *'
 });
 
 idioms.getAvailableLangs(function () {
