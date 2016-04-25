@@ -88,7 +88,6 @@ body {
     position: fixed;
     right: 80px
 }
-
 .wkdisplaylink {
     display: block;
     border-radius: 8px;
@@ -768,19 +767,14 @@ aside .asidemgm {
     border-radius: 100%;
 }
 
-.myplans {
-    background-color: #fff;
-    text-align: center;
-     border-radius: 8px;
-    margin-bottom: 7px;
-}
 
     
         .asideplans h2 {
             text-align: center;
             margin: 0px;
-            margin-bottom: 15px;
                 font-family: 'Indie Flower',cursive;
+            width: 100%;
+            margin-bottom: 15px
             }
 
 .myplans hgroup {
@@ -799,16 +793,21 @@ aside .asidemgm {
     
 }
 
-
-.plans {
-    padding-left: 7px;
-    padding-right: 7px
+.allmyplans {
+    display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-top: -10px;
 }
 
-.plans a {
-   overflow: hidden;
-    max-height: 125px;
-    display: block
+.plans {
+    flex: 1 0 calc(30% - 10px);
+  box-sizing: border-box;
+  background: #fff;
+  padding: 10px;
+    border-radius: 8px;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .plans img {
@@ -816,6 +815,10 @@ aside .asidemgm {
     float: left;
     border-radius: 8px
     
+}
+
+.allmyplans .plans:nth-child(4n){
+    flex: 1 0  calc(70% - 10px);
 }
 
 
