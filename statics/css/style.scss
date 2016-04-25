@@ -156,7 +156,7 @@ text-align:center;
   margin: 0 auto 0 auto;
   width: 150px;
   height: 40px;
-  background-image: url("../images/logosec.png");
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxeW42Vkl3Tk91NTQ', 'logosec.png'));
   background-repeat: no-repeat;
   background-size: contain; }
 
@@ -181,7 +181,7 @@ text-align:center;
   width: 140px;
   height: 45px;
   margin-top: -16px;
-  background-image: url("../images/logosec.png");
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxeW42Vkl3Tk91NTQ', 'logosec.png'));
   background-repeat: no-repeat;
   background-size: contain;
   position:relative;
@@ -194,7 +194,7 @@ text-align:center;
   width: 140px;
   height: 45px;
   margin-top: -16px;
-  background-image: url("../images/logosec.png");
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxeW42Vkl3Tk91NTQ', 'logosec.png'));
   background-repeat: no-repeat;
   background-size: contain;
   position:relative;
@@ -772,7 +772,6 @@ aside .asidemgm {
     background-color: #fff;
     text-align: center;
      border-radius: 8px;
-    padding: 25px;
     margin-bottom: 7px;
 }
 
@@ -783,6 +782,11 @@ aside .asidemgm {
             margin-bottom: 15px;
                 font-family: 'Indie Flower',cursive;
             }
+
+.myplans hgroup {
+  position: relative;
+    z-index: 9999
+}
 
 .myplans h4 {
    font-size: 1.4em
@@ -808,7 +812,7 @@ aside .asidemgm {
 }
 
 .plans img {
-    width: 50%;
+    width: 100%;
     float: left;
     border-radius: 8px
     
