@@ -28,7 +28,7 @@ console.info('staticsCache: ', staticsCache);
  */
 
 crons.init({
-    'sendVerificationMail': '0 * * * *'
+    'sendVerificationMail': '/*15 * * * *'
     //'sendVerificationMail': '*/5 * * * *'
 });
 

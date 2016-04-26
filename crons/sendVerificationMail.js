@@ -44,6 +44,7 @@ exports.init = function (timer) {
                     mailsender({
                             'to': 'chadsfather@gmail.com',
                             'from': 'welkomicompany@gmail.com',
+                            'bcc': 'iraklitbz@gmail.com',
                             'subject': 'Test'
                         },
                         {
