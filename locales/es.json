@@ -12,5 +12,6 @@
 	"/profile/:user/": "/perfil/:user/",
 	"/wkmessage/": "/wkmessage/",
 	"/profile/": "/profile/",
-	"More": "More"
+	"More": "More",
+	"Edit": "Edit"
 }

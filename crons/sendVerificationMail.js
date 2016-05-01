@@ -7,6 +7,13 @@ var schedule = require('node-schedule'),
 
 exports.init = function (timer) {
     schedule.scheduleJob(timer, function () {
+        console.log('******************************** SEND VERIFY MAIL ********************************');
+
+        var nodemailer = require('nodemailer'),
+            transporter = nodemailer.createTransport('smtps://welkomicompany%40gmail.com:welkomiapp@smtp.gmail.com'),
+            EmailTemplates = require('swig-email-templates'),
+            templates = new EmailTemplates();
+
         User
             .find({
                 'emailsended': false
@@ -21,11 +28,6 @@ exports.init = function (timer) {
                 if (err) throw err;
 
                 if (res.length > 0) {
-                    var nodemailer = require('nodemailer'),
-                        transporter = nodemailer.createTransport('smtps://welkomicompany%40gmail.com:welkomiapp@smtp.gmail.com'),
-                        EmailTemplates = require('swig-email-templates'),
-                        templates = new EmailTemplates();
-
                     var mailsender = transporter.templateSender({
                         'render': function(context, callback){
                             templates.render('./../../../views/emailverification.html', context, function (err, html, text) {
@@ -42,14 +44,14 @@ exports.init = function (timer) {
                     });
 
                     mailsender({
-                            'to': 'chadsfather@gmail.com',
+                            'to': res[0].email,
                             'from': 'welkomicompany@gmail.com',
                             'bcc': 'iraklitbz@gmail.com',
-                            'subject': 'Test'
+                            'subject': 'Email verification'
                         },
                         {
-                            'username': 'Node Mailer',
-                            'password': '!"\'<>&some-thing'
+                            'name': res[0].firstname + ' ' + res[0].lastname,
+                            'email': res[0].email
                         }, function(err, info) {
                             if (err) throw err;
 
