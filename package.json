@@ -44,7 +44,8 @@
     "node-schedule": "latest",
     "nodemailer": "latest",
     "swig-email-templates": "latest",
-    "email-templates": "latest"
+    "email-templates": "latest",
+    "q": "latest"
   },
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {

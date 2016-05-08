@@ -2,7 +2,8 @@
  * Created by chadsfather on 15/12/15.
  */
 
-var User = require('./../../models').model('User');
+var User = require('./../../models').model('User'),
+    redis = require('./../../wrappers/rediswrapper').init();
 
 exports.init = function (expressrouter) {
     expressrouter.prefix(
