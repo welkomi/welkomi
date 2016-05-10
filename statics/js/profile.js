@@ -43,3 +43,34 @@ app
         '$scope',
         ProfileCtrl
     ]);
+
+
+/**
+ * Directiva para manter fixed
+ * los datos del usuario
+ *
+ * @param $rootScope
+ * @returns {{restrict: string, link: Function}}
+ */
+function scrolltofixed($rootScope) {
+    return {
+        'restrict': 'C',
+        'link': function ($scope, $element, $attrs) {
+            angular.element($element).scrollToFixed({
+                'marginTop': 130,
+                'limit': $('.publishpage').outerHeight() - ($('.asidefather').outerHeight() - 64)
+            });
+        }
+    }
+}
+
+app
+    .controller('TourPublishCtrl', [
+        '$rootScope',
+        '$scope',
+        TourPublishCtrl
+    ]).
+    directive('scrolltofixed', [
+        '$rootScope',
+        scrolltofixed
+    ]);

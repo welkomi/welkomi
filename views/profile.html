@@ -22,8 +22,23 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                <div class="row">
-                    <div class="userperfil">
+                  <div class="usernavmenu">
+                 
+                   <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    
+    <li role="presentation"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab">Plans</a></li>
+    
+    <li role="presentation"><a href="#count" aria-controls="count" role="tab" data-toggle="tab">Count</a></li>
+  </ul>
+                   
+                   </div>
+                   
+                   <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="profile">
+        <div class="userperfil">
                         <div class="myperfil">
                             <section class="margindefault clearfix">
                                 <div class="col-md-11 col-lg-11 userbox clearfix">
@@ -81,14 +96,21 @@ Would like to make friendships ,not only for stay</p>
                         </div>
 
                     </div>
+        
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="plans">...</div>
+    <div role="tabpanel" class="tab-pane" id="count">...</div>
+  </div>
+                   
+                    
 
-                </div>
+      
             </div>
 
 
             <aside class="col-xs-12 col-sm-4 col-md-4 col-lg-4 asideplans">
-                    <h3 class="myasideplans">MY PLAN'S<i class="pull-right fa fa-map" aria-hidden="true"></i></h3>
-             
+  
                <div class="plans">
                     <div class="full_media">
                         <img class="img-responsive" src="/statics/images/citys/madrid.png">
@@ -123,4 +145,5 @@ Would like to make friendships ,not only for stay</p>
 
 {% block pagejs %}
 <script src="/statics/js/profile.js"></script>
+<script src="/statics/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
 {% endblock %}
