@@ -226,7 +226,6 @@ text-align:center;
   -ms-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
-  z-index: 9998;
 
 }
 .caja-sombra{
@@ -529,7 +528,7 @@ text-align:center;
   height: 34px;
   border-radius:0px;
     border: none;
-    border-left: 2px solid #7d7d7b;
+    border-left: 1px solid #7d7d7b;
   background-color: rgba(40, 41, 35, 0.8);
   color: #282923;
   -webkit-transition: all 0.3s ease;
@@ -732,7 +731,7 @@ aside .asidemgm {
 
 
 .username a {
-  color: $wkseccolor; }
+  color: $wkdarkcolor; }
 
 .username a:hover {
   text-decoration: none; }
@@ -1050,7 +1049,6 @@ aside .asidemgm {
 
 .moreimages{
   float: left;
-  background-color: rgb(203, 203, 203);
   text-align: center;
   height: 85px;
   width: 85px;
@@ -1060,7 +1058,8 @@ aside .asidemgm {
 
 .moreimages i{
   width: 100%;
-  font-size: 2.4em
+  font-size: 2.4em;
+    color: $wkseccolor
 }
 
 .wkpricebox{
@@ -1435,7 +1434,6 @@ margin-bottom:10px
   width: 100%;
   background-repeat: no-repeat;
   display:table;
-    border-radius: 8px
 }
 .tour-header .velohg {
   text-align: center;
@@ -1512,17 +1510,22 @@ margin-bottom:10px
   text-decoration: none;
   color:#34ae6b
 }
-.emailmsn{
-  width: 50%
-}
-.emailmsn{
-  width: 50%;
-  float: left;
+
+.wk_msn{
+  width: 100%;
 }
 
-.facebookmsn{
-  width: 50%;
-  float: right;
+.wk_msn .btn-msn {
+    color: $wkcolor;
+    text-transform: uppercase;
+}
+
+.wk_msn .btn-msn:hover {
+    color: $wkcolor;
+}
+
+.wk_msn span {
+     padding-left: 10px;
 }
 
 .btn-msn{
@@ -1531,7 +1534,7 @@ margin-bottom:10px
   color: #34ae6b
 
 }
-.contactways .facebookmsn{
+.contactways .wk_msn{
   border-left: solid 1px #dadfe0
 
 }
@@ -1589,8 +1592,61 @@ aside .usersearchperfil {
   display: none
 }
 
+/*send message modal*/
 
+.fastmsn .panel-profile-img {
+    width: 75px;
+    height: 75px
+}
 
+.modalheadlin h3{
+    text-align: left;
+    font-size: 18px;
+    margin-top: 0px
+}
+.fastmsn .panel-profile-img {
+    margin-top: 0px
+}
+
+.fastmsn .howsendmsn {
+    width: 20%;
+    float: left
+}
+
+.fastmsn .infomsn {
+    width: 80%;
+    float: right
+}
+
+.fastmsn p {
+   margin-top: 15px
+}
+
+.fastmsn .modalheadlin {
+    margin-bottom: 15px;
+}
+
+.fastmsn .bline {
+  border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0 20px 0
+}
+.fastmsn textarea {
+    margin-bottom: 10px;
+    height: 115px
+}
+
+.fastmsn .closebtn {
+    display: block;
+    width: 30px;
+    height: 30xp;
+    color: #cacccd;
+    text-align: center;
+    font-size: 1.5em;
+    position: absolute;
+    right: 33px;
+    top: 15px
+}
 /*moretours*/
 
 .moduletitle{
@@ -1747,9 +1803,11 @@ footer p {
 
 .footer-copyright {
   position: relative;
-  top: 220px;
+  top: 240px;
   text-align: center;
-  color: $wkseccolor; }
+  color: $wkdarkcolor;
+  margin-bottom: 0px
+}
 
 .scene{
   position: absolute;
@@ -1766,9 +1824,10 @@ footer p {
   position: absolute;
   padding-right: 220px;
   overflow: hidden;
-  bottom:-10px;
+  bottom:0px;
   left: 0px;
-  z-index: 10
+  z-index: 10;
+    margin-bottom: 0px
 
 }
 
@@ -2618,8 +2677,8 @@ float: left;
     padding: 0px
 }
 .modal-open .modal {
-    z-index: 9999!important;
-    margin-top: 40px
+    z-index: 9999;
+    margin-top: 65px;
 }
 
 .modal-table {
@@ -2766,7 +2825,6 @@ width: 100%;
     height: 45px;
     margin-top: -9px;
     position: relative;
-    z-index: 9999;
 }
     
     

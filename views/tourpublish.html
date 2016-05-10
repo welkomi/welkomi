@@ -11,6 +11,36 @@
 
 {% block content %}
 
+<script type="text/ng-template" id="sendMessageBox.html">
+    <div class="modal-body">
+        <div class="signup fastmsn">
+            <a class="closebtn" href="javascript:void(0)" ng-click="close()"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+                <div class="modalheadlin">
+                    <h3>MENSAJE A JON NIEVE</h3>
+                </div>
+                
+                <div class="bline clearfix">
+                
+                <div class="howsendmsn">
+                        <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'jamie.png') }}">
+                              </div>
+                    <div class="infomsn">
+                        <p>Enviale un mensaje al anfitrión para preguntar sobre su plan o cualquier otra consulta que quieras hacerle.</p>
+                    </div>
+                    </div>
+                
+                <div class="umsn clearfix">
+                    <h5>Asunto: <strong>Calle Huertas guide</strong></h5>
+                    <textarea class="mymess form-control" placeholder="Type here you message" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-sesson btn-block btn-large">Send message</button>
+
+        </div>
+    </div>
+</script>
+
 <div class="container-fluid publishpage top">
     <div class="container">
          <div class="row">
@@ -138,25 +168,14 @@
                 <div class="usersearchperfil">
                                         <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'jamie.png') }}">
 
-                    <h2 class="username"><a href="#">Julia /<span class="bolded"> Madrid</span></a>
+                    <h2 class="username"><a href="#">Jamie /<span class="bolded"> Madrid</span></a>
                     </h2>
 
-                   <div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-    <span class="sr-only">40% Complete (success)</span>
-  </div>
-</div>
                     <div class="contactways clearfix">
 
-                        <div class="emailmsn">
-                            <a class="btn-msn fa fa-envelope-o fa-lg" href="#">
-                                <span>Email</span></a>
-                        </div>
-
-
-                        <div class="facebookmsn">
-                            <a class="btn-msn fa fa-commenting fa-lg" href="#">
-                                <span>Messenger</span></a>
+                        <div class="wk_msn">
+                            <a class="btn-msn fa fa-comments fa-lg" href="javascript:void('0')" {% if userObject('user') %}ng-click="openModal('md', 'sendMessageBox.html')"{% else %}ng-click="openModal('md', 'loginBoxContent.html')"{% endif %}>
+                                <span>Contact with Jamie</span></a>
                         </div>
                     </div>
                 </div>

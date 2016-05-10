@@ -144,10 +144,10 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal, $http) {
     */
     $scope.animationsEnabled = true;
 
-    $scope.open = function (size) {
+    $scope.openModal = function (size, template) {
         var modalInstance = $uibModal.open({
             animation: $scope.animationsEnabled,
-            templateUrl: 'loginBoxContent.html',
+            templateUrl: template,
             controller: function ($rootScope, $scope) {
                 $scope.fbLoginFromModal = function () {
                     $rootScope.FBlogin();
