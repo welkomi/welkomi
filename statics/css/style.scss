@@ -1331,8 +1331,52 @@ aside .asidemgm {
 .filter {
   margin-bottom: 5px
 }
-
 /*Myperfil*/
+
+.usernavmenu li {
+    width: 25%
+}
+
+.usernavmenu .activ a {
+    border-bottom: 4px solid $wkcolor
+}
+
+.usernavmenu .activ a:hover {
+    background-color: #ecf0f1;
+    border-bottom: 4px solid $wkcolor
+}
+
+.usernavmenu li a {
+    position: relative;
+    text-align: center;
+    background-color: #ecf0f1;
+    color: #52428e;
+    border: none;
+    border-radius: 0px;
+    margin-right: 0px;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    border-bottom: 4px solid #d2d4d5;
+       -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+.usernavmenu li a i{
+    position: absolute;
+    top: 12px;
+    margin-left: 5px;
+    font-size: 1.2em;
+    color: #ccbffa
+}
+
+
+.usernavmenu li a:hover {
+    background-color: #fff;
+}
+
 
 .usernavmenu {
     margin-bottom: 8px
@@ -2926,6 +2970,19 @@ width: 100%;
     .footer {
         height: auto
     }
+    
+    .usernavmenu li a {
+    position: relative;
+    height: 40px;
+}
+
+.usernavmenu li a i{
+    position: absolute;
+    top: 7px;
+    margin-left: 0px;
+    font-size: 1.5em;
+    color: #52428e
+}  
    
   
 }
@@ -2934,6 +2991,7 @@ width: 100%;
 .modal-dialog {
     width: 480px;
     margin: 0 auto;
-}
+}  
+    
 }
 /*# sourceMappingURL=style.css.map */

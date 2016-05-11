@@ -37,14 +37,6 @@ function ProfileCtrl ($rootScope, $scope) {
     });
 }
 
-app
-    .controller('ProfileCtrl', [
-        '$rootScope',
-        '$scope',
-        ProfileCtrl
-    ]);
-
-
 /**
  * Directiva para manter fixed
  * los datos del usuario
@@ -57,20 +49,24 @@ function scrolltofixed($rootScope) {
         'restrict': 'C',
         'link': function ($scope, $element, $attrs) {
             angular.element($element).scrollToFixed({
-                'marginTop': 130,
-                'limit': $('.publishpage').outerHeight() - ($('.asidefather').outerHeight() - 64)
+                'marginTop': 60
             });
         }
     }
 }
 
 app
-    .controller('TourPublishCtrl', [
+    .controller('ProfileCtrl', [
         '$rootScope',
         '$scope',
-        TourPublishCtrl
+        ProfileCtrl
     ]).
-    directive('scrolltofixed', [
+
+  directive('scrolltofixed', [
         '$rootScope',
         scrolltofixed
     ]);
+
+
+
+  
