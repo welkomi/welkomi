@@ -1333,48 +1333,57 @@ aside .asidemgm {
 }
 /*Myperfil*/
 
+.user-logoff .usernavmenu .usercount,.user-logoff .usernavmenu .usermsn   {
+    display: none
+}
+
 .usernavmenu li {
     width: 25%
 }
-
 .usernavmenu .activ a {
-    border-bottom: 4px solid $wkcolor
+    border-bottom: 4px solid $wkcolor;
+}
+
+.scroll-to-fixed-fixed li a {
+    background-color: #3d3d3a!important
 }
 
 .usernavmenu .activ a:hover {
     background-color: #ecf0f1;
-    border-bottom: 4px solid $wkcolor
+     border: none;
 }
 
 .usernavmenu li a {
     position: relative;
     text-align: center;
-    background-color: #ecf0f1;
-    color: #52428e;
+    background-color: #5f5f5c;
+    color: #fff;
     border: none;
     border-radius: 0px;
     margin-right: 0px;
-    font-weight: bold;
     font-size: 1em;
+    border-bottom: 4px solid #3d3d3a;
     text-transform: uppercase;
-    border-bottom: 4px solid #d2d4d5;
        -moz-transition: background 0.2s linear;
   -ms-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
 
+
 .usernavmenu li a i{
     position: absolute;
     top: 12px;
     margin-left: 5px;
     font-size: 1.2em;
-    color: #ccbffa
+    color: #c1c1c1
 }
 
 
 .usernavmenu li a:hover {
-    background-color: #fff;
+    background-color: #3d3d3a;
+    border: none;
+    border-bottom: 4px solid $wkcolor;
 }
 
 
@@ -2546,7 +2555,6 @@ font-family: 'Nothing You Could Do', cursive;
  
 .howis {
     padding: 7px;
-    border-bottom: 1px solid $wkseccolor;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     position: relative;
@@ -2611,13 +2619,13 @@ font-family: 'Nothing You Could Do', cursive;
     background-color: #ecf0f1;
     width: 100%;
     height: inherit;
-    height: 95%;
-    border-bottom: 1px solid $wkseccolor;
+    height: 400px;
+    overflow-y: scroll
 
 }
 
 .inbox .clearfix {
-     padding: 8px 35px;
+     padding: 0px;
 
 }
 
@@ -2669,16 +2677,14 @@ font-family: 'Nothing You Could Do', cursive;
 
 }
 
-.inbox .me {
-float: right;
-    margin-bottom: 55px
+.inbox .text {
+    margin-top: 20px
 }
 
 
 .inbox .me .bubble {
 float: left;
-margin-right: 15px;
-    max-width: 500px;
+  width: 80%;
 }
 .inbox .me .bubble h3{
 padding: 15px;
@@ -2698,17 +2704,16 @@ padding-left: 20px;
 
 .inbox .me .avatar {
 float: right;
+    width: 20%
 }
 
 .inbox .him {
-float: left;
      margin-bottom: 55px
 }
 
 .inbox .him .bubble {
 float: right;
- margin-left: 15px;
- max-width: 500px
+width: 80%
 }
 
 
@@ -2725,13 +2730,14 @@ border-top-right-radius: 0px;
 
 .inbox .him .avatar {
 float: left;
+width: 20%
 }
 
 
 .inbox .panel-profile-img {
      margin-top: 0px;
-    width: 110px;
-    height: 110px;
+    width: 60px;
+    height: 60px;
     position: relative;
     left: 0;
     margin-left: 0px;
@@ -2981,7 +2987,11 @@ width: 100%;
     top: 7px;
     margin-left: 0px;
     font-size: 1.5em;
-    color: #52428e
+    color: #fff
+}  
+    
+    .usernavmenu .activ a i{
+    color: $wkcolor
 }  
    
   
