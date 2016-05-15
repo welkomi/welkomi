@@ -64,7 +64,7 @@
                         <span class="input-group-addon" id="basic-addon1"><a href="#"><i class="fa fa-search"
                                                                                          aria-hidden="true"></i></a></span>
                         <input type="text" class="form-control" placeholder="I would like to go to..."
-                               aria-describedby="basic-addon1">
+                               aria-describedby="basic-addon1" gmapautocomplete>
                     </div>
 
 
@@ -133,7 +133,7 @@
     </header>
 
 </div>
-<div class="container searchresults">
+<div class="container searchresults" style="display:none !important">
     <div class="row">
         <div class="col-lg-11">
             <ul class="results">
@@ -237,7 +237,6 @@
 <img ng-src="<<* User.pictureProfile *>>"/> -->
 
 {% endif %}
-
 {% if enviromentName() === 'production' %}
 <script src="/statics/js/welkomiapp.js"></script>
 {% else %}
@@ -256,13 +255,9 @@
 <script src="/statics/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="/statics/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 {% endif %}
-<!--search result-->
-<script>
-    $('.searchresults').hide();
-    $("#searchfixed").focus(function () {
-        $('.searchresults').show();
-    });
-</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initgmaplibrary"></script>
+
 {% block pagejs %}{% endblock %}
 </body>
 </html>

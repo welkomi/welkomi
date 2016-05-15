@@ -67,6 +67,7 @@ exports.init = function (expressrouter) {
                      if (errFind) throw errFind;
 
                      if (resFind.length > 0) {
+                         console.log('USUARIO ENCONTRADO');
                          res.json(resFind[0]);
                      }
 

@@ -11,7 +11,7 @@
     ],
     "env": {
       "NODE_ENV": "development",
-      "REDIS_URL": "redis://h:p4d0q3pnvfqi5v5mffc615jv195@ec2-54-217-206-37.eu-west-1.compute.amazonaws.com:12719",
+      "REDIS_URL": "redis://h:pb4ftp0fjg103o3m4en5nkehh5q@ec2-54-217-206-37.eu-west-1.compute.amazonaws.com:12719",
       "MONGOLAB_URI": "mongodb://welkomiapp1715:welkomiapp1715@ds013619.mlab.com:13619/heroku_pmw32hxp",
       "GDRIVE_URI": "http://googledrive.com/host/",
       "GOOGLE_API_REFRESH_TOKEN": "1/oAx1Mh4dWH_tFavg8lhuLXh-NpFbzLOc9BrQGA5XCDA",

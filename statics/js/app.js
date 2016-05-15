@@ -39,6 +39,16 @@ window.fbload = function () {
     ref.parentNode.insertBefore(js, ref);
 };
 
+
+/**
+ * Load Gmaps
+ *
+ * <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initgmaplibrary"></script>
+ */
+var initgmaplibrary = function () {
+    window.google = google || {};
+};
+
 /**
  * Common controller for all welkomi app
  *
@@ -146,9 +156,9 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal, $http) {
 
     $scope.openModal = function (size, template) {
         var modalInstance = $uibModal.open({
-            animation: $scope.animationsEnabled,
-            templateUrl: template,
-            controller: function ($rootScope, $scope) {
+            'animation': $scope.animationsEnabled,
+            'templateUrl': template,
+            'controller': function ($rootScope, $scope) {
                 $scope.fbLoginFromModal = function () {
                     $rootScope.FBlogin();
                 };
@@ -173,9 +183,42 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal, $http) {
  */
 function parallax () {
     return {
-        restrict: 'AEC',
-        link: function (scope, element, attrs) {
+        'restrict': 'AEC',
+        'link': function (scope, element, attrs) {
             new Parallax(element[0]);
+        }
+    }
+}
+
+/**
+ * Validation for a numeric day
+ *
+ * @returns {{require: string, link: Function}}
+ */
+function isfilled () {
+    return {
+        'require': 'ngModel',
+        'link': function (scope, elm, attrs, ctrl) {
+            ctrl.$validators.isfilled = function (modelValue, viewValue) {
+                if (ctrl.$isEmpty(modelValue)) {
+                    return false;
+                }
+
+                return true;
+            };
+        }
+    }
+}
+
+function gmapautocomplete ($window) {
+    return {
+        'restrcit': 'AEC',
+        'link': function (scope, element, attrs) {
+            new $window.google.maps.places.Autocomplete(element[0], {
+                'types': [
+                    '(cities)'
+                ]
+            });
         }
     }
 }
@@ -189,6 +232,11 @@ app
         '$uibModal',
         '$http',
         CommonCtrl
-    ]).
-    directive('parallax', [parallax]);
+    ])
+    .directive('parallax', [parallax])
+    .directive('isfilled', [isfilled])
+    .directive('gmapautocomplete', [
+        '$window',
+        gmapautocomplete
+    ]);
 
