@@ -63,11 +63,13 @@ exports.init = function (expressrouter) {
                      'username': req.body.username
                  })
                  .select('-password')
+                 .lean()
                  .exec(function (errFind, resFind) {
                      if (errFind) throw errFind;
 
                      if (resFind.length > 0) {
-                         console.log('USUARIO ENCONTRADO');
+                         resFind[0].found = true;
+
                          res.json(resFind[0]);
                      }
 
@@ -126,8 +128,13 @@ exports.init = function (expressrouter) {
                                                                      'username': user.username
                                                                  })
                                                                  .select('-password')
+                                                                 .lean()
                                                                  .exec(function (errCreateFind, resCreateFind) {
                                                                      if (errCreateFind) throw errCreateFind;
+
+                                                                     if (resCreateFind.logintype === 'form') {
+                                                                        resCreateFind.password = user.password
+                                                                     }
 
                                                                      res.json(resCreateFind);
                                                                  });

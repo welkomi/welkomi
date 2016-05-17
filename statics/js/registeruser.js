@@ -18,7 +18,16 @@ function RegisterUserCtrl ($rootScope, $scope, $http, $log) {
                 }
             )
                 .success(function (data, status) {
-                    $log.debug(data);
+                    if (
+                        data[0].username
+                        && !data[0].found
+                    ) {
+                        $('#submitedNewUserOk').submit();
+                    }
+
+                    else {
+                        $log.debug(data);
+                    }
                 });
         }
     }

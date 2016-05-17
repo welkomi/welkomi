@@ -256,6 +256,12 @@
 
                     </form>
 
+                    <form style="display:none !important;" id="submitedNewUserOk" name="submitedNewUserOk" method="post" action="/autenticate/">
+                        <input ng-model="user.email" type="text" name="username" value="" />
+                        <input ng-model="user.password" type="password" name="password" value="" />
+                        <input type="submit" />
+                    </form>
+
                 </div>
             </div>
         </div>

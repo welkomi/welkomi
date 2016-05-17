@@ -33,14 +33,15 @@
                     <hr>
                 </div>
 
+                <form name="loginForm" method="post" action="/autenticate/">
+                    <input ng-model="user.email" class="pure-input" name="username" placeholder="Email"
+                           required="required" type="email">
 
-                <input class="pure-input" id="Email" name="Email" placeholder="Email"
-                       required="required" type="email">
+                    <input ng-model="user.password" class="pure-input" name="password" placeholder="Password"
+                           required="required" type="password">
 
-                <input class="pure-input" id="password" name="Password" placeholder="Password"
-                       required="required" type="Password">
-
-                <button type="submit" class="btn btn-sesson btn-block btn-large">Iniciar sesión</button>
+                    <button type="submit" class="btn btn-sesson btn-block btn-large">Iniciar sesión</button>
+                </form>
 
                 <hr>
 
