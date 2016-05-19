@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EXAMPLE ANGULAR FILE UPLOAD</title>
+
+    <style>
+        .drop-space {
+            background-color: darkgrey;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            border: 5px dotted grey;
+            text-align: center;
+            line-height: 12;
+        }
+        .drop-space span {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        FileAPI = {
+            'debug': true
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+    <script src="/statics/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
+    <script src="/statics/ng-file-upload/ng-file-upload.min.js"></script>
+</head>
+<body ng-app="fileUpload" ng-controller="testCtrl">
+
+<div class="drop-space"
+     ng-model="files"
+     ngf-drop
+     ngf-select
+     ngf-multiple="true">
+    <span>Drop o select file</span>
+</div>
+
+<script>
+    function testCtrl ($scope, Upload, $http, $log) {
+        Upload.setDefaults({
+            'ngfMaxSize': 20000000
+        });
+
+        $scope.$watch('files', function (files) {
+            if (angular.isArray(files)) {
+                Upload
+                        .base64DataUrl(files)
+                        .then(function (urls) {
+                            angular.forEach(urls, function (v, k) {
+                                $http.post(
+                                        '/drive/file/insert/0B9gI2Lt4M_dxaGl2UUthVWdNaGM/',
+                                        {
+                                            'img': v,
+                                            'name': 'profilepicture-' + k + '.jpg'
+                                        },
+                                        {
+                                            'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                                        })
+                                        .then(function (data) {
+                                            $log.debug(data);
+                                            $log.debug('-----------------------------------------------');
+                                        });
+                            });
+                        });
+            }
+        });
+    }
+
+    var app = angular.module('fileUpload', ['ngFileUpload']);
+
+    app.controller('testCtrl', [
+        '$scope',
+        'Upload',
+        '$http',
+        '$log',
+        testCtrl
+    ]);
+</script>
+</body>
+</html>

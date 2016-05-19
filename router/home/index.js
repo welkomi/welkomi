@@ -21,4 +21,10 @@ exports.init = function (expressrouter, idioms) {
                  'locale': req.params.lang
              });
          });
+
+    expressrouter.get(
+        '/test/',
+        function (req, res) {
+            res.render('test', {});
+        });
 };
