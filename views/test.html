@@ -33,9 +33,11 @@
             top: 300px;
             left: 55px;
         }
+        ul li {
+            float: left;
+        }
         ul li div {
             margin: 0.5em;
-            float: left;
             width: 100px;
             height: 100px;
             background: darkgray;
@@ -64,16 +66,16 @@
     <span>Drop o select file</span>
 </div>
 
+<pre>{{ files | json }}</pre>
+
 <ul>
-    <li>
-        <div ng-repeat="i in fillArray() track by $index"
-             ng-model="files[0]"
+    <li ng-repeat="item in fillArray(8) track by $index">
+        <div ng-model="files[$index]"
              ngf-drop
              ngf-select
              ngf-pattern="'.jpg,.jpeg,.gif,.png'"
              ngf-drag-over-class="{pattern: 'image/*', accept: 'img-ok', reject: 'img-ko'}"
              ngf-multiple="true">
-            <!--<img ng-if="files[$index]" src="" />-->
             <span>{{ $index }}</span>
         </div>
     </li>
@@ -81,9 +83,6 @@
 
 <script>
     function testCtrl ($scope, Upload, $http, $log) {
-        $scope.totalFiles = new Array(8);
-        $scope.files = [];
-
         Upload.setDefaults({
             'ngfMaxSize': 20000000
         });
@@ -113,8 +112,8 @@
             }
         });
 
-        $scope.fillArray = function () {
-            return new Array(8);
+        $scope.fillArray = function (number) {
+            return new Array(number);
         }
     }
 
