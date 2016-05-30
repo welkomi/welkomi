@@ -58,7 +58,7 @@ exports.init = function (timer) {
                             mailsender({
                                     'to': i.email,
                                     'from': 'welkomicompany@gmail.com',
-                                    'bcc': 'iraklitbz@gmail.com',
+                                    //'bcc': 'iraklitbz@gmail.com',
                                     'subject': 'Email verification',
                                     'attachments': [
                                         {

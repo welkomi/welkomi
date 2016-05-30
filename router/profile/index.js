@@ -17,7 +17,34 @@ exports.init = function (expressrouter) {
                 .route(__l('/profile/:user/'))
                 .get(function (req, res) {
                     var userid = req.params.user.match(/(.*)-([0-9]+)/),
-                        userid = userid[2];
+                        userid = userid[2],
+                        codeVerification = req.query.account_verification;
+
+                    if (
+                        codeVerification
+                        && !req.user.emailverifyed
+                    ) {
+                        var password = require('password-hash-and-salt');
+
+                        password('account-verfication-' + req.user._id).verifyAgainst(codeVerification, function (errVerify, resVerify) {
+                            if (errVerify) throw errVerify;
+
+                            if (resVerify) {
+                                User
+                                    .update(
+                                    {
+                                        '_id': req.user._id
+                                    },
+                                    {
+                                        '$set': {
+                                            'emailverifyed': true
+                                        }
+                                    }, function (errUpdate, resUpdate) {
+                                        if (errUpdate) throw errUpdate;
+                                    })
+                            }
+                        });
+                    }
 
                     User
                         .find({
@@ -29,7 +56,8 @@ exports.init = function (expressrouter) {
                             if (errFind) throw errFind;
 
                             res.render('profile', {
-                                'visitedUser': resFind[0]
+                                'visitedUser': resFind[0],
+                                'enableEdit': ~~req.user._id === ~~userid
                             });
                         });
                 });
