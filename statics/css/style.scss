@@ -27,7 +27,9 @@ a:focus {
 outline: 0;
     border: none
 }
-
+.wkborder {
+  border: 1px solid #dadfe0;
+}
 .btn:focus {
 outline: 0;
  border: none
@@ -46,7 +48,7 @@ outline: 0;
   color:$wkcolor
 }
 .wkseccolor{
-  color:$wkseccolor
+  color:$wkdarkcolor
 }
 .container-fluid{
   padding: 0 20px 0 20px
@@ -692,7 +694,8 @@ aside .asidemgm {
   background-position: bottom; }
 
 .randomUsers {
-  margin-bottom: 50px; }
+  margin-bottom: 50px; 
+}
 
 .tourme {
   background-color: #fff;
@@ -1342,30 +1345,29 @@ aside .asidemgm {
 }
 
 .usernavmenu li {
-    width: 25%
+    width: 25%;
 }
-.usernavmenu .activ a {
-    border-bottom: 4px solid $wkcolor!important;
+.usernavmenu .activ a:after {
+    content: "";
+    display: block;
+   background-color: $wkcolor;
+    height: 3px;
+    width: 100%;
+    position: relative;
+    top:-3px
     
 }
-
-.scroll-to-fixed-fixed li a {
-   background-color: #fff!important;
-    border-bottom: 4px solid #d1d1d1!important;
-    
-}
-
 .usernavmenu .activ a:hover {
-    background-color: rgba(255,255,255,1);
-     border-bottom: 4px solid $wkcolor;
+   color: $wkcolor;
 }
 
 .usernavmenu li a {
     position: relative;
     text-align: center;
     font-weight: bold;
+    padding: 0px;
+        height: 43px;
     background-color: #fff;
-    color: $wkseccolor;
     border: none;
     border-radius: 0px;
     margin-right: 0px;
@@ -1375,7 +1377,16 @@ aside .asidemgm {
   -ms-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
-    margin-right: 2px;
+    margin-right: 2px
+}
+
+
+.nav-tabs > li.active > a {
+     color: #555555;
+    background-color: #ffffff;
+    border: none!important;
+    border-bottom-color: none!important;
+    cursor: default;
 }
 
 .usernavmenu li a span {
@@ -1388,16 +1399,14 @@ aside .asidemgm {
 }
 
 .usernavmenu li a i{
-    position: absolute;
-    font-size: 1.8em;
-    color: #c1c1c1
+    font-size: 2.2em;
+    color: #2e2e31
 }
 
 
 .usernavmenu li a:hover {
     background-color: rgba(255,255,255,1);
     border: none;
-    border-bottom: 4px solid $wkcolor;
 }
 
 
@@ -1605,7 +1614,7 @@ margin-bottom:10px
 .wk_msn .btn-msn {
     color: $wkcolor;
     text-transform: uppercase;
-    font-size: 2em
+    font-size: 3em
 }
 
 .wk_msn .btn-msn:hover {
@@ -2232,6 +2241,7 @@ text-transform: uppercase
     border: 1px solid $wkseccolor;
   color: $wkseccolor;
     padding: 0 15px;
+    text-transform: uppercase;
     width: 100%;
     margin: 0 auto;
     display: block;
@@ -2614,11 +2624,19 @@ font-family: 'Nothing You Could Do', cursive;
     margin-left: -40px;
 }
 
+
+.usermsgaside {
+    display: table;
+    height: 100%;
+}
 .usermsg h2 {
     margin-top: 5px;
     color: #282923;
     font-size: 1.4em;
-    font-weight: bold
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 5px
 }
 
 .usermsg h6 {
@@ -2633,7 +2651,7 @@ font-family: 'Nothing You Could Do', cursive;
     background-color: #ecf0f1;
     width: 100%;
     height: inherit;
-    height: 400px;
+    height: 650px;
     overflow-y: scroll
 
 }
@@ -2685,73 +2703,73 @@ font-family: 'Nothing You Could Do', cursive;
    }
 
 
-.inbox h3 {
-    margin: 0px;
-    font-size: 1.5em
 
+
+.bubble {
+    width: 80%;
+    h3 {
+        font-size: 1.2em;
+        margin: 0px 0px 15px 0;
+        line-height: 1.3;
+    }
 }
 
-.inbox .text {
-    margin-top: 20px
+.avatar {
+    width: 20%;
+    text-align: center
 }
 
-
-.inbox .me .bubble {
-float: left;
-  width: 80%;
-}
-.inbox .me .bubble h3{
-padding: 15px;
-background-color: #fff;
-    border-bottom-left-radius: 0px;
-border-top-left-radius: 0px;
- border-bottom-right-radius: 0px;
-    font-size: 1.2em;
-    margin: 15px 0px 0 0px;
-    background: #daf0d6
+.inbox small {
+    font-weight: bold;
+    color: $wkcolor;
 }
 
-.inbox .bubble small{
-padding-left: 20px;
-    color: $wkseccolor
-}
-
-.inbox .me .avatar {
-float: right;
-    width: 20%
+.inbox .contactways {
+    text-align: center;
+    border: none;
+    .wk_msn {
+        a {
+            color: $wkcolor;
+            padding: 10px;
+        }
+    }
 }
 
 .inbox .him {
-     margin-bottom: 55px
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 7px;
+    border-radius: 8px;
+    .avatar {
+        float: left;
+    }
+    .bubble {
+        float: right;
+    }
 }
 
-.inbox .him .bubble {
-float: right;
-width: 80%
+.inbox .me {
+    width: 100%;
+    background-color: rgba(126, 255, 10, 0.2);
+    padding: 15px;
+     margin-bottom: 7px;
+    border-radius: 8px;
+    small {
+        float: right;
+    }
+    .avatar {
+        float: right;
+    }
+    .bubble {
+        float: left;
+    }
 }
-
-
-
-.inbox .him .bubble h3 {
-padding: 15px;
-background-color: #fff;
-border-bottom-right-radius: 0px;
-border-top-right-radius: 0px;
- border-bottom-left-radius: 0px;
-    font-size: 1.2em;
-    margin: -5px 0px 0 0px
-}
-
-.inbox .him .avatar {
-float: left;
-width: 20%
-}
-
 
 .inbox .panel-profile-img {
      margin-top: 0px;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     position: relative;
     left: 0;
     margin-left: 0px;
