@@ -22,38 +22,47 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                  <div class="usernavmenu scrolltofixed">
-                 
-                   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="activ userprofile"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><span class="hidden-xs">Profile</span>
-         <i class="fa fa-user" aria-hidden="true"></i>
-        </a>
-                       </li>
-    
-    <li role="presentation" class="usermsn"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><span class="hidden-xs">Messages</span>
-        <i class="fa fa-comments" aria-hidden="true"></i>
-        </a></li>
-    
-    <li role="presentation" class="userplans"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab"><span class="hidden-xs">Plans</span>
-        <i class="fa fa-map-marker" aria-hidden="true"></i>
-        </a></li>
-    
-    <li role="presentation" class="usercount"><a href="#count" aria-controls="count" role="tab" data-toggle="tab"><span class="hidden-xs">Count</span>
-        <i class="fa fa-cog" aria-hidden="true"></i>
-        </a></li>
-  </ul>
-                   
-                   </div>
-                   
-                   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="profile">
-        <div class="userperfil">
-                        <div class="myperfil">
-                            <section class="margindefault clearfix">
-                                <div class="col-md-11 col-lg-11 userbox clearfix">
-                                    <div class="centred col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left">
-                                         <img class="panel-profile-img" ng-src="<<* User.pictureProfile *>>">
-                                    </div>
+                <div class="usernavmenu scrolltofixed">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="activ userprofile"><a href="#profile" aria-controls="profile"
+                                                                             role="tab" data-toggle="tab"><span
+                                class="hidden-xs">Profile</span>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                        </li>
+
+                        <li role="presentation" class="usermsn"><a href="#messages" aria-controls="messages" role="tab"
+                                                                   data-toggle="tab"><span
+                                class="hidden-xs">Messages</span>
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                        </a></li>
+
+                        <li role="presentation" class="userplans"><a href="#plans" aria-controls="plans" role="tab"
+                                                                     data-toggle="tab"><span
+                                class="hidden-xs">Plans</span>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </a></li>
+
+                        <li role="presentation" class="usercount"><a href="#count" aria-controls="count" role="tab"
+                                                                     data-toggle="tab"><span
+                                class="hidden-xs">Count</span>
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a></li>
+                    </ul>
+
+                </div>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="profile">
+                        <div class="userperfil">
+                            <div class="myperfil">
+                                <section class="margindefault clearfix">
+                                    <div class="col-md-11 col-lg-11 userbox clearfix">
+                                        <div class="centred col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left">
+                                            <img class="panel-profile-img" ng-src="<<* User.pictureProfile *>>">
+                                        </div>
+                                     
                                     <div class="main-info col-xs-12 col-sm-12 col-md-7">
                                         <hgroup>
                                             <h2 class="username">Irakli Tavberidze</h2>
@@ -66,45 +75,225 @@
                                             "I like to learn other languages even if it is a little bit so please bring
                                             yours my way"
                                         </blockquote>
+                                         </div>
+
+                                    </div>
+                                    <div class="edit col-md-1 col-lg-1 col-sm-12 clearfix text-right nopadding">
+                                        <a class="btn-edit" href="#">{{ __('Edit') }}</a>
+                                    </div>
+                                </section>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading clearfix">
+                                        <h2 class="pull-left">About me</h2>
+
+                                        <div class="edit nopadding pull-right">
+                                            <a class="btn-edit" href="#">{{ __('Edit') }}</a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>Hi I'm Jean from France, I'm a nice and open minded man, I love travelling
+                                            and meeting new people. I dream to do a world tour for a year soon.</p>
+
+                                        <h3>Why my city</h3>
+
+                                        <p>I like cs because i would like to try all different bottle during shower
+                                            until i find sampoo!XD
+                                            Shit that there are no english on the BOTTLE n my host didn't tell me which
+                                            one is sampoo!Lol
+                                            Would like to make friendships ,not only for stay</p>
+
+                                        <h3>Languages I speak</h3>
+                                        <ul class="list-inline">
+                                            <li>Deutsch</li>
+                                            <li>Español</li>
+                                            <li>English</li>
+                                            <li> Georgian</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                <div class="mycontacts">
+                                    <a class="wkdisplaylink" href="#">
+                                        <div class="usermsg clearfix">
+                                            <div class="col-md-5 col-lg-4 nopadding">
+                                                <img class="panel-profile-img"
+                                                     src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'nieve.png') }}">
+                                            </div>
+                                            <div class="col-md-6 col-lg-7 nopadding usermsgaside">
+                                                <h2>Jon Nieve</h2>
+                                                <h6>Lorem Ipsum giving information on its origins...</h6>
+                                            </div>
+                                            <div class="col-md-1 col-lg-1 nopadding arrowbox">
+                                                <span class="badge">4</span>
+                                            </div>
+
+
+                                        </div>
+                                    </a>
+
+                                    <a class="wkdisplaylink" href="#">
+                                        <div class="usermsg clearfix">
+                                            <div class="col-md-5 col-lg-4 nopadding">
+                                                <img class="panel-profile-img"
+                                                     src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'tylonn.png') }}">
+                                            </div>
+                                            <div class="col-md-6 col-lg-7 nopadding usermsgaside">
+                                                <h2>Tylion Lanister</h2>
+                                                <h6>Hi there!</h6>
+                                            </div>
+
+
+                                        </div>
+                                    </a>
+
+                                    <a class="wkdisplaylink" href="#">
+                                        <div class="usermsg clearfix">
+                                            <div class="col-md-5 col-lg-4 nopadding">
+                                                <img class="panel-profile-img"
+                                                     src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'ned.png') }}">
+                                            </div>
+                                            <div class="col-md-6 col-lg-7 nopadding usermsgaside">
+                                                <h2>Ned Stark</h2>
+                                                <h6>I told him that all he needed to do was talk his parents into buying
+                                                    him</h6>
+                                            </div>
+                                            <div class="col-md-1 col-lg-1 nopadding arrowbox">
+                                                <span class="badge">4</span>
+                                            </div>
+
+
+                                        </div>
+                                    </a>
+
+                                    <a class="active wkdisplaylink" href="#">
+                                        <div class="usermsg clearfix">
+                                            <div class="col-md-5 col-lg-4 nopadding">
+                                                <img class="panel-profile-img"
+                                                     src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                                            </div>
+                                            <div class="col-md-6 col-lg-7 nopadding usermsgaside">
+                                                <h2 class="activ">Arya Stark</h2>
+                                                <h6>My 11 year old granddaughter and 13 year...</h6>
+                                            </div>
+                                            <div class="col-md-1 col-lg-1 nopadding arrowbox">
+                                                <i class="fa fa-angle-right arrowright" aria-hidden="true"></i>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                                <div class="howis clearfix">
+                                    <h2>Arya Stark</h2>
+                                </div>
+                                <div class="inbox">
+                                    <div class="clearfix">
+                                        <div class="him">
+                                            <div class="text">
+                                                <div class="avatar">
+                                                    <img class="panel-profile-img"
+                                                         src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                                                </div>
+                                                <div class="bubble">
+                                                    <h3>How I would have loved to have done this myself to have done
+                                                        this myself!</h3>
+
+                                                    <h3>How I would have loved to have done this myself to have done
+                                                        this myself!</h3>
+                                                    <small>Yesterday</small>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="clearfix">
+                                        <div class="me">
+                                            <div class="text">
+                                                <div class="bubble">
+                                                    <h3>See you!! </h3>
+                                                    <small>14:54</small>
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="panel-profile-img"
+                                                         src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="clearfix">
+                                        <div class="him">
+                                            <div class="text">
+                                                <div class="avatar">
+                                                    <img class="panel-profile-img"
+                                                         src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                                                </div>
+                                                <div class="bubble">
+                                                    <h3>Lorem Ipsum giving information on its origins!</h3>
+                                                    <small>17:54</small>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="clearfix">
+                                        <div class="me">
+                                            <div class="text">
+                                                <div class="bubble">
+                                                    <h3>I treated my grandchildren to a session whilst on holiday in
+                                                        Noosa. How I would have loved to have done this myself! This
+                                                        review, therefore, is by proxy. My 11 year old granddaughter and
+                                                        13 year old grandson were absolutely taken by this
+                                                        sport/pastime.</h3>
+                                                    <small>22:54</small>
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="panel-profile-img"
+                                                         src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="clearfix">
+                                        <div class="me">
+                                            <div class="text">
+                                                <div class="bubble">
+                                                    <h3>How I would have loved to have! </h3>
+                                                    <small>00:54</small>
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="panel-profile-img"
+                                                         src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
-                               <div class="edit col-md-1 col-lg-1 col-sm-12 clearfix text-right nopadding">
-                                   <a class="btn-edit" href="#">{{ __('Edit') }}</a>
-                                </div>
-                            </section>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading clearfix">
-                                <h2 class="pull-left">About me</h2>
-                                <div class="edit nopadding pull-right">
-                                   <a class="btn-edit" href="#">{{ __('Edit') }}</a>
-                                </div>
-                                </div>
-                                <div class="panel-body">
-                                    <p>Hi I'm Jean from France, I'm a nice and open minded man, I love travelling and meeting new people. I dream to do a world tour for a year soon.</p>
-                                    <h3>Why my city</h3>
-                                    
-                                    <p>I like cs because i would like to try all different bottle during shower until i find sampoo!XD 
-Shit that there are no english on the BOTTLE n my host didn't tell me which one is sampoo!Lol 
-Would like to make friendships ,not only for stay</p>
-                               
-                               <h3>Languages I speak</h3>
-                               <ul class="list-inline">
-                                   <li>Deutsch</li>
-                                   <li>Español</li>
-                                   <li>English</li>
-                                   <li> Georgian </li>
-                               </ul>
-                                </div>
                             </div>
-
-                    
 
 
                         </div>
 
                     </div>
+<<<<<<< HEAD
         
     </div>
     <div role="tabpanel" class="tab-pane" id="messages">
@@ -258,46 +447,50 @@ Would like to make friendships ,not only for stay</p>
   </div>
                    
                     
+=======
+                    <div role="tabpanel" class="tab-pane" id="plans">...</div>
+                    <div role="tabpanel" class="tab-pane" id="count">...</div>
+                </div>
 
-      
+>>>>>>> 0f34c3c2ea4e29c39f5eec4bd081ffe0668997d6
+
             </div>
 
 
             <aside class="col-xs-12 col-sm-4 col-md-4 col-lg-4 asideplans hidden-xs  hidden-sm">
-  
-               <div class="plans">
+
+                <div class="plans">
                     <div class="full_media">
                         <img class="img-responsive" src="/statics/images/citys/madrid.png">
                         <hgroup>
-                        <h2>Madrid</h2>
-                        <h3>Huertas street guide</h3>
+                            <h2>Madrid</h2>
+
+                            <h3>Huertas street guide</h3>
                         </hgroup>
                     </div>
                 </div>
-                
+
                 <div class="plans">
                     <div class="full_media">
                         <img class="img-responsive" src="/statics/images/citys/newyork.png">
                         <hgroup>
-                        <h2>Madrid</h2>
-                        <h3>I guide you troude all the museoms</h3>
+                            <h2>Madrid</h2>
+
+                            <h3>I guide you troude all the museoms</h3>
                         </hgroup>
                     </div>
                 </div>
-    
-              
-              
-          
             </aside>
 
         </div>
     </div>
 </div>
-
-
 {% endblock %}
 
 {% block pagejs %}
 <script src="/statics/js/profile.js"></script>
+{% if enableEdit %}
+<!-- imprime el código de editar profile -->
+{% endif %}
 <script src="/statics/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
 {% endblock %}
