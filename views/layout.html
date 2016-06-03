@@ -83,8 +83,8 @@
 
                                     <ul class="dropdown-menu">
                                         {% if userObject('user') %}
-                                        <li><a href="{{ renderUrl('/profile/') }}{{ slugify(userObject('firstname') + ' ' + userObject('lastname') + ' ' + userObject('_id')) }}"><span class="navtext">My Profile</span></a></li>
-                                        <li><a href="/logout"><span class="navtext">Logout</span></a></li>
+                                        <li><a href="{{ renderUrl('/profile/') }}{{ slugify(userObject('firstname') + ' ' + userObject('lastname') + ' ' + userObject('_id')) }}"><i class="icon ion-android-person"></i><span class="navtext">My Profile</span></a></li>
+                                        <li><a href="/logout"><i class="icon ion-log-out"></i><span class="navtext">Logout</span></a></li>
                                         {% endif %}
                                     </ul>
                                 </li>

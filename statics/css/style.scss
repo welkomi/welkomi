@@ -378,6 +378,7 @@ text-align:center;
   padding: 4px 10px!important
    }
 
+
    .btn-mens {
        color: #fff;
        display: inline-block;
@@ -1347,18 +1348,13 @@ aside .asidemgm {
 .usernavmenu li {
     width: 25%;
 }
-.usernavmenu .activ a:after {
-    content: "";
-    display: block;
-   background-color: $wkcolor;
-    height: 3px;
-    width: 100%;
-    position: relative;
-    top:-3px
-    
-}
+
 .usernavmenu .activ a:hover {
    color: $wkcolor;
+}
+
+.scroll-to-fixed-fixed li a {
+    border-bottom: 1px solid #c1c1c1!important
 }
 
 .usernavmenu li a {
@@ -1367,7 +1363,7 @@ aside .asidemgm {
     font-weight: bold;
     padding: 0px;
         height: 43px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.0);
     border: none;
     border-radius: 0px;
     margin-right: 0px;
@@ -1385,7 +1381,7 @@ aside .asidemgm {
      color: #555555;
     background-color: #ffffff;
     border: none!important;
-    border-bottom-color: none!important;
+    border-bottom: 2px solid $wkseccolor;
     cursor: default;
 }
 
@@ -1399,9 +1395,12 @@ aside .asidemgm {
 }
 
 .usernavmenu li a i{
-    font-size: 2.2em;
-    color: #2e2e31
+    font-size: 2.6em;
+    color: #4f82b3;
+        position: relative;
+    top: -5px;
 }
+
 
 
 .usernavmenu li a:hover {
@@ -1427,9 +1426,6 @@ aside .asidemgm {
 }
 
 
-.usernavmenu .activ {
-    color: $wkcolor
-}
 
 .myperfil .panel-profile-img{
     margin-top: 0px;
@@ -1438,7 +1434,7 @@ aside .asidemgm {
 }
 
 blockquote {
-  border-left: 5px solid $wkseccolor;
+  border-left: 5px solid $wkdarkcolor;
   margin-top: 7px
 }
 
@@ -1482,6 +1478,32 @@ margin-bottom:10px
 
 
 /*.searchtbnheader*/
+
+.dropdown .dropdown-menu {
+    left: -91px;
+    li {
+        width: 100%;
+        a {
+            &:hover{
+                background-color: transparent;
+                color: $wkcolor;
+            }
+            i{
+                font-size: 1.3em;
+                position: relative;
+                float: left;
+                margin-right: 12px;
+            }
+        } span {
+            float: right
+        }
+    }
+}
+
+.specialheader .dropdown .dropdown-menu a {
+    color: $wkdarkcolor;
+    font-weight: normal;
+}
 
 .searchheader input {
   font-size: 12px;
@@ -1669,7 +1691,7 @@ aside .usersearchperfil {
   font-size: 2em;
   margin-right: 2px;
   text-align: center;
-  color: $wkseccolor;
+  color: $wkdarkcolor;
     background-color: #fff;
   border-radius: 50%;
   -webkit-transition: all 0.2s linear;
@@ -2238,8 +2260,8 @@ text-transform: uppercase
 
 .btn-edit{
     background-color: #fff;
-    border: 1px solid $wkseccolor;
-  color: $wkseccolor;
+    border: 1px solid $wkcolor;
+  color: $wkcolor;
     padding: 0 15px;
     text-transform: uppercase;
     width: 100%;
@@ -2255,7 +2277,7 @@ text-transform: uppercase
 }
 
 .btn-edit:hover{
- background: $wkseccolor;
+ background: $wkcolor;
     color: #fff;
     text-decoration: none
 }
@@ -2820,7 +2842,9 @@ width: 100%;
 }
 
 .signup .btn-sesson {
-margin-bottom: 7px
+margin-bottom: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .signup .pure-input {
