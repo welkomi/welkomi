@@ -62,22 +62,24 @@
                                 <section class="margindefault clearfix">
                                     <div class="col-md-11 col-lg-11 userbox clearfix">
                                         <div class="centred col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left">
-                                            <img class="panel-profile-img" ng-src="<<* User.pictureProfile *>>">
+                                            <img class="panel-profile-img" ng-src="{{ renderGdriveUrl(visitedUser.userfolder, 'profilepicture.jpg') }}">
                                         </div>
-                                     
-                                    <div class="main-info col-xs-12 col-sm-12 col-md-7">
-                                        <hgroup>
-                                            <h2 class="username">welkomi</h2>
 
-                                            <h3 class="localization"><i class="fa fa-map-marker"></i><a href="javascript:void(0)">Madrid </a><span></span>
-                                            </h3>
+                                        <div class="main-info col-xs-12 col-sm-12 col-md-7">
+                                            <hgroup>
+                                                <h2 class="username">welkomi</h2>
 
-                                        </hgroup>
-                                        <blockquote class="clearfix col-lg-12">
-                                            "I like to learn other languages even if it is a little bit so please bring
-                                            yours my way"
-                                        </blockquote>
-                                         </div>
+                                                <h3 class="localization"><i class="fa fa-map-marker"></i><a
+                                                        href="javascript:void(0)">Madrid </a><span></span>
+                                                </h3>
+
+                                            </hgroup>
+                                            <blockquote class="clearfix col-lg-12">
+                                                "I like to learn other languages even if it is a little bit so please
+                                                bring
+                                                yours my way"
+                                            </blockquote>
+                                        </div>
 
                                     </div>
                                     <div class="edit col-md-1 col-lg-1 col-sm-12 clearfix text-right nopadding">
@@ -90,7 +92,7 @@
                                         <h2 class="pull-left">About me</h2>
 
                                     </div>
-                                    <div class="panel-body">
+                                    <div class="panel-body" {% if enableEdit %}ui-tinymce="tinymceOptions" ng-model="tinymceModel"{% endif %}>
                                         <p>Hi I'm Jean from France, I'm a nice and open minded man, I love travelling
                                             and meeting new people. I dream to do a world tour for a year soon.</p>
 
@@ -118,146 +120,161 @@
                         </div>
 
                     </div>
-    <div role="tabpanel" class="tab-pane" id="messages">
-       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-             <div class="mycontacts">
-              <a class="wkdisplaylink" href="#"><div class="usermsg clearfix">
-                 <div class="col-md-5 col-lg-4 nopadding">
-                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'nieve.png') }}">
-                  </div>
-                  <div class="col-md-6 col-lg-7 nopadding usermsgaside">
-                      <h2>Jon Nieve</h2>
-                  </div>
-                   <div class="col-md-1 col-lg-1 nopadding arrowbox">
-                 <span class="badge">4</span>
-                  </div>
-                 
-                  
-                  </div></a>
-                  
-                   <a class="wkdisplaylink" href="#"><div class="usermsg clearfix">
-                 <div class="col-md-5 col-lg-4 nopadding">
-                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'tylonn.png') }}">
-                  </div>
-                  <div class="col-md-6 col-lg-7 nopadding usermsgaside">
-                      <h2>Tylion Lanister</h2>
-                  </div>
-                  
-                
-                  
-                  </div></a>
-                  
-                    <a class="wkdisplaylink" href="#"><div class="usermsg clearfix">
-                 <div class="col-md-5 col-lg-4 nopadding">
-                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'ned.png') }}">
-                  </div>
-                  <div class="col-md-6 col-lg-7 nopadding usermsgaside">
-                      <h2>Ned Stark</h2>
-                  </div>
-                  <div class="col-md-1 col-lg-1 nopadding arrowbox">
-                 <span class="badge">4</span>
-                  </div>
-                
-                  
-                  </div></a>
-                  
-                    <a class="active wkdisplaylink" href="#"><div class="usermsg clearfix">
-                 <div class="col-md-5 col-lg-4 nopadding">
-                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
-                  </div>
-                  <div class="col-md-6 col-lg-7 nopadding usermsgaside">
-                      <h2 class="activ">Arya Stark</h2>
-                  </div>
-                    <div class="col-md-1 col-lg-1 nopadding arrowbox">
-                  <i class="fa fa-angle-right arrowright" aria-hidden="true"></i>
-                  </div>
-                  
-                  </div></a>
-                  </div>
-                  
-        </div>
-        
-        
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-            <div class="inbox">
-                
-                
-                
-                 <div class="clearfix him">
-                 <div class="avatar">
-                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
-                  </div>
-                  <div class="bubble">
-                      <h3>How I would have loved to have done this myself to have done this myself!</h3>
-                      <small>Yesterday</small>
-                  </div>
-                  
-        
-            </div>
-            
-        
-    
-           
-            <div class="clearfix me">
-    
-                  <div class="bubble">
-                      <h3>I treated my grandchildren to a session whilst on holiday in Noosa. How I would have loved to have done this myself! This review, therefore, is by proxy. My 11 year old granddaughter and 13 year old grandson were absolutely taken by this sport/pastime.</h3>
-                      <small>22:54</small>
-                  </div>
-                   <div class="avatar">
-                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
-                  </div>
-                
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="mycontacts">
+                                    <a class="wkdisplaylink" href="#">
+                                        <div class="usermsg clearfix">
+                                            <div class="col-md-5 col-lg-4 nopadding">
+                                                <img class="panel-profile-img"
+                                                     src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'nieve.png') }}">
+                                            </div>
+                                            <div class="col-md-6 col-lg-7 nopadding usermsgaside">
+                                                <h2>Jon Nieve</h2>
+                                            </div>
+                                            <div class="col-md-1 col-lg-1 nopadding arrowbox">
+                                                <span class="badge">4</span>
+                                            </div>
 
-           </div>
-           
-           <div class="clearfix him">
-                 <div class="avatar">
-                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
-                  </div>
-                  <div class="bubble">
-                      <h3>This myself to have done this myself!</h3>
-                      <small>Yesterday</small>
-                  </div>
-                  
-        
-            </div>
-            
-            <div class="clearfix him">
-                 <div class="avatar">
-                  <img class="panel-profile-img" src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
-                  </div>
-                  <div class="bubble">
-                      <h3>I would have loved!</h3>
-                      <small>Yesterday</small>
-                  </div>
-                  
-        
-            </div>
-            
-           <div class="contactways clearfix">
 
-                        <div class="wk_msn">
-                            <a class="btn-msn icon ion-chatbubbles fa-lg" href="javascript:void('0')" ng-click="openModal('md', 'sendMessageBox.html')">
-                            </a>
+                                        </div>
+                                    </a>
+
+                                    <a class="wkdisplaylink" href="#">
+                                        <div class="usermsg clearfix">
+                                            <div class="col-md-5 col-lg-4 nopadding">
+                                                <img class="panel-profile-img"
+                                                     src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'tylonn.png') }}">
+                                            </div>
+                                            <div class="col-md-6 col-lg-7 nopadding usermsgaside">
+                                                <h2>Tylion Lanister</h2>
+                                            </div>
+
+
+                                        </div>
+                                    </a>
+
+                                    <a class="wkdisplaylink" href="#">
+                                        <div class="usermsg clearfix">
+                                            <div class="col-md-5 col-lg-4 nopadding">
+                                                <img class="panel-profile-img"
+                                                     src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'ned.png') }}">
+                                            </div>
+                                            <div class="col-md-6 col-lg-7 nopadding usermsgaside">
+                                                <h2>Ned Stark</h2>
+                                            </div>
+                                            <div class="col-md-1 col-lg-1 nopadding arrowbox">
+                                                <span class="badge">4</span>
+                                            </div>
+
+
+                                        </div>
+                                    </a>
+
+                                    <a class="active wkdisplaylink" href="#">
+                                        <div class="usermsg clearfix">
+                                            <div class="col-md-5 col-lg-4 nopadding">
+                                                <img class="panel-profile-img"
+                                                     src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                                            </div>
+                                            <div class="col-md-6 col-lg-7 nopadding usermsgaside">
+                                                <h2 class="activ">Arya Stark</h2>
+                                            </div>
+                                            <div class="col-md-1 col-lg-1 nopadding arrowbox">
+                                                <i class="fa fa-angle-right arrowright" aria-hidden="true"></i>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                <div class="inbox">
+
+
+                                    <div class="clearfix him">
+                                        <div class="avatar">
+                                            <img class="panel-profile-img"
+                                                 src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                                        </div>
+                                        <div class="bubble">
+                                            <h3>How I would have loved to have done this myself to have done this
+                                                myself!</h3>
+                                            <small>Yesterday</small>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="clearfix me">
+
+                                        <div class="bubble">
+                                            <h3>I treated my grandchildren to a session whilst on holiday in Noosa. How
+                                                I would have loved to have done this myself! This review, therefore, is
+                                                by proxy. My 11 year old granddaughter and 13 year old grandson were
+                                                absolutely taken by this sport/pastime.</h3>
+                                            <small>22:54</small>
+                                        </div>
+                                        <div class="avatar">
+                                            <img class="panel-profile-img"
+                                                 src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'cersei.png') }}">
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="clearfix him">
+                                        <div class="avatar">
+                                            <img class="panel-profile-img"
+                                                 src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                                        </div>
+                                        <div class="bubble">
+                                            <h3>This myself to have done this myself!</h3>
+                                            <small>Yesterday</small>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="clearfix him">
+                                        <div class="avatar">
+                                            <img class="panel-profile-img"
+                                                 src="{{ renderGdriveUrl('0B9gI2Lt4M_dxc1VNakJnc29kdkE', 'arya.png') }}">
+                                        </div>
+                                        <div class="bubble">
+                                            <h3>I would have loved!</h3>
+                                            <small>Yesterday</small>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="contactways clearfix">
+
+                                        <div class="wk_msn">
+                                            <a class="btn-msn icon ion-chatbubbles fa-lg" href="javascript:void('0')"
+                                               ng-click="openModal('md', 'sendMessageBox.html')">
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
                         </div>
+
                     </div>
-           
-               
-           
-            </div>
-        </div>
-        
-        
-        </div>
-        
-    </div>
-    <div role="tabpanel" class="tab-pane" id="plans">...</div>
-    <div role="tabpanel" class="tab-pane" id="count">...</div>
-  </div>
-                   
-                    
+                    <div role="tabpanel" class="tab-pane" id="plans">...</div>
+                    <div role="tabpanel" class="tab-pane" id="count">...</div>
+                </div>
+
 
             </div>
 

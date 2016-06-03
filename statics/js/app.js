@@ -7,7 +7,8 @@ var app = angular.module('welkomiApp', [
     'jkuri.gallery',
     'ui.bootstrap',
     'ngScrollbars',
-    'ngDroplet'
+    'ngDroplet',
+    'ui.tinymce'
 ]);
 
 app
@@ -130,7 +131,10 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal, $http) {
     function setPictureFromFBProfile (user, idFB) {
         if (idFB) {
             FBF.exchangePictureProfile(idFB, function (picture) {
-                if ($window.__user__.emailverifyed) {
+                if (
+                    $window.__user__.emailverifyed
+                    && $window.__user__.logintype === 'fb'
+                ) {
                     $http.post(
                         '/drive/file/insert/' + $window.__user__.userfolder + '/',
                         {
@@ -173,6 +177,17 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal, $http) {
 
     $scope.toggleAnimation = function () {
         $scope.animationsEnabled = !$scope.animationsEnabled;
+    };
+
+
+    /**
+     * TinyMce Configuration
+     */
+
+    $scope.tinymceOptions = {
+        plugins: 'link image code',
+        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
+        inline: true
     };
 }
 

@@ -57,7 +57,7 @@ exports.init = function (expressrouter) {
                     gm = require('gm').subClass({'imageMagick': true}),
                     parents = [],
                     ext = 'JPG',
-                    height = 200,
+                    height = null,
                     width = 200;
 
                 parents.push(req.params.parents);

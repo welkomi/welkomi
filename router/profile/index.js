@@ -55,9 +55,13 @@ exports.init = function (expressrouter) {
                         .exec(function (errFind, resFind) {
                             if (errFind) throw errFind;
 
+                            var request_id = req.user
+                                ? ~~req.user._id
+                                : null;
+
                             res.render('profile', {
                                 'visitedUser': resFind[0],
-                                'enableEdit': ~~req.user._id === ~~userid
+                                'enableEdit': request_id === ~~userid
                             });
                         });
                 });

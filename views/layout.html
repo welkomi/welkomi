@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/statics/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/statics/css/style.css">
- <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     {{ getRandomImgForHome() }}
     {{ setFBId() }}
     {{ userObject() }}
@@ -26,7 +26,8 @@
 
                 <div class="pull-left headerfixsearch {% block wover %}{% endblock %}">
                     <div class="input-group scrollernav searchuserheader{% block etiquetaSearch %}{% endblock %}">
-                        <span class="input-group-addon" id="basic-addon1"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></span>
+                        <span class="input-group-addon" id="basic-addon1"><a href="#"><i class="fa fa-search"
+                                                                                         aria-hidden="true"></i></a></span>
                         <input type="text" class="form-control" placeholder="I would like to go to..."
                                aria-describedby="basic-addon1" gmapautocomplete>
                     </div>
@@ -66,7 +67,8 @@
                                             data-onparent="true"></span><span class="navtext">Join us</span></a>
                                 </li>
                                 <li class="loginbtn">
-                                    <a class="btn btn-login" href="javascript:void(0)" ng-click="openModal('md', 'loginBoxContent.html')"><span
+                                    <a class="btn btn-login" href="javascript:void(0)"
+                                       ng-click="openModal('md', 'loginBoxContent.html')"><span
                                             class="wkicon livicon shadowed" data-n="sign-in" data-s="26" data-hc="0"
                                             data-onparent="true"></span><span class="navtext">Login</span></a>
                                 </li>
@@ -83,8 +85,12 @@
 
                                     <ul class="dropdown-menu">
                                         {% if userObject('user') %}
-                                        <li><a href="{{ renderUrl('/profile/') }}{{ slugify(userObject('firstname') + ' ' + userObject('lastname') + ' ' + userObject('_id')) }}"><i class="icon ion-android-person"></i><span class="navtext">My Profile</span></a></li>
-                                        <li><a href="/logout"><i class="icon ion-log-out"></i><span class="navtext">Logout</span></a></li>
+                                        <li>
+                                            <a href="{{ renderUrl('/profile/') }}{{ slugify(userObject('firstname') + ' ' + userObject('lastname') + ' ' + userObject('_id')) }}"><i
+                                                    class="icon ion-android-person"></i><span
+                                                    class="navtext">My Profile</span></a></li>
+                                        <li><a href="/logout"><i class="icon ion-log-out"></i><span class="navtext">Logout</span></a>
+                                        </li>
                                         {% endif %}
                                     </ul>
                                 </li>
@@ -143,47 +149,48 @@
                 </ul>
             </div>
             <div class="footersec clearfix">
-            <ul class="followus">
-                <a class="facebookwm" href="#">
-                    <li class="fa fa-facebook"><i>facebook</i></li>
-                </a>
-                <a class="twitterwm" href="#">
-                    <li class="fa fa-twitter"><i>twitter</i></li>
-                </a>
-                <a class="instagramwm" href="#">
-                    <li class="fa fa-instagram"><i>instagram</i></li>
-                </a>
-                <a class="vimeowm" href="#">
-                    <li class="fa fa-vimeo"><i>vimeo</i></li>
-                </a>
-            </ul>
+                <ul class="followus">
+                    <a class="facebookwm" href="#">
+                        <li class="fa fa-facebook"><i>facebook</i></li>
+                    </a>
+                    <a class="twitterwm" href="#">
+                        <li class="fa fa-twitter"><i>twitter</i></li>
+                    </a>
+                    <a class="instagramwm" href="#">
+                        <li class="fa fa-instagram"><i>instagram</i></li>
+                    </a>
+                    <a class="vimeowm" href="#">
+                        <li class="fa fa-vimeo"><i>vimeo</i></li>
+                    </a>
+                </ul>
 
-             <div class="dropdown selectlang">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">English
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Español</a></li>
-    <li><a href="#">Deutsch</a></li>
-    <li><a href="#">Potruguese</a></li>
-    <li><a href="#">Georgian</a></li>
-    <li><a href="#">日本の</a></li>
-    <li role="separator" class="divider"></li>
-    <li class="listtitle">Google Tanslate</li>
-    <li><a href="#">Dutch</a></li>
-    <li><a href="#">Russian</a></li>
-    <li><a href="#">Turkish</a></li>
-    <li><a href="#">Chinese</a></li>
-    <li><a href="#">Korean</a></li>
-  </ul>
-</div>
+                <div class="dropdown selectlang">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">English
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Potruguese</a></li>
+                        <li><a href="#">Georgian</a></li>
+                        <li><a href="#">日本の</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="listtitle">Google Tanslate</li>
+                        <li><a href="#">Dutch</a></li>
+                        <li><a href="#">Russian</a></li>
+                        <li><a href="#">Turkish</a></li>
+                        <li><a href="#">Chinese</a></li>
+                        <li><a href="#">Korean</a></li>
+                    </ul>
+                </div>
 
-               <ul class="navfooter">
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">HOW IT WORKS</a></li>
-                <li><a href="#">PRIVACY, CONDITIONS AND COOKIES</a></li>
-            </ul>
+                <ul class="navfooter">
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">HOW IT WORKS</a></li>
+                    <li><a href="#">PRIVACY, CONDITIONS AND COOKIES</a></li>
+                </ul>
 
             </div>
 
@@ -203,6 +210,7 @@
 <script src="/statics/js/bootstrap.js"></script>
 <script src="/statics/js/liveicons.js"></script>
 <script src="/statics/js/icons.js"></script>
+<script src="/statics/tinymce-dist/tinymce.min.js"></script>
 <script src="/statics/js/angular.min.js"></script>
 <script src="/statics/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="/statics/ng-scrollbars/dist/scrollbars.min.js"></script>
@@ -213,6 +221,7 @@
 <script src="/statics/ng-droplet/dist/ng-droplet.min.js"></script>
 <script src="/statics/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="/statics/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="/statics/angular-ui-tinymce/src/tinymce.js"></script>
 {% endif %}
 
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initgmaplibrary"></script>
