@@ -157,7 +157,7 @@ function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal, $http) {
     $scope.openModal = function (size, template) {
         var modalInstance = $uibModal.open({
             'animation': $scope.animationsEnabled,
-            'templateUrl': "/statics/html/sendMessageBox.html",
+            'templateUrl': "/statics/html/"+template,
             'controller': function ($rootScope, $scope) {
                 $scope.fbLoginFromModal = function () {
                     $rootScope.FBlogin();
