@@ -62,7 +62,16 @@
                                 <section class="margindefault clearfix">
                                     <div class="col-md-11 col-lg-11 userbox clearfix">
                                         <div class="centred col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left">
-                                            <img class="panel-profile-img" ng-src="{{ renderGdriveUrl(visitedUser.userfolder, 'profilepicture.jpg') }}">
+                                            <img class="panel-profile-img"
+                                                 {% if enableEdit && userObject('user') && userObject('logintype') === 'form' %}
+                                                 ng-model="files"
+                                                 ngf-drop
+                                                 ngf-select
+                                                 ngf-pattern="'.jpg,.jpeg,.gif,.png'"
+                                                 ngf-drag-over-class="{pattern: 'image/*', accept: 'img-ok', reject: 'img-ko'}"
+                                                 ngf-multiple="true"
+                                                 {% endif %}
+                                                 ng-src="{{ renderGdriveUrl(visitedUser.userfolder, 'profilepicture.jpg') }}">
                                         </div>
 
                                         <div class="main-info col-xs-12 col-sm-12 col-md-7">

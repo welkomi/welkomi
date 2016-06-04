@@ -58,7 +58,7 @@ exports.init = function (expressrouter) {
                     parents = [],
                     ext = 'JPG',
                     height = null,
-                    width = 200;
+                    width = 900;
 
                 parents.push(req.params.parents);
 

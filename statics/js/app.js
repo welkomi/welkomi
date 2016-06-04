@@ -8,7 +8,8 @@ var app = angular.module('welkomiApp', [
     'ui.bootstrap',
     'ngScrollbars',
     'ngDroplet',
-    'ui.tinymce'
+    'ui.tinymce',
+    'ngFileUpload'
 ]);
 
 app
