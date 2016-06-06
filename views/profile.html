@@ -35,9 +35,11 @@
                         </li>
 
                         <li role="presentation" class="usermsn"><a href="#messages" aria-controls="messages" role="tab"
-                                                                   data-toggle="tab"><span
+                                                                   data-toggle="tab">
+                                                                   <span
                                 class="hidden-xs">Messages</span>
                             <i class="icon ion-chatbubbles" aria-hidden="true"></i>
+                            <span class="badge">1</span>
                         </a></li>
 
                         <li role="presentation" class="userplans"><a href="#plans" aria-controls="plans" role="tab"
@@ -76,10 +78,11 @@
 
                                         <div class="main-info col-xs-12 col-sm-12 col-md-7">
                                             <hgroup>
-                                                <h2 class="username">welkomi</h2>
+                                                <h2 class="username">welkomi<i class="editicon icon ion-edit"></i></h2>
 
-                                                <h3 class="localization"><i class="fa fa-map-marker"></i><a
-                                                        href="javascript:void(0)">Madrid </a><span></span>
+                                                <h3 class="localization"><i class="icon ion-location"></i><a
+                                                        href="javascript:void(0)">Madrid 
+                                                        <i class="editicon icon ion-edit"></i></a><span></span>
                                                 </h3>
 
                                             </hgroup>
@@ -87,13 +90,12 @@
                                                 "I like to learn other languages even if it is a little bit so please
                                                 bring
                                                 yours my way"
+                                                <i class="editicon icon ion-edit"></i>
                                             </blockquote>
                                         </div>
 
                                     </div>
-                                    <div class="edit col-md-1 col-lg-1 col-sm-12 clearfix text-right nopadding">
-                                        <a class="btn-edit" href="#">{{ __('EDIT') }}</a>
-                                    </div>
+                                
                                 </section>
 
                                 <div class="panel panel-default">
@@ -280,8 +282,30 @@
                         </div>
 
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="plans">...</div>
-                    <div role="tabpanel" class="tab-pane" id="count">...</div>
+                    <div role="tabpanel" class="tab-pane" id="plans">
+                        <div class="panel panel-default">
+                                    <div class="panel-heading clearfix">
+                                        <h2 class="pull-left">MY PLANS</h2>
+
+                                    </div>
+                                    <div class="panel-body">
+                                    <a href="#" class="addplans icon ion-plus-round"></a>
+                                    </div>
+                                </div>
+                        
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="count">
+                         <div class="panel panel-default">
+                                    <div class="panel-heading clearfix">
+                                        <h2 class="pull-left">MY COUNT</h2>
+
+                                    </div>
+                                    <div class="panel-body">
+                                    <a href="#" class="addplans icon ion-plus-round"></a>
+                                    </div>
+                                </div>
+                        
+                    </div>
                 </div>
 
 

@@ -1353,9 +1353,6 @@ aside .asidemgm {
    color: $wkcolor;
 }
 
-.scroll-to-fixed-fixed li a {
-    border-bottom: 1px solid #c1c1c1!important
-}
 
 .usernavmenu li a {
     position: relative;
@@ -1363,7 +1360,7 @@ aside .asidemgm {
     font-weight: bold;
     padding: 0px;
         height: 43px;
-    background-color: rgba(255,255,255,0.0);
+    background-color: #d8bfd8;
     border: none;
     border-radius: 0px;
     margin-right: 0px;
@@ -1396,7 +1393,7 @@ aside .asidemgm {
 
 .usernavmenu li a i{
     font-size: 2.6em;
-    color: #4f82b3;
+    color: #523152;
         position: relative;
     top: -5px;
 }
@@ -1426,6 +1423,14 @@ aside .asidemgm {
 }
 
 
+.usermsn .badge {
+    position: absolute;
+    z-index: 9999;
+    top: 3px;
+    left: 57%;
+    display: block;
+    
+}
 
 .myperfil .panel-profile-img{
     margin-top: 0px;
@@ -1473,7 +1478,10 @@ margin-bottom:10px
 }
 
 .userbox .localization a{
-  color: #282923
+  color: #282923;
+    .editicon {
+        color:$wkseccolor;
+    }
 }
 
 
@@ -2170,12 +2178,39 @@ outline:none
 }
 .userperfil .username {
   font-weight: bold;
-  color: #282923
+  color: #282923;
+}
+
+.editicon {
+        padding: 7px;
+        margin-left: 10px;
+        font-size: 0.8em;
+        color: $wkseccolor;
+    opacity: 0;
+    }
+
+
+@each $edit in h2,h3, p,blockquote  {
+ #{$edit}:hover i.editicon {
+     opacity: 1;
+   
+ }
+}
+
+.addplans {
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    
 }
 
 .users .username {
   font-size: 1.9em;
   margin-top: 7px;
+    cursor: pointer;
+    &:hover {
+     cursor: pointer;
+    }
 }
 
 .users .tourme {
