@@ -3,6 +3,7 @@
  */
 
 function RegisterUserCtrl ($rootScope, $scope, $http, $log) {
+    
     $scope.submit = function (e) {
         e.preventDefault();
 
@@ -22,7 +23,8 @@ function RegisterUserCtrl ($rootScope, $scope, $http, $log) {
                         data[0].username
                         && !data[0].found
                     ) {
-                        $('#submitedNewUserOk').submit();
+                        //$('#submitedNewUserOk').submit();
+                        $scope.$parent.openModal('sm', 'verificationMail.html');
                     }
 
                     else {

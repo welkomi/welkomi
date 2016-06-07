@@ -185,7 +185,8 @@ function CommonCtrl($rootScope, $scope, $window, FBF, $uibModal, $http) {
 
     $scope.tinymceOptions = {
         plugins: 'link image code',
-        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
+        menubar: false,
+        toolbar: 'undo redo | bold italic',
         inline: true
     };
 }

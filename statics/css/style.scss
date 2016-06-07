@@ -3088,6 +3088,16 @@ width: 100%;
   
 }
 
+
+/*edit boxes in profile*/
+.panel-body {
+    &:focus{
+       outline: none; 
+    }
+} p:focus{
+    outline: none;
+}
+
 @media (min-width: 568px){
 .modal-dialog {
     width: 480px;
