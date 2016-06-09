@@ -36,6 +36,10 @@
                     <form accept-charset="UTF-8" class="w-authentication" id="new_user" name="new_user">
 
                         <fieldset>
+                            <label class="wk-hidden" for="username">Email</label>
+                            <input ng-model="user.email" class="pure-input" id="username" name="username" placeholder="Email"
+                                   required="required" type="email" value="">
+                                   
                             <label class="wk-hidden" for="firstname">First name</label>
                             <input ng-model='user.firstname' class="pure-input" id="firstname" name="firstname" placeholder="First name"
                                    required="required" type="text">
@@ -43,11 +47,6 @@
                             <label class="wk-hidden" for="lastname">Last name</label>
                             <input ng-model="user.lastname" class="pure-input" id="lastname" name="lastname" placeholder="Last name"
                                    required="required" type="text">
-
-
-                            <label class="wk-hidden" for="username">Email</label>
-                            <input ng-model="user.email" class="pure-input" id="username" name="username" placeholder="Email"
-                                   required="required" type="email" value="">
 
 
                             <label class="wk-hidden" for="password">Password</label>
@@ -263,7 +262,7 @@
                     </form>
 
                
-               
+               <h6 class="fillall">Por favor rellene todos los campos requeridos</h6>
                
                 </div>
             </div>

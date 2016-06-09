@@ -1111,6 +1111,22 @@ aside .asidemgm {
   width: 100%; }
 
 /*REGISTER FORM*/
+.registeruser .ng-invalid {
+    border: 2px solid $wkcolor;
+}
+
+.registeruser .w-authentication {
+    border: none;
+}
+
+.fillall {
+    font-size: 1.2em;
+    color: #dc143c;
+    position: relative;
+    top: 17px;
+    text-align: center
+}
+
 .userRegister{
   background-image: url('../images/trip.png');
   background-size: cover;
@@ -1122,18 +1138,29 @@ aside .asidemgm {
   color: #FFF;
   font-family: 'Mrs Sheppards', cursive;
 }
+
+.conect_fb {
+    display: table;
+    width: 100%;
+}
 .wk-button-facebook{
-  height: 40px;
+  height: 50px;
   text-align: center;
   width: 100%;
-  display: block;
-  background-color: rgb(17, 67, 152);
-  color: #fff
-
+  display: table-cell;
+    vertical-align: middle;
+  background-color: #44619d;
+  color: #fff;
+      -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+    
 }
 
 .wk-button-facebook:hover{
-  color: #fff
+  color: #fff;
+    background-color: #395388;
 
 }
 
@@ -1153,25 +1180,34 @@ aside .asidemgm {
 .signup_separator hr{
   margin: -16px auto 10px auto;
   width: 90%;
+    color: #efefef;
+background-color: #efefef;
+height: 1px;
 
 }
 
 .signup_eparator_text{
   display: inline-block;
   padding: 8px;
+    background-color: #ccd0ce;
+    font-size: 1.2em;
+}
+
+.signup .signup_eparator_text{
+    background-color: #fff;
 }
 
 .registeruser{
   background-color: rgba(255,255,255,0.65);
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
 
 }
 
 .registeruser input{
   margin-bottom: 8px;
-  height: 40px;
+  height: 50px;
   padding-left: 5px;
-  border: 1px solid rgb(205, 204, 204);
+  border: none;
   border-radius: 5px
 
 }
@@ -1188,7 +1224,7 @@ aside .asidemgm {
 }
 
 .bir_field select{
-  height: 40px;
+  height: 50px;
   margin-bottom: 8px;
   border: 1px solid rgb(205, 204, 204);
   border-radius: 5px
@@ -1196,7 +1232,13 @@ aside .asidemgm {
 }
 
 .condicions{
-  margin: 8px 0px 15px 0px
+  margin: 8px 0px 15px 0px;
+    small {
+        font-size: 1.1em;
+    }
+    a {
+        color: $wkseccolor;
+    }
 
 }
 
@@ -1253,8 +1295,17 @@ aside .asidemgm {
 }
 
 .btn-wk{
-  background-color: #fbba0e;
-  height: 40px;
+  background-color: $wkcolor;
+    color: #fff;
+  height: 50px;
+    -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+    &:hover{
+        background-color: #F44E51;
+        color: #fff
+    }
 
 }
 
@@ -1730,6 +1781,32 @@ aside .usersearchperfil {
     font-size: 18px;
     margin-top: 0px
 }
+
+.verifymail .infomsn {
+    h3{
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px
+}
+    h4 {
+        text-align: center;
+    }
+}
+.modalheadlin .logomodal{
+ color: #000;
+  display: block;
+  margin: 0 auto 0 auto;
+  width: 150px;
+  height: 40px;
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxeW42Vkl3Tk91NTQ', 'logo.png'));
+  background-repeat: no-repeat;
+  background-size: contain;
+    
+    a {
+        display: none;
+    }
+}
+
 .fastmsn .panel-profile-img {
     margin-top: 0px
 }
@@ -1744,6 +1821,17 @@ aside .usersearchperfil {
     float: right
 }
 
+.verifymail .infomsn {
+    width: 100%;
+    float: none;
+    p {
+        font-size: 1.2em;
+        margin-top: 20px;
+        span {
+        color: $wkcolor;
+    }
+}
+}
 .fastmsn p {
    margin-top: 15px
 }
@@ -2195,6 +2283,11 @@ outline:none
      opacity: 1;
    
  }
+}
+
+.user-logoff .addplans {
+    display: none;
+    
 }
 
 .addplans {
@@ -2866,6 +2959,18 @@ font-family: 'Nothing You Could Do', cursive;
     padding: 25px
 }
 
+.verifymail {
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px
+}
+
 .signup .fastlogin {
 position: relative;
     margin-top: 15px
@@ -2880,6 +2985,16 @@ width: 100%;
 margin-bottom: 7px;
     text-transform: uppercase;
     font-weight: bold;
+    height: 50px;
+    padding: 17px 0 17px 0;
+}
+
+.verifymail .btn-sesson {
+margin-bottom: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 50px;
+        padding: 17px 0 17px 0;
 }
 
 .signup .pure-input {
@@ -2996,9 +3111,9 @@ width: 100%;
     width: 100%;
     left: 0;
    margin-left: 0px;
-        float: left;
-          
+        float: left;       
 }
+      
     .headerfixsearch {
         width: 50px;
         height: 50px;
