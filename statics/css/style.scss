@@ -395,7 +395,7 @@ text-align:center;
   fill: #fff
 }
 .wklogin .btn-publish svg path {
-  fill: #ec6060!important
+  fill: #edb528!important
 }
 
    .specialheader .btn-joinus {
@@ -516,7 +516,7 @@ text-align:center;
 }
 
 .input-group-addon a {
-    color: $wkcolor;
+    color: $wkseccolor;
     font-size: 1.3em
 }
 
@@ -1401,7 +1401,8 @@ height: 1px;
 }
 
 .usernavmenu .activ a:hover {
-   color: $wkcolor;
+   color: $wkdarkcolor;
+    background-color: $wkseccolor;
 }
 
 
@@ -1411,7 +1412,7 @@ height: 1px;
     font-weight: bold;
     padding: 0px;
         height: 43px;
-    background-color: #d8bfd8;
+    background-color: #f6d379;
     border: none;
     border-radius: 0px;
     margin-right: 0px;
@@ -1421,18 +1422,24 @@ height: 1px;
   -ms-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
-    margin-right: 2px
+    margin-right: 1px
 }
 
-
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
+    background-color: $wkseccolor;
+    color: $wkdarkcolor;
+    
+}
 .nav-tabs > li.active > a {
-     color: #555555;
-    background-color: #ffffff;
+     color: $wkdarkcolor;
+    background-color: $wkseccolor;
     border: none!important;
-    border-bottom: 2px solid $wkseccolor;
     cursor: default;
 }
 
+.nav-tabs > li.active > a:focus {
+   background-color: $wkseccolor;
+}
 .usernavmenu li a span {
     display: none
 }
@@ -1444,7 +1451,7 @@ height: 1px;
 
 .usernavmenu li a i{
     font-size: 2.6em;
-    color: #523152;
+    color: $wkdarkcolor;
         position: relative;
     top: -5px;
 }
@@ -1452,8 +1459,12 @@ height: 1px;
 
 
 .usernavmenu li a:hover {
-    background-color: rgba(255,255,255,1);
     border: none;
+    background-color: $wkseccolor;
+}
+
+.usernavmenu li a:hover i {
+    color: $wkdarkcolor;
 }
 
 
@@ -2003,7 +2014,7 @@ footer p {
 
 .navfooter a {
   font-size: 1em; 
-    color: $wkseccolor;
+    color: $wkdarkcolor;
       -webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
   -ms-transition: color 0.2s linear;
@@ -2013,7 +2024,7 @@ footer p {
 
 .navfooter a:hover {
   text-decoration: none;
-  color: #ec6060; }
+  color: $wkcolor; }
 
 .footer-copyright {
   position: relative;
@@ -2294,6 +2305,10 @@ outline:none
     display: block;
     text-align: center;
     font-size: 3em;
+    color: $wkcolor;
+    &:hover {
+        color: #F44E51;
+    }
     
 }
 
