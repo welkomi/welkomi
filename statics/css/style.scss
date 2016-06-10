@@ -1281,7 +1281,7 @@ height: 1px;
   padding-left:0px
 }
 .breadcrumb a {
-  color: $wkseccolor;
+  color: $wkcolor;
   font-weight: bold;
   padding-left: 15px
 }
@@ -1455,6 +1455,13 @@ height: 1px;
     color: #fff;
         position: relative;
     top: -5px;
+}
+
+.btn-normal {
+    background-color: $wkcolor;
+    color: #fff;
+    width: 200px;
+    padding: 15px 30px 15px 30px;
 }
 
 
@@ -1736,10 +1743,7 @@ margin-bottom:10px
   color: #34ae6b
 
 }
-.contactways .wk_msn{
-  border-left: solid 1px #dadfe0
 
-}
 
 aside .usersearchperfil {
   padding: 20px 0px 0px 0px!important;
@@ -2323,7 +2327,7 @@ outline:none
         padding: 7px;
         margin-left: 10px;
         font-size: 0.8em;
-        color: $wkseccolor;
+        color: $wkcolor;
     opacity: 0;
     }
 
@@ -2848,7 +2852,7 @@ font-family: 'Nothing You Could Do', cursive;
 }
 
 .usermsgaside .activ {
-    color: $wkseccolor
+    color: $wkcolor
 }
 
 .inbox {
@@ -2931,7 +2935,8 @@ font-family: 'Nothing You Could Do', cursive;
 .inbox .contactways {
     text-align: center;
     border: none;
-    .wk_msn {
+    .wk_msn 
+    {
         a {
             color: $wkcolor;
             padding: 10px;
@@ -3124,6 +3129,10 @@ width: 100%;
 
 
 @media (max-width: 960px){
+    
+    .btn-normal {
+    width: 100%;
+}
     
     .changePass {
     
