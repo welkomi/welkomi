@@ -11,8 +11,8 @@
 @import 'mixins';
 /*header*/
 body {
-  background-color: #ecf0f1;
-  font-family: 'Lato', sans-serif;
+  background-color: #ecf0f1; 
+font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased!important;
   -moz-osx-font-smoothing: grayscale!important;
 }
@@ -113,6 +113,7 @@ outline: 0;
 .mycontacts .active {
     background-color: rgba(255,255,255,0.3)
 }
+
 
 .col_centred{
   float: none;
@@ -744,9 +745,14 @@ aside .asidemgm {
 
 
 
-.username a {
-  color: $wkdarkcolor; }
-
+.username {
+        margin: 5px 0 15px 0;
+    a {
+  color: $wkdarkcolor;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+}
 .username a:hover {
   text-decoration: none; }
 
@@ -771,14 +777,16 @@ aside .asidemgm {
 
 
 .panel-profile-img{
-  width: 110px;
-     height: 110px;
+  width: 120px;
+     height: 120px;
        object-fit: cover;
-          margin-top: -50px;
+          margin-top: -60px;
     border: 3px solid #fff;
     border-radius: 100%;
 }
-
+.usersearchperfil .panel-profile-img {
+     margin-top: -77px;
+}
 
     
         .asideplans h2 {   
@@ -1635,43 +1643,53 @@ margin-bottom:10px
 
 /*tourinfo*/
 
+.header_title {
+    height: 170px;
+    width: 100%;
+    padding-right: 0px;
+    margin-bottom: 25px;
+}
+.tour_title {
+    width: 85%;
+    float: left;
+    display: table-cell;
+     padding: 5px 0 0px 0;
+    hgroup {
+        padding: 0 35px;
+    }
+    
+    h2 {
+        font-size: 2.3em;
+    }
+}
+
+.priceitmodule {
+    display: table;
+    height: 100%;
+    width: 15%;
+    float: right;
+    border-radius: 2px;
+    background-color: #000;
+    
+    h2 {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: #fff;
+    }
+}
+
 .tour-header {
-  background-image: url("../images/citys/madrid.png");
+  background-image: url(render-gdrive-url('0B9gI2Lt4M_dxZFRPLVdhbUxRREE', 'madird.jpg'));
   background-size: cover;
-  height: 260px;
+    background-position: center center;
+  height: 360px;
   width: 100%;
   background-repeat: no-repeat;
   display:table;
 }
-.tour-header .velohg {
-  text-align: center;
-  vertical-align: middle;
-  display:table-cell;
-}
 
-.tour-header .velohg hgroup {
-  padding: 15px;
-  width: 90%;
-  margin: 0 auto 0 auto;
-  color: #fff
-}
 
-.tour-header .velohg hgroup i {
-  font-size: 2.8em;
-  margin-bottom: 10px
-}
-.tour-header .velohg hgroup h2 {
-  font-size: 45px;
-  border-top: 2px solid #fff;
-  padding-top: 11px;
-  margin-top: 0px;
-    font-weight: bold
-}
-
-.tour-header .velohg hgroup h3 {
-  font-size: 45px;
-    font-weight: bold
-}
 .tourinfo{
   background-color: #fff;
   padding: 5px 20px 10px 20px;
@@ -1697,8 +1715,11 @@ margin-bottom:10px
   border: solid 1px #dadfe0
 
 }
-.priceit {
-    margin-bottom: 10px
+.rewievmodule {
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
 }
     .bookingtour .btn-tourme{
       background-color: $wkcolor;
@@ -1758,7 +1779,7 @@ margin-bottom:10px
 
 aside .usersearchperfil {
   padding: 20px 0px 0px 0px!important;
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
   border: solid 1px #dadfe0;
 }
 
@@ -1786,10 +1807,10 @@ aside .usersearchperfil {
 }
 
 .pickdate{
-  padding-right: 7px;
+  padding: 0 7px 0 0px
 }
 .picknumb{
-  padding-left: 7px;
+   padding: 0 0px 0 7px
 }
 
 /*social icons*/
@@ -2283,7 +2304,7 @@ footer p {
 }
 
 .selctperson {
-    padding-left: 4px
+    padding: 0 0px 0 4px;
 }
  .personmuch select{
     background: #fff;
@@ -2515,7 +2536,7 @@ outline:none
 }
 
 .panel-body h3  {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold
 }
 
