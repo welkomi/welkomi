@@ -3,7 +3,9 @@
  */
 
 var User = require('./../../models').model('User'),
-    redis = require('./../../wrappers/rediswrapper').init();
+    UserProfile = require('./../../models').model('UserProfile'),
+    redis = require('./../../wrappers/rediswrapper').init(),
+    q = require('q');
 
 exports.init = function (expressrouter) {
     expressrouter.prefix(
@@ -46,21 +48,19 @@ exports.init = function (expressrouter) {
                         });
                     }
 
-                    User
-                        .find({
-                            '_id': userid
-                        })
-                        .select('-password')
-                        .select('-__v')
-                        .exec(function (errFind, resFind) {
-                            if (errFind) throw errFind;
-
+                    q
+                        .all([
+                            User.find({'_id': userid}),
+                            UserProfile.find({'user_id': userid})
+                        ])
+                        .done(function (resUser) {
                             var request_id = req.user
                                 ? ~~req.user._id
                                 : null;
 
                             res.render('profile', {
-                                'visitedUser': resFind[0],
+                                'visitedUser': resUser[0][0],
+                                'visitedUserProfile': resUser[1][0],
                                 'enableEdit': request_id === ~~userid
                             });
                         });

@@ -10,8 +10,7 @@
 
 {% block content %}
 
-
-<div class="container-fluid profile top">
+<div class="container-fluid profile top" ng-init="userProfile = {{ visitedUserProfile | raw }}">
     <div class="container">
         <div class="row">
             <ol class="breadcrumb">
@@ -37,7 +36,7 @@
                         <li role="presentation" class="usermsn"><a href="#messages" aria-controls="messages" role="tab"
                                                                    data-toggle="tab">
                                                                    <span
-                                class="hidden-xs">Messages</span>
+                                                                           class="hidden-xs">Messages</span>
                             <i class="icon ion-chatbubbles" aria-hidden="true"></i>
                             <span class="badge">1</span>
                         </a></li>
@@ -65,15 +64,18 @@
                                     <div class="col-md-11 col-lg-11 userbox clearfix">
                                         <div class="centred col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left">
                                             <img class="panel-profile-img"
-                                                 {% if enableEdit && userObject('user') && userObject('logintype') === 'form' %}
-                                                 ng-model="files"
-                                                 ngf-drop
-                                                 ngf-select
-                                                 ngf-pattern="'.jpg,.jpeg,.gif,.png'"
-                                                 ngf-drag-over-class="{pattern: 'image/*', accept: 'img-ok', reject: 'img-ko'}"
-                                                 ngf-multiple="true"
-                                                 {% endif %}
-                                                 ng-src="{{ renderGdriveUrl(visitedUser.userfolder, 'profilepicture.jpg') }}">
+                                                 {% if enableEdit && userObject('user') && userObject('logintype') ===
+                                            'form' %}
+                                            ng-model="files"
+                                            ngf-drop
+                                            ngf-select
+                                            ngf-pattern="'.jpg,.jpeg,.gif,.png'"
+                                            ngf-drag-over-class="{pattern: 'image/*', accept: 'img-ok', reject:
+                                            'img-ko'}"
+                                            ngf-multiple="true"
+                                            {% endif %}
+                                            ng-src="{{ renderGdriveUrl(visitedUser.userfolder, 'profilepicture.jpg')
+                                            }}">
                                         </div>
 
                                         <div class="main-info col-xs-12 col-sm-12 col-md-7">
@@ -81,21 +83,20 @@
                                                 <h2 class="username">welkomi<i class="editicon icon ion-edit"></i></h2>
 
                                                 <h3 class="localization"><i class="icon ion-location"></i><a
-                                                        href="javascript:void(0)">Madrid 
-                                                        <i class="editicon icon ion-edit"></i></a><span></span>
+                                                        href="javascript:void(0)">Madrid
+                                                    <i class="editicon icon ion-edit"></i></a><span></span>
                                                 </h3>
 
                                             </hgroup>
-                                            <blockquote class="clearfix col-lg-12">
-                                                "I like to learn other languages even if it is a little bit so please
-                                                bring
-                                                yours my way"
+                                            <blockquote class="clearfix col-lg-12" {% if enableEdit %}ui-tinymce="tinymceOptions"
+                                                        ng-model="userProfile.intro" {% endif %}>
+                                                {{ visitedUserProfile.intro | raw }}
                                                 <i class="editicon icon ion-edit"></i>
                                             </blockquote>
                                         </div>
 
                                     </div>
-                                
+
                                 </section>
 
                                 <div class="panel panel-default">
@@ -103,24 +104,24 @@
                                         <h2 class="pull-left">About me</h2>
 
                                     </div>
-                                    <div class="panel-body" {% if enableEdit %}ui-tinymce="tinymceOptions" ng-model="tinymceModel"{% endif %}>
-                                        <p>Hi I'm Jean from France, I'm a nice and open minded man, I love travelling
-                                            and meeting new people. I dream to do a world tour for a year soon.</p>
-
+                                    <div class="panel-body" {% if enableEdit %}ui-tinymce="tinymceOptions"
+                                         ng-model="userProfile.about" {% endif %}>
+                                        {{ visitedUserProfile.about | raw }}
                                     </div>
                                 </div>
-                                
-                                  <div class="panel panel-default">
+
+                                <div class="panel panel-default">
                                     <div class="panel-heading clearfix">
                                         <h2 class="pull-left">Languages I speak</h2>
 
                                     </div>
-                                    <div class="panel-body" {% if enableEdit %}ui-tinymce="tinymceOptions" ng-model="tinymceModel"{% endif %}>
+                                    <div class="panel-body" {% if enableEdit %}ui-tinymce="tinymceOptions"
+                                         ng-model="userProfile.lengs" {% endif %}>
                                         <ul class="list-inline">
                                             <li>Deutsch</li>
                                             <li>Español</li>
                                             <li>English</li>
-                                            <li> Georgian</li>
+                                            <li>Georgian</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -284,62 +285,65 @@
                     </div>
                     <div role="tabpanel" class="tab-pane" id="plans">
                         <div class="panel panel-default">
-                                    <div class="panel-heading clearfix">
-                                        <h2 class="pull-left">MY PLANS</h2>
+                            <div class="panel-heading clearfix">
+                                <h2 class="pull-left">MY PLANS</h2>
 
-                                    </div>
-                                    <div class="panel-body">
-                                    <a href="#" class="addplans icon ion-plus-round"></a>
-                                    </div>
-                                </div>
-                        
+                            </div>
+                            <div class="panel-body">
+                                <a href="#" class="addplans icon ion-plus-round"></a>
+                            </div>
+                        </div>
+
                     </div>
                     <div role="tabpanel" class="tab-pane" id="count">
-                          <div class="panel panel-default">
-                                    <div class="panel-heading clearfix">
-                                        <h2 class="pull-left">Change password</h2>
+                        <div class="panel panel-default">
+                            <div class="panel-heading clearfix">
+                                <h2 class="pull-left">Change password</h2>
 
-                                    </div>
-                                    
-                                    <div class="panel-body account">
-                                                                   
-                                   <form class="changePass" >
- <div class="form-group">
-    <label for="exampleInputPassword1">Old password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-                                  
-                                  <div class="form-group">
-    <label for="exampleInputPassword1">New password</label>
-    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-  </div>
-                                  
-                                  <div class="form-group">
-    <label for="exampleInputPassword1">Confirm new password</label>
-    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-  </div>
-                                   </form>
-                                   
-                                     <a href="#" class="btn btn-normal">Update password</a>
-                                   
-                                   
-                                    </div>
-                                </div>
-                        
-                        
-                         <div class="panel panel-default">
-                                    <div class="panel-heading clearfix">
-                                        <h2 class="pull-left delete">Delete account</h2>
+                            </div>
 
+                            <div class="panel-body account">
+
+                                <form class="changePass">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Old password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                               placeholder="Password">
                                     </div>
-                                    
-                                    <div class="panel-body account">
-                                 <p>Once you delete your account, there is no going back. Please be certain.</p>
-                                   
-                                   <a href="#" class="btn btn-welkomi">DELETE</a>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">New password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword2"
+                                               placeholder="Password">
                                     </div>
-                                </div>
-                        
+
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirm new password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword3"
+                                               placeholder="Password">
+                                    </div>
+                                </form>
+
+                                <a href="#" class="btn btn-normal">Update password</a>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading clearfix">
+                                <h2 class="pull-left delete">Delete account</h2>
+
+                            </div>
+
+                            <div class="panel-body account">
+                                <p>Once you delete your account, there is no going back. Please be certain.</p>
+
+                                <a href="#" class="btn btn-welkomi">DELETE</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 

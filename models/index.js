@@ -49,6 +49,20 @@ var UserSchema = mongoose.Schema({
     }
 });
 
+var UserProfileSchema = mongoose.Schema({
+    '_id': 'Number',
+    'user_id': 'Number',
+    'intro': {
+        'type': 'String',
+        'default': 'Escribe una breve introducción'
+    },
+    'about': {
+        'type': 'String',
+        'default': 'Cuentanos sobre ti.'
+    },
+    'langs': []
+});
+
 var IdiomsSchema = mongoose.Schema({
     '_id': 'Number',
     'key': 'String',
@@ -69,7 +83,11 @@ autoIncrement.initialize(mongoose.connect(process.env.MONGOLAB_URI));
  * Schema para usuarios
  */
 UserSchema.plugin(autoIncrement.plugin, 'User');
-//UserSchema.plugin(passportLocalMongoose);
+
+/**
+ * Schema para el profile del usuario
+ */
+UserProfileSchema.plugin(autoIncrement.plugin, 'UserProfile');
 
 /**
  * Schema para idiomas
@@ -84,6 +102,7 @@ LanguagesSchema.plugin(autoIncrement.plugin, 'Languages');
 exports.model = function(model) {
      var models = {
          'User': mongoose.model('User', UserSchema),
+         'UserProfile': mongoose.model('UserProfile', UserProfileSchema),
          'Idioms': mongoose.model('Idioms', IdiomsSchema),
          'Languages': mongoose.model('Languages', LanguagesSchema)
      };

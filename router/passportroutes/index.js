@@ -57,7 +57,9 @@ exports.init = function (expressrouter) {
          '/register/',
          function (req, res, next) {
              var user = req.body,
-                 User = models.model('User');
+                 User = models.model('User'),
+                 UserProfile = models.model('UserProfile');
+
              User
                  .find({
                      'username': req.body.username
@@ -123,20 +125,27 @@ exports.init = function (expressrouter) {
                                                          }, function (errUpdate, resUpdate) {
                                                              if (errUpdate) throw errUpdate;
 
-                                                             User
-                                                                 .find({
-                                                                     'username': user.username
-                                                                 })
-                                                                 .select('-password')
-                                                                 .lean()
-                                                                 .exec(function (errCreateFind, resCreateFind) {
-                                                                     if (errCreateFind) throw errCreateFind;
+                                                             UserProfile
+                                                                 .create({
+                                                                     'user_id': resCreate._id
+                                                                 }, function (errCreateProfile, resCreateProfile) {
+                                                                     if (errCreateProfile) throw  errCreateProfile;
 
-                                                                     if (resCreateFind.logintype === 'form') {
-                                                                        resCreateFind.password = user.password
-                                                                     }
+                                                                     User
+                                                                         .find({
+                                                                             'username': user.username
+                                                                         })
+                                                                         .select('-password')
+                                                                         .lean()
+                                                                         .exec(function (errCreateFind, resCreateFind) {
+                                                                             if (errCreateFind) throw errCreateFind;
 
-                                                                     res.json(resCreateFind);
+                                                                             if (resCreateFind.logintype === 'form') {
+                                                                                 resCreateFind.password = user.password
+                                                                             }
+
+                                                                             res.json(resCreateFind);
+                                                                         });
                                                                  });
                                                          });
                                                  });
