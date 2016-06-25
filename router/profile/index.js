@@ -58,6 +58,11 @@ exports.init = function (expressrouter) {
                                 ? ~~req.user._id
                                 : null;
 
+                            console.log(resUser[0][0]);
+                            console.log(resUser[1][0]);
+                            console.log(request_id);
+                            console.log(~~userid);
+
                             res.render('profile', {
                                 'visitedUser': resUser[0][0],
                                 'visitedUserProfile': resUser[1][0],

@@ -1,5 +1,0 @@
-{
-	"/register-user/": "/register-user/",
-	"/login-user/": "/login-user/",
-	"/profile/:user/": "/profile/:user/"
-}
