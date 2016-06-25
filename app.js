@@ -36,6 +36,7 @@ idioms.getAvailableLangs(function () {
     /**
      * Config for i18n
      */
+
     i18n.configure({
         'locales': ___availableLangs.array,
         'directory': __dirname + '/locales',

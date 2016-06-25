@@ -35,7 +35,8 @@ exports.init = function (callback) {
 
                     var languages = response[0].languages,
                         obj = {
-                            'array': languages,
+                            'object': languages,
+                            'array': formatLanguagesString(languages),
                             'route': '/:lang(' + formatLanguagesString(languages) + ')'
                         };
 
