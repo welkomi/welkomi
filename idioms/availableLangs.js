@@ -2,14 +2,27 @@
  * Created by chadsfather on 27/3/16.
  */
 
-var models = require('./../models/'),
+var _ = require('underscore'),
+    models = require('./../models/'),
     redis = require('./../wrappers/rediswrapper').init();
 
 exports.init = function (callback) {
     var rediskey = '___availableLangs';
 
+    function formatLanguagesString (obj) {
+        var strings = [];
+
+        _.each(obj, function (v, k) {
+            strings.push(v.key);
+        });
+
+        return strings.join('|');
+    }
+
     redis.exists(rediskey, function (errRedis, resRedis) {
         if (errRedis) throw errRedis;
+
+        resRedis = false;
 
         if (!resRedis) {
             models.model('Languages')
@@ -21,10 +34,9 @@ exports.init = function (callback) {
                     if (err) throw err;
 
                     var languages = response[0].languages,
-                        route = languages.join('|'),
                         obj = {
                             'array': languages,
-                            'route': '/:lang(' + route + ')'
+                            'route': '/:lang(' + formatLanguagesString(languages) + ')'
                         };
 
                     global[rediskey] = obj;
