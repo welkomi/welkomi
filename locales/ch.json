@@ -9,5 +9,4 @@
 	"/home/": "/",
 	"/register-user/": "/%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C/",
 	"/login-user/": "/%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7/",
-	"/profile/:user/": "/%E8%BD%AE%E5%BB%93/:user/"
 }

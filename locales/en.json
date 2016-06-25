@@ -9,13 +9,14 @@
 	"/home/": "/",
 	"/register-user/": "/register-user/",
 	"/login-user/": "/login-user/",
-	"/profile/:user/": "/profile/:user/",
 	"showyourplace": "showyourplace",
-	"/profile/": "/profile/",
+	"/profile/:user": "/profile/:user",
 	"/logout/": "/logout/",
 	"/wkmessage/": "/wkmessage/",
 	"more": "more",
 	"More": "More",
 	"Edit": "Edit",
-	"EDIT": "EDIT"
+	"EDIT": "EDIT",
+	"/profile/": "/profile/",
+	"/profile/:user/": "/profile/:user/"
 }

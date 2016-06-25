@@ -9,10 +9,10 @@
 	"/home/": "/",
 	"/register-user/": "/registrar-usuario/",
 	"/login-user/": "/logar-usuario/",
-	"/profile/:user/": "/perfil/:user/",
 	"/wkmessage/": "/wkmessage/",
 	"/profile/": "/perfil/",
 	"More": "More",
 	"Edit": "Edit",
-	"EDIT": "EDIT"
+	"EDIT": "EDIT",
+	"/profile/:user/": "/perfil/:user/"
 }

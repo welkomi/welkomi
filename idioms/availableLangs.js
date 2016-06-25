@@ -9,14 +9,16 @@ var _ = require('underscore'),
 exports.init = function (callback) {
     var rediskey = '___availableLangs';
 
-    function formatLanguagesString (obj) {
+    function formatLanguagesString (obj, array) {
         var strings = [];
 
         _.each(obj, function (v, k) {
             strings.push(v.key);
         });
 
-        return strings.join('|');
+        return array
+            ? strings
+            : strings.join('|')
     }
 
     redis.exists(rediskey, function (errRedis, resRedis) {
@@ -36,7 +38,7 @@ exports.init = function (callback) {
                     var languages = response[0].languages,
                         obj = {
                             'object': languages,
-                            'array': formatLanguagesString(languages),
+                            'array': formatLanguagesString(languages, true),
                             'route': '/:lang(' + formatLanguagesString(languages) + ')'
                         };
 

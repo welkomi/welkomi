@@ -9,8 +9,8 @@
 	"/home/": "/",
 	"/register-user/": "/registrieren-Benutzer/",
 	"/login-user/": "/Login-Benutzer/",
-	"/profile/:user/": "/Profil/:user/",
 	"/wkmessage/": "/wkmessage/",
 	"/profile/": "/profile/",
-	"More": "More"
+	"More": "More",
+	"/profile/:user/": "/profile/:user/"
 }
