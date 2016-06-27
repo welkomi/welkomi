@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="/statics/css/screen.css">
+<link rel="stylesheet" type="text/css" href="/statics/css/ngGallery.css">
+{% endblock %}
+
+{% block pageController %}ng-controller="TourPublishCtrl"{% endblock %}
+
+{% block content %}
+
+
+<div class="container-fluid publishpage top add">
+         <div class="row">
+          <div class="container">
+           <ol class="breadcrumb">
+  <li><a href="#">Madrid</a></li>
+  <li class="active">City tour</li>
+</ol>
+</div>
+</div>
+
+<div class="row">
+    <div class="container-fluid">
+       <div class="tour-header m_bottom">
+           <a href="#" class="selectimg"><i class="icon ion-image"></i><span>Drag o choose you background imagen</span>  </a></div>                 
+</div>
+</div>
+
+<div class="row">
+            <div class="container">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m_bottom">
+
+       <div class="clearfix header_title">
+          <div class="panel-body tour_title">
+                                <hgroup>
+                                    <h2>Guia por el barrio de las letras </h2>
+                                    <ul class="toolsreview list-inline">
+                                        <li class="likeit">  
+                                        <a class="icon ion-ios-heart" href="#"></a>
+                                         
+                                          <div class="like-count" id="gh-count" href="#" style="display: block;">5988</div>
+                                          
+                                          
+                                        </li>
+                                    </ul>
+                                </hgroup>
+                          
+                                </div>
+                                <div class="priceitmodule">
+                                   <h2>Price it</h2>  
+                                </div>
+                            </div>
+
+            <div class="tourmodel">
+                
+                    <div class="panel panel-default">
+                                <div class="panel-heading clearfix">
+                                <h2 class="pull-left">My Plan</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p>Describe your plan</p>
+                                    
+                                     <p>English - Spanish
+                                     </p>
+                               
+                          
+                                </div>
+                            </div>
+
+          
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804"
+                            width="600" height="450" frameborder="0" style="border:0"></iframe>
+                </div>
+                <div class="gallerytour clearfix">
+                    <div class="tourimages">
+                        <ng-gallery images="images"></ng-gallery>
+                    </div>
+                    <a class="morepict" href="#">
+                        <div class="moreimages"><a href="#" class="addplans icon ion-plus-round"></a>add images</div>
+                    </a>
+                </div>
+            
+        </div>
+           </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block pagejs %}
+<script src="/statics/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+<script src="/statics/js/tourpublish.js"></script>
+{% endblock %}

@@ -83,6 +83,12 @@ exports.routes = function (expressrouter) {
      * Route '/'
      */
     require('./tourpublish').init(expressrouter, idioms);
+        /**
+     * add plans site, just momently for the css
+     *
+     * Route '/'
+     */
+    require('./addplans').init(expressrouter, idioms);
     
     /**
      * welkomi message site

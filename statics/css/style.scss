@@ -17,11 +17,6 @@ font-family: 'Roboto', sans-serif;
   -moz-osx-font-smoothing: grayscale!important;
 }
 
-@media (min-width: 1370px){
-.container {
-    width: 1350px;
-}
-}
 
 a:focus {
 outline: 0;
@@ -113,7 +108,15 @@ outline: 0;
 .mycontacts .active {
     background-color: rgba(255,255,255,0.3)
 }
+.display-table{
+    display: table
+}
 
+.display-cell{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center
+}
 
 .col_centred{
   float: none;
@@ -795,8 +798,6 @@ aside .asidemgm {
             font-size: 1.5em;
             margin-bottom: 15px;
             text-transform: uppercase;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #dddddd;
             }
 
 .myplans hgroup {
@@ -806,6 +807,11 @@ aside .asidemgm {
 .myplans h4 {
    font-size: 1.4em
     
+}
+
+#plans h3 {
+    color: #575855;
+    text-align: center;
 }
 
 .myplans h5 {
@@ -1033,7 +1039,7 @@ aside .asidemgm {
 }
 
 .gallerytour{
-  margin-top: 10px
+  margin-top: 15px
 
 }
 
@@ -1063,14 +1069,14 @@ aside .asidemgm {
   text-align: center;
   height: 85px;
   width: 85px;
-  padding-top: 16px;
   margin-top: 2px
 }
 
 .moreimages i{
   width: 100%;
+    display: block;
   font-size: 2.4em;
-    color: $wkseccolor
+    color: $wkcolor
 }
 
 .wkpricebox{
@@ -1738,6 +1744,33 @@ margin-bottom:10px
 
 }
 
+.add {
+    .tour-header {
+        background-image: none;
+        background-color: rgba(232, 181, 49, 0.5);
+        display: table;
+        text-align: center
+    }
+    .selectimg {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        border: 2px dashed $wkdarkcolor;
+        font-size: 2em;
+        width: 100%;
+        color: $wkcolor;
+        &:hover {
+            text-decoration: none;
+        }
+        i {
+            width: 100%;
+            display: block;
+            font-size: 3em;
+        }
+    }
+}
+
+
 .tour-header {
   background-image: url(render-gdrive-url('0B9gI2Lt4M_dxZFRPLVdhbUxRREE', 'madird.jpg'));
   background-size: cover;
@@ -2029,7 +2062,8 @@ aside .usersearchperfil {
 
 .moretours{
   margin-top: 30px;
-  background-color: #fadd92;
+  background-color: #fff;
+    border: 1px solid #dadfe0;
   padding-top: 15px;
   padding-bottom: 50px;
   background-image: url(render-gdrive-url('0B9gI2Lt4M_dxNGJxMnlIN1dQRzg', 'street.jpg'));
