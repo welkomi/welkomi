@@ -25,7 +25,7 @@
 <div class="row">
     <div class="container-fluid">
        <div class="tour-header m_bottom">
-           <a href="#" class="selectimg"><i class="icon ion-image"></i><span>Drag o choose you background imagen</span>  </a></div>                 
+           <a href="#" class="selectimg"><i class="icon ion-image"></i><span>Drag o choose you background imagen for you plan</span>  </a></div>                 
 </div>
 </div>
 
@@ -38,15 +38,6 @@
           <div class="panel-body tour_title">
                                 <hgroup>
                                     <h2>Guia por el barrio de las letras </h2>
-                                    <ul class="toolsreview list-inline">
-                                        <li class="likeit">  
-                                        <a class="icon ion-ios-heart" href="#"></a>
-                                         
-                                          <div class="like-count" id="gh-count" href="#" style="display: block;">5988</div>
-                                          
-                                          
-                                        </li>
-                                    </ul>
                                 </hgroup>
                           
                                 </div>
@@ -70,24 +61,47 @@
                           
                                 </div>
                             </div>
-
-          
-                <div class="map">
+                            
+                            
+         <div class="wkmodule clearfix">
+          <div class="col-xs-12 col-sm-5 col-md-7 col-lg-7">
+                                <div class="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804"
                             width="600" height="450" frameborder="0" style="border:0"></iframe>
+                            </div>
+                            
                 </div>
+           <div class="col-xs-12 col-sm-7 col-md-5 col-lg-5">
+                 <div class="wkfilter">
+          <h2>Localize you plan in this map</h2>
+
+          <form class="launch_p clearfix ng-pristine ng-valid-date ng-invalid ng-invalid-required">
+    <input type="text" class="form-control" placeholder="Madrid">
+                   
+                   <input type="text" class="form-control" placeholder="Where exactly in Madird?">
+                   
+                        <a class="btn btn-launch" href="#">
+                          <span class="navtext">Launch</span>
+                          </a>
+</form>
+        </div>
+                            </div>
+                            
+                     </div>       
+         
                 <div class="gallerytour clearfix">
                     <div class="tourimages">
-                        <ng-gallery images="images"></ng-gallery>
+                        
                     </div>
                     <a class="morepict" href="#">
-                        <div class="moreimages"><a href="#" class="addplans icon ion-plus-round"></a>add images</div>
+                        <div class="moreimages addpic"><a href="#" class="addplans icon ion-plus-round"></a>add images</div>
                     </a>
                 </div>
             
         </div>
            </div>
     </div>
+</div>
 </div>
 {% endblock %}
 
