@@ -25,7 +25,7 @@ app
 /**
  * Load FB sdk Async.
  */
-window.fbload = function() {
+window.fbload = function () {
     var js,
         id = 'facebook-jssdk',
         ref = document.getElementsByTagName('script')[0];
@@ -48,7 +48,7 @@ window.fbload = function() {
  *
  * <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initgmaplibrary"></script>
  */
-var initgmaplibrary = function() {
+var initgmaplibrary = function () {
     window.google = google || {};
 };
 
@@ -61,7 +61,7 @@ var initgmaplibrary = function() {
  * @constructor
  */
 
-function CommonCtrl($rootScope, $scope, $window, FBF, $uibModal, $http) {
+function CommonCtrl ($rootScope, $scope, $window, FBF, $uibModal, $http) {
     $rootScope.User = {};
     $rootScope.__user__ = $window.__user__;
 
@@ -110,7 +110,7 @@ function CommonCtrl($rootScope, $scope, $window, FBF, $uibModal, $http) {
             function(response) {});
     };
 
-    $scope.fbLogin = function() {
+    $scope.fbLogin = function () {
         FBF.login(function(response) {
             if (response.status === 'connected') {
                 FBFapi();
@@ -120,7 +120,7 @@ function CommonCtrl($rootScope, $scope, $window, FBF, $uibModal, $http) {
 
     $rootScope.FBlogin = $scope.fbLogin;
 
-    function FBFapi() {
+    function FBFapi () {
         FBF.api(
             me,
             fieldsreponse,
@@ -130,7 +130,7 @@ function CommonCtrl($rootScope, $scope, $window, FBF, $uibModal, $http) {
         )
     }
 
-    function setPictureFromFBProfile(user, idFB) {
+    function setPictureFromFBProfile (user, idFB) {
         if (idFB) {
             FBF.exchangePictureProfile(idFB, function(picture) {
                 if (
@@ -157,7 +157,7 @@ function CommonCtrl($rootScope, $scope, $window, FBF, $uibModal, $http) {
      */
     $scope.animationsEnabled = true;
 
-    $scope.openModal = function(size, template) {
+    $scope.openModal = function (size, template) {
         var modalInstance = $uibModal.open({
             'animation': $scope.animationsEnabled,
             'templateUrl': "/statics/html/" + template,
@@ -174,7 +174,7 @@ function CommonCtrl($rootScope, $scope, $window, FBF, $uibModal, $http) {
         });
     };
 
-    $scope.toggleAnimation = function() {
+    $scope.toggleAnimation = function () {
         $scope.animationsEnabled = !$scope.animationsEnabled;
     };
 
@@ -197,7 +197,7 @@ function CommonCtrl($rootScope, $scope, $window, FBF, $uibModal, $http) {
  * @returns {{restrict: string, link: Function}}
  */
 
-function parallax() {
+function parallax () {
     return {
         'restrict': 'AEC',
         'link': function(scope, element, attrs) {
@@ -212,7 +212,7 @@ function parallax() {
  * @returns {{require: string, link: Function}}
  */
 
-function isfilled() {
+function isfilled () {
     return {
         'require': 'ngModel',
         'link': function(scope, elm, attrs, ctrl) {
@@ -227,15 +227,24 @@ function isfilled() {
     }
 }
 
-function gmapautocomplete($window) {
+function gmapautocomplete ($window) {
     return {
         'restrcit': 'AEC',
-        'link': function(scope, element, attrs) {
+        'link': function (scope, element, attrs) {
             new $window.google.maps.places.Autocomplete(element[0], {
                 'types': [
                     '(cities)'
                 ]
             });
+        }
+    }
+}
+
+function chosenactive ($log) {
+    return {
+        'restrict': 'AEC',
+        'link': function (scope, element, attrs) {
+            $(element).chosen();
         }
     }
 }
@@ -255,4 +264,8 @@ app
     .directive('gmapautocomplete', [
         '$window',
         gmapautocomplete
+    ])
+    .directive('chosenactive', [
+        '$log',
+        chosenactive
     ]);

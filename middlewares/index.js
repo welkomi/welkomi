@@ -280,3 +280,18 @@ exports.slugify = function () {
         next();
     }
 };
+
+/**
+ * Return the object languages availables
+ *
+ * @returns {Function}
+ */
+exports.getlangs = function () {
+    return function (req, res, next) {
+        res.locals.getlangs = function () {
+            return ___availableLangs.object;
+        };
+
+        next();
+    }
+};

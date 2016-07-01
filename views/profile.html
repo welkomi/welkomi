@@ -86,24 +86,23 @@
                                                         href="javascript:void(0)">Madrid
                                                     <i class="editicon icon ion-edit"></i></a><span></span>
                                                 </h3>
-
                                             </hgroup>
-                                            <blockquote class="clearfix col-lg-12" {% if enableEdit %}ui-tinymce="tinymceOptions"
+
+                                            <blockquote class="clearfix col-lg-12" {% if enableEdit
+                                                        %}ui-tinymce="tinymceOptions"
                                                         ng-model="userProfile.intro" {% endif %}>
                                                 {{ visitedUserProfile.intro | raw }}
                                                 <i class="editicon icon ion-edit"></i>
                                             </blockquote>
                                         </div>
-
                                     </div>
-
                                 </section>
 
                                 <div class="panel panel-default">
                                     <div class="panel-heading clearfix">
                                         <h2 class="pull-left">About me</h2>
-
                                     </div>
+
                                     <div class="panel-body" {% if enableEdit %}ui-tinymce="tinymceOptions"
                                          ng-model="userProfile.about" {% endif %}>
                                         {{ visitedUserProfile.about | raw }}
@@ -115,23 +114,27 @@
                                         <h2 class="pull-left">Languages I speak</h2>
 
                                     </div>
-                                    <div class="panel-body" {% if enableEdit %}ui-tinymce="tinymceOptions"
-                                         ng-model="userProfile.lengs" {% endif %}>
-                                        <ul class="list-inline">
+                                    <div class="panel-body" {% if enableEdit %}ng-model="userProfile.langs" {% endif %}>
+                                        {% if enableEdit %}
+                                        <select chosenactive multiple>
+                                            {% for lang in getlangs() %}
+                                            <option value="{{ lang.translates[visitedUser.locale] }}">{{ lang.translates[visitedUser.locale] }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        {% endif %}
+
+                                        <!-- <ul class="list-inline">
                                             <li>Deutsch</li>
                                             <li>Español</li>
                                             <li>English</li>
                                             <li>Georgian</li>
-                                        </ul>
+                                        </ul> -->
                                     </div>
                                 </div>
-
-
                             </div>
-
                         </div>
-
                     </div>
+
                     <div role="tabpanel" class="tab-pane" id="messages">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -290,9 +293,9 @@
 
                             </div>
                             <div class="panel-body">
-                   <h3>No favourite plans</h3>
-                            
-                           </div>
+                                <h3>No favourite plans</h3>
+
+                            </div>
                         </div>
 
                     </div>
@@ -355,17 +358,17 @@
             <aside class="col-xs-12 col-sm-4 col-md-4 col-lg-4 asideplans hidden-xs  hidden-sm">
 
                 <div role="tabpanel" class="tab-pane" id="plans">
-                        <div class="panel panel-default">
-                            <div class="panel-heading clearfix">
-                                <h2 class="pull-left">MY PLANS</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-heading clearfix">
+                            <h2 class="pull-left">MY PLANS</h2>
 
-                            </div>
-                            <div class="panel-body">
-                                <a href="#" class="addplans icon ion-plus-round"></a>
-                            </div>
                         </div>
-
+                        <div class="panel-body">
+                            <a href="#" class="addplans icon ion-plus-round"></a>
+                        </div>
                     </div>
+
+                </div>
             </aside>
 
         </div>

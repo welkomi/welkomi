@@ -34,9 +34,10 @@ gulp.task('js', function () {
             './statics/ng-droplet/dist/ng-droplet.min.js',
             './statics/angular-bootstrap/ui-bootstrap.min.js',
             './statics/angular-bootstrap/ui-bootstrap-tpls.min.js',
-	    './statics/angular-ui-tinymce/src/tinymce.js',
-	    './statics/ng-file-upload-shim/ng-file-upload-shim.min.js',
-            './statics/ng-file-upload/ng-file-upload.min.js'
+	        './statics/angular-ui-tinymce/src/tinymce.js',
+	        './statics/ng-file-upload-shim/ng-file-upload-shim.min.js',
+            './statics/ng-file-upload/ng-file-upload.min.js',
+            './statics/chosen/chosen.jquery.js'
         ])
         .pipe(uglify('welkomiapp.js', {
             'mangle': false

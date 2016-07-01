@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
+
     <title>Welkomi - {% block title %}{% endblock %}</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="/statics/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/statics/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/statics/chosen/chosen.css">
     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
     {{ getRandomImgForHome() }}
     {{ setFBId() }}
@@ -225,6 +230,7 @@
 <script src="/statics/angular-ui-tinymce/src/tinymce.js"></script>
 <script src="/statics/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
 <script src="/statics/ng-file-upload/ng-file-upload.min.js"></script>
+<script src="/statics/chosen/chosen.jquery.js"></script>
 {% endif %}
 
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initgmaplibrary"></script>
