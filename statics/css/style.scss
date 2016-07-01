@@ -247,7 +247,7 @@ text-align:center;
 }
 
 .navbar-fixed-top {
-  background-color: rgba(39, 40, 34, 0.99);
+  background-color: rgba(57, 61, 61, 0.98);
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
   -ms-transition: background 0.2s linear;
@@ -1946,8 +1946,7 @@ aside .usersearchperfil {
   font-size: 2em;
   margin-right: 2px;
   text-align: center;
-  color: $wkdarkcolor;
-    background-color: #fff;
+  color: $wkbluedark;
   border-radius: 50%;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -1956,9 +1955,7 @@ aside .usersearchperfil {
   transition: all 0.2s linear;
 }
 .followus a:hover{
-  background-color: $wkcolor;
-    color: #fff;
-  border: none
+    color: $wkseccolor;
 }
 
 .followus li i{
@@ -2088,7 +2085,7 @@ aside .usersearchperfil {
 .moduletitle{
   font-size: 3.5em;
   text-align: center;
-  color: $wkcolor;
+  color: $wkdarkcolor;
   margin-bottom: 40px;
     font-weight: bold;
 }
@@ -2186,7 +2183,7 @@ aside .usersearchperfil {
 
 .footer {
   /*  background-image: url("../images/city2.png");*/
-  margin-top: 60px;
+    padding-top: 60px;
   background-repeat: repeat-x;
   background-position: bottom;
   height: 360px;
@@ -2213,7 +2210,27 @@ aside .usersearchperfil {
 }
 
 .selectlang button {
-    width: 90px
+    width: 90px;
+    background-color: transparent;
+        color: $wkbluedark;
+        border: 2px solid $wkbluedark;
+        &:hover {
+        background-color: transparent;
+        color: $wkseccolor;
+        border: 2px solid $wkbluedark;
+             }
+    &:focus {
+        background-color: #343b3b!important;
+        color: $wkseccolor!important;
+         border: 2px solid $wkbluedark!important;
+        
+    }
+}
+
+.selectlang button .open > .dropdown-toggle.btn-default {
+     background-color: #343b3b!important;
+        color: $wkseccolor!important;
+        border: 2px solid #fff!important;
 }
 
 .selectlang .dropdown-menu{
@@ -2252,11 +2269,11 @@ footer p {
 
 .navfooter a:hover {
   text-decoration: none;
-  color: $wkcolor; }
+  color: $wkseccolor; }
 
 .footer-copyright {
   position: relative;
-  top: 240px;
+  top: 175px;
   text-align: center;
   color: $wkdarkcolor;
   margin-bottom: 0px
@@ -2267,7 +2284,6 @@ footer p {
   overflow: hidden;
   text-align: right!important;
   padding-right: 150px;
-  bottom:30px;
   height: 220px;
   z-index: 20
 }
@@ -3410,7 +3426,7 @@ width: 100%;
     }
     
      .selectlang button {
-        width: 100%
+        width: 100%;
     }
     
     .followus {
