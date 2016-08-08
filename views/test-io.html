@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IO</title>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket/socket.io.js"></script>
+</head>
+<body>
+
+
+
+<hr />
+<div>Button mensaje a todos</div>
+<button>Send Message to all</button>
+<div id="msgs"></div>
+<hr />
+<div>Cuadro general de dialogo</div>
+<textarea rows="10" cols="80"></textarea>
+<div id="msgArea"></div>
+<hr />
+
+<script>
+    (function ($) {
+        var socket = io.connect('http://localhost:3000');
+        
+        socket.on('ClientId', function (data) {
+            socket.emit('ClientConnnected', data.id);
+        });
+        
+        socket.on('message', function (data) {
+            $('div#msgs').append('<div>' + data.msg + ' => ' + data.id + '</div>');
+        });
+        
+        socket.on('fromArea', function (data) {
+            $('div#msgArea').html(data);
+        });
+
+        /**
+         * MESSAGER
+         */
+        $('button').on('click', function () {
+            socket.emit('sendAll', {});
+        });
+        
+        $('textarea').on('keyup', function (e) {
+           socket.emit('messageArea', e.target.value);
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

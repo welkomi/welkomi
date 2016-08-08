@@ -18,7 +18,9 @@ var passport = require('passport'),
     middlewares = require('./middlewares'),
     crons = require('./crons');
     viewsCache = process.env.NODE_ENV === 'production',
-    staticsCache = process.env.NODE_ENV === 'production' ? process.env.CACHE_TIME : 0;
+    staticsCache = process.env.NODE_ENV === 'production' ? process.env.CACHE_TIME : 0,
+    clientsSocket = [];
+
 
 console.info('viewsCache: ', viewsCache);
 console.info('staticsCache: ', staticsCache);
@@ -26,7 +28,6 @@ console.info('staticsCache: ', staticsCache);
 /**
  * Crons jobs
  */
-
 crons.init({
     'sendVerificationMail': '*/3 * * * *'
     //'sendVerificationMail': '*/5 * * * *'
@@ -36,7 +37,6 @@ idioms.getAvailableLangs(function () {
     /**
      * Config for i18n
      */
-
     i18n.configure({
         'locales': ___availableLangs.array,
         'directory': __dirname + '/locales',
@@ -85,6 +85,7 @@ idioms.getAvailableLangs(function () {
 
     app.use(expressrouter);
     app.use('/statics', express.static(__dirname + '/statics', {'maxAge': staticsCache}));
+    app.use('/socket', express.static(__dirname + '/node_modules/socket.io-client', {'maxAge': staticsCache}));
     app.engine('html', swig.renderFile);
     app.set('view engine', 'html');
     app.set('views', __dirname + '/views');
@@ -103,7 +104,7 @@ idioms.getAvailableLangs(function () {
         res.status(404);
         res.render('404', {});
     });
-
+    
     /**
      * Initialize the server
      *
@@ -115,4 +116,43 @@ idioms.getAvailableLangs(function () {
 
         console.log('App listening at http://%s:%s', host, port);
     });
+
+    var io = require('socket.io')(server);
+        
+    /**
+     * Config for socket.io
+     */
+    io.on('connection', function (socket) {
+        socket.emit('ClientId', {
+            'id': socket.id 
+        });
+        
+        socket.on('ClientConnnected', function (id) {
+            clientsSocket.push(id);            
+        });
+
+        socket.on('disconnect', function (data) {
+            console.log('Perdimos un usuario', data);
+        });
+        
+        socket.on('sendAll', function () {
+            clientsSocket.forEach(function (id) { 
+                if (io.sockets.connected[id]) {
+                    io.sockets.connected[id].emit('message', {
+                        'msg': 'Hola',
+                        'id': id
+                    });
+                }
+            });
+        });
+        
+        socket.on('messageArea', function (data) {
+            clientsSocket.forEach(function (id) {
+                if (io.sockets.connected[id]) {
+                    io.sockets.connected[id].emit('fromArea', data);
+                }
+            });
+        });
+    });
+
 });

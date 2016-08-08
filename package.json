@@ -45,7 +45,8 @@
     "nodemailer": "latest",
     "swig-email-templates": "latest",
     "email-templates": "latest",
-    "q": "latest"
+    "q": "latest",
+    "socket.io": "latest"
   },
   "homepage": "git+https://github.com/welkomi/#readme",
   "devDependencies": {

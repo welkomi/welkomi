@@ -96,4 +96,10 @@ exports.routes = function (expressrouter) {
      * Route '/'
      */
     require('./wkmessage').init(expressrouter, idioms);
+
+    /**
+     * tests pages
+     */
+    
+    require('./tests').init(expressrouter, idioms);
 };
