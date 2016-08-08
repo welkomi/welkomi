@@ -6,6 +6,8 @@ exports.init = function (expressrouter, idioms) {
     expressrouter.get(
         '/test/io',
         function (req, res) {
-            res.render('test-io', {});
+            res.render('test-io', {
+                'port': GLOBAL.port 
+            });
         });
 };
