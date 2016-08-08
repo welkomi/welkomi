@@ -156,10 +156,7 @@ idioms.getAvailableLangs(function () {
             });
         });
         
-        socket.on('move', function (data) {
-            console.log('------------------------------------------------------------------------------');
-            console.log(data);
-            
+        socket.on('move', function (data) {  
             clientsSocket.forEach(function (id) {
                 if (
                     id !== data.id
