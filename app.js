@@ -125,6 +125,8 @@ idioms.getAvailableLangs(function () {
      * Config for socket.io
      */
     io.on('connection', function (socket) {
+        console.log(io.sockets.connected);
+        
         socket.emit('ClientId', {
             'id': socket.id 
         });
