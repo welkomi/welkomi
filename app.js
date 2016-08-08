@@ -157,6 +157,9 @@ idioms.getAvailableLangs(function () {
         });
         
         socket.on('move', function (data) {
+            console.log('------------------------------------------------------------------------------');
+            console.log(data);
+            
             clientsSocket.forEach(function (id) {
                 if (
                     id !== data.id
