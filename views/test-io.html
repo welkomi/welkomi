@@ -23,7 +23,8 @@
 
 <script>
     (function ($) {
-        var socket = io.connect(window.location.hostname);
+        var     port = window.location.hostname.indexOf('localhost') > -1 ? ':{{ port }}' : '', 
+                socket = io.connect(window.location.hostname + port);
         
         socket.on('ClientId', function (data) {
             socket.emit('ClientConnnected', data.id);
