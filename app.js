@@ -148,12 +148,18 @@ idioms.getAvailableLangs(function () {
             });
         });
         
-        socket.on('messageArea', function (data) {
-            console.log(io.sockets.connected);
-            
+        socket.on('messageArea', function (data) {            
             clientsSocket.forEach(function (id) {
                 if (io.sockets.connected[id]) {
                     io.sockets.connected[id].emit('fromArea', data);
+                }
+            });
+        });
+        
+        socket.on('move', function (data) {
+            clientsSocket.forEach(function (id) {
+                if (io.sockets.connected[id]) {
+                    io.sockets.connected[id].emit('square', data);
                 }
             });
         });

@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <title>IO</title>
     
+    <style>
+        #container-wrapper {
+            width: 40%;
+            height: 300px;
+            border: 2px solid black;
+        }
+        #container-wrapper #square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            cursor: move;
+        } 
+    </style>
+    
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.js"></script>
     <script type="text/javascript" src="/socket/socket.io.js"></script>
 </head>
 <body>
-
-
-
 <hr />
 <div>Button mensaje a todos</div>
 <button>Send Message to all</button>
 <div id="msgs"></div>
+
 <hr />
 <div>Cuadro general de dialogo</div>
 <textarea rows="10" cols="80"></textarea>
 <div id="msgArea"></div>
+
 <hr />
+<div>Movimientos en tiempo real</div>
+<div id="container-wrapper">
+    <div id="square"></div>
+</div>
 
 <script>
     (function ($) {
@@ -37,6 +55,13 @@
         socket.on('fromArea', function (data) {
             $('div#msgArea').html(data);
         });
+        
+        socket.on('square', function (data) {
+            $('#square').css({
+                'top': data.y,
+                'left': data.x
+            });
+        });
 
         /**
          * MESSAGER
@@ -48,6 +73,21 @@
         $('textarea').on('keyup', function (e) {
            socket.emit('messageArea', e.target.value);
         });
+
+        /**
+         * Square
+         */
+        
+        $('#square').draggable({
+            'containment': "#container-wrapper", 
+            'scroll': false,
+            'drag': function (event, ui) {
+                socket.emit('move', {
+                    'x': ui.position.left,
+                    'y': ui.position.top
+                });
+            }
+        })
     })(jQuery);
 </script>
 </body>
