@@ -124,9 +124,7 @@ idioms.getAvailableLangs(function () {
     /**
      * Config for socket.io
      */
-    io.on('connection', function (socket) {
-        console.log(io.sockets.connected);
-        
+    io.on('connection', function (socket) {        
         socket.emit('ClientId', {
             'id': socket.id 
         });
@@ -151,6 +149,8 @@ idioms.getAvailableLangs(function () {
         });
         
         socket.on('messageArea', function (data) {
+            console.log(io.sockets.connected);
+            
             clientsSocket.forEach(function (id) {
                 if (io.sockets.connected[id]) {
                     io.sockets.connected[id].emit('fromArea', data);
