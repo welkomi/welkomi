@@ -42,9 +42,11 @@
 <script>
     (function ($) {
         var     port = window.location.hostname.indexOf('localhost') > -1 ? ':{{ port }}' : '', 
-                socket = io.connect(window.location.hostname + port);
+                socket = io.connect(window.location.hostname + port),
+                id;
         
         socket.on('ClientId', function (data) {
+            id = data.id;
             socket.emit('ClientConnnected', data.id);
         });
         
@@ -84,7 +86,8 @@
             'drag': function (event, ui) {
                 socket.emit('move', {
                     'x': ui.position.left,
-                    'y': ui.position.top
+                    'y': ui.position.top,
+                    'id': id
                 });
             }
         });

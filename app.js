@@ -158,7 +158,10 @@ idioms.getAvailableLangs(function () {
         
         socket.on('move', function (data) {
             clientsSocket.forEach(function (id) {
-                if (io.sockets.connected[id]) {
+                if (
+                    id !== data.id
+                    && io.sockets.connected[id]
+                ) {
                     io.sockets.connected[id].emit('square', data);
                 }
             });
