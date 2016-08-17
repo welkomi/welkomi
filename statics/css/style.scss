@@ -607,6 +607,7 @@ text-align:center;
 .searchuserheader input:focus {
   background-color: #fff;
   box-shadow: none;
+    width: 300px;
 
 }
 
@@ -705,7 +706,6 @@ aside .asidemgm {
 .modulohowworks {
   background-image: url(render-gdrive-url('0B9gI2Lt4M_dxZFRPLVdhbUxRREE', 'sofa.jpg'));
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   background-position: bottom; }
 
@@ -1130,7 +1130,19 @@ aside .asidemgm {
   background-color: $wkcolor;
   font-size: 2em;
   color: #fff;
-  margin-top: 10px; }
+    border: none;
+  margin-top: 10px; 
+         -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+    &:hover {
+        background-color: $wkhover;
+        
+    }
+}
+
+
 
 .perfilhow img {
   width: 100%; }
@@ -2211,17 +2223,20 @@ aside .usersearchperfil {
 
 .selectlang button {
     width: 90px;
+    font-weight: bold;
     background-color: transparent;
         color: $wkbluedark;
         border: 2px solid $wkbluedark;
+     -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
         &:hover {
-        background-color: transparent;
-        color: $wkseccolor;
+        background-color: rgba(232, 181, 49, 0.6);
         border: 2px solid $wkbluedark;
              }
     &:focus {
-        background-color: #343b3b!important;
-        color: $wkseccolor!important;
+        background-color: rgba(232, 181, 49, 0.6)!important;
          border: 2px solid $wkbluedark!important;
         
     }
@@ -2259,6 +2274,7 @@ footer p {
 
 .navfooter a {
   font-size: 1em; 
+    font-weight: bold;
     color: $wkdarkcolor;
       -webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
@@ -2284,8 +2300,9 @@ footer p {
   overflow: hidden;
   text-align: right!important;
   padding-right: 150px;
-  height: 220px;
-  z-index: 20
+  height: 200px;
+  z-index: 20;
+    top: 145px
 }
 
 .scenetwo{
@@ -2344,21 +2361,19 @@ footer p {
 /*USERS PAGE*/
 .guidedisplay{
   height: 82%;
-  position: fixed;
-  width: 65%;
 }
 
 .colspecial {
   clear: both;
-  padding-right: 15px;
+  padding-right: 0px;
   padding-left: 15px;
 }
 
 .colspecialfil{
-  width: 35%;
   padding-right: 15px;
-  padding-left: 30px;
-  float: right;
+  position: fixed;
+  right: 0px;
+  top: 112px;
 
 }
 .wkfilter{
@@ -3330,6 +3345,11 @@ width: 100%;
 
 
 @media (max-width: 960px){
+    
+    .searchuserheader input:focus {
+    width: auto;
+
+}
     
     .btn-normal {
     width: 100%;

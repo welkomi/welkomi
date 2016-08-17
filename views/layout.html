@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="/statics/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/statics/css/style.css">
+    <link rel="stylesheet" href="/statics/angular-material/angular-material.min.css">
     <link rel="stylesheet" type="text/css" href="/statics/chosen/chosen.css">
     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
@@ -133,8 +134,6 @@
                 <ul parallax id="scene" class="scene col-xs-12 col-sm-12 col-md-12 col-lg-9">
                     <!--<li class="layer nube1" data-depth="0.02"><img src="/statics/images/nube1.png"></li>-->
                     <li class="layer nube1" data-depth="0.02"><img
-                            src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube1.png') }}"></li>
-                    <li class="layer nube2" data-depth="0.02"><img
                             src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube2.png') }}"></li>
                     <li class="layer nube2small" data-depth="-0.02"><img
                             src="{{ renderGdriveUrl('0B9gI2Lt4M_dxOENhek9qdVpTTDQ', 'nube2.png') }}"></li>
@@ -230,7 +229,12 @@
 <script src="/statics/angular-ui-tinymce/src/tinymce.js"></script>
 <script src="/statics/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
 <script src="/statics/ng-file-upload/ng-file-upload.min.js"></script>
+<!--Angular material-->
+<script src="/statics/angular-aria/angular-aria.min.js"></script>
+<script src="/statics/angular-animate/angular-animate.min.js"></script>
+<script src="/statics/angular-material/angular-material.min.js"></script>
 <script src="/statics/chosen/chosen.jquery.js"></script>
+
 {% endif %}
 
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initgmaplibrary"></script>

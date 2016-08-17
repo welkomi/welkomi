@@ -9,7 +9,8 @@ var app = angular.module('welkomiApp', [
     'ngScrollbars',
     'ngDroplet',
     'ui.tinymce',
-    'ngFileUpload'
+    'ngFileUpload',
+    'ngMaterial'
 ]);
 
 app
