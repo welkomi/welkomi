@@ -1,6 +1,6 @@
 /*Iraklitbz | Welkomi*/
 
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 @import url('http://weloveiconfonts.com/api/?family=entypo');
 @import url('http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
 @import url('https://fonts.googleapis.com/css?family=Passion+One:400,700,900');
@@ -11,6 +11,7 @@
 @import 'mixins';
 /*header*/
 body {
+
   background-color: #ecf0f1; 
 font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased!important;
@@ -135,7 +136,7 @@ outline: 0;
 }
 
 header {
-    position: relative
+    position: relative;
 }
 
 .logo {
@@ -2379,7 +2380,10 @@ footer p {
 .wkfilter{
     background-color: #fff;
     border-radius: 8px;
-    padding: 0 7px 0 7px;
+}
+
+.wk--chekbox {
+  padding-left: 5px;
 }
 
 .wkfilter .searchuser{
@@ -2399,9 +2403,29 @@ footer p {
 
 .launch_p {
     clear: both;
-    padding: 0px 10px 10px 10px;
     border-radius: 7px
 }
+
+.size--wk {
+  font-size: 16px;
+  color: $wkcolor;
+}
+
+md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+  background-color: $wkcolor;
+}
+
+.search-panel-content {
+  margin-bottom: 10px;
+}
+
+.search-panel-content h3 {
+  color: rgba(0,0,0,0.54);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
 .launch_p input{
     height: 50px;
 }
